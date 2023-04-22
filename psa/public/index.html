@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Physical Starlight and Atmosphere | Blender Addon</title>
+	<meta name="description" content="Blender addon that gives instant cinematic atmosphere and cuts down technical headache associated with setting up believable lighting.">
+	<link rel="icon" type="image/svg+xml" href="assets/images/psa-logo.svg">
+	<!-- Social Cards -->
+	
+	<!-- Do not transfer random numbers into phone numbers -->
+	<meta name="format-detection" content="telephone=no">
+	<!-- Fonts -->
+	
+	<link href="assets/fonts/Inter-Light.woff2" type="font/woff2" crossorigin>
+	<link href="assets/fonts/Inter-Regular.woff2" type="font/woff2" crossorigin>
+	<link href="assets/fonts/Inter-Medium.woff2" type="font/woff2" crossorigin>
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/vendor/jquery.fancybox.min.css">
+	
+</head>
+
+
+<body>
+	<div class="gallery" id="gallery">
+	<div class="big-gap"></div>
+	<div class="left-indent size-6">
+		<h2 class="gallery__title">
+			Featured Artists
+		</h2>
+	</div>
+	<div class="gallery__grid">
+					<figure class="gallery__artwork gallery__artwork--wide">
+				<a href="assets/images/gallery/alexander-lortkipanidze/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Alexander Lortkipanidze"
+						
+												src="assets/images/gallery/alexander-lortkipanidze/1-thumb-2x-720.jpg"
+						srcset="
+							assets/images/gallery/alexander-lortkipanidze/1-thumb-2x-320.jpg 320w,
+							assets/images/gallery/alexander-lortkipanidze/1-thumb-2x-400.jpg 400w,
+							assets/images/gallery/alexander-lortkipanidze/1-thumb-2x-512.jpg 512w,
+							assets/images/gallery/alexander-lortkipanidze/1-thumb-2x-720.jpg 720w,
+							assets/images/gallery/alexander-lortkipanidze/1-thumb-2x-850.jpg 850w
+						"
+						sizes="
+							(max-width: 576px) calc(100vw - 4px),
+							(max-width: 1700px) calc(50vw - 3px),
+            				847px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/varzov" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Alexander Lortkipanidze</a>
+					<div class="gallery__jobtitle">Сoncept designer/3d generalist</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/jonas-fornerod/2.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Jonas Fornerod"
+						
+												src="assets/images/gallery/jonas-fornerod/2-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/jonas-fornerod/2-thumb-160.jpg 160w,
+							assets/images/gallery/jonas-fornerod/2-thumb-200.jpg 200w,
+							assets/images/gallery/jonas-fornerod/2-thumb-256.jpg 256w,
+							assets/images/gallery/jonas-fornerod/2-thumb-360.jpg 360w,
+							assets/images/gallery/jonas-fornerod/2-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/jonasfornerod" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Jonas Fornerod</a>
+					<div class="gallery__jobtitle">Digital artist / Photographer / Graphic Designer</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/lee-petty/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Lee Petty"
+						
+												src="assets/images/gallery/lee-petty/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/lee-petty/1-thumb-160.jpg 160w,
+							assets/images/gallery/lee-petty/1-thumb-200.jpg 200w,
+							assets/images/gallery/lee-petty/1-thumb-256.jpg 256w,
+							assets/images/gallery/lee-petty/1-thumb-360.jpg 360w,
+							assets/images/gallery/lee-petty/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/lpetty" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Lee Petty</a>
+					<div class="gallery__jobtitle">Art Director, Double Fine Productions</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/ilmari-kumpunen/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Ilmari Kumpunen"
+						
+												src="assets/images/gallery/ilmari-kumpunen/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/ilmari-kumpunen/1-thumb-160.jpg 160w,
+							assets/images/gallery/ilmari-kumpunen/1-thumb-200.jpg 200w,
+							assets/images/gallery/ilmari-kumpunen/1-thumb-256.jpg 256w,
+							assets/images/gallery/ilmari-kumpunen/1-thumb-360.jpg 360w,
+							assets/images/gallery/ilmari-kumpunen/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/ilmarik" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Ilmari Kumpunen</a>
+					<div class="gallery__jobtitle">Associate Art Director at Housemarque</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/jonas-fornerod/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Jonas Fornerod"
+						
+												src="assets/images/gallery/jonas-fornerod/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/jonas-fornerod/1-thumb-160.jpg 160w,
+							assets/images/gallery/jonas-fornerod/1-thumb-200.jpg 200w,
+							assets/images/gallery/jonas-fornerod/1-thumb-256.jpg 256w,
+							assets/images/gallery/jonas-fornerod/1-thumb-360.jpg 360w,
+							assets/images/gallery/jonas-fornerod/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/jonasfornerod" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Jonas Fornerod</a>
+					<div class="gallery__jobtitle">Digital artist / Photographer / Graphic Designer</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork gallery__artwork--wide">
+				<a href="assets/images/gallery/andrei-khrutskii/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Andrei Khrutskii"
+						
+												src="assets/images/gallery/andrei-khrutskii/1-thumb-2x-720.jpg"
+						srcset="
+							assets/images/gallery/andrei-khrutskii/1-thumb-2x-320.jpg 320w,
+							assets/images/gallery/andrei-khrutskii/1-thumb-2x-400.jpg 400w,
+							assets/images/gallery/andrei-khrutskii/1-thumb-2x-512.jpg 512w,
+							assets/images/gallery/andrei-khrutskii/1-thumb-2x-720.jpg 720w,
+							assets/images/gallery/andrei-khrutskii/1-thumb-2x-850.jpg 850w
+						"
+						sizes="
+							(max-width: 576px) calc(100vw - 4px),
+							(max-width: 1700px) calc(50vw - 3px),
+            				847px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://andreikhrutskii.artstation.com/" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Andrei Khrutskii</a>
+					<div class="gallery__jobtitle">freelance matte painter / concept artist</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork gallery__artwork--wide">
+				<a href="assets/images/gallery/arnaud-imobersteg/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Arnaud Imobersteg"
+						
+												src="assets/images/gallery/arnaud-imobersteg/1-thumb-2x-720.jpg"
+						srcset="
+							assets/images/gallery/arnaud-imobersteg/1-thumb-2x-320.jpg 320w,
+							assets/images/gallery/arnaud-imobersteg/1-thumb-2x-400.jpg 400w,
+							assets/images/gallery/arnaud-imobersteg/1-thumb-2x-512.jpg 512w,
+							assets/images/gallery/arnaud-imobersteg/1-thumb-2x-720.jpg 720w,
+							assets/images/gallery/arnaud-imobersteg/1-thumb-2x-850.jpg 850w
+						"
+						sizes="
+							(max-width: 576px) calc(100vw - 4px),
+							(max-width: 1700px) calc(50vw - 3px),
+            				847px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/arnaud_imobersteg" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Arnaud Imobersteg</a>
+					<div class="gallery__jobtitle">Architect - Illustrator</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/jan-šarbort/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Jan Šarbort"
+						
+												src="assets/images/gallery/jan-šarbort/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/jan-šarbort/1-thumb-160.jpg 160w,
+							assets/images/gallery/jan-šarbort/1-thumb-200.jpg 200w,
+							assets/images/gallery/jan-šarbort/1-thumb-256.jpg 256w,
+							assets/images/gallery/jan-šarbort/1-thumb-360.jpg 360w,
+							assets/images/gallery/jan-šarbort/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/jansarbort" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Jan Šarbort</a>
+					<div class="gallery__jobtitle">Concept Artist</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/jeff-lange/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Jeff Lange"
+						
+												src="assets/images/gallery/jeff-lange/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/jeff-lange/1-thumb-160.jpg 160w,
+							assets/images/gallery/jeff-lange/1-thumb-200.jpg 200w,
+							assets/images/gallery/jeff-lange/1-thumb-256.jpg 256w,
+							assets/images/gallery/jeff-lange/1-thumb-360.jpg 360w,
+							assets/images/gallery/jeff-lange/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://twitter.com/jefftml" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Jeff Lange</a>
+					<div class="gallery__jobtitle">Digital Artist / Photographer</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/maximilian-schiller/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Maximilian Schiller"
+						
+												src="assets/images/gallery/maximilian-schiller/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/maximilian-schiller/1-thumb-160.jpg 160w,
+							assets/images/gallery/maximilian-schiller/1-thumb-200.jpg 200w,
+							assets/images/gallery/maximilian-schiller/1-thumb-256.jpg 256w,
+							assets/images/gallery/maximilian-schiller/1-thumb-360.jpg 360w,
+							assets/images/gallery/maximilian-schiller/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/maxschiller" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Maximilian Schiller</a>
+					<div class="gallery__jobtitle">Concept Artist and Illustrator</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/maximilian-schiller/2.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Maximilian Schiller"
+						
+												src="assets/images/gallery/maximilian-schiller/2-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/maximilian-schiller/2-thumb-160.jpg 160w,
+							assets/images/gallery/maximilian-schiller/2-thumb-200.jpg 200w,
+							assets/images/gallery/maximilian-schiller/2-thumb-256.jpg 256w,
+							assets/images/gallery/maximilian-schiller/2-thumb-360.jpg 360w,
+							assets/images/gallery/maximilian-schiller/2-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/maxschiller" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Maximilian Schiller</a>
+					<div class="gallery__jobtitle">Concept Artist and Illustrator</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork gallery__artwork--wide">
+				<a href="assets/images/gallery/dominick-critelli/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Dominick Critelli"
+						
+												src="assets/images/gallery/dominick-critelli/1-thumb-2x-720.jpg"
+						srcset="
+							assets/images/gallery/dominick-critelli/1-thumb-2x-320.jpg 320w,
+							assets/images/gallery/dominick-critelli/1-thumb-2x-400.jpg 400w,
+							assets/images/gallery/dominick-critelli/1-thumb-2x-512.jpg 512w,
+							assets/images/gallery/dominick-critelli/1-thumb-2x-720.jpg 720w,
+							assets/images/gallery/dominick-critelli/1-thumb-2x-850.jpg 850w
+						"
+						sizes="
+							(max-width: 576px) calc(100vw - 4px),
+							(max-width: 1700px) calc(50vw - 3px),
+            				847px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/dominickcritelli" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Dominick Critelli</a>
+					<div class="gallery__jobtitle">Freelance Illustrator</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork gallery__artwork--wide">
+				<a href="assets/images/gallery/ilmari-kumpunen/2.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Ilmari Kumpunen"
+						
+												src="assets/images/gallery/ilmari-kumpunen/2-thumb-2x-720.jpg"
+						srcset="
+							assets/images/gallery/ilmari-kumpunen/2-thumb-2x-320.jpg 320w,
+							assets/images/gallery/ilmari-kumpunen/2-thumb-2x-400.jpg 400w,
+							assets/images/gallery/ilmari-kumpunen/2-thumb-2x-512.jpg 512w,
+							assets/images/gallery/ilmari-kumpunen/2-thumb-2x-720.jpg 720w,
+							assets/images/gallery/ilmari-kumpunen/2-thumb-2x-850.jpg 850w
+						"
+						sizes="
+							(max-width: 576px) calc(100vw - 4px),
+							(max-width: 1700px) calc(50vw - 3px),
+            				847px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/ilmarik" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Ilmari Kumpunen</a>
+					<div class="gallery__jobtitle">Associate Art Director at Housemarque</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/wolfgang-pereira/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Wolfgang Pereira"
+						
+												src="assets/images/gallery/wolfgang-pereira/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/wolfgang-pereira/1-thumb-160.jpg 160w,
+							assets/images/gallery/wolfgang-pereira/1-thumb-200.jpg 200w,
+							assets/images/gallery/wolfgang-pereira/1-thumb-256.jpg 256w,
+							assets/images/gallery/wolfgang-pereira/1-thumb-360.jpg 360w,
+							assets/images/gallery/wolfgang-pereira/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://wolfgangps-blog.tumblr.com/" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Wolfgang Pereira</a>
+					<div class="gallery__jobtitle"></div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/noely-ryan/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Noely Ryan"
+						
+												src="assets/images/gallery/noely-ryan/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/noely-ryan/1-thumb-160.jpg 160w,
+							assets/images/gallery/noely-ryan/1-thumb-200.jpg 200w,
+							assets/images/gallery/noely-ryan/1-thumb-256.jpg 256w,
+							assets/images/gallery/noely-ryan/1-thumb-360.jpg 360w,
+							assets/images/gallery/noely-ryan/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/enor" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Noely Ryan</a>
+					<div class="gallery__jobtitle">Concept Art | DMP</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/petra-trebješanin/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Petra Trebješanin"
+						
+												src="assets/images/gallery/petra-trebješanin/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/petra-trebješanin/1-thumb-160.jpg 160w,
+							assets/images/gallery/petra-trebješanin/1-thumb-200.jpg 200w,
+							assets/images/gallery/petra-trebješanin/1-thumb-256.jpg 256w,
+							assets/images/gallery/petra-trebješanin/1-thumb-360.jpg 360w,
+							assets/images/gallery/petra-trebješanin/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/petramikulicic" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Petra Trebješanin</a>
+					<div class="gallery__jobtitle">Architectural visualizator</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/roma-likholob/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Roman Likholob"
+						
+												src="assets/images/gallery/roma-likholob/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/roma-likholob/1-thumb-160.jpg 160w,
+							assets/images/gallery/roma-likholob/1-thumb-200.jpg 200w,
+							assets/images/gallery/roma-likholob/1-thumb-256.jpg 256w,
+							assets/images/gallery/roma-likholob/1-thumb-360.jpg 360w,
+							assets/images/gallery/roma-likholob/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/pulsid" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Roman Likholob</a>
+					<div class="gallery__jobtitle">Environment Concept Artist | Illustrator</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork gallery__artwork--wide">
+				<a href="assets/images/gallery/ilmari-kumpunen/3.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Ilmari Kumpunen"
+						
+												src="assets/images/gallery/ilmari-kumpunen/3-thumb-2x-720.jpg"
+						srcset="
+							assets/images/gallery/ilmari-kumpunen/3-thumb-2x-320.jpg 320w,
+							assets/images/gallery/ilmari-kumpunen/3-thumb-2x-400.jpg 400w,
+							assets/images/gallery/ilmari-kumpunen/3-thumb-2x-512.jpg 512w,
+							assets/images/gallery/ilmari-kumpunen/3-thumb-2x-720.jpg 720w,
+							assets/images/gallery/ilmari-kumpunen/3-thumb-2x-850.jpg 850w
+						"
+						sizes="
+							(max-width: 576px) calc(100vw - 4px),
+							(max-width: 1700px) calc(50vw - 3px),
+            				847px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/ilmarik" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Ilmari Kumpunen</a>
+					<div class="gallery__jobtitle">Associate Art Director at Housemarque</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork gallery__artwork--wide">
+				<a href="assets/images/gallery/marco-iozzi/2.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Marco Iozzi"
+						
+												src="assets/images/gallery/marco-iozzi/2-thumb-2x-720.jpg"
+						srcset="
+							assets/images/gallery/marco-iozzi/2-thumb-2x-320.jpg 320w,
+							assets/images/gallery/marco-iozzi/2-thumb-2x-400.jpg 400w,
+							assets/images/gallery/marco-iozzi/2-thumb-2x-512.jpg 512w,
+							assets/images/gallery/marco-iozzi/2-thumb-2x-720.jpg 720w,
+							assets/images/gallery/marco-iozzi/2-thumb-2x-850.jpg 850w
+						"
+						sizes="
+							(max-width: 576px) calc(100vw - 4px),
+							(max-width: 1700px) calc(50vw - 3px),
+            				847px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.marcoiozzi.com/" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Marco Iozzi</a>
+					<div class="gallery__jobtitle">Concept Art and Illustration</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork gallery__artwork--wide">
+				<a href="assets/images/gallery/marco-iozzi/3.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Marco Iozzi"
+						
+												src="assets/images/gallery/marco-iozzi/3-thumb-2x-720.jpg"
+						srcset="
+							assets/images/gallery/marco-iozzi/3-thumb-2x-320.jpg 320w,
+							assets/images/gallery/marco-iozzi/3-thumb-2x-400.jpg 400w,
+							assets/images/gallery/marco-iozzi/3-thumb-2x-512.jpg 512w,
+							assets/images/gallery/marco-iozzi/3-thumb-2x-720.jpg 720w,
+							assets/images/gallery/marco-iozzi/3-thumb-2x-850.jpg 850w
+						"
+						sizes="
+							(max-width: 576px) calc(100vw - 4px),
+							(max-width: 1700px) calc(50vw - 3px),
+            				847px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.marcoiozzi.com/" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Marco Iozzi</a>
+					<div class="gallery__jobtitle">Concept Art and Illustration</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork gallery__artwork--wide">
+				<a href="assets/images/gallery/jukka-lehto/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Jukka Lehto"
+						
+												src="assets/images/gallery/jukka-lehto/1-thumb-2x-720.jpg"
+						srcset="
+							assets/images/gallery/jukka-lehto/1-thumb-2x-320.jpg 320w,
+							assets/images/gallery/jukka-lehto/1-thumb-2x-400.jpg 400w,
+							assets/images/gallery/jukka-lehto/1-thumb-2x-512.jpg 512w,
+							assets/images/gallery/jukka-lehto/1-thumb-2x-720.jpg 720w,
+							assets/images/gallery/jukka-lehto/1-thumb-2x-850.jpg 850w
+						"
+						sizes="
+							(max-width: 576px) calc(100vw - 4px),
+							(max-width: 1700px) calc(50vw - 3px),
+            				847px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/versaali" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Jukka Lehto</a>
+					<div class="gallery__jobtitle">3D Artist</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/sterling-osment/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Sterling Osment"
+						
+												src="assets/images/gallery/sterling-osment/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/sterling-osment/1-thumb-160.jpg 160w,
+							assets/images/gallery/sterling-osment/1-thumb-200.jpg 200w,
+							assets/images/gallery/sterling-osment/1-thumb-256.jpg 256w,
+							assets/images/gallery/sterling-osment/1-thumb-360.jpg 360w,
+							assets/images/gallery/sterling-osment/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/sterlingosment" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Sterling Osment</a>
+					<div class="gallery__jobtitle">FrameworkVFX - Animator - Modeller - 3D/VR Artist - VFX</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/subin-rajendran/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Subin Rajendran"
+						
+												src="assets/images/gallery/subin-rajendran/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/subin-rajendran/1-thumb-160.jpg 160w,
+							assets/images/gallery/subin-rajendran/1-thumb-200.jpg 200w,
+							assets/images/gallery/subin-rajendran/1-thumb-256.jpg 256w,
+							assets/images/gallery/subin-rajendran/1-thumb-360.jpg 360w,
+							assets/images/gallery/subin-rajendran/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/subinrajendran" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Subin Rajendran</a>
+					<div class="gallery__jobtitle">Concept Artist</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/subin-rajendran/2.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Subin Rajendran"
+						
+												src="assets/images/gallery/subin-rajendran/2-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/subin-rajendran/2-thumb-160.jpg 160w,
+							assets/images/gallery/subin-rajendran/2-thumb-200.jpg 200w,
+							assets/images/gallery/subin-rajendran/2-thumb-256.jpg 256w,
+							assets/images/gallery/subin-rajendran/2-thumb-360.jpg 360w,
+							assets/images/gallery/subin-rajendran/2-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/subinrajendran" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Subin Rajendran</a>
+					<div class="gallery__jobtitle">Concept Artist</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/subin-rajendran/3.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Subin Rajendran"
+						
+												src="assets/images/gallery/subin-rajendran/3-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/subin-rajendran/3-thumb-160.jpg 160w,
+							assets/images/gallery/subin-rajendran/3-thumb-200.jpg 200w,
+							assets/images/gallery/subin-rajendran/3-thumb-256.jpg 256w,
+							assets/images/gallery/subin-rajendran/3-thumb-360.jpg 360w,
+							assets/images/gallery/subin-rajendran/3-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/subinrajendran" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Subin Rajendran</a>
+					<div class="gallery__jobtitle">Concept Artist</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork gallery__artwork--wide">
+				<a href="assets/images/gallery/lee-petty/2.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Lee Petty"
+						
+												src="assets/images/gallery/lee-petty/2-thumb-2x-720.jpg"
+						srcset="
+							assets/images/gallery/lee-petty/2-thumb-2x-320.jpg 320w,
+							assets/images/gallery/lee-petty/2-thumb-2x-400.jpg 400w,
+							assets/images/gallery/lee-petty/2-thumb-2x-512.jpg 512w,
+							assets/images/gallery/lee-petty/2-thumb-2x-720.jpg 720w,
+							assets/images/gallery/lee-petty/2-thumb-2x-850.jpg 850w
+						"
+						sizes="
+							(max-width: 576px) calc(100vw - 4px),
+							(max-width: 1700px) calc(50vw - 3px),
+            				847px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/lpetty" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Lee Petty</a>
+					<div class="gallery__jobtitle">Art Director, Double Fine Productions</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork gallery__artwork--wide">
+				<a href="assets/images/gallery/marco-iozzi/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Marco Iozzi"
+						
+												src="assets/images/gallery/marco-iozzi/1-thumb-2x-720.jpg"
+						srcset="
+							assets/images/gallery/marco-iozzi/1-thumb-2x-320.jpg 320w,
+							assets/images/gallery/marco-iozzi/1-thumb-2x-400.jpg 400w,
+							assets/images/gallery/marco-iozzi/1-thumb-2x-512.jpg 512w,
+							assets/images/gallery/marco-iozzi/1-thumb-2x-720.jpg 720w,
+							assets/images/gallery/marco-iozzi/1-thumb-2x-850.jpg 850w
+						"
+						sizes="
+							(max-width: 576px) calc(100vw - 4px),
+							(max-width: 1700px) calc(50vw - 3px),
+            				847px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.marcoiozzi.com/" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Marco Iozzi</a>
+					<div class="gallery__jobtitle">Concept Art and Illustration</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/vincent-mactiernan/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Vincent MacTiernan"
+						
+												src="assets/images/gallery/vincent-mactiernan/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/vincent-mactiernan/1-thumb-160.jpg 160w,
+							assets/images/gallery/vincent-mactiernan/1-thumb-200.jpg 200w,
+							assets/images/gallery/vincent-mactiernan/1-thumb-256.jpg 256w,
+							assets/images/gallery/vincent-mactiernan/1-thumb-360.jpg 360w,
+							assets/images/gallery/vincent-mactiernan/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/mattewizard" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Vincent MacTiernan</a>
+					<div class="gallery__jobtitle">VisualFX Artist & Compositor</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/vincent-mactiernan/2.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Vincent MacTiernan"
+						
+												src="assets/images/gallery/vincent-mactiernan/2-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/vincent-mactiernan/2-thumb-160.jpg 160w,
+							assets/images/gallery/vincent-mactiernan/2-thumb-200.jpg 200w,
+							assets/images/gallery/vincent-mactiernan/2-thumb-256.jpg 256w,
+							assets/images/gallery/vincent-mactiernan/2-thumb-360.jpg 360w,
+							assets/images/gallery/vincent-mactiernan/2-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/mattewizard" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Vincent MacTiernan</a>
+					<div class="gallery__jobtitle">VisualFX Artist & Compositor</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/scott-warren/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Scott Warren"
+						
+												src="assets/images/gallery/scott-warren/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/scott-warren/1-thumb-160.jpg 160w,
+							assets/images/gallery/scott-warren/1-thumb-200.jpg 200w,
+							assets/images/gallery/scott-warren/1-thumb-256.jpg 256w,
+							assets/images/gallery/scott-warren/1-thumb-360.jpg 360w,
+							assets/images/gallery/scott-warren/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/fiatlux" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Scott Warren</a>
+					<div class="gallery__jobtitle">Senior Lighting Artist at Turtle Rock Studios</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork ">
+				<a href="assets/images/gallery/tomasz-sadzinica/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Tomasz Sadzinica"
+						
+												src="assets/images/gallery/tomasz-sadzinica/1-thumb-360.jpg"
+						srcset="
+							assets/images/gallery/tomasz-sadzinica/1-thumb-160.jpg 160w,
+							assets/images/gallery/tomasz-sadzinica/1-thumb-200.jpg 200w,
+							assets/images/gallery/tomasz-sadzinica/1-thumb-256.jpg 256w,
+							assets/images/gallery/tomasz-sadzinica/1-thumb-360.jpg 360w,
+							assets/images/gallery/tomasz-sadzinica/1-thumb-425.jpg 425w
+						"
+						sizes="
+							(max-width: 576px) calc(50vw - 3px),
+							(max-width: 1700px) calc(25vw - 2px),
+            				423px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/mortom" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Tomasz Sadzinica</a>
+					<div class="gallery__jobtitle">Just a simple 3D artist.</div>
+				</figcaption>
+			</figure>
+					<figure class="gallery__artwork gallery__artwork--wide">
+				<a href="assets/images/gallery/ryan-richmond/1.jpg" data-fancybox="galleryfb">
+					<img
+						alt="Artwork by Ryan Richmond"
+						
+												src="assets/images/gallery/ryan-richmond/1-thumb-2x-720.jpg"
+						srcset="
+							assets/images/gallery/ryan-richmond/1-thumb-2x-320.jpg 320w,
+							assets/images/gallery/ryan-richmond/1-thumb-2x-400.jpg 400w,
+							assets/images/gallery/ryan-richmond/1-thumb-2x-512.jpg 512w,
+							assets/images/gallery/ryan-richmond/1-thumb-2x-720.jpg 720w,
+							assets/images/gallery/ryan-richmond/1-thumb-2x-850.jpg 850w
+						"
+						sizes="
+							(max-width: 576px) calc(100vw - 4px),
+							(max-width: 1700px) calc(50vw - 3px),
+            				847px
+						"
+											>
+				</a>
+				<figcaption>
+					<a href="https://www.artstation.com/ryanrichmond" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">Ryan Richmond</a>
+					<div class="gallery__jobtitle">Concept Artist</div>
+				</figcaption>
+			</figure>
+			</div>
+</div>
+	<!-- Fancybox smooth animations and simplicity is worth importing jquery. Change my mind -->
+	<script src="assets/javascript/vendor/jquery.min.js"></script>
+	<script src="assets/javascript/vendor/jquery.fancybox.min.js"></script>
+	<script>
+	$.fancybox.defaults.buttons = [
+      //"zoom",
+      //"share",
+      //"slideShow",
+      //"fullScreen",
+      //"download",
+      //"thumbs",
+      "close"
+	]
+	$('[data-fancybox="images"]').fancybox({
+		afterLoad : function(instance, current) {
+			var pixelRatio = window.devicePixelRatio || 1;
+
+			if ( pixelRatio > 1.5 ) {
+				current.width  = current.width  / pixelRatio;
+				current.height = current.height / pixelRatio;
+			}
+		}
+	});
+	var imageOption = $.extend(true, {}, $.fancybox.defaults, {
+		caption : function( instance, item ) {
+			return $(this).next('figcaption').html();
+		}
+	});
+	$('[data-fancybox="galleryfb"]').fancybox(imageOption);
+
+	</script>
+</body>
+</html>
+

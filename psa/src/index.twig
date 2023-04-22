@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Physical Starlight and Atmosphere | Blender Addon</title>
+	<meta name="description" content="Blender addon that gives instant cinematic atmosphere and cuts down technical headache associated with setting up believable lighting.">
+	<link rel="icon" type="image/svg+xml" href="assets/images/psa-logo.svg">
+	<!-- Social Cards -->
+	{# <meta property="og:title" content="Physical Starlight and Atmosphere">
+	<meta property="og:description" content="Cinematic atmosphere One click away for Blender">
+	<meta property="og:image" content="https://www.physicaladdons.com/psa/assets/images/presets/nishita-1700.jpeg">
+	<meta property="og:url" content="https://www.physicaladdons.com/psa/">
+	<meta name="twitter:card" content="summary_large_image" /> #}
+	<!-- Do not transfer random numbers into phone numbers -->
+	<meta name="format-detection" content="telephone=no">
+	<!-- Fonts -->
+	{# <link rel="preload" href="assets/fonts/Inter-Light.woff2" as="font" type="font/woff2" crossorigin> #}
+	<link href="assets/fonts/Inter-Light.woff2" type="font/woff2" crossorigin>
+	<link href="assets/fonts/Inter-Regular.woff2" type="font/woff2" crossorigin>
+	<link href="assets/fonts/Inter-Medium.woff2" type="font/woff2" crossorigin>
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/vendor/jquery.fancybox.min.css">
+	
+</head>
+
+
+<body>
+	{% include "partials/gallery/gallery.twig" %}
+
+	<!-- Fancybox smooth animations and simplicity is worth importing jquery. Change my mind -->
+	<script src="{{ 'assets/javascript/vendor/jquery.min.js' }}"></script>
+	<script src="{{ 'assets/javascript/vendor/jquery.fancybox.min.js' }}"></script>
+	<script>
+	$.fancybox.defaults.buttons = [
+      //"zoom",
+      //"share",
+      //"slideShow",
+      //"fullScreen",
+      //"download",
+      //"thumbs",
+      "close"
+	]
+	$('[data-fancybox="images"]').fancybox({
+		afterLoad : function(instance, current) {
+			var pixelRatio = window.devicePixelRatio || 1;
+
+			if ( pixelRatio > 1.5 ) {
+				current.width  = current.width  / pixelRatio;
+				current.height = current.height / pixelRatio;
+			}
+		}
+	});
+	var imageOption = $.extend(true, {}, $.fancybox.defaults, {
+		caption : function( instance, item ) {
+			return $(this).next('figcaption').html();
+		}
+	});
+	$('[data-fancybox="galleryfb"]').fancybox(imageOption);
+
+	</script>
+</body>
+</html>
+

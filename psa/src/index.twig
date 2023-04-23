@@ -28,7 +28,18 @@
 
 
 <body>
-	{% include "partials/gallery/gallery.twig" %}
+    <div class="wrapper">
+        {% include "partials/hero/hero.twig" %}
+        {% include "partials/benefits/benefits.twig" %}
+        {% include "partials/comparison/comparison.twig" %}
+        {% include "partials/team/team.twig" %}
+        {% include "partials/gallery/gallery.twig" %}
+        {% include "partials/controls/controls.twig" %}
+        {% include "partials/testimonials/testimonials.twig" %}
+        {% include "partials/pricing/pricing.twig" %}
+        {% include "partials/notes/notes.twig" %}
+        {% include "partials/footer/footer.twig" %}
+    </div>
 
 	<!-- Fancybox smooth animations and simplicity is worth importing jquery. Change my mind -->
 	<script src="{{ 'assets/javascript/vendor/jquery.min.js' }}"></script>

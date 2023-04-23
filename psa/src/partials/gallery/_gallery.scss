@@ -5,9 +5,9 @@
 		span {
 			color: #ab235d;
 		}
-		@include respond-below(xs) {
-			margin-bottom: 36px;
-		}
+		// @include respond-below(xs) {
+		// 	margin-bottom: 36px;
+		// }
 	}
 	
 	&__grid {
@@ -15,16 +15,16 @@
 		padding: 0 2px;
 		grid-template-columns: repeat(4, 1fr);
 		//grid-template-rows: repeat(5, 350px);
-		grid-auto-rows: 350px;
+		grid-auto-rows: 207px;
 		grid-gap: 2px;
 		transition: grid-auto-rows 1s linear;
-		@include respond-above(xlg) {
-			max-width: 1700px;
-			margin: 0 auto;
-		}
-		@include respond-below(xs) {
-			grid-template-columns: repeat(2, 1fr);
-		}
+		// @include respond-above(xlg) {
+		// 	max-width: 1700px;
+		// 	margin: 0 auto;
+		// }
+		// @include respond-below(xs) {
+		// 	grid-template-columns: repeat(2, 1fr);
+		// }
 	}
 	&__artwork {
  		position: relative;
@@ -44,9 +44,9 @@
 		&:hover, &:focus {
 			&:after {
 				opacity: 1;
-				@include respond-below(xs) {
-					display: none; // on mobile there is no hover
-				}
+				// @include respond-below(xs) {
+				// 	display: none; // on mobile there is no hover
+				// }
 			}
 		}
 
@@ -73,9 +73,9 @@
 		&:hover, &:focus {
 			> figcaption {
 				opacity: 1;
-				@include respond-below(xs) {
-					display: none; // on mobile there is no hover
-				}
+				// @include respond-below(xs) {
+				// 	display: none; // on mobile there is no hover
+				// }
 			}
 		}
 	}
@@ -101,9 +101,9 @@
 				fill: #F5F5F5;
 				opacity: 0;
 				transition: opacity .1s ease-in-out;
-				@include respond-below(xs) {
-					opacity: 1;
-				}
+				// @include respond-below(xs) {
+				// 	opacity: 1;
+				// }
 			}
 			&:hover:after {
 				opacity: 1;

@@ -3,13 +3,15 @@
 @import "scss/typography";
 @import "scss/scaffolding";
 
-@import "partials/hero/hero";
-@import "partials/benefits/benefits";
-@import "partials/comparison/comparison";
-@import "partials/team/team";
-@import "partials/controls/controls";
-@import "partials/testimonials/testimonials";
-@import "partials/pricing/pricing";
-@import "partials/notes/notes";
-@import "partials/footer/footer";
-@import "partials/gallery/gallery";
+@import "blocks/hero/hero";
+@import "blocks/benefits/benefits";
+@import "blocks/comparison/comparison";
+@import "blocks/team/team";
+@import "blocks/controls/controls";
+@import "blocks/testimonials/testimonials";
+@import "blocks/pricing/pricing";
+@import "blocks/notes/notes";
+@import "blocks/footer/footer";
+@import "blocks/gallery/gallery";
+
+@import "partials/benefit-card/benefit-card";

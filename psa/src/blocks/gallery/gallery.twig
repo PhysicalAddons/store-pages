@@ -368,12 +368,12 @@
 
 ]%}
 <div class="gallery" id="gallery">
-	<div class="big-gap"></div>
-	<div class="left-indent size-6">
+	{# <div class="big-gap"></div> #}
+	{# <div class="left-indent size-6"> #}
 		<h2 class="gallery__title">
 			Who is using PSA?
 		</h2>
-	</div>
+	{# </div> #}
 	<div class="gallery__grid">
 		{% for artwork in artworks %}
 			<figure class="gallery__artwork {{ (artwork.size == 2) ? 'gallery__artwork--wide' : '' }}">

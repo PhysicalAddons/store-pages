@@ -78,7 +78,7 @@ body {
   color: #000000;
 }
 
-.h2, .gallery__title {
+.h2, .gallery__title, .benefits__title {
   padding: 0 0 64px 16px;
   font-size: 40px;
   font-weight: 500;
@@ -94,6 +94,15 @@ body {
 
 .block {
   margin-bottom: 130px;
+}
+
+.benefits__grid {
+  display: grid;
+  padding: 0 2px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 500px;
+  grid-gap: 12px;
+  transition: grid-auto-rows 1s linear;
 }
 
 .gallery__title {
@@ -182,4 +191,16 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: calc(100% - 32px);
+}
+
+.benefit-card {
+  padding: 32px;
+  background-color: #000000;
+  border-radius: 6px;
+}
+.benefit-card__title {
+  color: #FFFFFF;
+}
+.benefit-card__description {
+  color: rgba(255, 255, 255, 0.5);
 }

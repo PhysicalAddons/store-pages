@@ -1,0 +1,11 @@
+.benefit-card {
+    padding: 32px;
+    background-color: #000000;
+    border-radius: $default-radius;
+    &__title {
+        color: #FFFFFF;
+    }
+    &__description {
+        color: rgba(#FFFFFF, .5);
+    }
+}

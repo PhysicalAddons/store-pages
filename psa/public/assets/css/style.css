@@ -194,7 +194,7 @@ body {
 }
 
 .benefit-card {
-  padding: 32px;
+  padding: 32px 66px 32px 32px;
   background-color: #000000;
   border-radius: 6px;
 }
@@ -203,4 +203,14 @@ body {
 }
 .benefit-card__description {
   color: rgba(255, 255, 255, 0.5);
+}
+.benefit-card__title, .benefit-card__description {
+  display: inline;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.benefit-card--wide {
+  grid-column: span 2;
 }

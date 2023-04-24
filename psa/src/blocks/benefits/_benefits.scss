@@ -1,0 +1,15 @@
+.benefits {
+    &__title {
+		@extend .h2;
+	}
+	
+	&__grid {
+		display: grid;
+		padding: 0 2px;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: 500px;
+		grid-gap: 12px;
+		transition: grid-auto-rows 1s linear;
+    }
+    
+}

@@ -1,0 +1,216 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/Inter-Light.woff2?v=3.18") format("woff2"), url("../fonts/Inter-Light.woff?v=3.18") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2?v=3.18") format("woff2"), url("../fonts/Inter-Regular.woff?v=3.18") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2?v=3.18") format("woff2"), url("../fonts/Inter-Medium.woff?v=3.18") format("woff");
+}
+body {
+  font-family: "Inter", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #000000;
+}
+
+.h2, .gallery__title, .benefits__title {
+  padding: 0 0 64px 16px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: Inter;
+  color: #000000;
+  letter-spacing: -0.03em;
+}
+
+.wrapper {
+  max-width: 728px;
+}
+
+.block {
+  margin-bottom: 130px;
+}
+
+.benefits__grid {
+  display: grid;
+  padding: 0 2px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 500px;
+  grid-gap: 12px;
+  transition: grid-auto-rows 1s linear;
+}
+
+.gallery__title {
+  margin-bottom: 72px;
+}
+.gallery__title span {
+  color: #ab235d;
+}
+.gallery__grid {
+  display: grid;
+  padding: 0 2px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 207px;
+  grid-gap: 2px;
+  transition: grid-auto-rows 1s linear;
+}
+.gallery__artwork {
+  position: relative;
+}
+.gallery__artwork:after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)) 0 102% no-repeat;
+  transition: opacity 0.2s linear;
+  z-index: 1;
+}
+.gallery__artwork:hover:after, .gallery__artwork:focus:after {
+  opacity: 1;
+}
+.gallery__artwork--wide {
+  grid-column: span 2;
+}
+.gallery__artwork > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+.gallery__artwork > figcaption {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  z-index: 2;
+}
+.gallery__artwork:hover > figcaption, .gallery__artwork:focus > figcaption {
+  opacity: 1;
+}
+.gallery__author {
+  position: absolute;
+  bottom: 36px;
+  left: 16px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 500;
+}
+.gallery__author:after {
+  position: relative;
+  top: 4px;
+  display: inline-block;
+  content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZmlsbD0iI0Y1RjVGNSIgZD0iTTI5LjI1IDYuNzZhNiA2IDAgMDAtOC41IDBsMS40MiAxLjQyYTQgNCAwIDExNS42NyA1LjY3bC04IDhhNCA0IDAgMTEtNS42Ny01LjY2bDEuNDEtMS40Mi0xLjQxLTEuNDItMS40MiAxLjQyYTYgNiAwIDAwMCA4LjVBNiA2IDAgMDAxNyAyNWE2IDYgMCAwMDQuMjctMS43Nmw4LThhNiA2IDAgMDAtLjAyLTguNDh6Ii8+PHBhdGggZmlsbD0iI0Y1RjVGNSIgZD0iTTQuMTkgMjQuODJhNCA0IDAgMDEwLTUuNjdsOC04YTQgNCAwIDAxNS42NyAwQTMuOTQgMy45NCAwIDAxMTkgMTRhNCA0IDAgMDEtMS4xNyAyLjg1TDE1LjcxIDE5bDEuNDIgMS40MiAyLjEyLTIuMTJhNiA2IDAgMDAtOC41MS04LjUxbC04IDhhNiA2IDAgMDAwIDguNTFBNiA2IDAgMDA3IDI4YTYuMDcgNi4wNyAwIDAwNC4yOC0xLjc2bC0xLjQyLTEuNDJhNCA0IDAgMDEtNS42NyAweiIvPjxwYXRoIGRhdGEtbmFtZT0iJmx0O1RyYW5zcGFyZW50IFJlY3RhbmdsZSZndDsiIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMzJ2MzJIMHoiLz48L3N2Zz4=");
+  width: 16px;
+  height: 16px;
+  margin-left: 6px;
+  fill: #F5F5F5;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+.gallery__author:hover:after {
+  opacity: 1;
+}
+.gallery__jobtitle {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: #ABABAB;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 32px);
+}
+
+.benefit-card {
+  padding: 32px 66px 32px 32px;
+  background-color: #000000;
+  border-radius: 6px;
+}
+.benefit-card__title {
+  color: #FFFFFF;
+}
+.benefit-card__description {
+  color: rgba(255, 255, 255, 0.5);
+}
+.benefit-card__title, .benefit-card__description {
+  display: inline;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.benefit-card--wide {
+  grid-column: span 2;
+}

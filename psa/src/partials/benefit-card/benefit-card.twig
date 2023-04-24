@@ -1,5 +1,7 @@
 <div class="benefit-card{{ (size == 2) ? ' benefit-card--wide' : '' }}">
     <h3 class="benefit-card__title">{{title}}</h3>
     <p class="benefit-card__description">{{description}}</p>
-    {# <img class="benefit-card__image" src="{{image.src}}" alt="{{image.alt}}"> #}
+    <figure class="benefit-card__figure{{ (image.border) ? ' benefit-card__figure--bordered' : '' }}"{{(image.style) ? ' style="'~image.style~'"' : ''}}>
+        <img class="benefit-card__image" src="{{image.src}}" alt="{{image.alt}}">
+    </figure>
 </div>

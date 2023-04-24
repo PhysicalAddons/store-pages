@@ -1,0 +1,34 @@
+{% set testimonials = [
+	{
+		'title': 'Feels like magic<br>every time<br>I use it',
+		'description': 'Physical Starlight and Atmosphere has been an invaluable tool for me in my personal/professional work and a huge missing link for lighting in Blender. It still feels like magic every time I use it, I can\'t recommend it highly enough!',
+        'author': '<em>Ben Mauro</em> Senior Concept<br>Artist at <em>343 Industries</em>',
+    },
+    {
+		'title': 'Feels like magic<br>every time<br>I use it',
+		'description': 'Physical Starlight and Atmosphere has been an invaluable tool for me in my personal/professional work and a huge missing link for lighting in Blender. It still feels like magic every time I use it, I can\'t recommend it highly enough!',
+        'author': '<em>Ben Mauro</em> Senior Concept<br>Artist at <em>343 Industries</em>',
+    },
+    {
+		'title': 'Feels like magic<br>every time<br>I use it',
+		'description': 'Physical Starlight and Atmosphere has been an invaluable tool for me in my personal/professional work and a huge missing link for lighting in Blender. It still feels like magic every time I use it, I can\'t recommend it highly enough!',
+        'author': '<em>Ben Mauro</em> Senior Concept<br>Artist at <em>343 Industries</em>',
+    },
+    {
+		'title': 'Feels like magic<br>every time<br>I use it',
+		'description': 'Physical Starlight and Atmosphere has been an invaluable tool for me in my personal/professional work and a huge missing link for lighting in Blender. It still feels like magic every time I use it, I can\'t recommend it highly enough!',
+        'author': '<em>Ben Mauro</em> Senior Concept<br>Artist at <em>343 Industries</em>',
+    },
+]%}
+
+<div class="block testimonials" id="testimonials">
+    <h2 class="testimonials__title">Used by industry leaders</h2>
+    <div class="testimonials__slider">
+        {# container that can contain arrows etc. #}
+        <div class="siema">
+            {% for testimonial in testimonials %}
+            {% include '../../partials/testimonial-card/testimonial-card.twig' with testimonial only %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

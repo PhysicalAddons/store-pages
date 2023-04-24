@@ -44,7 +44,9 @@
 	<!-- Fancybox smooth animations and simplicity is worth importing jquery. Change my mind -->
 	<script src="{{ 'assets/javascript/vendor/jquery.min.js' }}"></script>
 	<script src="{{ 'assets/javascript/vendor/jquery.fancybox.min.js' }}"></script>
+    <script src="{{ 'assets/javascript/vendor/siema.min.js' }}"></script>
 	<script>
+    // FANCYBOX
 	$.fancybox.defaults.buttons = [
       //"zoom",
       //"share",
@@ -71,6 +73,24 @@
 	});
 	$('[data-fancybox="galleryfb"]').fancybox(imageOption);
 
+    // SIEMA
+    const mySiema = new Siema({
+		perPage: 1.5
+	});
+	{# new Siema({
+  selector: '.siema',
+  duration: 200,
+  easing: 'ease-out',
+  perPage: 1,
+  startIndex: 0,
+  draggable: true,
+  multipleDrag: true,
+  threshold: 20,
+  loop: false,
+  rtl: false,
+  onInit: () => {},
+  onChange: () => {},
+}); #}
 	</script>
 </body>
 </html>

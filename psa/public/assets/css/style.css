@@ -78,7 +78,7 @@ body {
   color: #000000;
 }
 
-.h2, .gallery__title, .benefits__title {
+.h2, .gallery__title, .testimonials__title, .benefits__title {
   padding: 0 0 64px 16px;
   font-size: 40px;
   font-weight: 500;
@@ -87,15 +87,27 @@ body {
   color: #000000;
   letter-spacing: -0.03em;
 }
+.h2 em, .gallery__title em, .testimonials__title em, .benefits__title em {
+  font-weight: 600;
+  background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 
 .wrapper {
   max-width: 728px;
+  overflow: hidden;
 }
 
 .block {
   margin-bottom: 130px;
 }
 
+.benefits__title {
+  font-size: 50px;
+}
 .benefits__grid {
   display: grid;
   padding: 0 2px;
@@ -105,9 +117,6 @@ body {
   transition: grid-auto-rows 1s linear;
 }
 
-.gallery__title {
-  margin-bottom: 72px;
-}
 .gallery__title span {
   color: #ab235d;
 }
@@ -194,9 +203,11 @@ body {
 }
 
 .benefit-card {
+  position: relative;
   padding: 32px 66px 32px 32px;
   background-color: #000000;
   border-radius: 6px;
+  overflow: hidden;
 }
 .benefit-card__title {
   color: #FFFFFF;
@@ -213,4 +224,65 @@ body {
 }
 .benefit-card--wide {
   grid-column: span 2;
+}
+.benefit-card__figure {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+}
+.benefit-card__figure--bordered {
+  left: -15px;
+  bottom: -18px;
+  border: 2px solid #2F2F2F;
+  border-top-right-radius: 32px;
+}
+.benefit-card__figure--bordered .benefit-card__image {
+  border: 13px solid #121212;
+  border-top-right-radius: 32px;
+  box-sizing: border-box;
+}
+.benefit-card__image {
+  max-width: 100%;
+}
+
+.testimonial-card {
+  position: relative;
+  margin-right: 12px;
+  height: 470px;
+  padding: 32px;
+  box-sizing: border-box;
+  background-color: #000000;
+  border-radius: 6px;
+}
+.testimonial-card__title {
+  font-size: 32px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #FFFFFF;
+}
+.testimonial-card__info {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+}
+.testimonial-card__description {
+  width: 250px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.5);
+}
+.testimonial-card__author {
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.5);
+}
+.testimonial-card__author em {
+  color: #FFFFFF;
 }

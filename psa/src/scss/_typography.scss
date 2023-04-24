@@ -41,4 +41,12 @@ body {
     font-family: Inter;
     color: $color-text;
     letter-spacing: -0.03em;
+    em {
+        font-weight: 600;
+        background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
 }

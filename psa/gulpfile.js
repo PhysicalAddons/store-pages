@@ -41,3 +41,4 @@ gulp.task("watch", function () {
 });
 
 gulp.task("default", gulp.parallel("browserSync", "compile", "watch", "css"));
+gulp.task("build", gulp.parallel("compile", "css"));

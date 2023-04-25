@@ -1,7 +1,5 @@
 .comparison {
 
-
-
     &__title {
         @extend .h2;
     }
@@ -62,4 +60,45 @@
         opacity: 0.5;
     }
 
+    @media (max-width: 500px) {
+
+        table {
+            display: block;
+          }
+        
+          thead {
+            display: none;
+          }
+        
+          tr {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+            border: none;
+          }
+        
+          td,
+          th {
+            display: block;
+          }
+        
+          td:nth-child(1),
+          th:nth-child(1) {
+            width: 100%;
+          }
+        
+          td:nth-child(2),
+          th:nth-child(2),
+          td:nth-child(3),
+          th:nth-child(3) {
+            width: 45%;
+          }
+        
+          tr:last-child {
+            td {
+              border-bottom: 1px solid #ccc;
+            }
+          }
+        
+    }
 }

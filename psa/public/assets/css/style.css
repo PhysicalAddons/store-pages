@@ -78,7 +78,7 @@ body {
   color: #000000;
 }
 
-.h2, .gallery__title, .testimonials__title, .benefits__title {
+.h2, .gallery__title, .notes__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
   padding: 0 0 64px 16px;
   font-size: 40px;
   font-weight: 500;
@@ -87,7 +87,7 @@ body {
   color: #000000;
   letter-spacing: -0.03em;
 }
-.h2 em, .gallery__title em, .testimonials__title em, .benefits__title em {
+.h2 em, .gallery__title em, .notes__title em, .testimonials__title em, .controls__title em, .comparison__title em, .benefits__title em {
   font-weight: 600;
   background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
   -webkit-background-clip: text;
@@ -115,6 +115,159 @@ body {
   grid-auto-rows: 500px;
   grid-gap: 12px;
   transition: grid-auto-rows 1s linear;
+}
+
+.comparison table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.comparison table th,
+.comparison table td {
+  width: 33.3333%;
+  padding: 8px 16px 32px 0px;
+  text-align: left;
+}
+.comparison table tr {
+  border-bottom: 1px solid #ccc;
+}
+.comparison table tr:last-child {
+  border-bottom: none;
+}
+.comparison h3 {
+  font-size: 30px;
+}
+.comparison h4 {
+  font-size: 20px;
+}
+.comparison .lightText {
+  opacity: 0.5;
+}
+
+.controls .heroBlock {
+  background: #b94aff;
+  position: relative;
+  width: 100%;
+  padding-bottom: 40%;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 32px;
+}
+.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .controls__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+}
+.controls table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-bottom: 1px solid #ccc;
+}
+.controls table h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.controls table p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  padding-left: 8px;
+}
+.controls table th, .controls table td {
+  padding: 8px 0px 32px 0px;
+  text-align: left;
+  border-top: 1px solid #ccc;
+}
+.controls table tr {
+  border-bottom: 1px solid #ccc;
+}
+.controls table th + th,
+.controls table td + td {
+  border-left: 1px solid #ccc;
+}
+.controls table th:nth-child(1), .controls table td:nth-child(1) {
+  width: 30%;
+}
+.controls table th:nth-child(2), .controls table td:nth-child(2) {
+  width: 70%;
+}
+@media (max-width: 500px) {
+  .controls table {
+    display: block;
+  }
+  .controls tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    border: none;
+  }
+  .controls td,
+  .controls th {
+    display: block;
+    width: calc(50% - 8px);
+    border-top: none;
+    border-left: none;
+    margin-right: 8px;
+  }
+  .controls tr:last-child td {
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.notes h2 {
+  padding-left: 30%;
+}
+.notes table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.notes table h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+.notes table p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+.notes table th, .notes table td {
+  padding: 16px 0px 64px 0px;
+  text-align: left;
+  border-top: 1px solid #ccc;
+}
+.notes table tr {
+  border-bottom: 1px solid #ccc;
+}
+.notes table th:nth-child(1), .notes table td:nth-child(1) {
+  width: 30%;
+}
+.notes table th:nth-child(2), .notes table td:nth-child(2) {
+  width: 70%;
+}
+@media (max-width: 500px) {
+  .notes table {
+    display: block;
+  }
+  .notes tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    border: none;
+  }
+  .notes td,
+  .notes th {
+    display: block;
+    width: calc(50% - 8px);
+    border-top: none;
+    border-left: none;
+    margin-right: 8px;
+  }
 }
 
 .gallery__title span {

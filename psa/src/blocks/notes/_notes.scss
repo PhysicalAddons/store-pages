@@ -1,0 +1,72 @@
+.notes {
+
+    &__title {
+        @extend .h2;
+    }
+
+    h2 {     
+        padding-left: 30%;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+
+        h4 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+        }
+      
+        th, td {
+            padding: 16px 0px 64px 0px;
+            text-align: left;
+            border-top: 1px solid #ccc;
+        }
+      
+        tr {
+            border-bottom: 1px solid #ccc;
+        }
+
+        th:nth-child(1), td:nth-child(1) {
+            width: 30%;
+        }
+        
+        th:nth-child(2), td:nth-child(2) {
+            width: 70%;
+        }
+        
+    }
+
+    @media (max-width: 500px) {
+
+        table {
+            display: block;
+        }
+      
+        tr {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+            border: none;
+        }
+      
+        td,
+        th {
+            display: block;
+            width: calc(50% - 8px);
+            border-top: none;
+            border-left: none;
+            margin-right: 8px;
+        }
+      
+      }
+
+}

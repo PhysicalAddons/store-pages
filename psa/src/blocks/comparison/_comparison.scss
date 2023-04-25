@@ -1,0 +1,38 @@
+.comparison {
+
+    &__title {
+        @extend .h2;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+            width: 33.3333%;
+            padding: 8px 16px 32px 0px;
+            text-align: left;
+        }
+
+        tr {
+            border-bottom: 1px solid #ccc;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .lightText {
+        opacity: 0.5;
+    }
+
+}

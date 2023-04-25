@@ -5,7 +5,10 @@
     }
 
     .heroBlock {
-        background: #b94aff;
+        background-image: url('/assets/images/controls-backup.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         position: relative;
         width: 100%;
         padding-bottom: 40%;
@@ -14,6 +17,7 @@
         margin-bottom: 32px;
 
         .h2 {
+            color: white;
             position: absolute;
             top: 0;
             left: 0;
@@ -27,7 +31,9 @@
         width: 100%;
         border-collapse: separate;
         border-spacing: 0;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #DCDCDC; 
+        padding-left: 16px;
+        padding-right: 16px;
 
         h4 {
             font-weight: 500;
@@ -45,16 +51,17 @@
         th, td {
             padding: 8px 0px 32px 0px;
             text-align: left;
-            border-top: 1px solid #ccc;
+            border-top: 1px solid #DCDCDC;
+            vertical-align: top;
         }
       
         tr {
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #DCDCDC;
         }
           
         th + th,
         td + td {
-            border-left: 1px solid #ccc;
+            border-left: 1px solid #DCDCDC;
         }
 
         th:nth-child(1), td:nth-child(1) {
@@ -69,29 +76,40 @@
 
     @media (max-width: 500px) {
 
+        h2 {
+            padding: 16px !important;
+            font-size: 32px;
+        }
+
         table {
             display: block;
+
+            p {
+                padding-left: 0px;
+                margin-bottom: 8px;
+            }
         }
       
         tr {
             display: flex;
             flex-wrap: wrap;
-            margin-bottom: 8px;
-            border: none;
+            margin-bottom: 8px !important;
+            border: none !important;
         }
       
         td,
         th {
             display: block;
-            width: calc(50% - 8px);
-            border-top: none;
-            border-left: none;
-            margin-right: 8px;
+            padding: 8px 0px 8px 0px !important;
+            width: 100% !important;
+            border-top: none !important;
+            border-left: none !important;
+            margin-right: 8px !important;
         }
       
         tr:last-child {
             td {
-                border-bottom: 1px solid #ccc;
+                border-bottom: none;
             }
         }
       }

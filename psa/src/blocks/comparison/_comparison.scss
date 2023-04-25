@@ -1,22 +1,30 @@
 .comparison {
 
+
+
     &__title {
         @extend .h2;
     }
 
-    table {
+    .comparison__table {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    table { 
         width: 100%;
         border-collapse: collapse;
 
         th,
         td {
             width: 33.3333%;
-            padding: 8px 16px 32px 0px;
+            padding: 16px 16px 48px 0px;
             text-align: left;
+            vertical-align: top;
         }
 
         tr {
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #DCDCDC;
             &:last-child {
                 border-bottom: none;
             }
@@ -25,10 +33,29 @@
 
     h3 {
         font-size: 30px;
+        font-weight: 500;
     }
 
     h4 {
         font-size: 20px;
+    }
+
+    img {
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 16px;
+        margin-top: -4px;
+    }
+    .imgException {
+        margin-top: 0px;
+    }
+
+    p {
+        display: inline-block;
+        width: calc(100% - 57px);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
     }
 
     .lightText {

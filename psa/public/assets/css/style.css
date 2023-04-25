@@ -117,6 +117,10 @@ body {
   transition: grid-auto-rows 1s linear;
 }
 
+.comparison .comparison__table {
+  padding-right: 16px;
+  padding-left: 16px;
+}
 .comparison table {
   width: 100%;
   border-collapse: collapse;
@@ -124,27 +128,89 @@ body {
 .comparison table th,
 .comparison table td {
   width: 33.3333%;
-  padding: 8px 16px 32px 0px;
+  padding: 16px 16px 48px 0px;
   text-align: left;
+  vertical-align: top;
 }
 .comparison table tr {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #DCDCDC;
 }
 .comparison table tr:last-child {
   border-bottom: none;
 }
 .comparison h3 {
   font-size: 30px;
+  font-weight: 500;
 }
 .comparison h4 {
   font-size: 20px;
 }
+.comparison img {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 16px;
+  margin-top: -4px;
+}
+.comparison .imgException {
+  margin-top: 0px;
+}
+.comparison p {
+  display: inline-block;
+  width: calc(100% - 57px);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+}
 .comparison .lightText {
   opacity: 0.5;
 }
+@media (max-width: 500px) {
+  .comparison table {
+    display: block;
+  }
+  .comparison thead {
+    display: none;
+  }
+  .comparison tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    border: none !important;
+  }
+  .comparison td,
+  .comparison th {
+    display: block;
+    padding: 0px 0px 16px 0px !important;
+  }
+  .comparison h4 {
+    font-size: 20px;
+    border-bottom: 1px solid #DCDCDC;
+    padding-bottom: 8px;
+    margin-top: 20px;
+  }
+  .comparison p {
+    width: calc(100% - 64px);
+  }
+  .comparison td:nth-child(1),
+  .comparison th:nth-child(1) {
+    width: 100%;
+  }
+  .comparison td:nth-child(2),
+  .comparison th:nth-child(2),
+  .comparison td:nth-child(3),
+  .comparison th:nth-child(3) {
+    width: 50%;
+  }
+  .comparison tr:last-child td {
+    border-bottom: none;
+  }
+}
 
 .controls .heroBlock {
-  background: #b94aff;
+  background-image: url("/assets/images/controls-backup.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
   width: 100%;
   padding-bottom: 40%;
@@ -153,6 +219,7 @@ body {
   margin-bottom: 32px;
 }
 .controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .controls__title {
+  color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -164,7 +231,9 @@ body {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #DCDCDC;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .controls table h4 {
   font-weight: 500;
@@ -180,15 +249,15 @@ body {
 .controls table th, .controls table td {
   padding: 8px 0px 32px 0px;
   text-align: left;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #DCDCDC;
   vertical-align: top;
 }
 .controls table tr {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #DCDCDC;
 }
 .controls table th + th,
 .controls table td + td {
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #DCDCDC;
 }
 .controls table th:nth-child(1), .controls table td:nth-child(1) {
   width: 30%;
@@ -197,28 +266,41 @@ body {
   width: 70%;
 }
 @media (max-width: 500px) {
+  .controls h2 {
+    padding: 16px !important;
+    font-size: 32px;
+  }
   .controls table {
     display: block;
+  }
+  .controls table p {
+    padding-left: 0px;
+    margin-bottom: 8px;
   }
   .controls tr {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 8px;
-    border: none;
+    margin-bottom: 8px !important;
+    border: none !important;
   }
   .controls td,
   .controls th {
     display: block;
-    width: calc(50% - 8px);
-    border-top: none;
-    border-left: none;
-    margin-right: 8px;
+    padding: 8px 0px 8px 0px !important;
+    width: 100% !important;
+    border-top: none !important;
+    border-left: none !important;
+    margin-right: 8px !important;
   }
   .controls tr:last-child td {
-    border-bottom: 1px solid #ccc;
+    border-bottom: none;
   }
 }
 
+.notes {
+  padding-left: 16px;
+  padding-right: 16px;
+}
 .notes h2 {
   padding-left: 30%;
 }
@@ -231,43 +313,65 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
+  padding-right: 32px;
 }
 .notes table p {
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
 }
-.notes table th, .notes table td {
+.notes table img {
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border-radius: 6px;
+}
+.notes table th,
+.notes table td {
   padding: 16px 0px 64px 0px;
   text-align: left;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #dcdcdc;
+  vertical-align: top;
 }
 .notes table tr {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #dcdcdc;
 }
-.notes table th:nth-child(1), .notes table td:nth-child(1) {
+.notes table th:nth-child(1),
+.notes table td:nth-child(1) {
   width: 30%;
 }
-.notes table th:nth-child(2), .notes table td:nth-child(2) {
+.notes table th:nth-child(2),
+.notes table td:nth-child(2) {
   width: 70%;
 }
 @media (max-width: 500px) {
+  .notes h2 {
+    padding-left: 0px !important;
+  }
   .notes table {
     display: block;
+  }
+  .notes table h4 {
+    padding-right: 0px;
+    margin-top: 32px;
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 400;
   }
   .notes tr {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 8px;
-    border: none;
+    border: none !important;
   }
   .notes td,
   .notes th {
     display: block;
-    width: calc(50% - 8px);
-    border-top: none;
-    border-left: none;
-    margin-right: 8px;
+    width: 100% !important;
+    border-top: none !important;
+    border-left: none !important;
+    margin-right: 8px !important;
+    padding: 8px 0px 16px 0px !important;
   }
 }
 

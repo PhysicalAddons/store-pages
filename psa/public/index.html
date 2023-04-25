@@ -84,45 +84,91 @@
 		HDRI comparison
 	</h2>
 
-	<div class="comparison__table">
+	<div class="comparison__table"> 
 
-		<table>
+	<table>
+    <thead>
+        <tr>
+            <th class=""></th>
+            <th>
+                <h3>PSA</h3><br>
+                <p class="lightText">Physical Starlight <br>and Atmosphere</p>
+            </th>
+            <th>
+                <h3>HDRI</h3><br>
+                <p class="lightText">High dynamic <br>range image</p>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
             <tr>
-                <th></th>
-                <th><h3>PSA</h3><br><p class="lightText">Physical Starlight <br>and Atmosphere</p></th>
-                <th><h3>HDRI</h3><br><p class="lightText">High dynamic <br>range image</p></th>
+                <td class=""><h4>Filesize</h4></td>
+                <td>
+                    <img class="imgException" src="assets/images/icons/1MB.svg"></img>
+                    <p>Lightweight. Addon itself - 600kb install file. Each preset less than 1MB</p>
+                </td>
+                <td>
+                    <img class="imgException" src="assets/images/icons/1GB.svg"></img>
+                    <p>Large files for each HDRI up to 4GB</p>
+                </td>
             </tr>
             <tr>
-                <td><h4>Filesize</h4></td>
-                <td><p>Lightweight. Addon itself - 600kb install file. Each preset less than 1MB</p></td>
-                <td><p>Large files for each HDRI up to 4GB</p></td>
+                <td class=""><h4>Animation</h4></td>
+                <td>
+                    <img src="assets/images/icons/ir.svg"></img>
+                    <p>Animate each parameter in keyframes</p>
+                </td>
+                <td>
+                    <img src="assets/images/icons/nav.svg"></img>
+                    <p>HDRIs are static</p>
+                </td>
             </tr>
             <tr>
-                <td><h4>Animation</h4></td>
-                <td><p>Animate each parameter in keyframes</p></td>
-                <td><p>HDRIs are static</p></td>
+                <td class=""><h4>Artistic freedom</h4></td>
+                <td>
+                    <img src="assets/images/icons/ir.svg"></img>
+                    <p>Limitless configuration possibilities to build any world you imagine</p>
+                </td>
+                <td>
+                    <img src="assets/images/icons/nav.svg"></img>
+                    <p>Limited to the captured  HDRI file</p>
+                </td>
             </tr>
             <tr>
-                <td><h4>Artistic freedom</h4></td>
-                <td><p>Limitless configuration possibilities to build any world you imagine</p></td>
-                <td><p>Limited to the captured  HDRI file</p></td>
+                <td class=""><h4>Ease of use</h4></td>
+                <td>
+                    <img src="assets/images/icons/ir.svg"></img>
+                    <p>One-click presets</p>
+                </td>
+                <td>
+                    <img src="assets/images/icons/ir.svg"></img>
+                    <p>Setup with 2 nodes</p>
+                </td>
             </tr>
             <tr>
-                <td><h4>Ease of use</h4></td>
-                <td><p>One-click presets</p></td>
-                <td><p>Setup with 2 nodes</p></td>
+                <td class=""><h4>Dynamic interaction</h4></td>
+                <td>
+                    <img src="assets/images/icons/ir.svg"></img>
+                    <p>For every parameter</p>
+                </td>
+                <td>
+                    <img src="assets/images/icons/nav.svg"></img>
+                    <p>HDRIs are static</p>
+                </td>
             </tr>
             <tr>
-                <td><h4>Dynamic interaction</h4></td>
-                <td><p>For every parameter</p></td>
-                <td><p>HDRIs are static</p></td>
+                <td class=""><h4>Fast Workflow</h4></td>
+                <td>
+                    <img src="assets/images/icons/ir.svg"></img>
+                    <p>intuitively tunable parameters for specific lighting conditions </p>
+                </td>
+                <td>
+                    <img src="assets/images/icons/nav.svg"></img>
+                    <p>Significantly longer prototyping for specific lighting conditions</p>
+                </td>
             </tr>
-            <tr>
-                <td><h4>Fast Workflow</h4></td>
-                <td><p>intuitively tunable parameters for specific lighting conditions </p></td>
-                <td><p>Significantly longer prototyping for specific lighting conditions</p></td>
-            </tr>
-        </table>
+    </tbody>
+</table>
         
 	</div>
 </div>                <div class="gallery block" id="gallery">
@@ -1032,7 +1078,11 @@ abc
             </tr>
             <tr>
                 <td><h4>Why procedural skies?</h4></td>
-                <td><p>Procedural skies are more common in the games industry, and there the industry has developed way past the static HDRIs, skyboxes, or skydomes.<br><br>The industry is still using the good old HDRI light probe method to do outdoor lighting, and for a good reason - it is the simplest way to simulate realistic lighting conditions, without worrying that it will look wrong. After all, it is a 360° snapshot of a real environment.<br><br>HDRI probes unfortunately are not able to capture one crucial aspect - the fact that the sky is dynamic. The sky is not just a membrane of the imaginary rim of the sky, it has volume. The sky's the atmosphere and the atmosphere is a physical medium consisting of a blend of gases. The sky literally starts just outside of your eyeball and extends to outer space. Sunlight travels through this medium illuminating, scattering, and absorbing in it.<br><br>Physical Starlight and Atmosphere is a product 2 years in active development and a culmination of at least a decade of research and development.</p></td>
+                <td><p>Procedural skies are more common in the games industry, and there the industry has developed way past the static HDRIs, skyboxes, or skydomes.<br><br>The industry is still using the good old HDRI light probe method to do outdoor lighting, and for a good reason - it is the simplest way to simulate realistic lighting conditions, without worrying that it will look wrong. After all, it is a 360° snapshot of a real environment.<br><br>HDRI probes unfortunately are not able to capture one crucial aspect - the fact that the sky is dynamic. The sky is not just a membrane of the imaginary rim of the sky, it has volume. The sky's the atmosphere and the atmosphere is a physical medium consisting of a blend of gases. The sky literally starts just outside of your eyeball and extends to outer space. Sunlight travels through this medium illuminating, scattering, and absorbing in it.<br>
+                
+                <img src="assets/images/notes-1.jpg"></img>
+
+                <br>Physical Starlight and Atmosphere is a product 2 years in active development and a culmination of at least a decade of research and development.</p></td>
             </tr>
             <tr>
                 <td><h4>Awesome time (and money) saver!</h4></td>

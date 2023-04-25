@@ -557,6 +557,8 @@ body {
   box-sizing: border-box;
   background-color: #000000;
   border-radius: 6px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .testimonial-card__title {
   font-size: 32px;

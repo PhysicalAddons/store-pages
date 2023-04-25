@@ -181,6 +181,7 @@ body {
   padding: 8px 0px 32px 0px;
   text-align: left;
   border-top: 1px solid #ccc;
+  vertical-align: top;
 }
 .controls table tr {
   border-bottom: 1px solid #ccc;
@@ -369,14 +370,26 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 .benefit-card__title, .benefit-card__description {
+  position: relative;
   display: inline;
   font-family: Inter;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.4;
+  z-index: 1;
 }
 .benefit-card--wide {
   grid-column: span 2;
+}
+.benefit-card--background {
+  background-position: center;
+  background-size: cover;
+}
+.benefit-card--onethird {
+  padding: 32px 66% 32px 32px;
+}
+.benefit-card--twothirds {
+  padding: 32px 33% 32px 32px;
 }
 .benefit-card__figure {
   position: absolute;
@@ -397,6 +410,24 @@ body {
 }
 .benefit-card__image {
   max-width: 100%;
+}
+.benefit-card__note {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  z-index: 1;
+}
+.benefit-card__label, .benefit-card__text {
+  font-size: 12px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.benefit-card__label {
+  color: rgba(255, 255, 255, 0.5);
+}
+.benefit-card__text {
+  color: #FFFFFF;
 }
 
 .testimonial-card {

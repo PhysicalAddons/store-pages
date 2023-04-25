@@ -467,6 +467,11 @@ body {
   border-radius: 6px;
   overflow: hidden;
 }
+@media (max-width: 1199px) {
+  .benefit-card {
+    padding: 32px;
+  }
+}
 .benefit-card__title {
   color: #FFFFFF;
 }

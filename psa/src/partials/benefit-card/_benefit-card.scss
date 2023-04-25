@@ -4,6 +4,10 @@
     background-color: #000000;
     border-radius: $default-radius;
     overflow: hidden;
+    @include respond-below(lg) {
+        padding: 32px;
+    }
+
     &__title {
         color: #FFFFFF;
     }

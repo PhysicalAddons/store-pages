@@ -53,7 +53,7 @@
         width: calc(100% - 57px);
         font-weight: 400;
         font-size: 12px;
-        line-height: 15px;
+        line-height: 140%;
     }
 
     .lightText {
@@ -64,41 +64,52 @@
 
         table {
             display: block;
-          }
+        }
         
-          thead {
+        thead {
             display: none;
-          }
+        }
         
-          tr {
+        tr {
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 8px;
-            border: none;
-          }
+            border: none !important;
+        }
         
-          td,
-          th {
+        td,
+        th {
             display: block;
-          }
+            padding: 0px 0px 16px 0px !important;
+        }
+
+        h4 {
+            font-size: 20px;
+            border-bottom: 1px solid #DCDCDC;
+            padding-bottom: 8px;
+            margin-top: 20px;
+        }
+
+        p {
+            width: calc(100% - 64px);
+        }
         
-          td:nth-child(1),
-          th:nth-child(1) {
+        td:nth-child(1),
+        th:nth-child(1) {
             width: 100%;
-          }
+        }
         
-          td:nth-child(2),
-          th:nth-child(2),
-          td:nth-child(3),
-          th:nth-child(3) {
-            width: 45%;
-          }
+        td:nth-child(2),
+        th:nth-child(2),
+        td:nth-child(3),
+        th:nth-child(3) {
+            width: 50%;
+        }
         
-          tr:last-child {
+        tr:last-child {
             td {
-              border-bottom: 1px solid #ccc;
+              border-bottom: none;
             }
-          }
-        
+        }
     }
 }

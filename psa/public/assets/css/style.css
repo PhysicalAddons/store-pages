@@ -159,7 +159,7 @@ body {
   width: calc(100% - 57px);
   font-weight: 400;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 140%;
 }
 .comparison .lightText {
   opacity: 0.5;
@@ -175,11 +175,21 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 8px;
-    border: none;
+    border: none !important;
   }
   .comparison td,
   .comparison th {
     display: block;
+    padding: 0px 0px 16px 0px !important;
+  }
+  .comparison h4 {
+    font-size: 20px;
+    border-bottom: 1px solid #DCDCDC;
+    padding-bottom: 8px;
+    margin-top: 20px;
+  }
+  .comparison p {
+    width: calc(100% - 64px);
   }
   .comparison td:nth-child(1),
   .comparison th:nth-child(1) {
@@ -189,10 +199,10 @@ body {
   .comparison th:nth-child(2),
   .comparison td:nth-child(3),
   .comparison th:nth-child(3) {
-    width: 45%;
+    width: 50%;
   }
   .comparison tr:last-child td {
-    border-bottom: 1px solid #ccc;
+    border-bottom: none;
   }
 }
 

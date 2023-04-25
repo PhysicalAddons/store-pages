@@ -116,7 +116,7 @@ body {
   grid-gap: 12px;
   transition: grid-auto-rows 1s linear;
 }
-@media (max-width: 766px) {
+@media (max-width: 467px) {
   .benefits__grid {
     grid-template-columns: auto;
   }
@@ -472,7 +472,7 @@ body {
   border-radius: 6px;
   overflow: hidden;
 }
-@media (max-width: 1199px) {
+@media (max-width: 687px) {
   .benefit-card {
     padding: 32px;
   }
@@ -495,7 +495,7 @@ body {
 .benefit-card--wide {
   grid-column: span 2;
 }
-@media (max-width: 766px) {
+@media (max-width: 467px) {
   .benefit-card--wide {
     grid-column: auto;
   }

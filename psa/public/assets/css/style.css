@@ -116,6 +116,11 @@ body {
   grid-gap: 12px;
   transition: grid-auto-rows 1s linear;
 }
+@media (max-width: 766px) {
+  .benefits__grid {
+    grid-template-columns: auto;
+  }
+}
 
 .comparison .comparison__table {
   padding-right: 16px;
@@ -489,6 +494,11 @@ body {
 }
 .benefit-card--wide {
   grid-column: span 2;
+}
+@media (max-width: 766px) {
+  .benefit-card--wide {
+    grid-column: auto;
+  }
 }
 .benefit-card--background {
   background-position: center;

@@ -25,6 +25,9 @@
     }
     &--wide {
         grid-column: span 2; // better if this would be passed from the top
+        @include respond-below(sm) {
+			grid-column: auto;
+		}
     }
     &--background {
         background-position: center;

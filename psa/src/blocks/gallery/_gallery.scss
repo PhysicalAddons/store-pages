@@ -41,14 +41,14 @@
 			transition: opacity .2s linear;
 			z-index: 1;
 		}
-		// &:hover, &:focus {
-		// 	&:after {
-		// 		opacity: 1;
-		// 		// @include respond-below(xs) {
-		// 		// 	display: none; // on mobile there is no hover
-		// 		// }
-		// 	}
-		// }
+		&:hover, &:focus {
+			&:after {
+				opacity: 1;
+				// @include respond-below(xs) {
+				// 	display: none; // on mobile there is no hover
+				// }
+			}
+		}
 
 		&--wide {
 			grid-column: span 2;
@@ -85,7 +85,7 @@
 			left: 16px;
 
 			text-decoration: none;
-			color: $color-text;
+			color: #FFFFFF;
 			font-size: 12px;
 			font-weight: 500;
 			//z-index: 2;

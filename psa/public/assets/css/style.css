@@ -406,6 +406,9 @@ body {
   transition: opacity 0.2s linear;
   z-index: 1;
 }
+.gallery__artwork:hover:after, .gallery__artwork:focus:after {
+  opacity: 1;
+}
 .gallery__artwork--wide {
   grid-column: span 2;
 }
@@ -429,7 +432,7 @@ body {
   bottom: 36px;
   left: 16px;
   text-decoration: none;
-  color: #000000;
+  color: #FFFFFF;
   font-size: 12px;
   font-weight: 500;
 }

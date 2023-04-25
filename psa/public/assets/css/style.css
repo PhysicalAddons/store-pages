@@ -406,13 +406,10 @@ body {
   transition: opacity 0.2s linear;
   z-index: 1;
 }
-.gallery__artwork:hover:after, .gallery__artwork:focus:after {
-  opacity: 1;
-}
 .gallery__artwork--wide {
   grid-column: span 2;
 }
-.gallery__artwork > a > img {
+.gallery__artwork > img {
   width: 100%;
   height: 100%;
   object-fit: cover;

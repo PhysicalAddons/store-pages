@@ -41,27 +41,27 @@
 			transition: opacity .2s linear;
 			z-index: 1;
 		}
-		&:hover, &:focus {
-			&:after {
-				opacity: 1;
-				// @include respond-below(xs) {
-				// 	display: none; // on mobile there is no hover
-				// }
-			}
-		}
+		// &:hover, &:focus {
+		// 	&:after {
+		// 		opacity: 1;
+		// 		// @include respond-below(xs) {
+		// 		// 	display: none; // on mobile there is no hover
+		// 		// }
+		// 	}
+		// }
 
 		&--wide {
 			grid-column: span 2;
 		}
 
-		> a {
+		// > a {
 			> img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: bottom;
 			}
-		}
+		// }
 
 		> figcaption {
 			position: relative;

@@ -182,6 +182,11 @@ body {
   grid-gap: 12px;
   transition: grid-auto-rows 1s linear;
 }
+@media (max-width: 467px) {
+  .benefits__grid {
+    grid-template-columns: auto;
+  }
+}
 
 .comparison .comparison__table {
   padding-right: 16px;
@@ -473,7 +478,7 @@ body {
 .gallery__artwork--wide {
   grid-column: span 2;
 }
-.gallery__artwork > a > img {
+.gallery__artwork > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -493,7 +498,7 @@ body {
   bottom: 36px;
   left: 16px;
   text-decoration: none;
-  color: #000000;
+  color: #FFFFFF;
   font-size: 12px;
   font-weight: 500;
 }
@@ -533,6 +538,11 @@ body {
   border-radius: 6px;
   overflow: hidden;
 }
+@media (max-width: 687px) {
+  .benefit-card {
+    padding: 32px;
+  }
+}
 .benefit-card__title {
   color: #FFFFFF;
 }
@@ -540,14 +550,31 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 .benefit-card__title, .benefit-card__description {
+  position: relative;
   display: inline;
   font-family: Inter;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.4;
+  z-index: 1;
 }
 .benefit-card--wide {
   grid-column: span 2;
+}
+@media (max-width: 467px) {
+  .benefit-card--wide {
+    grid-column: auto;
+  }
+}
+.benefit-card--background {
+  background-position: center;
+  background-size: cover;
+}
+.benefit-card--onethird {
+  padding: 32px 66% 32px 32px;
+}
+.benefit-card--twothirds {
+  padding: 32px 33% 32px 32px;
 }
 .benefit-card__figure {
   position: absolute;
@@ -569,6 +596,24 @@ body {
 .benefit-card__image {
   max-width: 100%;
 }
+.benefit-card__note {
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+  z-index: 1;
+}
+.benefit-card__label, .benefit-card__text {
+  font-size: 12px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.benefit-card__label {
+  color: rgba(255, 255, 255, 0.5);
+}
+.benefit-card__text {
+  color: #FFFFFF;
+}
 
 .testimonial-card {
   position: relative;
@@ -578,6 +623,8 @@ body {
   box-sizing: border-box;
   background-color: #000000;
   border-radius: 6px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .testimonial-card__title {
   font-size: 32px;

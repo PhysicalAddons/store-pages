@@ -11,6 +11,9 @@
 		grid-auto-rows: 500px;
 		grid-gap: 12px;
 		transition: grid-auto-rows 1s linear;
+		@include respond-below(sm) {
+			grid-template-columns: auto;
+		}
     }
     
 }

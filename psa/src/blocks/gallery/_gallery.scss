@@ -54,14 +54,14 @@
 			grid-column: span 2;
 		}
 
-		> a {
+		// > a {
 			> img {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: bottom;
 			}
-		}
+		// }
 
 		> figcaption {
 			position: relative;
@@ -85,7 +85,7 @@
 			left: 16px;
 
 			text-decoration: none;
-			color: $color-text;
+			color: #FFFFFF;
 			font-size: 12px;
 			font-weight: 500;
 			//z-index: 2;

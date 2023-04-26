@@ -4,6 +4,10 @@
     background-color: #000000;
     border-radius: $default-radius;
     overflow: hidden;
+    @include respond-below(lg) {
+        padding: 32px;
+    }
+
     &__title {
         color: #FFFFFF;
     }
@@ -11,14 +15,29 @@
         color: rgba(#FFFFFF, .5);
     }
     &__title, &__description {
+        position: relative;
         display: inline;
         font-family: Inter;
         font-size: 16px;
         font-weight: 500;
         line-height: 1.4;
+        z-index: 1; // to be on top of the img
     }
     &--wide {
         grid-column: span 2; // better if this would be passed from the top
+        @include respond-below(sm) {
+			grid-column: auto;
+		}
+    }
+    &--background {
+        background-position: center;
+        background-size: cover;
+    }
+    &--onethird {
+        padding: 32px 66% 32px 32px;
+    }
+    &--twothirds {
+        padding: 32px 33% 32px 32px;
     }
     &__figure {
         position: absolute;
@@ -39,5 +58,23 @@
     }
     &__image {
         max-width: 100%;
+    }
+    &__note {
+        position: absolute;
+        left: 32px;
+        bottom: 32px;
+        z-index: 1;
+    }
+    &__label, &__text {
+        font-size: 12px;
+        font-family: Inter;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+    &__label {
+        color: rgba(#FFFFFF, .5);
+    }
+    &__text {
+        color: #FFFFFF;
     }
 }

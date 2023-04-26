@@ -631,12 +631,22 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.testimonial-card--case-study .testimonial-card__title:before {
+  display: block;
+  margin-bottom: 6px;
+  content: url("/assets/images/icons/case-study.svg");
+}
 .testimonial-card__title {
   font-size: 32px;
   font-family: Inter;
   font-weight: 500;
   line-height: 1.1;
   color: #FFFFFF;
+}
+.testimonial-card__title:before {
+  display: block;
+  margin-bottom: 6px;
+  content: url("/assets/images/icons/quote.svg");
 }
 .testimonial-card__info {
   position: absolute;

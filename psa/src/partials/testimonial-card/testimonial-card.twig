@@ -1,7 +1,13 @@
-<div class="testimonial-card" style="background-image: url('{{background}}')">
+<div class="testimonial-card{{ (class) ? ' '~class : '' }}" style="background-image: url('{{background}}')">
     <h3 class="testimonial-card__title">{{title}}</h3>
     <div class="testimonial-card__info">
         <p class="testimonial-card__description">{{description}}</p>
+        {% if author %}
         <div class="testimonial-card__author">{{author}}</div>
+        {% elseif logo %}
+        <div class="testimonial-card__logo">
+            <img src="{{logo}}" alt="Company Logo">
+        </div>
+        {% endif %}
     </div>
 </div>

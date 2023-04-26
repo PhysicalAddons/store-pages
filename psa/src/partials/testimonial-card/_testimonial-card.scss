@@ -10,6 +10,15 @@
     
     background-size: cover;
     background-repeat: no-repeat;
+    
+    &--case-study &__title {
+        &:before {
+            display: block;
+            margin-bottom: 6px;
+            content: url('/assets/images/icons/case-study.svg');
+        }
+    }
+
 
     &__title {
         font-size: 32px;
@@ -17,6 +26,11 @@
         font-weight: 500;
         line-height: 1.1;
         color: #FFFFFF;
+        &:before {
+            display: block;
+            margin-bottom: 6px;
+            content: url('/assets/images/icons/quote.svg');
+        }
     }
 
     &__info {

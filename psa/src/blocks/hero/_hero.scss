@@ -47,7 +47,7 @@
         h1 {
             font-weight: 500;
             font-size: 50px;
-            line-height: 61px;
+            line-height: 120%;
             text-align: center;
             letter-spacing: -0.03em;
             margin-bottom: 32px;
@@ -92,12 +92,35 @@
     }
 
     @media (max-width: 600px) {
+
+        .tabs {
+
+            height: 40px;
+    
+            .label {
+                font-size: 12px;
+                padding-left: 0;
+            }
+            .tab {
+                padding: 0px 12px;
+                font-size: 12px;
+
+                span {
+                    padding-right: 4px;
+                }
+            }
+        }
+
         .bigBlock {
 
-            padding: 128px 16px 64px 16px;
+            padding: 25% 16px 25% 16px;
 
+            h1 {
+                font-size: 32px;
+            }
             h2 {
-                font-size: 16px;
+                font-size: 14px;
+                margin-bottom: 25%;
                 br {
                     display: none;
                 }

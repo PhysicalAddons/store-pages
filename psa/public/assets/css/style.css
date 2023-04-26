@@ -142,13 +142,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 128px 32px 64px 32px;
+  padding: 128px 32px 128px 32px;
   border-radius: 6px 0px 6px 6px;
 }
 .hero .bigBlock h1 {
   font-weight: 500;
   font-size: 50px;
-  line-height: 61px;
+  line-height: 120%;
   text-align: center;
   letter-spacing: -0.03em;
   margin-bottom: 32px;
@@ -161,16 +161,71 @@ body {
   text-align: center;
   color: white;
   margin-bottom: 128px;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 160.71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 .hero .bigBlock .video {
   margin-bottom: 64px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
 }
 .hero .bigBlock .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero .bigBlock .logoWall, .hero .bigBlock .logoWall2 {
   width: 100%;
 }
-.hero .bigBlock .logoWall {
-  width: 100%;
+.hero .bigBlock .logoWall2 {
+  display: none;
 }
+@media (max-width: 600px) {
+  .hero .tabs {
+    height: 40px;
+  }
+  .hero .tabs .label {
+    font-size: 12px;
+    padding-left: 0;
+  }
+  .hero .tabs .tab {
+    padding: 0px 12px;
+    font-size: 12px;
+  }
+  .hero .tabs .tab span {
+    padding-right: 4px;
+  }
+  .hero .bigBlock {
+    padding: 25% 16px 25% 16px;
+  }
+  .hero .bigBlock h1 {
+    font-size: 32px;
+  }
+  .hero .bigBlock h2 {
+    font-size: 14px;
+    margin-bottom: 25%;
+  }
+  .hero .bigBlock h2 br {
+    display: none;
+  }
+  .hero .bigBlock .logoWall {
+    display: none;
+  }
+  .hero .bigBlock .logoWall2 {
+    display: block;
+  }
+}
+
 .benefits__title {
   font-size: 50px;
 }
@@ -251,7 +306,7 @@ body {
   .comparison td,
   .comparison th {
     display: block;
-    padding: 0px 0px 16px 0px !important;
+    padding: 0px 0px 8px 0px !important;
   }
   .comparison h4 {
     font-size: 20px;
@@ -343,10 +398,13 @@ body {
   }
   .controls table {
     display: block;
+    border-bottom: none;
   }
   .controls table p {
     padding-left: 0px;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    font-size: 14px;
   }
   .controls tr {
     display: flex;

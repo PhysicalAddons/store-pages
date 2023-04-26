@@ -83,10 +83,13 @@
 
         table {
             display: block;
+            border-bottom: none;
 
             p {
                 padding-left: 0px;
-                margin-bottom: 8px;
+                margin-bottom: 0px;
+                font-weight: 400;
+                font-size: 14px;
             }
         }
       

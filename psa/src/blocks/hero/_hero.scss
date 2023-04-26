@@ -41,13 +41,13 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        padding: 128px 32px 64px 32px;
+        padding: 128px 32px 128px 32px;
         border-radius: 6px 0px 6px 6px;
 
         h1 {
             font-weight: 500;
             font-size: 50px;
-            line-height: 61px;
+            line-height: 120%;
             text-align: center;
             letter-spacing: -0.03em;
             margin-bottom: 32px;
@@ -60,19 +60,77 @@
             text-align: center;
             color: white;
             margin-bottom: 128px;
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 160.71%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
         }
         .video {
             margin-bottom: 64px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
             iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
+                height: 100%;
             }
         }
-        .logoWall {
+        .logoWall, .logoWall2 {
             width: 100%;
+        }
+        .logoWall2 {
+            display: none;
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
 
+        .tabs {
+
+            height: 40px;
+    
+            .label {
+                font-size: 12px;
+                padding-left: 0;
+            }
+            .tab {
+                padding: 0px 12px;
+                font-size: 12px;
+
+                span {
+                    padding-right: 4px;
+                }
+            }
+        }
+
+        .bigBlock {
+
+            padding: 25% 16px 25% 16px;
+
+            h1 {
+                font-size: 32px;
+            }
+            h2 {
+                font-size: 14px;
+                margin-bottom: 25%;
+                br {
+                    display: none;
+                }
+            }
+            .logoWall {
+                display: none;
+            }
+            .logoWall2 {
+                display: block;
+            }
+        }
     }
 }

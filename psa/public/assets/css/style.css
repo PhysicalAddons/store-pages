@@ -291,6 +291,10 @@ body {
   opacity: 0.5;
 }
 @media (max-width: 500px) {
+  .comparison .comparison__table {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
   .comparison table {
     display: block;
   }
@@ -302,6 +306,9 @@ body {
     flex-wrap: wrap;
     margin-bottom: 8px;
     border: none !important;
+  }
+  .comparison img {
+    padding-right: 4px;
   }
   .comparison td,
   .comparison th {
@@ -315,7 +322,7 @@ body {
     margin-top: 20px;
   }
   .comparison p {
-    width: calc(100% - 64px);
+    width: calc(100% - 46px);
   }
   .comparison td:nth-child(1),
   .comparison th:nth-child(1) {
@@ -476,6 +483,7 @@ body {
 @media (max-width: 500px) {
   .notes h2 {
     padding-left: 0px !important;
+    padding-bottom: 16px;
   }
   .notes table {
     display: block;
@@ -502,6 +510,90 @@ body {
     margin-right: 8px !important;
     padding: 8px 0px 16px 0px !important;
   }
+}
+
+.footer {
+  display: flex;
+  margin-bottom: 128px;
+  background: #f2f2f2;
+  padding: 32px;
+  border-radius: 6px;
+}
+@media (max-width: 600px) {
+  .footer {
+    display: block;
+  }
+}
+.footer .column1 {
+  width: 50%;
+}
+@media (max-width: 700px) {
+  .footer .column1 {
+    width: 40%;
+  }
+}
+@media (max-width: 600px) {
+  .footer .column1 {
+    width: 100%;
+    padding-bottom: 100px !important;
+  }
+}
+.footer .column2 {
+  width: 50%;
+}
+@media (max-width: 700px) {
+  .footer .column2 {
+    width: 60%;
+  }
+}
+@media (max-width: 600px) {
+  .footer .column2 {
+    width: 100%;
+  }
+}
+.footer .column {
+  padding: 0;
+}
+.footer .column .svg-logo-link svg {
+  width: 160px;
+  height: 63px;
+  margin-top: -8px;
+}
+.footer .column .svg-logo-link svg rect {
+  height: 72px;
+}
+.footer .column .products {
+  margin-bottom: 100px;
+}
+.footer .column .products a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-bottom: 8px;
+  padding: 4px;
+  border-radius: 8px;
+  height: 32px;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+.footer .column .products a:hover {
+  background: #e3e3e3;
+}
+.footer .column .products a h4 {
+  display: inline-block;
+  line-height: 32px;
+  vertical-align: top;
+  padding-left: 8px;
+  font-size: 16px;
+}
+.footer .column .products a .comingSoon {
+  opacity: 0.3;
+}
+.footer .column .socialList a {
+  margin-right: 20px;
+}
+.footer .column .socialList a:hover {
+  opacity: 0.5;
 }
 
 .gallery__title span {

@@ -62,6 +62,11 @@
 
     @media (max-width: 500px) {
 
+        .comparison__table {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
         table {
             display: block;
         }
@@ -75,6 +80,10 @@
             flex-wrap: wrap;
             margin-bottom: 8px;
             border: none !important;
+        }
+
+        img {
+            padding-right: 4px;
         }
         
         td,
@@ -91,7 +100,7 @@
         }
 
         p {
-            width: calc(100% - 64px);
+            width: calc(100% - 46px);
         }
         
         td:nth-child(1),

@@ -49,4 +49,10 @@ body {
         background-clip: text;
         text-fill-color: transparent;
     }
+    @include respond-below(sm) {
+      font-size: 32px;
+      padding-left: 0;
+      padding-bottom: 32px;
+    }
+    
 }

@@ -95,6 +95,13 @@ body {
   background-clip: text;
   text-fill-color: transparent;
 }
+@media (max-width: 467px) {
+  .h2, .gallery__title, .notes__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
+    font-size: 32px;
+    padding-left: 0;
+    padding-bottom: 32px;
+  }
+}
 
 .wrapper {
   max-width: 728px;
@@ -103,6 +110,11 @@ body {
 
 .block {
   margin-bottom: 130px;
+}
+@media (max-width: 467px) {
+  .block {
+    margin-bottom: 100px;
+  }
 }
 
 .hero .tabs {
@@ -229,6 +241,11 @@ body {
 .benefits__title {
   font-size: 50px;
 }
+@media (max-width: 467px) {
+  .benefits__title {
+    font-size: 32px;
+  }
+}
 .benefits__grid {
   display: grid;
   padding: 0 2px;
@@ -240,6 +257,7 @@ body {
 @media (max-width: 467px) {
   .benefits__grid {
     grid-template-columns: auto;
+    grid-auto-rows: 411px;
   }
 }
 
@@ -606,6 +624,12 @@ body {
     padding: 32px;
   }
 }
+@media (max-width: 467px) {
+  .benefit-card {
+    padding: 16px;
+    padding-right: 52px;
+  }
+}
 .benefit-card__title {
   color: #FFFFFF;
 }
@@ -621,6 +645,11 @@ body {
   line-height: 1.4;
   z-index: 1;
 }
+@media (max-width: 467px) {
+  .benefit-card__title, .benefit-card__description {
+    font-size: 12px;
+  }
+}
 .benefit-card--wide {
   grid-column: span 2;
 }
@@ -633,11 +662,38 @@ body {
   background-position: center;
   background-size: cover;
 }
+@media (max-width: 467px) {
+  .benefit-card--background {
+    background-position: 81% 50%;
+  }
+}
 .benefit-card--onethird {
   padding: 32px 66% 32px 32px;
 }
+@media (max-width: 687px) {
+  .benefit-card--onethird {
+    padding: 32px;
+  }
+}
+@media (max-width: 467px) {
+  .benefit-card--onethird {
+    padding: 16px;
+    padding-right: 52px;
+  }
+}
 .benefit-card--twothirds {
   padding: 32px 33% 32px 32px;
+}
+@media (max-width: 687px) {
+  .benefit-card--twothirds {
+    padding: 32px;
+  }
+}
+@media (max-width: 467px) {
+  .benefit-card--twothirds {
+    padding: 16px;
+    padding-right: 52px;
+  }
 }
 .benefit-card__figure {
   position: absolute;

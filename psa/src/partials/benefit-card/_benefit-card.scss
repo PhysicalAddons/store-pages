@@ -7,6 +7,10 @@
     @include respond-below(lg) {
         padding: 32px;
     }
+    @include respond-below(sm) {
+        padding: 16px;
+        padding-right: 52px;
+    }
 
     &__title {
         color: #FFFFFF;
@@ -22,6 +26,9 @@
         font-weight: 500;
         line-height: 1.4;
         z-index: 1; // to be on top of the img
+        @include respond-below(sm) {
+            font-size: 12px;
+        }
     }
     &--wide {
         grid-column: span 2; // better if this would be passed from the top
@@ -32,12 +39,29 @@
     &--background {
         background-position: center;
         background-size: cover;
+        @include respond-below(sm) {
+            background-position: 81% 50%;
+        }
     }
     &--onethird {
         padding: 32px 66% 32px 32px;
+        @include respond-below(lg) {
+            padding: 32px;
+        }
+        @include respond-below(sm) {
+            padding: 16px;
+            padding-right: 52px;
+        }
     }
     &--twothirds {
         padding: 32px 33% 32px 32px;
+        @include respond-below(lg) {
+            padding: 32px;
+        }
+        @include respond-below(sm) {
+            padding: 16px;
+            padding-right: 52px;
+        }
     }
     &__figure {
         position: absolute;

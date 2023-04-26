@@ -105,6 +105,72 @@ body {
   margin-bottom: 130px;
 }
 
+.hero .tabs {
+  height: 40px;
+}
+.hero .tabs .label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: -0.03em;
+  display: inline-block;
+  padding-left: 8px;
+}
+.hero .tabs .tab {
+  display: inline-block;
+  padding: 0px 20px;
+  border-radius: 6px 6px 0px 0px;
+  float: right;
+  background: #F2F2F2;
+  color: black;
+  text-decoration: none;
+  margin-left: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 40px;
+}
+.hero .tabs .tab span {
+  font-weight: 600;
+  padding-right: 10px;
+}
+.hero .tabs .active {
+  color: white;
+  background: #5b66b9;
+}
+.hero .bigBlock {
+  background-image: url("/assets/images/heroBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 128px 32px 64px 32px;
+  border-radius: 6px 0px 6px 6px;
+}
+.hero .bigBlock h1 {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 61px;
+  text-align: center;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+  color: white;
+}
+.hero .bigBlock h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
+  color: white;
+  margin-bottom: 128px;
+}
+.hero .bigBlock .video {
+  margin-bottom: 64px;
+}
+.hero .bigBlock .video iframe {
+  width: 100%;
+}
+.hero .bigBlock .logoWall {
+  width: 100%;
+}
 .benefits__title {
   font-size: 50px;
 }

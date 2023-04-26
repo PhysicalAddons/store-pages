@@ -18,6 +18,18 @@
             content: url('/assets/images/icons/case-study.svg');
         }
     }
+    &--no-br &__author{
+        @include respond-below(sm) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    @include respond-below(sm) {
+        padding: 16px;
+
+    }
 
 
     &__title {
@@ -31,6 +43,9 @@
             margin-bottom: 6px;
             content: url('/assets/images/icons/quote.svg');
         }
+        @include respond-below(sm) {
+            font-size: 28px;
+        }
     }
 
     &__info {
@@ -38,6 +53,11 @@
         bottom: 32px;
         left: 32px;
         right: 32px;
+        @include respond-below(sm) {
+            bottom: 16px;
+            left: 16px;
+            right: 32px;
+        }
     }
     
     &__description {
@@ -48,6 +68,9 @@
         font-weight: 500;
         line-height: 1.4;
         color: rgba(#FFFFFF, .5);
+        @include respond-below(sm) {
+            width: auto;
+        }
     }
 
     &__author {

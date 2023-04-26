@@ -16,18 +16,24 @@
 		grid-template-columns: repeat(4, 1fr);
 		//grid-template-rows: repeat(5, 350px);
 		grid-auto-rows: 207px;
-		grid-gap: 2px;
+		grid-gap: 1px;
 		transition: grid-auto-rows 1s linear;
 		// @include respond-above(xlg) {
 		// 	max-width: 1700px;
 		// 	margin: 0 auto;
 		// }
-		// @include respond-below(xs) {
-		// 	grid-template-columns: repeat(2, 1fr);
-		// }
+		@include respond-below(sm) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 	&__artwork {
  		position: relative;
+
+		@include respond-below(sm) {
+			&:nth-child(n+16) {
+				display: none;
+			}
+		}
 
 		&:after {
 			content: "";

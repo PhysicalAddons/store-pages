@@ -78,7 +78,7 @@ body {
   color: #000000;
 }
 
-.h2, .gallery__title, .notes__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
+.h2, .gallery__title, .notes__title, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
   padding: 0 0 64px 16px;
   font-size: 40px;
   font-weight: 500;
@@ -87,7 +87,7 @@ body {
   color: #000000;
   letter-spacing: -0.03em;
 }
-.h2 em, .gallery__title em, .notes__title em, .testimonials__title em, .controls__title em, .comparison__title em, .benefits__title em {
+.h2 em, .gallery__title em, .notes__title em, .pricing__title em, .testimonials__title em, .controls__title em, .comparison__title em, .benefits__title em {
   font-weight: 600;
   background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
   -webkit-background-clip: text;
@@ -96,12 +96,12 @@ body {
   text-fill-color: transparent;
 }
 @media (max-width: 467px) {
-  .h2, .gallery__title, .notes__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
+  .h2, .gallery__title, .notes__title, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
     font-size: 32px;
     padding-left: 0;
     padding-bottom: 32px;
   }
-  .h2 br, .gallery__title br, .notes__title br, .testimonials__title br, .controls__title br, .comparison__title br, .benefits__title br {
+  .h2 br, .gallery__title br, .notes__title br, .pricing__title br, .testimonials__title br, .controls__title br, .comparison__title br, .benefits__title br {
     display: none;
   }
 }
@@ -365,7 +365,7 @@ body {
   border-radius: 6px;
   margin-bottom: 32px;
 }
-.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .controls__title {
+.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .controls__title {
   color: white;
   position: absolute;
   top: 0;
@@ -447,44 +447,81 @@ body {
   }
 }
 
-.comparison .comparison__table {
+.pricing .pricing__table {
   padding-right: 16px;
   padding-left: 16px;
 }
-.comparison table {
+.pricing table {
   width: 100%;
   border-collapse: collapse;
 }
-.comparison table th,
-.comparison table td {
+.pricing table th, .pricing table td {
   width: 33.3333%;
-  padding: 16px 16px 48px 0px;
+  padding: 12px 16px 32px 12px;
   text-align: left;
   vertical-align: top;
 }
-.comparison table tr {
+.pricing table td em {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 36px;
+  background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.pricing table td em.modified {
+  font-size: 16px;
+  line-height: 19px;
+}
+.pricing table thead tr {
   border-bottom: 1px solid #DCDCDC;
 }
-.comparison table tr:last-child {
+.pricing table tbody tr {
+  border-bottom: 1px solid #DCDCDC;
+}
+.pricing table tbody tr:last-child {
   border-bottom: none;
 }
-.comparison h3 {
-  font-size: 30px;
+.pricing table tbody tr td {
+  border-right: 1px solid #DCDCDC;
+}
+.pricing table tbody tr td:last-child {
+  border-right: none;
+}
+.pricing table tfoot {
+  background-color: #F2F2F2;
+}
+.pricing table tfoot tr:first-child td:first-child {
+  border-top-left-radius: 20px;
+}
+.pricing table tfoot tr:first-child td:last-child {
+  border-top-right-radius: 20px;
+}
+.pricing table tfoot tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
+}
+.pricing table tfoot tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
+.pricing table tfoot td {
+  border-right: 1px solid #DCDCDC;
+}
+.pricing table tfoot td:last-child {
+  border-right: none;
+}
+.pricing h3 {
+  font-size: 20px;
+  line-height: 24px;
   font-weight: 500;
 }
-.comparison h4 {
-  font-size: 20px;
+.pricing h4 {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
 }
-.comparison img {
-  display: inline-block;
-  vertical-align: top;
-  padding-right: 16px;
-  margin-top: -4px;
-}
-.comparison .imgException {
-  margin-top: 0px;
-}
-.comparison p {
+.pricing p {
   display: inline-block;
   width: calc(100% - 57px);
   font-weight: 400;
@@ -492,44 +529,41 @@ body {
   line-height: 140%;
 }
 @media (max-width: 500px) {
-  .comparison table {
+  .pricing table {
     display: block;
   }
-  .comparison thead {
+  .pricing thead {
     display: none;
   }
-  .comparison tr {
+  .pricing tr {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 8px;
     border: none !important;
   }
-  .comparison td,
-  .comparison th {
+  .pricing td,
+  .pricing th {
     display: block;
     padding: 0px 0px 8px 0px !important;
   }
-  .comparison h4 {
+  .pricing h4 {
     font-size: 20px;
     border-bottom: 1px solid #DCDCDC;
     padding-bottom: 8px;
     margin-top: 20px;
   }
-  .comparison p {
+  .pricing p {
     width: calc(100% - 64px);
   }
-  .comparison td:nth-child(1),
-  .comparison th:nth-child(1) {
+  .pricing td:nth-child(1),
+  .pricing th:nth-child(1) {
     width: 100%;
   }
-  .comparison td:nth-child(2),
-  .comparison th:nth-child(2),
-  .comparison td:nth-child(3),
-  .comparison th:nth-child(3) {
+  .pricing td:nth-child(2),
+  .pricing th:nth-child(2),
+  .pricing td:nth-child(3),
+  .pricing th:nth-child(3) {
     width: 50%;
-  }
-  .comparison tr:last-child td {
-    border-bottom: none;
   }
 }
 

@@ -512,6 +512,11 @@ body {
 .gallery__artwork:hover:after, .gallery__artwork:focus:after {
   opacity: 1;
 }
+@media (max-width: 467px) {
+  .gallery__artwork:hover:after, .gallery__artwork:focus:after {
+    display: none;
+  }
+}
 .gallery__artwork--wide {
   grid-column: span 2;
 }
@@ -674,6 +679,7 @@ body {
   position: absolute;
   bottom: 32px;
   left: 32px;
+  right: 32px;
 }
 .testimonial-card__description {
   width: 250px;

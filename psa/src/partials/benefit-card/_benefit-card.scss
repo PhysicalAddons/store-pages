@@ -10,6 +10,9 @@
     @include respond-below(sm) {
         padding: 16px;
         padding-right: 52px;
+        .benefit-card__figure {
+            right: 16px !important;
+        }
     }
 
     &__title {
@@ -34,7 +37,12 @@
         grid-column: span 2; // better if this would be passed from the top
         @include respond-below(sm) {
 			grid-column: auto;
+            .benefit-card__figure {
+                left: -200px;
+                right: 16px !important;
+            }
 		}
+        
     }
     &--background {
         background-position: center;

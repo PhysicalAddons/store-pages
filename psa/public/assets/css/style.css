@@ -361,7 +361,7 @@ body {
 }
 
 .controls .heroBlock {
-  background-image: url("/assets/images/controls-backup.jpg");
+  background-image: url("/assets/images/controls/addoncontrols.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -562,12 +562,65 @@ body {
   font-weight: 500;
 }
 .pricing h4 {
+  position: relative;
   font-size: 16px;
   line-height: 19px;
   font-weight: 500;
 }
 .pricing h4 a {
   color: #000000;
+}
+.pricing .infotrgr {
+  cursor: pointer;
+}
+.pricing .infotrgr:hover + .infomsg {
+  display: block;
+}
+.pricing .infomsg {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  box-sizing: border-box;
+  width: 240px;
+  padding: 16px;
+  display: none;
+  border-radius: 6px;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.3);
+  background-color: #1E1E1E;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.pricing .infomsg:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #1E1E1E;
+  left: 94px;
+  transform: rotate(45deg);
+  top: -6px;
+  z-index: 1;
+}
+.pricing .infomsg::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 20px;
+  background-color: transparent;
+  left: 0px;
+  top: -15px;
+  z-index: 3;
+}
+.pricing .infomsg:hover {
+  display: block;
+}
+.pricing .infomsg a {
+  color: rgba(255, 255, 255, 0.7);
 }
 @media (max-width: 500px) {
   .pricing table {
@@ -888,6 +941,9 @@ body {
     padding: 16px;
     padding-right: 52px;
   }
+  .benefit-card .benefit-card__figure {
+    right: 16px !important;
+  }
 }
 .benefit-card__title {
   color: #FFFFFF;
@@ -915,6 +971,10 @@ body {
 @media (max-width: 467px) {
   .benefit-card--wide {
     grid-column: auto;
+  }
+  .benefit-card--wide .benefit-card__figure {
+    left: -200px;
+    right: 16px !important;
   }
 }
 .benefit-card--background {

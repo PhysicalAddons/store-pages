@@ -10,9 +10,6 @@
     @include respond-below(sm) {
         padding: 16px;
         padding-right: 52px;
-        .benefit-card__figure {
-            right: 16px !important;
-        }
     }
 
     &__title {
@@ -86,6 +83,9 @@
                 border-top-right-radius: 32px;
                 box-sizing: border-box;
             }
+            @include respond-below(sm) {
+                right: 16px !important;
+            }
         }
     }
     &__image {
@@ -108,5 +108,19 @@
     }
     &__text {
         color: #FFFFFF;
+    }
+
+    &__comp1, &__comp2 {
+        position: absolute;
+        bottom: 70px;
+        color : #FFFFFF;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &__comp1 {
+        left: 18%;
+    }
+    &__comp2 {
+        right: 18%;
     }
 }

@@ -31,17 +31,17 @@
         }
         .active {
             color: white;
-            background: #5b66b9;
+            background: #9291bc;
         }
     }
 
     .bigBlock {
 
-        background-image: url('/assets/images/heroBackground.jpg');
+        background-image: url('/assets/images/heroBackground2.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        padding: 128px 32px 128px 32px;
+        padding: 200px 32px 64px 32px;
         border-radius: 6px 0px 6px 6px;
 
         h1 {
@@ -59,7 +59,7 @@
             line-height: 140%;
             text-align: center;
             color: white;
-            margin-bottom: 128px;
+            margin-bottom: 200px;
             background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 160.71%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -113,23 +113,34 @@
 
         .bigBlock {
 
-            padding: 25% 16px 25% 16px;
+            padding: 30% 16px 50px 16px;
 
             h1 {
                 font-size: 32px;
+                padding-right: 5%;
+                padding-left: 5%;
+                line-height: 110%;
             }
             h2 {
                 font-size: 14px;
                 margin-bottom: 25%;
+                padding-right: 10%;
+                padding-left: 10%;
                 br {
                     display: none;
                 }
+            }
+            .video {
+                margin-bottom: 40px;
             }
             .logoWall {
                 display: none;
             }
             .logoWall2 {
                 display: block;
+                padding-right: 5%;
+                padding-left: 5%;
+                box-sizing: border-box;
             }
         }
     }

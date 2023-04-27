@@ -4,6 +4,10 @@
     {% if image %}
     <figure class="benefit-card__figure{{ (image.border) ? ' benefit-card__figure--bordered' : '' }}"{{(image.style) ? ' style="'~image.style~'"' : ''}}>
         <img class="benefit-card__image" src="{{image.src}}" alt="{{image.alt}}">
+        {% if comparison %}
+        <div class="benefit-card__comp1">Eevee</div>
+        <div class="benefit-card__comp2">Cycles</div>
+        {% endif %}
     </figure>
     {% endif %}
     {% if author %}

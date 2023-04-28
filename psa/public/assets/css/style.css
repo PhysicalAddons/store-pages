@@ -78,7 +78,7 @@ body {
   color: #000000;
 }
 
-.h2, .gallery__title, .notes__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
+.h2, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
   padding: 0 0 48px 16px;
   font-size: 40px;
   font-weight: 500;
@@ -87,7 +87,7 @@ body {
   color: #000000;
   letter-spacing: -0.03em;
 }
-.h2 em, .gallery__title em, .notes__title em, .pricing__subtitle em, .pricing__title em, .testimonials__title em, .controls__title em, .comparison__title em, .benefits__title em {
+.h2 em, .gallery__title em, .notes__title em, .pricing-mobile__title em, .pricing__subtitle em, .pricing__title em, .testimonials__title em, .controls__title em, .comparison__title em, .benefits__title em {
   font-weight: 600;
   background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
   -webkit-background-clip: text;
@@ -96,12 +96,12 @@ body {
   text-fill-color: transparent;
 }
 @media (max-width: 467px) {
-  .h2, .gallery__title, .notes__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
+  .h2, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
     font-size: 32px;
     padding-left: 0;
     padding-bottom: 32px;
   }
-  .h2 br, .gallery__title br, .notes__title br, .pricing__subtitle br, .pricing__title br, .testimonials__title br, .controls__title br, .comparison__title br, .benefits__title br {
+  .h2 br, .gallery__title br, .notes__title br, .pricing-mobile__title br, .pricing__subtitle br, .pricing__title br, .testimonials__title br, .controls__title br, .comparison__title br, .benefits__title br {
     display: none;
   }
 }
@@ -491,7 +491,7 @@ body {
   border-radius: 6px;
   margin-bottom: 32px;
 }
-.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .controls__title {
+.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing-mobile__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .controls__title {
   color: white;
   position: absolute;
   top: 0;
@@ -572,6 +572,11 @@ body {
   }
 }
 
+@media (max-width: 467px) {
+  .pricing {
+    display: none;
+  }
+}
 .pricing__subtitle {
   float: left;
 }
@@ -783,6 +788,36 @@ body {
   .pricing th:nth-child(3) {
     width: 50%;
   }
+}
+
+.pricing-mobile {
+  position: relative;
+  display: none;
+}
+@media (max-width: 467px) {
+  .pricing-mobile {
+    display: block;
+  }
+}
+.pricing-mobile__refund {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.pricing-mobile__refund a {
+  color: inherit;
+}
+.pricing-mobile__packs {
+  background: #F2F2F2;
+  border-radius: 6px;
+}
+.pricing-mobile__psapco {
+  margin-top: 12px;
 }
 
 .notes {
@@ -1338,4 +1373,125 @@ body {
 .btn--primary {
   background-color: #6B26FF;
   color: #FFFFFF;
+}
+
+.pricing-pack {
+  position: relative;
+  padding: 16px 16px 32px;
+}
+.pricing-pack + .pricing-pack {
+  border-top: 1px solid #DCDCDC;
+}
+.pricing-pack__title {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+.pricing-pack__price {
+  margin-top: 11px;
+}
+.pricing-pack__price > div {
+  font-family: Inter;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 31px;
+}
+.pricing-pack__price > div + div {
+  color: #BFBFBF;
+  text-decoration: line-through;
+}
+.pricing-pack__description {
+  margin-top: 2px;
+  margin-bottom: 32px;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.pricing-pack__featuredescr {
+  margin-bottom: 18px;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  color: #000000;
+}
+.pricing-pack__feature {
+  position: relative;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  color: #000000;
+}
+.pricing-pack__feature:before {
+  content: "+ ";
+}
+.pricing-pack__feature + .pricing-pack__feature {
+  margin-top: 12px;
+}
+.pricing-pack__feature a {
+  color: inherit;
+}
+.pricing-pack .btn {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+.pricing-pack .infotrgr {
+  position: absolute;
+  left: 81px;
+  bottom: -4px;
+  cursor: pointer;
+}
+.pricing-pack .infotrgr:hover + .infomsg {
+  display: block;
+}
+.pricing-pack .infomsg {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  box-sizing: border-box;
+  width: 240px;
+  padding: 16px;
+  display: none;
+  border-radius: 6px;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.3);
+  background-color: #1E1E1E;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.pricing-pack .infomsg:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #1E1E1E;
+  left: 81px;
+  transform: rotate(45deg);
+  top: -6px;
+  z-index: 1;
+}
+.pricing-pack .infomsg::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 20px;
+  background-color: transparent;
+  left: 0px;
+  top: -15px;
+  z-index: 3;
+}
+.pricing-pack .infomsg:hover {
+  display: block;
+}
+.pricing-pack .infomsg a {
+  color: rgba(255, 255, 255, 0.7);
 }

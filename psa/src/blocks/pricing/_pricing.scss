@@ -1,4 +1,7 @@
 .pricing {
+    @include respond-below(sm) {
+        display: none;
+    }
 
     &__title {
         @extend .h2;
@@ -272,5 +275,39 @@
         //       border-bottom: none;
         //     }
         // }
+    }
+}
+
+
+.pricing-mobile {
+    position: relative;
+    display: none;
+    @include respond-below(sm) {
+        display: block;
+    }
+
+    &__title {
+        @extend .h2;
+        // margin-bottom: 32px;
+    }
+    &__refund {
+        position: absolute;
+        right: 0;
+        top: 15px;
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        color: rgba(#000000, .5);
+        a {
+            color: inherit;
+        }
+    }
+    &__packs {
+        background: #F2F2F2;
+        border-radius: $default-radius;
+    }
+    &__psapco {
+        margin-top: 12px;
     }
 }

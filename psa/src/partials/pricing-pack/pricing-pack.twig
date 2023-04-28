@@ -1,0 +1,29 @@
+<div class="pricing-pack">
+    <h3 class="pricing-pack__title">{{name}}</h3>
+    {% if price %}
+    <div class="pricing-pack__price">
+        <div>{{price.new}}</div>
+        <div>{{price.old}}</div>
+    </div>
+    {% endif %}
+    <p class="pricing-pack__description">{{description}}</p>
+    <p class="pricing-pack__featuredescr">{{feature_description}}</p>
+    <ul class="pricing-pack__features">
+    {% for feature in features %}
+        <li class="pricing-pack__feature">
+        {% if feature is iterable %}
+            {% if feature.link %}
+            <a href="{{feature.link}}">{{feature.title}}</a>
+            {% elseif feature.description %}
+            {{feature.title}}
+            <img class="infotrgr" src="assets/images/icons/info.svg" alt="Info Icons">
+            <div class="infomsg">{{feature.description}}</a>.</div>
+            {% endif %}
+        {% else %}
+            {{feature}}
+        {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+    <a href="{{btn.link}}" class="btn {{btn.type}}">{{btn.title}}</a>
+</div>

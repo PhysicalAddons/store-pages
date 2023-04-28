@@ -150,3 +150,80 @@
          {% include '../../partials/bundle/bundle.twig' with {'class': 'pricing__psapco'} %}
     </div>
 </div>
+
+{% set packs = [
+	{
+		'name': 'Basic',
+		'price': {
+            'old': '',
+            'new': '$58'
+        },
+        'description': 'One time payment',
+        'btn': {
+            'title': 'Select',
+            'link': 'https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=2891',
+            'type': 'btn--primary'
+        },
+        'features': [
+            'Single user',
+            'Free Updates',
+            'New Features',
+            '10 Presets',
+            {
+                'title': 'Discord community',
+                'link': 'https://discord.gg/wvzPVzj9Vr'
+            },
+            {
+                'title': 'GPL license',
+                'description': 'All artworks made using our addon belong to you and can be used for commercial purposes. No need for attribution. <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">Read more about GPL license'
+            },
+        ]
+    },
+    {
+		'name': 'Studio',
+		'price': {
+            'old': '',
+            'new': '$328'
+        },
+        'description': 'One time payment',
+        'btn': {
+            'title': 'Select',
+            'link': 'https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=2892',
+            'type': 'btn--primary'
+        },
+        'feature_description': 'Same as Basic plus',
+        'features': [
+            '7 Users in company',
+            'Dedicated Support',
+            'Early access'
+        ]
+    },
+    {
+		'name': 'Enterprise',
+        'description': 'Custom pricing',
+        'btn': {
+            'title': 'Contact Us',
+            'link': 'https://www.physicaladdons.com/psa/contacts/'
+        },
+        'feature_description': 'Same as Studio plus',
+        'features': [
+            'Unlimited user count',
+            'Prioritized feature and bug requests',
+            'Priority support'
+        ]
+    }
+    
+]%}
+<div class="pricing-mobile block">
+	<h2 class="pricing-mobile__title">Pricing</h2>
+    <div class="pricing-mobile__refund">
+        30 day <a href="https://support.blendermarket.com/article/22-refund-policy" target="_blank">refund policy</a>
+    </div>
+    <div class="pricing-mobile__packs">
+        {% for pack in packs %}
+        {% include '../../partials/pricing-pack/pricing-pack.twig' with pack only %}
+        {% endfor %}
+    </div>
+
+    {% include '../../partials/bundle/bundle.twig' with {'class': 'pricing-mobile__psapco'} %}
+</div>

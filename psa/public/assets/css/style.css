@@ -150,10 +150,10 @@ body {
 }
 .hero .tabs .active {
   color: white;
-  background: #9291bc;
+  background: #77789d;
 }
 .hero .bigBlock {
-  background-image: url("/assets/images/heroBackground2.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), url(/assets/images/heroBackground2.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1048,7 +1048,7 @@ body {
 
 .benefit-card {
   position: relative;
-  padding: 32px 66px 32px 32px;
+  padding: 32px 67px 32px 32px;
   background-color: #000000;
   border-radius: 6px;
   overflow: hidden;

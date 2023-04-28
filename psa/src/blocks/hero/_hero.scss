@@ -31,13 +31,12 @@
         }
         .active {
             color: white;
-            background: #9291bc;
+            background: #77789d;
         }
     }
 
     .bigBlock {
-
-        background-image: url('/assets/images/heroBackground2.jpg');
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), url(/assets/images/heroBackground2.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

@@ -78,7 +78,7 @@ body {
   color: #000000;
 }
 
-.h2, .gallery__title, .notes__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
+.h2, .gallery__title, .notes__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .team__title, .comparison__title, .benefits__title {
   padding: 0 0 64px 16px;
   font-size: 40px;
   font-weight: 500;
@@ -87,7 +87,7 @@ body {
   color: #000000;
   letter-spacing: -0.03em;
 }
-.h2 em, .gallery__title em, .notes__title em, .pricing__subtitle em, .pricing__title em, .testimonials__title em, .controls__title em, .comparison__title em, .benefits__title em {
+.h2 em, .gallery__title em, .notes__title em, .pricing__subtitle em, .pricing__title em, .testimonials__title em, .controls__title em, .team__title em, .comparison__title em, .benefits__title em {
   font-weight: 600;
   background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
   -webkit-background-clip: text;
@@ -96,12 +96,12 @@ body {
   text-fill-color: transparent;
 }
 @media (max-width: 467px) {
-  .h2, .gallery__title, .notes__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
+  .h2, .gallery__title, .notes__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .team__title, .comparison__title, .benefits__title {
     font-size: 32px;
     padding-left: 0;
     padding-bottom: 32px;
   }
-  .h2 br, .gallery__title br, .notes__title br, .pricing__subtitle br, .pricing__title br, .testimonials__title br, .controls__title br, .comparison__title br, .benefits__title br {
+  .h2 br, .gallery__title br, .notes__title br, .pricing__subtitle br, .pricing__title br, .testimonials__title br, .controls__title br, .team__title br, .comparison__title br, .benefits__title br {
     display: none;
   }
 }
@@ -150,14 +150,14 @@ body {
 }
 .hero .tabs .active {
   color: white;
-  background: #5b66b9;
+  background: #9291bc;
 }
 .hero .bigBlock {
-  background-image: url("/assets/images/heroBackground.jpg");
+  background-image: url("/assets/images/heroBackground2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 128px 32px 128px 32px;
+  padding: 200px 32px 64px 32px;
   border-radius: 6px 0px 6px 6px;
 }
 .hero .bigBlock h1 {
@@ -175,7 +175,7 @@ body {
   line-height: 140%;
   text-align: center;
   color: white;
-  margin-bottom: 128px;
+  margin-bottom: 200px;
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 160.71%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -221,23 +221,34 @@ body {
     padding-right: 4px;
   }
   .hero .bigBlock {
-    padding: 25% 16px 25% 16px;
+    padding: 30% 16px 50px 16px;
   }
   .hero .bigBlock h1 {
     font-size: 32px;
+    padding-right: 5%;
+    padding-left: 5%;
+    line-height: 110%;
   }
   .hero .bigBlock h2 {
     font-size: 14px;
     margin-bottom: 25%;
+    padding-right: 10%;
+    padding-left: 10%;
   }
   .hero .bigBlock h2 br {
     display: none;
+  }
+  .hero .bigBlock .video {
+    margin-bottom: 40px;
   }
   .hero .bigBlock .logoWall {
     display: none;
   }
   .hero .bigBlock .logoWall2 {
     display: block;
+    padding-right: 5%;
+    padding-left: 5%;
+    box-sizing: border-box;
   }
 }
 
@@ -360,6 +371,111 @@ body {
   }
 }
 
+.team {
+  background-image: url("/assets/images/team/teamx2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 32px;
+  border-radius: 6px;
+}
+@media (max-width: 500px) {
+  .team {
+    background-image: url("/assets/images/team/team2.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+}
+.team .topRow {
+  padding-bottom: 64px;
+}
+.team .topRow h2 {
+  color: white;
+  padding: 0px;
+  display: inline-block;
+  margin-top: -6px;
+}
+.team .topRow img {
+  float: right;
+}
+@media (max-width: 500px) {
+  .team .topRow img {
+    float: none;
+    display: block;
+    margin-top: 32px;
+  }
+}
+.team .sideBySideRows {
+  display: flex;
+  color: white;
+}
+@media (max-width: 500px) {
+  .team .sideBySideRows {
+    flex-direction: column;
+  }
+}
+.team .sideBySideRows a {
+  color: white;
+}
+.team .sideBySideRows .leftSide {
+  width: 60%;
+  margin-right: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  .team .sideBySideRows .leftSide {
+    width: 100%;
+    padding-top: 80px;
+  }
+}
+.team .sideBySideRows .leftSide img {
+  display: block;
+}
+@media (max-width: 500px) {
+  .team .sideBySideRows .leftSide img {
+    display: none;
+  }
+}
+.team .sideBySideRows .leftSide a {
+  color: white;
+  margin-top: 16px;
+  display: inline-block;
+}
+.team .sideBySideRows .leftSide b {
+  font-weight: 600px !important;
+}
+.team .sideBySideRows .rightSide {
+  width: 39%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 32px;
+}
+@media (max-width: 500px) {
+  .team .sideBySideRows .rightSide {
+    width: 100%;
+    padding-bottom: 0px;
+  }
+}
+.team .sideBySideRows .rightSide h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+.team .sideBySideRows .rightSide img {
+  vertical-align: text-top;
+  padding-right: 4px;
+}
+.team .sideBySideRows .rightSide p {
+  font-size: 12px;
+  opacity: 0.7;
+  line-height: 140%;
+}
+
 .controls .heroBlock {
   background-image: url("/assets/images/controls/addoncontrols.jpg");
   background-repeat: no-repeat;
@@ -372,7 +488,7 @@ body {
   border-radius: 6px;
   margin-bottom: 32px;
 }
-.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .controls__title {
+.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .team__title, .controls .heroBlock .controls__title {
   color: white;
   position: absolute;
   top: 0;

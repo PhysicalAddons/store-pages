@@ -103,7 +103,10 @@
                             <div>
                                 <h4>Basic</h4>
                                 <p>One time payment</p>
-                                <div class="pricing__price">$58</div>
+                                <div class="pricing__price">
+                                    <div>$58</div>
+                                    <div></div>
+                                </div>
                             </div>
                             <div>
                                 <a href="https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=2891" class="btn btn--primary" target="_blank">Select</a>
@@ -115,7 +118,10 @@
                             <div>
                                 <h4>Studio</h4>
                                 <p>One time payment</p>
-                                <div class="pricing__price">$328</div>
+                                <div class="pricing__price">
+                                    <div>$328</div>
+                                    <div></div>
+                                </div>
                             </div>
                             <div>
                                 <a href="https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=2892" class="btn btn--primary" target="_blank">Select</a>
@@ -138,4 +144,9 @@
             </tfoot>
         </table> 
 	</div>
+
+    <div class="pricing__bundle">
+        <h2 class="pricing__subtitle">Bundle</h2>
+         {% include '../../partials/bundle/bundle.twig' with {'class': 'pricing__psapco'} %}
+    </div>
 </div>

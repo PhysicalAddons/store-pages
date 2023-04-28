@@ -78,7 +78,7 @@ body {
   color: #000000;
 }
 
-.h2, .gallery__title, .notes__title, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
+.h2, .gallery__title, .notes__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
   padding: 0 0 64px 16px;
   font-size: 40px;
   font-weight: 500;
@@ -87,7 +87,7 @@ body {
   color: #000000;
   letter-spacing: -0.03em;
 }
-.h2 em, .gallery__title em, .notes__title em, .pricing__title em, .testimonials__title em, .controls__title em, .comparison__title em, .benefits__title em {
+.h2 em, .gallery__title em, .notes__title em, .pricing__subtitle em, .pricing__title em, .testimonials__title em, .controls__title em, .comparison__title em, .benefits__title em {
   font-weight: 600;
   background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
   -webkit-background-clip: text;
@@ -96,12 +96,12 @@ body {
   text-fill-color: transparent;
 }
 @media (max-width: 467px) {
-  .h2, .gallery__title, .notes__title, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
+  .h2, .gallery__title, .notes__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
     font-size: 32px;
     padding-left: 0;
     padding-bottom: 32px;
   }
-  .h2 br, .gallery__title br, .notes__title br, .pricing__title br, .testimonials__title br, .controls__title br, .comparison__title br, .benefits__title br {
+  .h2 br, .gallery__title br, .notes__title br, .pricing__subtitle br, .pricing__title br, .testimonials__title br, .controls__title br, .comparison__title br, .benefits__title br {
     display: none;
   }
 }
@@ -372,7 +372,7 @@ body {
   border-radius: 6px;
   margin-bottom: 32px;
 }
-.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .controls__title {
+.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .controls__title {
   color: white;
   position: absolute;
   top: 0;
@@ -454,19 +454,30 @@ body {
   }
 }
 
-.pricing .pricing__table {
-  padding-right: 16px;
-  padding-left: 16px;
+.pricing__subtitle {
+  float: left;
+}
+.pricing__psapco {
+  margin-left: 30%;
+}
+.pricing__bundle {
+  margin-top: 32px;
 }
 .pricing table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 .pricing table th, .pricing table td {
-  width: 33.3333%;
   padding: 12px 16px 32px 12px;
   text-align: left;
   vertical-align: top;
+}
+.pricing table th, .pricing table td {
+  box-sizing: border-box;
+}
+.pricing table th:nth-child(1), .pricing table td:nth-child(1) {
+  width: 30%;
 }
 .pricing table td em {
   font-size: 30px;
@@ -530,45 +541,40 @@ body {
 .pricing table tfoot p a {
   color: rgba(0, 0, 0, 0.5);
 }
-.pricing table tfoot .btn {
-  display: inline-block;
-  padding: 10px 14px;
-  text-decoration: none;
-  font-size: 12px;
-  text-align: center;
-  border-radius: 100px;
-  background-color: #E3E3E3;
-  color: #000000;
+.pricing table h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
 }
-.pricing table tfoot .btn--primary {
-  background-color: #6B26FF;
-  color: #FFFFFF;
+.pricing table h4 {
+  position: relative;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+}
+.pricing table h4 a {
+  color: #000000;
 }
 .pricing__price {
-  font-size: 26px;
+  margin-top: 2px;
+}
+.pricing__price div {
+  display: inline-block;
+  font-family: Inter;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 31px;
+  line-height: 24px;
   color: #000000;
+}
+.pricing__price div + div {
+  color: #BFBFBF;
+  text-decoration: line-through;
 }
 .pricing__flex {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.pricing h3 {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 500;
-}
-.pricing h4 {
-  position: relative;
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: 500;
-}
-.pricing h4 a {
-  color: #000000;
 }
 .pricing .infotrgr {
   cursor: pointer;
@@ -1146,5 +1152,71 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 .testimonial-card__author em {
+  color: #FFFFFF;
+}
+
+.bundle {
+  padding: 16px;
+  background-color: #F2F2F2;
+  border-radius: 6px;
+}
+.bundle__products img {
+  width: 40px;
+  height: 40px;
+}
+.bundle__products img + img {
+  margin-left: 12px;
+}
+.bundle__name {
+  margin-top: 32px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+}
+.bundle__price {
+  margin-top: 8px;
+}
+.bundle__price div {
+  display: inline-block;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000000;
+}
+.bundle__price div + div {
+  color: #BFBFBF;
+  text-decoration: line-through;
+}
+.bundle__footer {
+  margin-top: 64px;
+  position: relative;
+}
+.bundle__footer > .btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.bundle__description {
+  width: 300px;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 100px;
+  background-color: #E3E3E3;
+  color: #000000;
+}
+.btn--primary {
+  background-color: #6B26FF;
   color: #FFFFFF;
 }

@@ -818,6 +818,15 @@ body {
 }
 .pricing-mobile__psapco {
   margin-top: 12px;
+  position: relative;
+}
+.pricing-mobile__psapco .btn {
+  bottom: auto !important;
+  top: 16px !important;
+  right: 16px !important;
+}
+.pricing-mobile__psapco .bundle__footer {
+  position: static;
 }
 
 .notes {

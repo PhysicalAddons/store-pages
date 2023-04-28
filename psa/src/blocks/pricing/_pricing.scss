@@ -309,5 +309,14 @@
     }
     &__psapco {
         margin-top: 12px;
+        .btn {
+            bottom: auto !important;
+            top: 16px !important;
+            right: 16px !important;
+        }
+        .bundle__footer {
+            position: static;
+        }
+        position: relative;
     }
 }

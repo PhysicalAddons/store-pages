@@ -78,8 +78,8 @@ body {
   color: #000000;
 }
 
-.h2, .gallery__title, .notes__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .team__title, .comparison__title, .benefits__title {
-  padding: 0 0 64px 16px;
+.h2, .gallery__title, .notes__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
+  padding: 0 0 48px 16px;
   font-size: 40px;
   font-weight: 500;
   line-height: 1.2;
@@ -87,7 +87,7 @@ body {
   color: #000000;
   letter-spacing: -0.03em;
 }
-.h2 em, .gallery__title em, .notes__title em, .pricing__subtitle em, .pricing__title em, .testimonials__title em, .controls__title em, .team__title em, .comparison__title em, .benefits__title em {
+.h2 em, .gallery__title em, .notes__title em, .pricing__subtitle em, .pricing__title em, .testimonials__title em, .controls__title em, .comparison__title em, .benefits__title em {
   font-weight: 600;
   background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
   -webkit-background-clip: text;
@@ -96,12 +96,12 @@ body {
   text-fill-color: transparent;
 }
 @media (max-width: 467px) {
-  .h2, .gallery__title, .notes__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .team__title, .comparison__title, .benefits__title {
+  .h2, .gallery__title, .notes__title, .pricing__subtitle, .pricing__title, .testimonials__title, .controls__title, .comparison__title, .benefits__title {
     font-size: 32px;
     padding-left: 0;
     padding-bottom: 32px;
   }
-  .h2 br, .gallery__title br, .notes__title br, .pricing__subtitle br, .pricing__title br, .testimonials__title br, .controls__title br, .team__title br, .comparison__title br, .benefits__title br {
+  .h2 br, .gallery__title br, .notes__title br, .pricing__subtitle br, .pricing__title br, .testimonials__title br, .controls__title br, .comparison__title br, .benefits__title br {
     display: none;
   }
 }
@@ -379,12 +379,9 @@ body {
   padding: 32px;
   border-radius: 6px;
 }
-@media (max-width: 500px) {
+@media (max-width: 467px) {
   .team {
-    background-image: url("/assets/images/team/team2.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+    background-image: url("/assets/images/team/teamx2-mobile.jpg");
   }
 }
 .team .topRow {
@@ -396,14 +393,17 @@ body {
   display: inline-block;
   margin-top: -6px;
 }
+@media (max-width: 467px) {
+  .team .topRow h2 {
+    font-size: 28px;
+  }
+}
 .team .topRow img {
   float: right;
 }
-@media (max-width: 500px) {
+@media (max-width: 467px) {
   .team .topRow img {
-    float: none;
-    display: block;
-    margin-top: 32px;
+    display: none;
   }
 }
 .team .sideBySideRows {
@@ -417,6 +417,8 @@ body {
 }
 .team .sideBySideRows a {
   color: white;
+  font-size: 14px;
+  font-weight: 500;
 }
 .team .sideBySideRows .leftSide {
   width: 60%;
@@ -467,7 +469,8 @@ body {
   margin-bottom: 8px;
 }
 .team .sideBySideRows .rightSide img {
-  vertical-align: text-top;
+  position: relative;
+  top: 2px;
   padding-right: 4px;
 }
 .team .sideBySideRows .rightSide p {
@@ -488,7 +491,7 @@ body {
   border-radius: 6px;
   margin-bottom: 32px;
 }
-.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .team__title, .controls .heroBlock .controls__title {
+.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .controls__title {
   color: white;
   position: absolute;
   top: 0;
@@ -501,7 +504,6 @@ body {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-bottom: 1px solid #DCDCDC;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -522,7 +524,7 @@ body {
   border-top: 1px solid #DCDCDC;
   vertical-align: top;
 }
-.controls table tr {
+.controls table tr:last-child td {
   border-bottom: 1px solid #DCDCDC;
 }
 .controls table th + th,
@@ -925,19 +927,20 @@ body {
   height: 32px;
   margin-left: -4px;
   margin-right: -4px;
+  line-height: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .footer .column .products a:hover {
   background: #e3e3e3;
 }
-.footer .column .products a h4 {
-  display: inline-block;
-  line-height: 32px;
-  vertical-align: top;
-  padding-left: 8px;
-  font-size: 16px;
+.footer .column .products a img {
+  float: left;
+  margin-right: 12px;
 }
-.footer .column .products a .comingSoon {
-  opacity: 0.3;
+.footer .column .products a:nth-child(3) {
+  color: rgba(0, 0, 0, 0.3);
 }
 .footer .column .socialList a {
   margin-right: 20px;

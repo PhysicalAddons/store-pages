@@ -5,17 +5,24 @@
     background-size: cover;
     padding: 32px;
     border-radius: 6px;
-
-    &__title {
-		@extend .h2;
-	}
-
-    @media (max-width: 500px) { 
-        background-image: url('/assets/images/team/team2.jpg');
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: cover;
+    @include respond-below(sm) {
+        background-image: url('/assets/images/team/teamx2-mobile.jpg');
     }
+
+    // &__title {
+	// 	@extend .h2;
+    //     @include respond-below(sm) {
+    //         font-size: 28px;
+    //         display: none;
+    //     }
+	// }
+
+    // @media (max-width: 500px) { 
+    //     background-image: url('/assets/images/team/team2.jpg');
+    //     background-repeat: no-repeat;
+    //     background-position: top;
+    //     background-size: cover;
+    // }
 
     .topRow {
         padding-bottom: 64px;
@@ -25,14 +32,15 @@
             padding: 0px;
             display: inline-block;
             margin-top: -6px;
+            @include respond-below(sm) {
+                font-size: 28px;
+            }
         }
 
         img {
             float: right;
-            @media (max-width: 500px) { 
-                float: none;
-                display: block;
-                margin-top: 32px;
+            @include respond-below(sm) {
+                display: none
             }
         }
     }
@@ -47,6 +55,8 @@
 
         a {
             color: white;
+            font-size: 14px;
+            font-weight: 500;
         }
 
         .leftSide {
@@ -98,7 +108,8 @@
             }
 
             img {
-                vertical-align: text-top;
+                position: relative;
+                top: 2px;
                 padding-right: 4px;
             }
 

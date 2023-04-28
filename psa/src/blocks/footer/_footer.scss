@@ -58,21 +58,23 @@
                 height: 32px;
                 margin-left: -4px;
                 margin-right: -4px;
+                line-height: 32px;
+
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
 
                 &:hover {
                     background: #e3e3e3;
                 }
 
-                h4 {
-                    display: inline-block;
-                    line-height: 32px;
-                    vertical-align: top;
-                    padding-left: 8px;
-                    font-size: 16px;
+                img {
+                    float: left;
+                    margin-right: 12px;
                 }
 
-                .comingSoon {
-                    opacity: 0.3;
+                &:nth-child(3) {
+                    color: rgba(#000000, 0.3);
                 }
             }
         }

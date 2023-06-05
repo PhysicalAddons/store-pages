@@ -169,8 +169,30 @@
             text-align: center;
             line-height: 32px;
             font-weight: 500;
-            padding: 8px;
+            padding: 6px;
         }
+    }
+    .demoRow {
+        td {
+            height: 100%;
+            background: radial-gradient(59.42% 59.42% at 56.82% 56.82%, #6C26FF 45.31%, #BA26FF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D9D9D9;;
+            color: white;
+            text-align: center;
+            line-height: 32px;
+            font-weight: 500;
+            padding: 6px 16px;
+        }
+        h2 {
+            float: left;
+            display: inline-block;
+            font-weight: 400;
+        }
+        .infotrgr {
+            float: right;
+            height: 32px;
+            width: 20px;
+        }
+
     }
 
     .infotrgr {

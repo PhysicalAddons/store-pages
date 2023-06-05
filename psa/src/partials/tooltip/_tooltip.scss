@@ -1,11 +1,50 @@
-.tooltipLink {
+$tooltip-padding-top: 8px;
+
+.tooltip {
+    position: relative;
     height: 12px; 
     display: inline-block;
+    // cursor: pointer;
     img {
         position: absolute;
     }
-}
+    
+    &__content {
+        box-sizing: border-box;
+        display: none;
+        position: absolute;
+        top: calc(100% + $tooltip-padding-top);
+        width: 260px;
+        padding: 16px;
 
-.tooltip {
+        border-radius: $default-radius;
+        box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.3);
+        background-color: #1E1E1E;
+        color: rgba(#FFFFFF, .7);
+        z-index: 2;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.2;
+        text-align: left;
+        &::before {
+            content:"";
+            position: absolute;
+            display: block;
+            left: 0px;
+            top: -$tooltip-padding-top;
+            width: 100%;
+            height: $tooltip-padding-top;
+        }
+    }
+    &:hover .tooltip__content {
+        display: block;
+    }
 
+    &--right &__content {
+        right: -16px;
+        border-top-right-radius: 0;
+    }
+    &--left &__content {
+        border-top-left-radius: 0;
+    }
 }

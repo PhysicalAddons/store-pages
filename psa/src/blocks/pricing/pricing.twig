@@ -52,9 +52,14 @@
                     </tr>
                     <tr>
                         <td>
-                            <h4 data-tooltip='All artworks made using our addon belong to you and can be used for commercial purposes. No need for attribution. <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">Read more about GPL license</a>'>
+                            <h4>
                                 GPL license
-                                <img src="assets/images/icons/info.svg" alt="Info Icons" style="position: relative; top: 4px;">
+                                <div class="tooltip tooltip--left">
+                                    <img src="assets/images/icons/info.svg" alt="Info icon"/>
+                                    <div class="tooltip__content">All artworks made using our addon belong to you and can be used for commercial purposes. No need for attribution. <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">Read more about GPL license</a></div>
+                                </div>
+                                
+                                {# <img src="assets/images/icons/info.svg" alt="Info Icons" style="position: relative; top: 4px;"> #}
                             </h4>
                         </td>
                         <td><img src="assets/images/icons/ir.svg"></img></td>
@@ -147,7 +152,19 @@
                 </tr>
                 <tr class="demoRow">
                     <td colspan="4">
-                        <h2>Try Demo version for 5$ <a class="tooltipLink"><img src="assets/images/icons/info-white.svg" alt="Info icon"></a></h2>
+                        <h2>
+                            Try Demo version for 5$
+                            <a class="tooltip tooltip--left">
+                                <img src="assets/images/icons/info-white.svg" alt="Info icon">
+                                <div class="tooltip__content">
+                                    Demo version<br><br>
+                                    + Pay only the difference when upgrading<br>
+                                    + No commercial or personal licence<br>
+                                    + Control only sun rotation<br>
+                                    + Earth preset only
+                                </div>
+                            </a>
+                        </h2>
                     </td>
                 </tr>
             </tfoot>

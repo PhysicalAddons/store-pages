@@ -1600,10 +1600,47 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tooltipLink {
+.tooltip {
+  position: relative;
   height: 12px;
   display: inline-block;
 }
-.tooltipLink img {
+.tooltip img {
   position: absolute;
+}
+.tooltip__content {
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  width: 260px;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.3);
+  background-color: #1E1E1E;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: left;
+}
+.tooltip__content::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0px;
+  top: -8px;
+  width: 100%;
+  height: 8px;
+}
+.tooltip:hover .tooltip__content {
+  display: block;
+}
+.tooltip--right .tooltip__content {
+  right: -16px;
+  border-top-right-radius: 0;
+}
+.tooltip--left .tooltip__content {
+  border-top-left-radius: 0;
 }

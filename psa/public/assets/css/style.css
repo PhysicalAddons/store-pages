@@ -781,38 +781,21 @@ body {
   font-weight: 500;
   padding: 6px;
 }
-.pricing .demoRow td {
-  height: 100%;
-  background: radial-gradient(59.42% 59.42% at 56.82% 56.82%, #6C26FF 45.31%, #BA26FF 100%), #D9D9D9;
-  color: white;
-  text-align: center;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 6px 16px;
-}
-.pricing .demoRow h2 {
-  float: left;
-  display: inline-block;
-  font-weight: 400;
-}
-.pricing .demoRow h2 a {
+.pricing .demoRowOutside {
+  display: block;
+  background: linear-gradient(270deg, #6C26FF, #BA26FF, #6C26FF);
+  background-size: 200% 200%;
+  padding: 0px 16px;
+  line-height: 48px;
   color: white;
   text-decoration: none;
+  border-radius: 0px 0px 6px 6px;
 }
-.pricing .demoRow h2 a:hover {
-  color: #d1a8ff;
-}
-.pricing .demoRow .tooltip {
+.pricing .demoRowOutside img {
   height: 16px;
 }
-.pricing .demoRow img {
-  width: 16px;
-  height: 22px;
-}
-.pricing .demoRow .infotrgr {
-  float: right;
-  height: 32px;
-  width: 20px;
+.pricing .demoRowOutside:hover {
+  animation: gradient-animation 3s linear infinite;
 }
 .pricing .infotrgr {
   cursor: pointer;
@@ -944,6 +927,14 @@ body {
   position: static;
 }
 
+@keyframes gradient-animation {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 .notes {
   padding-left: 16px;
   padding-right: 16px;

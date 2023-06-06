@@ -7,8 +7,14 @@
     border-radius: 100px;
     background-color: #E3E3E3;
     color: #000000;
+    &:hover {
+        background-color: #d1d1d1;
+    }
     &--primary {
         background-color: #6B26FF;
         color: #FFFFFF;
+        &:hover {
+            background-color: #4c19b8;
+        }
     }
 }

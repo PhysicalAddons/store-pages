@@ -1,4 +1,4 @@
-$tooltip-padding-top: 8px;
+$tooltip-padding-top: 16px;
 
 .tooltip {
     position: relative;
@@ -14,41 +14,43 @@ $tooltip-padding-top: 8px;
         display: none;
         position: absolute;
         top: calc(100% + $tooltip-padding-top);
-        width: 280px;
-        padding: 16px;
-
+        width: 230px;
+        padding: 10px 13px;
         border-radius: $default-radius;
-        box-shadow: 0px 4px 16px rgba(17,17,26,0.1), 0px 8px 32px rgba(17,17,26,0.05);
         background-color: #1E1E1E;
-        color: #ffffffbd;
+        color: rgba(255, 255, 255, 0.7411764706);
         z-index: 2;
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 1.2;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 130%;
         text-align: left;
+        box-shadow: 0px 4px 16px rgba(17,17,26,0.1), 0px 8px 24px rgba(17,17,26,0.1), 0px 16px 56px rgba(17,17,26,0.1);
 
         a {
             color: white !important;
         }
         &::before {
-            content:"";
-            position: absolute;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid #1e1e1e;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+            content: "";
             display: block;
-            left: 0px;
-            top: -$tooltip-padding-top;
-            width: 100%;
-            height: $tooltip-padding-top;
-        }
+            height: 0px;
+            width: 0px;
+            position: absolute;
+            top: -19px;
+            left: calc(50% - 10px);
+          }
     }
     &:hover .tooltip__content {
         display: block;
     }
 
     &--right &__content {
-        right: -16px;
-        border-top-right-radius: 0;
+        right: calc(-115px + -8px);
     }
     &--left &__content {
-        border-top-left-radius: 0;
+        right: calc(-115px + -8px);
     }
 }

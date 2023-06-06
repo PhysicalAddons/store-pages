@@ -186,13 +186,20 @@
             float: left;
             display: inline-block;
             font-weight: 400;
+            a {
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    color: #d1a8ff;
+                }
+            }
         }
         .tooltip {
             height: 16px;
         }
         img {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 22px;
         }
         .infotrgr {
             float: right;

@@ -15,9 +15,11 @@
             {% if feature.link %}
             <a href="{{feature.link}}">{{feature.title}}</a>
             {% elseif feature.description %}
-            {{feature.title}}
-            <img class="infotrgr" src="assets/images/icons/info.svg" alt="Info Icons">
-            <div class="infomsg">{{feature.description}}</a>.</div>
+            {{feature.title}}            
+            <div class="tooltip tooltip--left mobileTooltip2">
+            <img style="height: 16px;" src="assets/images/icons/info.svg" alt="Info icon"/>
+            <div class="tooltip__content">{{feature.description}}</div>
+            </div>
             {% endif %}
         {% else %}
             {{feature}}

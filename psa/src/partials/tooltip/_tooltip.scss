@@ -53,3 +53,30 @@ $tooltip-padding-top: 16px;
         right: calc(-113px + -8px);
     }
 }
+
+@media (max-width: 500px) {
+    .mobileTooltip1 {
+        .tooltip__content {
+            right: -168px;
+        }
+        .tooltip__content::before {
+            left: 56px;
+        }
+    }
+    .mobileTooltip2 {
+        .tooltip__content {
+            right: -147px;
+        }
+        .tooltip__content::before {
+            left: 78px;
+        }
+    }
+    .mobileTooltip3 {
+        .tooltip__content {
+            right: -58px;
+        }
+        .tooltip__content::before {
+            left: 166px;
+        }
+    }
+}

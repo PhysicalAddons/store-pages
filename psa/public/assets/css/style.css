@@ -781,22 +781,6 @@ body {
   font-weight: 500;
   padding: 6px;
 }
-.pricing .demoRowOutside {
-  display: block;
-  background: linear-gradient(270deg, #6C26FF, #BA26FF, #6C26FF);
-  background-size: 200% 200%;
-  padding: 0px 16px;
-  line-height: 48px;
-  color: white;
-  text-decoration: none;
-  border-radius: 0px 0px 6px 6px;
-}
-.pricing .demoRowOutside img {
-  height: 16px;
-}
-.pricing .demoRowOutside:hover {
-  animation: gradient-animation 3s linear infinite;
-}
 .pricing .infotrgr {
   cursor: pointer;
 }
@@ -886,6 +870,24 @@ body {
   .pricing th:nth-child(3) {
     width: 50%;
   }
+}
+
+.demoRowOutside {
+  display: block;
+  background: linear-gradient(270deg, #6C26FF, #BA26FF, #6C26FF);
+  background-size: 200% 200%;
+  padding: 0px 16px;
+  line-height: 48px;
+  color: white;
+  text-decoration: none;
+  border-radius: 0px 0px 6px 6px;
+  margin-bottom: 32px;
+}
+.demoRowOutside img {
+  height: 16px;
+}
+.demoRowOutside:hover {
+  animation: gradient-animation 3s linear infinite;
 }
 
 .pricing-mobile {
@@ -1666,4 +1668,25 @@ body {
 }
 .tooltip--left .tooltip__content {
   right: -121px;
+}
+
+@media (max-width: 500px) {
+  .mobileTooltip1 .tooltip__content {
+    right: -168px;
+  }
+  .mobileTooltip1 .tooltip__content::before {
+    left: 56px;
+  }
+  .mobileTooltip2 .tooltip__content {
+    right: -147px;
+  }
+  .mobileTooltip2 .tooltip__content::before {
+    left: 78px;
+  }
+  .mobileTooltip3 .tooltip__content {
+    right: -58px;
+  }
+  .mobileTooltip3 .tooltip__content::before {
+    left: 166px;
+  }
 }

@@ -172,23 +172,6 @@
             padding: 6px;
         }
     }
-    .demoRowOutside {
-        display: block;
-        background: linear-gradient(270deg, #6C26FF, #BA26FF, #6C26FF);
-        background-size: 200% 200%;
-        padding: 0px 16px;
-        line-height: 48px;
-        color: white;
-        text-decoration: none;
-        border-radius: 0px 0px 6px 6px;
-        img {
-            height: 16px;
-        }
-
-        &:hover {
-            animation: gradient-animation 3s linear infinite;
-        }
-    }
 
     .infotrgr {
         cursor: pointer;
@@ -305,6 +288,24 @@
     }
 }
 
+.demoRowOutside {
+    display: block;
+    background: linear-gradient(270deg, #6C26FF, #BA26FF, #6C26FF);
+    background-size: 200% 200%;
+    padding: 0px 16px;
+    line-height: 48px;
+    color: white;
+    text-decoration: none;
+    border-radius: 0px 0px 6px 6px;
+    margin-bottom: 32px;
+    img {
+        height: 16px;
+    }
+
+    &:hover {
+        animation: gradient-animation 3s linear infinite;
+    }
+}
 
 .pricing-mobile {
     position: relative;

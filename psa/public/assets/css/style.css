@@ -1619,7 +1619,7 @@ body {
 
 .tooltip {
   position: relative;
-  height: 12px;
+  height: 13px;
   display: inline-block;
 }
 .tooltip img {
@@ -1630,8 +1630,8 @@ body {
   display: none;
   position: absolute;
   top: calc(100% + 16px);
-  width: 230px;
-  padding: 10px 13px;
+  width: 226px;
+  padding: 10px 12px;
   border-radius: 6px;
   background-color: #1E1E1E;
   color: rgba(255, 255, 255, 0.7411764706);
@@ -1662,8 +1662,8 @@ body {
   display: block;
 }
 .tooltip--right .tooltip__content {
-  right: -123px;
+  right: -121px;
 }
 .tooltip--left .tooltip__content {
-  right: -123px;
+  right: -121px;
 }

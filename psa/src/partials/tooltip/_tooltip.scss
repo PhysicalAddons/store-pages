@@ -2,9 +2,8 @@ $tooltip-padding-top: 16px;
 
 .tooltip {
     position: relative;
-    height: 12px; 
+    height: 13px;
     display: inline-block;
-    // cursor: pointer;
     img {
         position: absolute;
     }
@@ -14,8 +13,8 @@ $tooltip-padding-top: 16px;
         display: none;
         position: absolute;
         top: calc(100% + $tooltip-padding-top);
-        width: 230px;
-        padding: 10px 13px;
+        width: 226px;
+        padding: 10px 12px;
         border-radius: $default-radius;
         background-color: #1E1E1E;
         color: rgba(255, 255, 255, 0.7411764706);
@@ -48,9 +47,9 @@ $tooltip-padding-top: 16px;
     }
 
     &--right &__content {
-        right: calc(-115px + -8px);
+        right: calc(-113px + -8px);
     }
     &--left &__content {
-        right: calc(-115px + -8px);
+        right: calc(-113px + -8px);
     }
 }

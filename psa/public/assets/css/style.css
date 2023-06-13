@@ -553,7 +553,6 @@ body {
 }
 
 .controls .heroBlock {
-  background-image: url("/assets/images/controls/addoncontrols.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -563,6 +562,16 @@ body {
   overflow: hidden;
   border-radius: 6px;
   margin-bottom: 32px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
+  .controls .heroBlock {
+    background-image: url("/assets/images/controls/addoncontrols.jpg");
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
+  .controls .heroBlock {
+    background-image: url("/assets/images/controls/addoncontrols2x.jpg");
+  }
 }
 .controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing-mobile__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .controls__title {
   color: white;

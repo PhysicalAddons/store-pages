@@ -5,7 +5,7 @@
     }
 
     .heroBlock {
-        background-image: url('/assets/images/controls/addoncontrols.jpg');
+        @include backgroundImage('/assets/images/controls/addoncontrols.jpg', '/assets/images/controls/addoncontrols2x.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

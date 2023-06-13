@@ -109,24 +109,24 @@ $breakpoints: (
 }
 
 
-@mixin serveBackgroundImages($nonRetinaImage, $retinaImage) {
+@mixin backgroundImage($nonRetinaImage, $retinaImage) {
   // Non-retina screen
-  @media #{$nonRetinaMediaQuery} {
+  @media #{$nonRetina} {
     background-image: url($nonRetinaImage);
   }
   
   // Retina screen
-  @media #{$retinaMediaQuery} {
+  @media #{$retina} {
     background-image: url($retinaImage);
   }
 }
 // Define media queries for non-retina and retina screens
-$nonRetina: 'only screen and (-webkit-min-device-pixel-ratio: 1), 
-            only screen and (min--moz-device-pixel-ratio: 1), 
-            only screen and (-o-min-device-pixel-ratio: 1/1), 
-            only screen and (min-resolution: 96dpi)';
+$nonRetina: 'only screen and (-webkit-min-device-pixel-ratio: 1),' +
+            'only screen and (min--moz-device-pixel-ratio: 1),' +
+            'only screen and (-o-min-device-pixel-ratio: 1/1),' +
+            'only screen and (min-resolution: 96dpi)';
 
-$retina: 'only screen and (-webkit-min-device-pixel-ratio: 2), 
-          only screen and (min--moz-device-pixel-ratio: 2), 
-          only screen and (-o-min-device-pixel-ratio: 2/1), 
-          only screen and (min-resolution: 192dpi)';
+$retina: 'only screen and (-webkit-min-device-pixel-ratio: 2),' +
+        'only screen and (min--moz-device-pixel-ratio: 2),' +
+        'only screen and (-o-min-device-pixel-ratio: 2/1),' +
+        'only screen and (min-resolution: 192dpi)';

@@ -6,7 +6,7 @@
     padding: 32px;
     box-sizing: border-box;
     background-color: #000000;
-    border-radius: $default-radius;
+    border-radius: $default-radius; 
     
     background-size: cover;
     background-repeat: no-repeat;
@@ -83,4 +83,24 @@
             color: #FFFFFF;
         }
     }
+
+    &.imageBen {
+        @include backgroundImage('/assets/images/testimonials/benx2.jpg', '/assets/images/testimonials/benx2.jpg');
+    }
+    &.imageRenault {
+        @include backgroundImage('/assets/images/testimonials/renaultx2.jpg', '/assets/images/testimonials/renaultx2.jpg');
+    }
+    &.imageTralie {
+        @include backgroundImage('/assets/images/testimonials/jamesx2.jpg', '/assets/images/testimonials/jamesx2.jpg');
+    }
+    &.imageSubin {
+        @include backgroundImage('/assets/images/testimonials/subinx2.jpg', '/assets/images/testimonials/subinx2.jpg');
+    }
+    &.imageScott {
+        @include backgroundImage('/assets/images/testimonials/scottx2.jpg', '/assets/images/testimonials/scottx2.jpg');
+    }
+    &.imageRyan {
+        @include backgroundImage('/assets/images/testimonials/ryanx2.jpg', '/assets/images/testimonials/ryanx2.jpg');
+    }
+
 }

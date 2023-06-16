@@ -1,12 +1,14 @@
 .team {
-    background-image: url('/assets/images/team/teamx2.jpg');
+    background: black;
+    @include backgroundImage('/assets/images/team/teamx2.jpg', '/assets/images/team/teamx2.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 32px;
     border-radius: 6px;
+    
     @include respond-below(sm) {
-        background-image: url('/assets/images/team/teamx2-mobile.jpg');
+        @include backgroundImage('/assets/images/team/teamx2-mobile.jpg', '/assets/images/team/teamx2-mobile.jpg');
     }
 
     // &__title {

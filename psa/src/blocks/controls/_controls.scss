@@ -6,7 +6,7 @@
 
     .heroBlock {
         background: black;
-        @include backgroundImage('/assets/images/controls/addoncontrols.jpg', '/assets/images/controls/addoncontrols.jpg');
+        @include backgroundImage('/assets/images/controls/addoncontrols.webp', '/assets/images/controls/addoncontrols2x.webp');
         background-repeat: no-repeat;
         background-position: top 0 right 0;
         background-size: cover;

@@ -43,7 +43,7 @@
 
     .bigBlock {
         background: #000000;
-        @include backgroundImage('/assets/images/heroBackground2.jpg', '/assets/images/heroBackground2.jpg');
+        @include backgroundImage('/assets/images/heroBackground.webp', '/assets/images/heroBackground2x.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

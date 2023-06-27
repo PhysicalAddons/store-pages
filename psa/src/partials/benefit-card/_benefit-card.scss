@@ -5,7 +5,7 @@
     border-radius: $default-radius;
     overflow: hidden;
     @include respond-below(lg) {
-        padding: 32px;
+        padding: 32px; 
     }
     @include respond-below(sm) {
         padding: 16px;
@@ -106,6 +106,9 @@
         outline: 2px solid #2F2F2F;
         border-top-right-radius: 32px;
         box-sizing: border-box;
+        @include respond-below(sm) {
+            height: 270px;
+        }
     }
     &__backgroundImage {
         display: block;
@@ -118,56 +121,71 @@
     .smallScreenImage {
         height: 270px;
     }
+    .videoContainer {
+        overflow: hidden;
+        video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            min-width: 630px;
+        }
+    }
+    .videoContainerSmall {
+        video {
+            min-width: 360px !important;
+        }
+    }
     .image1 {
-        @include backgroundImage('/assets/images/benefits/benefits-presets.gif', '/assets/images/benefits/benefits-presets.gif');
-        background-repeat: no-repeat;
-        background-position: right 0px top 0px;
-        background-size: cover;
+        //@include backgroundImage('/assets/images/benefits/presetsBig.webm', '/assets/images/benefits/presetsBig.webm');
+        //background-repeat: no-repeat;
+        //background-position: right 0px top 0px;
+        //background-size: cover;
     }
     .image2 {
-        @include backgroundImage('/assets/images/benefits/benefits-realtime.gif', '/assets/images/benefits/benefits-realtime.gif');
-        background-repeat: no-repeat;
-        background-position: right 0px top 0px;
-        background-size: cover;
+        //@include backgroundImage('/assets/images/benefits/realtime.webm', '/assets/images/benefits/realtime.webm');
+        //background-repeat: no-repeat;
+        //background-position: right 0px top 0px;
+        //background-size: cover;
     }
     .image3 {
-        @include backgroundImage('/assets/images/benefits/benefits-animationx2.jpg', '/assets/images/benefits/benefits-animationx2.jpg');
+        @include backgroundImage('/assets/images/benefits/benefits-animation.webp', '/assets/images/benefits/benefits-animation2x.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     &.image4 { 
-        @include backgroundImage('/assets/images/benefits/benefits-freedomx2.jpg', '/assets/images/benefits/benefits-freedomx2.jpg');
+        @include backgroundImage('/assets/images/benefits/benefits-freedom.webp', '/assets/images/benefits/benefits-freedom2x.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     .image5 {
-        @include backgroundImage('/assets/images/benefits/benefits-presets.gif', '/assets/images/benefits/benefits-presets.gif');
+        @include backgroundImage('/assets/images/benefits/presets.webm', '/assets/images/benefits/presets.webm');
         background-repeat: no-repeat;
         background-position: right 0px top 0px;
         background-size: cover;
     }
     .image6 {
-        @include backgroundImage('/assets/images/benefits/benefits-eeveecycles.jpg', '/assets/images/benefits/benefits-eeveecycles.jpg');
+        @include backgroundImage('/assets/images/benefits/benefits-eeveecycles.webp', '/assets/images/benefits/benefits-eeveecycles2x.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     .image7 {
-        @include backgroundImage('/assets/images/benefits/benefits-realvalues.jpg', '/assets/images/benefits/benefits-realvalues.jpg');
+        @include backgroundImage('/assets/images/benefits/benefits-values.webp', '/assets/images/benefits/benefits-values2x.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     .image8 {
-        @include backgroundImage('/assets/images/benefits/benefits-acesx2.jpg', '/assets/images/benefits/benefits-acesx2.jpg');
+        @include backgroundImage('/assets/images/benefits/benefits-aces.webp', '/assets/images/benefits/benefits-aces2x.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     .imageDemo {
-        @include backgroundImage('/assets/images/benefits/benefits-demo.jpg', '/assets/images/benefits/benefits-demo.jpg');
+        @include backgroundImage('/assets/images/benefits/benefits-demo.webp', '/assets/images/benefits/benefits-demo2x.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -209,6 +227,10 @@
         .imageDemo {
             width: calc(50% + 8px);
             height: 300px;
+            @include respond-below(sm) {
+                width: 90%;
+                height: 250px;
+            }
 		}
         .infotrgr2:hover+.infomsg2 {
 			display: block;

@@ -382,32 +382,14 @@
 						alt="Artwork by {{artwork.author}}"
 						
 						{% if artwork.size == 2 %}
-						src="{{artwork.image.thumb }}-2x-720.jpg"
+						src="{{artwork.image.thumb }}-2x-320.jpg"
 						srcset="
-							{{artwork.image.thumb }}-2x-320.jpg 320w,
-							{{artwork.image.thumb }}-2x-400.jpg 400w,
-							{{artwork.image.thumb }}-2x-512.jpg 512w,
-							{{artwork.image.thumb }}-2x-720.jpg 720w,
-							{{artwork.image.thumb }}-2x-850.jpg 850w
-						"
-						sizes="
-							(max-width: 576px) calc(100vw - 4px),
-							(max-width: 1700px) calc(50vw - 3px),
-            				847px
+							{{artwork.image.thumb }}-2x-720.jpg 2x,
 						"
 						{% else %}
-						src="{{artwork.image.thumb }}-360.jpg"
+						src="{{artwork.image.thumb }}-160.jpg"
 						srcset="
-							{{artwork.image.thumb }}-160.jpg 160w,
-							{{artwork.image.thumb }}-200.jpg 200w,
-							{{artwork.image.thumb }}-256.jpg 256w,
-							{{artwork.image.thumb }}-360.jpg 360w,
-							{{artwork.image.thumb }}-425.jpg 425w
-						"
-						sizes="
-							(max-width: 576px) calc(50vw - 3px),
-							(max-width: 1700px) calc(25vw - 2px),
-            				423px
+							{{artwork.image.thumb }}-360.jpg 2x,
 						"
 						{% endif %}
 					>

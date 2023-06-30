@@ -479,12 +479,12 @@ body {
 }
 @media only screen and (max-width: 467px) and (-webkit-min-device-pixel-ratio: 1), only screen and (max-width: 467px) and (min--moz-device-pixel-ratio: 1), only screen and (max-width: 467px) and (-o-min-device-pixel-ratio: 1/1), only screen and (max-width: 467px) and (min-resolution: 96dpi) {
   .team {
-    background-image: url("/assets/images/team/teamx2-mobile.jpg");
+    background-image: url("/assets/images/team/teamMobile.webp");
   }
 }
 @media only screen and (max-width: 467px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 467px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 467px) and (-o-min-device-pixel-ratio: 2/1), only screen and (max-width: 467px) and (min-resolution: 192dpi) {
   .team {
-    background-image: url("/assets/images/team/teamx2-mobile.jpg");
+    background-image: url("/assets/images/team/teamMobile2x.webp");
   }
 }
 .team .topRow {

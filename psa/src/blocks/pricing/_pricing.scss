@@ -86,10 +86,12 @@
             // Border radiuses for TD elements
             tr:first-child td:first-child {
                 border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
             }
             
             tr:first-child td:last-child {
                 border-top-right-radius: 6px;
+                border-bottom-right-radius: 6px;
             }
             
             tr:last-child td:first-child {
@@ -118,7 +120,6 @@
                     color: rgba(#000000,.5);
                 }
             }
-
         }
 
         h3 {
@@ -162,6 +163,7 @@
     }
         
     .discountRow {
+        display: none;
         td {
             height: 100%;
             background: radial-gradient(59.42% 59.42% at 56.82% 56.82%, #6C26FF 45.31%, #BA26FF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D9D9D9;
@@ -170,6 +172,22 @@
             line-height: 32px;
             font-weight: 500;
             padding: 6px;
+        }
+    }
+    &--discount {
+        .discountRow {
+            display: table-row;
+        }
+        table {
+            tfoot {
+                tr:first-child td:first-child {
+                    border-bottom-left-radius: 0px;
+                }
+                
+                tr:first-child td:last-child {
+                    border-bottom-right-radius: 0px;
+                }
+            }  
         }
     }
 

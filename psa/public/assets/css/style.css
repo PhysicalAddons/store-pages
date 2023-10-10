@@ -553,7 +553,6 @@ body {
 }
 
 .controls .heroBlock {
-  background-image: url("/assets/images/controls/addoncontrols.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -563,6 +562,16 @@ body {
   overflow: hidden;
   border-radius: 6px;
   margin-bottom: 32px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
+  .controls .heroBlock {
+    background-image: url("/assets/images/controls/addoncontrols.jpg");
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
+  .controls .heroBlock {
+    background-image: url("/assets/images/controls/addoncontrols2x.jpg");
+  }
 }
 .controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing-mobile__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .testimonials__title, .controls .heroBlock .benefits__title, .controls .heroBlock .comparison__title, .controls .heroBlock .controls__title {
   color: white;
@@ -709,9 +718,11 @@ body {
 }
 .pricing table tfoot tr:first-child td:first-child {
   border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 .pricing table tfoot tr:first-child td:last-child {
   border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 .pricing table tfoot tr:last-child td:first-child {
   border-bottom-left-radius: 6px;
@@ -772,6 +783,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+.pricing .discountRow {
+  display: none;
+}
 .pricing .discountRow td {
   height: 100%;
   background: radial-gradient(59.42% 59.42% at 56.82% 56.82%, #6C26FF 45.31%, #BA26FF 100%), #D9D9D9;
@@ -780,6 +794,15 @@ body {
   line-height: 32px;
   font-weight: 500;
   padding: 6px;
+}
+.pricing--discount .discountRow {
+  display: table-row;
+}
+.pricing--discount table tfoot tr:first-child td:first-child {
+  border-bottom-left-radius: 0px;
+}
+.pricing--discount table tfoot tr:first-child td:last-child {
+  border-bottom-right-radius: 0px;
 }
 .pricing .infotrgr {
   cursor: pointer;

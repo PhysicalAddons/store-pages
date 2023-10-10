@@ -718,9 +718,11 @@ body {
 }
 .pricing table tfoot tr:first-child td:first-child {
   border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 .pricing table tfoot tr:first-child td:last-child {
   border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 .pricing table tfoot tr:last-child td:first-child {
   border-bottom-left-radius: 6px;
@@ -781,6 +783,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+.pricing .discountRow {
+  display: none;
+}
 .pricing .discountRow td {
   height: 100%;
   background: radial-gradient(59.42% 59.42% at 56.82% 56.82%, #6C26FF 45.31%, #BA26FF 100%), #D9D9D9;
@@ -789,6 +794,15 @@ body {
   line-height: 32px;
   font-weight: 500;
   padding: 6px;
+}
+.pricing--discount .discountRow {
+  display: table-row;
+}
+.pricing--discount table tfoot tr:first-child td:first-child {
+  border-bottom-left-radius: 0px;
+}
+.pricing--discount table tfoot tr:first-child td:last-child {
+  border-bottom-right-radius: 0px;
 }
 .pricing .infotrgr {
   cursor: pointer;

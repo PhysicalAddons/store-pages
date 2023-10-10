@@ -113,11 +113,13 @@ $breakpoints: (
   // Non-retina screen
   @media #{$nonRetina} {
     background-image: url($nonRetinaImage);
+    // background-image: -webkit-image-set(url($nonRetinaImage) 1x);
   }
   
   // Retina screen
   @media #{$retina} {
     background-image: url($retinaImage);
+    // background-image: -webkit-image-set(url($retinaImage) 1x);
   }
 }
 // Define media queries for non-retina and retina screens
@@ -130,3 +132,4 @@ $retina: 'only screen and (-webkit-min-device-pixel-ratio: 2),' +
         'only screen and (min--moz-device-pixel-ratio: 2),' +
         'only screen and (-o-min-device-pixel-ratio: 2/1),' +
         'only screen and (min-resolution: 192dpi)';
+

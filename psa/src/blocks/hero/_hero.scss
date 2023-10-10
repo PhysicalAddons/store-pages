@@ -1,5 +1,11 @@
 .hero {
 
+    .stencilDark {
+        background: linear-gradient(270deg, #6C26FF, #BA26FF, #6C26FF);
+        background-size: 200% 200%;
+        animation: gradient-animation 3s linear infinite;
+    }
+
     .tabs {
 
         height: 40px;
@@ -36,7 +42,8 @@
     }
 
     .bigBlock {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), url(/assets/images/heroBackground2.jpg);
+        background: #000000;
+        @include backgroundImage('/assets/images/heroBackground.webp', '/assets/images/heroBackground2x.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -144,3 +151,4 @@
         }
     }
 }
+

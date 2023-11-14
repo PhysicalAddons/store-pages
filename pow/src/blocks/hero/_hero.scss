@@ -43,7 +43,8 @@
 
     .bigBlock {
         background: #000000;
-        @include backgroundImage('/assets/images/heroBackground.webp', '/assets/images/heroBackground2x.webp');
+        // @include backgroundImage('/assets/images/heroBackground.webp', '/assets/images/heroBackground2x.webp');
+        @include backgroundImage('https://placehold.co/728x1208/red/white', 'https://placehold.co/1456x2416/red/white');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

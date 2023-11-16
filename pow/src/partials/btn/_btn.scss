@@ -11,10 +11,10 @@
         background-color: #d1d1d1;
     }
     &--primary {
-        background-color: #6B26FF;
+        background-color: #000000;
         color: #FFFFFF;
         &:hover {
-            background-color: #4c19b8;
+            background-color: rgba(#000000, .8);
         }
     }
 }

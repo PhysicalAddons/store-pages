@@ -37,7 +37,8 @@
         }
         .active {
             color: white;
-            background: #77789d;
+            // background: #77789d; // TODO: Placehold
+            background-color: #FF0000;
         }
     }
 
@@ -95,6 +96,14 @@
         }
         .logoWall2 {
             display: none;
+        }
+        &__notice {
+            margin-top: 16px;
+            text-align: right;
+            color: rgba(#FFFFFF, .8);
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.25;
         }
     }
 

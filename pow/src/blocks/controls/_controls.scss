@@ -6,7 +6,8 @@
 
     .heroBlock {
         background: black;
-        @include backgroundImage('/assets/images/controls/addoncontrols.webp', '/assets/images/controls/addoncontrols2x.webp');
+        // @include backgroundImage('/assets/images/controls/addoncontrols.webp', '/assets/images/controls/addoncontrols2x.webp');
+        @include backgroundImage('https://placehold.co/728x292/red/white', 'https://placehold.co/1456x584/red/white');
         background-repeat: no-repeat;
         background-position: top 0 right 0;
         background-size: cover;

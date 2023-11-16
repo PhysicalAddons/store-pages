@@ -32,6 +32,7 @@
     <div class="wrapper">
         {% include "blocks/hero/hero.twig" %}
         {% include "blocks/benefits/benefits.twig" %}
+        {% include "blocks/updates/updates.twig" %}
         {% include "blocks/team/team.twig" %}
         {% include "blocks/gallery/gallery.twig" %}
         {% include "blocks/controls/controls.twig" %}
@@ -39,65 +40,6 @@
         {% include "blocks/notes/notes.twig" %}
         {% include "blocks/footer/footer.twig" %}
     </div>
-
-	<!-- Fancybox smooth animations and simplicity is worth importing jquery. Change my mind -->
-	<!--<script src="{{ 'assets/javascript/vendor/jquery.min.js' }}"></script>
-	<script src="{{ 'assets/javascript/vendor/jquery.fancybox.min.js' }}"></script>-->
-    <script src="{{ 'assets/javascript/vendor/siema.min.js' }}"></script>
-	<script>
-    // FANCYBOX
-	/*$.fancybox.defaults.buttons = [
-      //"zoom",
-      //"share",
-      //"slideShow",
-      //"fullScreen",
-      //"download",
-      //"thumbs",
-      "close"
-	]
-	$('[data-fancybox="images"]').fancybox({
-		afterLoad : function(instance, current) {
-			var pixelRatio = window.devicePixelRatio || 1;
-
-			if ( pixelRatio > 1.5 ) {
-				current.width  = current.width  / pixelRatio;
-				current.height = current.height / pixelRatio;
-			}
-		}
-	});
-	var imageOption = $.extend(true, {}, $.fancybox.defaults, {
-		caption : function( instance, item ) {
-			return $(this).next('figcaption').html();
-		}
-	});
-	$('[data-fancybox="galleryfb"]').fancybox(imageOption);*/
-
-    // SIEMA
-	if (window.innerWidth < 468) {
-		const mySiema = new Siema({
-			perPage: 1.1
-		});
-	} else {
-		const mySiema = new Siema({
-			perPage: 1.5
-		});
-	}
-    
-	{# new Siema({
-  selector: '.siema',
-  duration: 200,
-  easing: 'ease-out',
-  perPage: 1,
-  startIndex: 0,
-  draggable: true,
-  multipleDrag: true,
-  threshold: 20,
-  loop: false,
-  rtl: false,
-  onInit: () => {},
-  onChange: () => {},
-}); #}
-	</script>
 </body>
 </html>
 

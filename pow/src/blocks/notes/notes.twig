@@ -4,41 +4,38 @@
 	    Creator notes
     </h2>
 
-	<div class="notes_table">
 
-        <table>
+    <table class="notes__table">
+    
+        <tr>
+            <td><h4>The complexity of the open waters</h4></td>
+            <td>
+                <p>Simulating open waters in 3D environments, especially in real-time, is a complex task due to the multifaceted nature of water as a material and the dynamic conditions under which it exists. The challenges in simulating water include recreating the visual properties, such as reflection and refraction, as well as the physical behavior, like wave dynamics and interactions with objects and the environment.</p>
+                <h5>Reflection and Refraction</h5>
+                <p>Water surfaces reflect the environment and refract light passing through them. Shaders must account for the Fresnel effect, which changes the reflectivity based on the viewing angle. Real-time cube mapping or screen-space techniques can be used for reflections, while refraction often requires a distortion effect based on a normal map.</p>
+                <h5>Wave Dynamics</h5>
+                <p>Realistic water movement can be achieved through a combination of techniques. The Gerstner wave model is commonly used to simulate wave displacement. This model allows for the creation of waves that combine different amplitudes, wavelengths, and directions, creating a convincing, moving water surface.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><h4>Shader Implementation</h4></td>
+            <td>
+                <h5>Vertex Shader</h5>
+                <p>For altering the vertices of a water mesh to simulate wave movement, using the Gerstner equation to displace vertices.</p>
+                <h5>Fragment Shader</h5>
+                <p>For computing lighting, reflection, refraction, and shading details. This involves using normal mapping for small ripples, specular mapping for shiny water effects, and possibly shadow mapping if the water receives or casts shadows.</p>
+                <h5>Procedural Generation</h5>
+                <p>Open waters in a large environment are often procedurally generated to avoid the memory cost of large textures. Noise functions like Perlin or Simplex noise can generate the base pattern for the water surface. These patterns can be tiled and offset over time to simulate continuous motion.</p>
+                <h5>Performance</h5>
+                <p>Real-time performance requires careful consideration of computational cost. Level of detail (LOD) systems can reduce the number of calculations by simplifying the water simulation at distances. Simpler mathematical models may be used for distant water, while closer water requires more detailed simulation.</p>
+                <h5>Interactions</h5>
+                <p>Simulating interactions with other objects, like boats or characters, adds another layer of complexity. This involves dynamic modification of the water's surface and appropriate response in the shader, which can be simulated with render targets that allow shaders to write and read interaction data.</p>
+                <h5>Environmental Effects</h5>
+                <p>Water appearance changes with weather conditions and time of day. Shaders must adapt to different lighting conditions, and possibly integrate with particle systems for effects like foam and splashes.</p>
+                <h5>Optimization</h5>
+                <p>Techniques such as culling, where non-visible water surfaces are not processed, and using lower precision arithmetic where possible, can help maintain performance. Additionally, shaders can be written to take advantage of parallel processing capabilities of modern GPUs.</p>
+                <p>Each of these areas presents its own set of challenges and requires specific shader programming techniques to handle the data efficiently and produce convincing results. The actual implementation would vary greatly depending on the platform, performance considerations, and the level of realism required by the project.</p>
+            </td>
         
-            <tr>
-                <td><h4>The complexity of the open waters</h4></td>
-                <td>
-                    <p>Simulating open waters in 3D environments, especially in real-time, is a complex task due to the multifaceted nature of water as a material and the dynamic conditions under which it exists. The challenges in simulating water include recreating the visual properties, such as reflection and refraction, as well as the physical behavior, like wave dynamics and interactions with objects and the environment.</p>
-                    <h3>Reflection and Refraction</h3>
-                    <p>Water surfaces reflect the environment and refract light passing through them. Shaders must account for the Fresnel effect, which changes the reflectivity based on the viewing angle. Real-time cube mapping or screen-space techniques can be used for reflections, while refraction often requires a distortion effect based on a normal map.</p>
-                    <h3>Wave Dynamics</h3>
-                    <p>Realistic water movement can be achieved through a combination of techniques. The Gerstner wave model is commonly used to simulate wave displacement. This model allows for the creation of waves that combine different amplitudes, wavelengths, and directions, creating a convincing, moving water surface.</p>
-                </td>
-            </tr>
-            <tr>
-                <td><h4>Shader Implementation</h4></td>
-                <td>
-                    <h3>Vertex Shader</h3>
-                    <p>For altering the vertices of a water mesh to simulate wave movement, using the Gerstner equation to displace vertices.</p>
-                    <h3>Fragment Shader</h3>
-                    <p>For computing lighting, reflection, refraction, and shading details. This involves using normal mapping for small ripples, specular mapping for shiny water effects, and possibly shadow mapping if the water receives or casts shadows.</p>
-                    <h3>Procedural Generation</h3>
-                    <p>Open waters in a large environment are often procedurally generated to avoid the memory cost of large textures. Noise functions like Perlin or Simplex noise can generate the base pattern for the water surface. These patterns can be tiled and offset over time to simulate continuous motion.</p>
-                    <h3>Performance</h3>
-                    <p>Real-time performance requires careful consideration of computational cost. Level of detail (LOD) systems can reduce the number of calculations by simplifying the water simulation at distances. Simpler mathematical models may be used for distant water, while closer water requires more detailed simulation.</p>
-                    <h3>Interactions</h3>
-                    <p>Simulating interactions with other objects, like boats or characters, adds another layer of complexity. This involves dynamic modification of the water's surface and appropriate response in the shader, which can be simulated with render targets that allow shaders to write and read interaction data.</p>
-                    <h3>Environmental Effects</h3>
-                    <p>Water appearance changes with weather conditions and time of day. Shaders must adapt to different lighting conditions, and possibly integrate with particle systems for effects like foam and splashes.</p>
-                    <h3>Optimization</h3>
-                    <p>Techniques such as culling, where non-visible water surfaces are not processed, and using lower precision arithmetic where possible, can help maintain performance. Additionally, shaders can be written to take advantage of parallel processing capabilities of modern GPUs.</p>
-                    <p>Each of these areas presents its own set of challenges and requires specific shader programming techniques to handle the data efficiently and produce convincing results. The actual implementation would vary greatly depending on the platform, performance considerations, and the level of realism required by the project.</p>
-                </td>
-            
-        </table>
-
-	</div>
+    </table>
 </div>

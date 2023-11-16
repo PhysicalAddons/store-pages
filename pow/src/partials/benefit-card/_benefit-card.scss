@@ -30,6 +30,9 @@
             font-size: 12px;
         }
     }
+    &__list {
+        position: relative;
+    }
     &--wide {
         grid-column: span 2; // better if this would be passed from the top
         @include respond-below(sm) {

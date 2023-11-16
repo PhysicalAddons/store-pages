@@ -78,7 +78,7 @@ body {
   color: #000000;
 }
 
-.h2, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .benefits__title {
+.h2, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .updates__title, .benefits__title {
   padding: 0 0 48px 16px;
   font-size: 40px;
   font-weight: 500;
@@ -87,7 +87,7 @@ body {
   color: #000000;
   letter-spacing: -0.03em;
 }
-.h2 em, .gallery__title em, .notes__title em, .pricing-mobile__title em, .pricing__subtitle em, .pricing__title em, .controls__title em, .benefits__title em {
+.h2 em, .gallery__title em, .notes__title em, .pricing-mobile__title em, .pricing__subtitle em, .pricing__title em, .controls__title em, .updates__title em, .benefits__title em {
   font-weight: 600;
   background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
   -webkit-background-clip: text;
@@ -96,12 +96,12 @@ body {
   text-fill-color: transparent;
 }
 @media (max-width: 467px) {
-  .h2, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .benefits__title {
+  .h2, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .updates__title, .benefits__title {
     font-size: 32px;
     padding-left: 0;
     padding-bottom: 32px;
   }
-  .h2 br, .gallery__title br, .notes__title br, .pricing-mobile__title br, .pricing__subtitle br, .pricing__title br, .controls__title br, .benefits__title br {
+  .h2 br, .gallery__title br, .notes__title br, .pricing-mobile__title br, .pricing__subtitle br, .pricing__title br, .controls__title br, .updates__title br, .benefits__title br {
     display: none;
   }
 }
@@ -155,7 +155,7 @@ body {
 }
 .hero .tabs .active {
   color: white;
-  background: #77789d;
+  background-color: #FF0000;
 }
 .hero .bigBlock {
   background: #000000;
@@ -219,6 +219,14 @@ body {
 }
 .hero .bigBlock .logoWall2 {
   display: none;
+}
+.hero .bigBlock__notice {
+  margin-top: 16px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
 }
 @media (max-width: 600px) {
   .hero .tabs {
@@ -363,6 +371,104 @@ body {
   }
 }
 
+.updates {
+  background-color: red;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.updates__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.updates__table h4 {
+  font-weight: 300;
+  font-size: 80px;
+  line-height: 1;
+  padding-right: 32px;
+  letter-spacing: -4.8px;
+}
+.updates__table h4 + div {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 20px;
+  line-height: 1.25;
+  background-color: #F2F2F2;
+  border-radius: 50px;
+}
+.updates__table h5 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+}
+.updates__table h5 + p {
+  margin-top: 4px;
+}
+.updates__table h5 + p + h5 {
+  margin-top: 16px;
+}
+.updates__table p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+.updates__table img {
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border-radius: 6px;
+}
+.updates__table th,
+.updates__table td {
+  padding: 16px 0px 64px 0px;
+  text-align: left;
+  border-top: 1px solid #dcdcdc;
+  vertical-align: top;
+}
+.updates__table tr {
+  border-bottom: 1px solid #dcdcdc;
+}
+.updates__table th:nth-child(1),
+.updates__table td:nth-child(1) {
+  width: 30%;
+}
+.updates__table th:nth-child(2),
+.updates__table td:nth-child(2) {
+  width: 70%;
+}
+@media (max-width: 500px) {
+  .updates h2 {
+    padding-left: 0px !important;
+    padding-bottom: 16px;
+  }
+  .updates table {
+    display: block;
+  }
+  .updates table h4 {
+    padding-right: 0px;
+    margin-top: 32px;
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 400;
+  }
+  .updates tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    border: none !important;
+  }
+  .updates td,
+  .updates th {
+    display: block;
+    width: 100% !important;
+    border-top: none !important;
+    border-left: none !important;
+    margin-right: 8px !important;
+    padding: 8px 0px 16px 0px !important;
+  }
+}
+
 .team {
   background: black;
   background-repeat: no-repeat;
@@ -500,15 +606,15 @@ body {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
   .controls .heroBlock {
-    background-image: url("/assets/images/controls/addoncontrols.webp");
+    background-image: url("https://placehold.co/728x292/red/white");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
   .controls .heroBlock {
-    background-image: url("/assets/images/controls/addoncontrols2x.webp");
+    background-image: url("https://placehold.co/1456x584/red/white");
   }
 }
-.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing-mobile__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .benefits__title, .controls .heroBlock .controls__title {
+.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing-mobile__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .benefits__title, .controls .heroBlock .updates__title, .controls .heroBlock .controls__title {
   color: white;
   position: absolute;
   top: 0;
@@ -619,20 +725,6 @@ body {
 .pricing table th:nth-child(1), .pricing table td:nth-child(1) {
   width: 30%;
 }
-.pricing table td em {
-  font-size: 30px;
-  font-weight: 300;
-  line-height: 36px;
-  background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-.pricing table td em.modified {
-  font-size: 16px;
-  line-height: 19px;
-}
 .pricing table thead tr {
   border-bottom: 1px solid #DCDCDC;
 }
@@ -647,6 +739,21 @@ body {
 }
 .pricing table tbody tr td:last-child {
   border-right: none;
+}
+.pricing table tbody tr td em {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 36px;
+  background: radial-gradient(73.75% 73.75% at 67.5% 67.5%, #0B9AAD 25%, #00407B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.pricing table tbody tr td em.modified {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
 }
 .pricing table tfoot {
   background-color: #F2F2F2;
@@ -718,19 +825,24 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.pricing .discountRow {
+.pricing table .discountRow {
   display: none;
 }
-.pricing .discountRow td {
+.pricing table .discountRow td {
   height: 100%;
-  background: radial-gradient(59.42% 59.42% at 56.82% 56.82%, #6C26FF 45.31%, #BA26FF 100%), #D9D9D9;
-  color: white;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.6);
   text-align: center;
   line-height: 32px;
-  font-weight: 500;
+  font-weight: 300;
   padding: 6px;
 }
-.pricing--discount .discountRow {
+.pricing table .discountRow td em {
+  background: unset;
+  font-weight: 400;
+  color: white;
+}
+.pricing--discount table .discountRow {
   display: table-row;
 }
 .pricing--discount table tfoot tr:first-child td:first-child {
@@ -902,44 +1014,56 @@ body {
 .notes h2 {
   padding-left: 30%;
 }
-.notes table {
+.notes__table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
 }
-.notes table h4 {
+.notes__table h4 {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   padding-right: 32px;
 }
-.notes table p {
+.notes__table h5 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+}
+.notes__table h5 + p {
+  margin-top: 4px;
+}
+.notes__table p {
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
 }
-.notes table img {
+.notes__table p + h5 {
+  margin-top: 16px;
+}
+.notes__table img {
   width: 100%;
   margin-top: 32px;
   margin-bottom: 32px;
   border-radius: 6px;
 }
-.notes table th,
-.notes table td {
+.notes__table th,
+.notes__table td {
   padding: 16px 0px 64px 0px;
   text-align: left;
   border-top: 1px solid #dcdcdc;
   vertical-align: top;
 }
-.notes table tr {
+.notes__table tr {
   border-bottom: 1px solid #dcdcdc;
 }
-.notes table th:nth-child(1),
-.notes table td:nth-child(1) {
+.notes__table th:nth-child(1),
+.notes__table td:nth-child(1) {
   width: 30%;
 }
-.notes table th:nth-child(2),
-.notes table td:nth-child(2) {
+.notes__table th:nth-child(2),
+.notes__table td:nth-child(2) {
   width: 70%;
 }
 @media (max-width: 500px) {
@@ -1196,6 +1320,9 @@ body {
   .benefit-card__title, .benefit-card__description {
     font-size: 12px;
   }
+}
+.benefit-card__list {
+  position: relative;
 }
 .benefit-card--wide {
   grid-column: span 2;
@@ -1599,11 +1726,11 @@ body {
   background-color: #d1d1d1;
 }
 .btn--primary {
-  background-color: #6B26FF;
+  background-color: #000000;
   color: #FFFFFF;
 }
 .btn--primary:hover {
-  background-color: #4c19b8;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .pricing-pack {

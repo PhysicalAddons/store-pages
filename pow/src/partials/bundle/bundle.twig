@@ -5,8 +5,8 @@
     </div>
     <h3 class="bundle__name">Physical Addons Bundle</h3>
     <div class="bundle__price">
-        <div>$87</div>
-        <div>$97</div>
+        <div>${{ promo ? (price_bundle * ( 1 - discount))|round(0, 'floor') : price_bundle }}</div>
+        <div>{{ promo ? '$' ~ price_bundle : '' }}</div>
     </div>
     <footer class="bundle__footer">
         <p class="bundle__description">

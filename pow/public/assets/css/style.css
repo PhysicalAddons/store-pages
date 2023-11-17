@@ -98,7 +98,7 @@ body {
 @media (max-width: 467px) {
   .h2, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .updates__title, .benefits__title {
     font-size: 32px;
-    padding-left: 0;
+    padding-left: 16px;
     padding-bottom: 32px;
   }
   .h2 br, .gallery__title br, .notes__title br, .pricing-mobile__title br, .pricing__subtitle br, .pricing__title br, .controls__title br, .updates__title br, .benefits__title br {
@@ -241,7 +241,7 @@ body {
     font-size: 12px;
   }
   .hero .tabs .tab span {
-    padding-right: 4px;
+    display: none;
   }
   .hero .bigBlock {
     padding: 30% 16px 50px 16px;
@@ -1172,8 +1172,10 @@ body {
 .footer .column .products a img {
   float: left;
   margin-right: 12px;
+  width: 32px;
+  height: 32px;
 }
-.footer .column .products a:nth-child(3) {
+.footer .column .products a:nth-child(4) {
   color: rgba(0, 0, 0, 0.3);
 }
 .footer .column .socialList a {
@@ -1322,7 +1324,18 @@ body {
   }
 }
 .benefit-card__list {
-  position: relative;
+  position: absolute;
+  left: 32px;
+  bottom: 32px;
+}
+.benefit-card__list > li {
+  line-height: 40px;
+}
+.benefit-card__list > li > img {
+  float: left;
+  margin-right: 12px;
+  width: 40px;
+  height: 40px;
 }
 .benefit-card--wide {
   grid-column: span 2;

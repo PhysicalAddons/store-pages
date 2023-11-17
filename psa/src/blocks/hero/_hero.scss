@@ -97,22 +97,25 @@
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 567px) {
 
         .tabs {
 
-            height: 40px;
+            height: 32px;
     
             .label {
+                line-height: 32px;
                 font-size: 12px;
                 padding-left: 0;
             }
             .tab {
                 padding: 0px 12px;
                 font-size: 12px;
+                line-height: 32px;;
 
                 span {
-                    padding-right: 4px;
+
+                    display: none;
                 }
             }
         }

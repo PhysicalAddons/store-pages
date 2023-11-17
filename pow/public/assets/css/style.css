@@ -1330,12 +1330,16 @@ body {
 }
 .benefit-card__list > li {
   line-height: 40px;
+  color: #FFFFFF;
 }
 .benefit-card__list > li > img {
   float: left;
   margin-right: 12px;
   width: 40px;
   height: 40px;
+}
+.benefit-card__list > li + li {
+  margin-top: 16px;
 }
 .benefit-card--wide {
   grid-column: span 2;

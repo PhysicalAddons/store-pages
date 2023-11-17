@@ -1,14 +1,13 @@
 .updates {
     background-color: red; // placehold
 
-    padding-left: 16px;
-    padding-right: 16px;
-
     &__title {
         @extend .h2;
     }
 
     &__table {
+        padding-left: 16px;
+        padding-right: 16px;
         width: 100%;
         border-collapse: separate;
         border-spacing: 0;

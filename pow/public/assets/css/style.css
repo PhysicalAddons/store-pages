@@ -375,10 +375,10 @@ body {
 
 .updates {
   background-color: red;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 .updates__table {
+  padding-left: 16px;
+  padding-right: 16px;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
@@ -532,7 +532,6 @@ body {
 }
 .team .sideBySideRows a {
   color: white;
-  font-size: 14px;
   font-weight: 500;
 }
 .team .sideBySideRows .leftSide {
@@ -557,9 +556,9 @@ body {
   }
 }
 .team .sideBySideRows .leftSide a {
-  color: white;
   margin-top: 16px;
   display: inline-block;
+  font-size: 14px;
 }
 .team .sideBySideRows .leftSide b {
   font-weight: 600px !important;
@@ -592,6 +591,9 @@ body {
   font-size: 12px;
   opacity: 0.7;
   line-height: 140%;
+}
+.team .sideBySideRows .rightSide a {
+  font-size: 12px;
 }
 
 .controls .heroBlock {
@@ -835,7 +837,7 @@ body {
   background-color: #000000;
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
-  line-height: 32px;
+  line-height: 36px;
   font-weight: 300;
   padding: 6px;
 }

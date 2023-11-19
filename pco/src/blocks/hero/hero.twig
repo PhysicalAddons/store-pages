@@ -1,0 +1,24 @@
+
+{% set data = {
+	'tabs': [
+		{
+			'title': '<span>PSA</span>Atmosphere',
+			'link': 'https://blendermarket.com/products/physical-starlight-atmosphere'
+		},
+		{
+			'title': '<span>PCO</span>Planets',
+			'link': 'https://blendermarket.com/products/physical-celestial-objects'
+		},
+		{
+			'active': true,
+			'title': '<span>POW</span>Ocean',
+            'link': '#'
+		}
+	],
+    'title': 'Breathtaking planets in a single click',
+    'description': 'Physical Celestial Objects Addon allows you to build<br> real-scale planets with multi-layered atmospheres, procedural rings in real time while having<br> cinematic visuals.',
+    'video': 'https://www.youtube.com/embed/jNz014Ffzxs?si=NH8iLtvBdnyzf0EP',
+    'notice': true
+}
+%}
+{% include "../../shared/blocks/hero/hero.twig" with data only %}

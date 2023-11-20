@@ -716,6 +716,17 @@ body {
   }
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
+  .controls .heroBlock {
+    background-image: url("/assets/images/controls/addon-controls.jpg");
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
+  .controls .heroBlock {
+    background-image: url("/assets/images/controls/addon-controlsx2.jpg");
+  }
+}
+
 @media (max-width: 467px) {
   .pricing {
     display: none;
@@ -1060,7 +1071,7 @@ body {
   font-size: 14px;
   line-height: 140%;
 }
-.notes__table p + h5 {
+.notes__table p + p, .notes__table p h5 {
   margin-top: 16px;
 }
 .notes__table img {

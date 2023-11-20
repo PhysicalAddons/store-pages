@@ -280,6 +280,17 @@ body {
 .hero .tabs .active {
   background-color: #000000;
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
+  .hero .bigBlock {
+    background-image: url("/assets/images/hero/001-big-box.jpg");
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
+  .hero .bigBlock {
+    background-image: url("/assets/images/hero/001-big-box-2x.jpg");
+  }
+}
+
 .benefits__title {
   font-size: 50px;
 }
@@ -376,9 +387,6 @@ body {
   }
 }
 
-.updates {
-  background-color: red;
-}
 .updates__table {
   padding-left: 16px;
   padding-right: 16px;
@@ -417,6 +425,12 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
+}
+.updates__table p b {
+  font-weight: 600;
+}
+.updates__table p + p {
+  margin-top: 16px;
 }
 .updates__table img {
   width: 100%;
@@ -1353,7 +1367,7 @@ body {
 .benefit-card .videoContainer {
   overflow: hidden;
 }
-.benefit-card .videoContainer video {
+.benefit-card .videoContainer video, .benefit-card .videoContainer img {
   position: absolute;
   top: 0;
   right: 0;
@@ -1366,16 +1380,16 @@ body {
 .benefit-card .image3 {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
   .benefit-card .image3 {
-    background-image: url("/assets/images/benefits/benefits-animation.webp");
+    background-image: url("/assets/images/benefits/features-3.jpg");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
   .benefit-card .image3 {
-    background-image: url("/assets/images/benefits/benefits-animation2x.webp");
+    background-image: url("/assets/images/benefits/features-3x2.jpg");
   }
 }
 .benefit-card.image4 {

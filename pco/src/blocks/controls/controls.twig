@@ -1,0 +1,27 @@
+
+{% set data = {
+    controls : [
+        {
+            "title": "Planets",
+            "description": "Enables the addition, removal, and renaming of planets in the scene. The system's flexibility allows for dynamic creation, with the maximum number of planets dictated by the user's hardware capabilities."
+        },
+        {
+            "title": "Planet Surface",
+            "description": "Albedo: Applies a color map or texture, defining the planet's surface appearance.<br><br>Roughness: Adjusts the surface texture, affecting how light interacts with the terrain.<br><br>Height: Implements a displacement map to create realistic topographical features.<br><br>Emission: Allows specific areas to emit light, with adjustable emission strength for varying intensities."
+        },
+        {
+            "title": "Atmosphere",
+            "description": "Calculates atmospheric properties based on user-defined parameters. This includes the atmosphere's radius, density, and light scattering characteristics, offering a realistic portrayal of planetary atmospheres."
+        },
+        {
+            "title": "Rings",
+            "description": "Our addon provides two ring creation methods: Procedural and Textured.<br><br> Procedural Rings: Generate rings with adjustable scale, detail, roughness, and color. Customize inner/outer radius, shadow impact, and translucency for realistic or artistic effects.<br><br>Textured Rings: Create rings using textures with control over color tint, rotation, inner/outer radius, shadow factor, and translucency, offering a blend of realism and artistic flexibility."
+        },
+        {
+            "title": "Transform",
+            "description": "Allows for precise planetary positioning and orientation. Includes options for global coordinate placement, viewer-based positioning, or setting planets in elliptical orbits."
+        },
+    ]
+}
+%}
+{% include "../../shared/blocks/controls/controls.twig" with data only %}

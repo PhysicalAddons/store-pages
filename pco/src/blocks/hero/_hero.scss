@@ -1,0 +1,10 @@
+.hero {
+    .tabs {
+        .active {
+            background-color: #000000;
+        }
+    }
+    .bigBlock {
+        @include backgroundImage('/assets/images/hero/001-big-box.jpg', '/assets/images/hero/001-big-box-2x.jpg');
+    }
+}

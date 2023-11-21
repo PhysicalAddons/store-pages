@@ -1,4 +1,10 @@
 .hero {
+    .bigBlock {
+        padding-top: 128px;
+        > h2 {
+            margin-bottom: 128px;
+        }
+    }
     .tabs {
         .active {
             background-color: #000000;

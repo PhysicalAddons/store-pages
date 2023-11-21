@@ -1,0 +1,11 @@
+
+{% set data = {
+	'notes': [
+		{
+			'title': 'The science behind PCO',
+			'description': '<p>Celestial objects are raytraced analytical spheres. This rendering approach is less prone to precision errors at extremely large distances and immense scales. They also interact with each other - cast penumbra shadows and contribute to indirect light.</p><p>Planets use a simplified form of Hapke BRDF. It makes them look ‘velvety’ at grazing angles. For water worlds, we implemented GGX Specular distribution model. Rings, atmospheres, and real surface displacement are in the concept phase and will be introduced once the rocky planets are fully functional. Indirect lighting is based on analytical spherical area light.</p><img src="assets/images/notes/notes-1.jpg" alt="Planet with a ring"><p>Rings contribute to indirect light, rings are lit by planets, and planets are lit by rings. A large portion of our time is invested in sorting functions - to sort and mix opaque and semi-transparent objects. The process is automated whenever you add a new celestial object.</p>',
+		}
+    ]
+}
+%}
+{% include "../../shared/blocks/notes/notes.twig" with data only %}

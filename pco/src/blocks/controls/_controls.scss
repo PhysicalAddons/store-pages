@@ -1,0 +1,5 @@
+.controls {
+    .heroBlock {
+        @include backgroundImage('/assets/images/controls/addon-controls.jpg', '/assets/images/controls/addon-controlsx2.jpg');
+    }
+}

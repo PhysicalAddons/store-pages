@@ -1,0 +1,27 @@
+<div class="controls block" id="controls">
+
+    <div class="heroBlock">
+
+        <h2 class="controls__title">
+		    Addon controls
+	    </h2>
+
+    </div>
+
+	<div class="controls__table">
+
+        <table>
+            {% for control in controls %}
+            <tr>
+                <td><h4>{{control.title}}</h4></td>
+                <td>
+                    <p>
+                        {{control.description}}
+                    </p>
+                </td>
+            </tr>   
+            {% endfor %}
+        </table>
+
+	</div>
+</div>

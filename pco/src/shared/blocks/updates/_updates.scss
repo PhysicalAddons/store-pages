@@ -1,0 +1,124 @@
+.updates {
+
+    &__title {
+        @extend .h2;
+    }
+
+    &__table {
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+
+        h4 {
+            font-weight: 300;
+            font-size: 80px;
+            line-height: 1;
+            padding-right: 32px;
+            letter-spacing: -4.8px;
+            & + div {
+                display: inline-block;
+                padding: 3px 8px;
+                font-size: 20px;
+                line-height: 1.25;
+                background-color: #F2F2F2;
+                border-radius: 50px;
+            }
+        }
+
+        h5 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.25;
+            letter-spacing: -0.6px;
+            & + p {
+                margin-top: 4px;
+                & + h5 {
+                    margin-top: 16px;
+                }
+            }
+        }
+
+
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            b {
+                font-weight: 600;
+            }
+            & + p {
+              margin-top: 16px;  
+            }
+        }
+
+        img {
+            width: 100%;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            border-radius: 6px;
+        }
+
+        th,
+        td {
+            padding: 16px 0px 64px 0px;
+            text-align: left;
+            border-top: 1px solid #dcdcdc;
+            vertical-align: top;
+        }
+
+        tr {
+            border-bottom: 1px solid #dcdcdc;
+        }
+
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 30%;
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 500px) {
+
+        
+
+        h2 {
+            padding-left: 0px !important;
+            padding-bottom: 16px;
+        }
+
+        table {
+            display: block;
+
+            h4 {
+                padding-right: 0px;
+                margin-top: 32px;
+                font-size: 32px;
+                line-height: 120%;
+                font-weight: 400;
+            }
+        }
+
+        tr {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+            border: none !important;
+        }
+
+        td,
+        th {
+            display: block;
+            width: 100% !important;
+            border-top: none !important;
+            border-left: none !important;
+            margin-right: 8px !important;
+            padding: 8px 0px 16px 0px !important;
+        }
+    }
+}

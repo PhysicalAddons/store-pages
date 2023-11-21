@@ -199,6 +199,13 @@
         background-position: center;
         background-size: cover;
     }
+    &.image8 {
+        // @include backgroundImage('/assets/images/benefits/benefits-freedom.webp', '/assets/images/benefits/benefits-freedom2x.webp');
+        @include backgroundImage('https://placehold.co/724x500/red/white', 'https://placehold.co/1448x1000/red/white');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
     // .image8 {
     //     @include backgroundImage('https://placehold.co/356x400/red/white', 'https://placehold.co/712x800/red/white');
     //     // @include backgroundImage('/assets/images/benefits/benefits-aces.webp', '/assets/images/benefits/benefits-aces2x.webp');

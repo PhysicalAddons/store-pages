@@ -78,7 +78,7 @@ body {
   color: #000000;
 }
 
-.h2, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .updates__title, .benefits__title {
+.h2, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .team__title, .updates__title, .benefits__title {
   padding: 0 0 48px 16px;
   font-size: 40px;
   font-weight: 500;
@@ -87,7 +87,7 @@ body {
   color: #000000;
   letter-spacing: -0.03em;
 }
-.h2 em, .notes__title em, .pricing-mobile__title em, .pricing__subtitle em, .pricing__title em, .controls__title em, .updates__title em, .benefits__title em {
+.h2 em, .notes__title em, .pricing-mobile__title em, .pricing__subtitle em, .pricing__title em, .controls__title em, .team__title em, .updates__title em, .benefits__title em {
   font-weight: 600;
   background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
   -webkit-background-clip: text;
@@ -96,12 +96,12 @@ body {
   text-fill-color: transparent;
 }
 @media (max-width: 467px) {
-  .h2, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .updates__title, .benefits__title {
+  .h2, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .team__title, .updates__title, .benefits__title {
     font-size: 32px;
     padding-left: 16px;
     padding-bottom: 32px;
   }
-  .h2 br, .notes__title br, .pricing-mobile__title br, .pricing__subtitle br, .pricing__title br, .controls__title br, .updates__title br, .benefits__title br {
+  .h2 br, .notes__title br, .pricing-mobile__title br, .pricing__subtitle br, .pricing__title br, .controls__title br, .team__title br, .updates__title br, .benefits__title br {
     display: none;
   }
 }
@@ -522,6 +522,12 @@ body {
     background-image: url("/assets/images/team/teamMobile2x.webp");
   }
 }
+@media (max-width: 467px) {
+  .team__title {
+    font-size: 28px;
+    display: none;
+  }
+}
 .team .topRow {
   padding-bottom: 64px;
 }
@@ -641,7 +647,7 @@ body {
     background-image: url("https://placehold.co/1456x584/red/white");
   }
 }
-.controls .heroBlock .h2, .controls .heroBlock .notes__title, .controls .heroBlock .pricing-mobile__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .benefits__title, .controls .heroBlock .updates__title, .controls .heroBlock .controls__title {
+.controls .heroBlock .h2, .controls .heroBlock .notes__title, .controls .heroBlock .pricing-mobile__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .benefits__title, .controls .heroBlock .updates__title, .controls .heroBlock .team__title, .controls .heroBlock .controls__title {
   color: white;
   position: absolute;
   top: 0;

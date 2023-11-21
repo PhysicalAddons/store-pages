@@ -11,13 +11,13 @@
         @include backgroundImage('/assets/images/team/teamMobile.webp', '/assets/images/team/teamMobile2x.webp');
     }
 
-    // &__title {
-	// 	@extend .h2;
-    //     @include respond-below(sm) {
-    //         font-size: 28px;
-    //         display: none;
-    //     }
-	// }
+    &__title {
+		@extend .h2;
+        @include respond-below(sm) {
+            font-size: 28px;
+            display: none;
+        }
+	}
 
     // @media (max-width: 500px) { 
     //     background-image: url('/assets/images/team/team2.jpg');

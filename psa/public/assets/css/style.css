@@ -220,20 +220,22 @@ body {
 .hero .bigBlock .logoWall2 {
   display: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 567px) {
   .hero .tabs {
-    height: 40px;
+    height: 32px;
   }
   .hero .tabs .label {
+    line-height: 32px;
     font-size: 12px;
     padding-left: 0;
   }
   .hero .tabs .tab {
     padding: 0px 12px;
     font-size: 12px;
+    line-height: 32px;
   }
   .hero .tabs .tab span {
-    padding-right: 4px;
+    display: none;
   }
   .hero .bigBlock {
     padding: 30% 16px 50px 16px;
@@ -1144,8 +1146,10 @@ body {
 .footer .column .products a img {
   float: left;
   margin-right: 12px;
+  width: 32px;
+  height: 32px;
 }
-.footer .column .products a:nth-child(3) {
+.footer .column .products a:nth-child(4) {
   color: rgba(0, 0, 0, 0.3);
 }
 .footer .column .socialList a {

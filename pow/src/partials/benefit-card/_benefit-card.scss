@@ -172,9 +172,11 @@
         background-position: center;
         background-size: cover;
     }
+
+
+
     &.image4 { 
-        // @include backgroundImage('/assets/images/benefits/benefits-freedom.webp', '/assets/images/benefits/benefits-freedom2x.webp');
-        @include backgroundImage('https://placehold.co/724x500/red/white', 'https://placehold.co/1448x1000/red/white');
+        @include backgroundImage('/assets/images/benefits/feature-4.jpg', '/assets/images/benefits/feature-4x2.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -186,22 +188,19 @@
         background-size: cover;
     }
     .image6 {
-        @include backgroundImage('https://placehold.co/356x400/red/white', 'https://placehold.co/712x800/red/white');
-        // @include backgroundImage('/assets/images/benefits/benefits-eeveecycles.webp', '/assets/images/benefits/benefits-eeveecycles2x.webp');
+        @include backgroundImage('/assets/images/benefits/feature-6.jpg', '/assets/images/benefits/feature-6x2.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     &.image7 {
-        // @include backgroundImage('/assets/images/benefits/benefits-freedom.webp', '/assets/images/benefits/benefits-freedom2x.webp');
-        @include backgroundImage('https://placehold.co/724x500/red/white', 'https://placehold.co/1448x1000/red/white');
+        @include backgroundImage('/assets/images/benefits/feature-7.jpg', '/assets/images/benefits/feature-7x2.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
     }
     &.image8 {
-        // @include backgroundImage('/assets/images/benefits/benefits-freedom.webp', '/assets/images/benefits/benefits-freedom2x.webp');
-        @include backgroundImage('https://placehold.co/724x500/red/white', 'https://placehold.co/1448x1000/red/white');
+        @include backgroundImage('/assets/images/benefits/feature-8.jpg', '/assets/images/benefits/feature-8x2.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

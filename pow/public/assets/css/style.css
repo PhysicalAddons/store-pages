@@ -155,7 +155,7 @@ body {
 }
 .hero .tabs .active {
   color: white;
-  background-color: #FF0000;
+  background-color: #7D9BA9;
 }
 .hero .bigBlock {
   background: #000000;
@@ -167,12 +167,12 @@ body {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
   .hero .bigBlock {
-    background-image: url("https://placehold.co/728x1208/red/white");
+    background-image: url("/assets/images/hero/hero.jpg");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
   .hero .bigBlock {
-    background-image: url("https://placehold.co/1456x2416/red/white");
+    background-image: url("/assets/images/hero/herox2.jpg");
   }
 }
 .hero .bigBlock h1 {
@@ -607,12 +607,12 @@ body {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
   .controls .heroBlock {
-    background-image: url("https://placehold.co/728x292/red/white");
+    background-image: url("/assets/images/controls/controls.jpg");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
   .controls .heroBlock {
-    background-image: url("https://placehold.co/1456x584/red/white");
+    background-image: url("/assets/images/controls/controlsx2.jpg");
   }
 }
 .controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing-mobile__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .benefits__title, .controls .heroBlock .updates__title, .controls .heroBlock .controls__title {
@@ -1479,12 +1479,12 @@ body {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
   .benefit-card.image4 {
-    background-image: url("https://placehold.co/724x500/red/white");
+    background-image: url("/assets/images/benefits/feature-4.jpg");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
   .benefit-card.image4 {
-    background-image: url("https://placehold.co/1448x1000/red/white");
+    background-image: url("/assets/images/benefits/feature-4x2.jpg");
   }
 }
 .benefit-card .image5 {
@@ -1509,12 +1509,12 @@ body {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
   .benefit-card .image6 {
-    background-image: url("https://placehold.co/356x400/red/white");
+    background-image: url("/assets/images/benefits/feature-6.jpg");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
   .benefit-card .image6 {
-    background-image: url("https://placehold.co/712x800/red/white");
+    background-image: url("/assets/images/benefits/feature-6x2.jpg");
   }
 }
 .benefit-card.image7 {
@@ -1524,12 +1524,12 @@ body {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
   .benefit-card.image7 {
-    background-image: url("https://placehold.co/724x500/red/white");
+    background-image: url("/assets/images/benefits/feature-7.jpg");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
   .benefit-card.image7 {
-    background-image: url("https://placehold.co/1448x1000/red/white");
+    background-image: url("/assets/images/benefits/feature-7x2.jpg");
   }
 }
 .benefit-card.image8 {
@@ -1539,12 +1539,12 @@ body {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
   .benefit-card.image8 {
-    background-image: url("https://placehold.co/724x500/red/white");
+    background-image: url("/assets/images/benefits/feature-8.jpg");
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
   .benefit-card.image8 {
-    background-image: url("https://placehold.co/1448x1000/red/white");
+    background-image: url("/assets/images/benefits/feature-8x2.jpg");
   }
 }
 .benefit-card .imageDemo {

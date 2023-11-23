@@ -18,6 +18,7 @@
             padding-right: 32px;
             letter-spacing: -4.8px;
             & + div {
+                margin-top: 11px;
                 display: inline-block;
                 padding: 3px 8px;
                 font-size: 20px;
@@ -33,9 +34,11 @@
             line-height: 1.25;
             letter-spacing: -0.6px;
             & + p {
-                margin-top: 4px;
+                padding-top: 4px;
+                // padding-bottom: 32px;
                 & + h5 {
-                    margin-top: 16px;
+                    border-top: 1px solid #DCDCDC;
+                    padding-top: 8px;
                 }
             }
         }
@@ -45,8 +48,10 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 140%;
+            color: rgba(#000000, 0.50);
             b {
                 font-weight: 600;
+                color: rgba(#000000, 1);
             }
             & + p {
               margin-top: 16px;  
@@ -62,7 +67,7 @@
 
         th,
         td {
-            padding: 16px 0px 64px 0px;
+            padding: 16px 0px 32px 0px;
             text-align: left;
             border-top: 1px solid #dcdcdc;
             vertical-align: top;
@@ -74,12 +79,12 @@
 
         th:nth-child(1),
         td:nth-child(1) {
-            width: 30%;
+            width: 50%;
         }
 
         th:nth-child(2),
         td:nth-child(2) {
-            width: 70%;
+            width: 50%;
         }
     }
 

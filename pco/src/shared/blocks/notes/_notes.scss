@@ -36,10 +36,12 @@
 
 
         p {
+            margin-bottom: 32px;
             font-weight: 400;
-            font-size: 14px;
-            line-height: 140%;
-            & + p, h5 {
+            font-size: 12px;
+            line-height: 1.4;
+            color: rgba(#000000, 0.50);
+            & + h5 {
                 margin-top: 16px;
             }
         }
@@ -54,7 +56,7 @@
 
         th,
         td {
-            padding: 16px 0px 64px 0px;
+            padding: 16px 0px 32px 0px;
             text-align: left;
             border-top: 1px solid #dcdcdc;
             vertical-align: top;
@@ -114,3 +116,4 @@
         }
     }
 }
+

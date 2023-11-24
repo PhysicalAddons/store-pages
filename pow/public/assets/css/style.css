@@ -388,6 +388,7 @@ body {
   letter-spacing: -4.8px;
 }
 .updates__table h4 + div {
+  margin-top: 11px;
   display: inline-block;
   padding: 3px 8px;
   font-size: 20px;
@@ -402,15 +403,18 @@ body {
   letter-spacing: -0.6px;
 }
 .updates__table h5 + p {
-  margin-top: 4px;
+  padding-top: 4px;
+  padding-bottom: 32px;
 }
 .updates__table h5 + p + h5 {
-  margin-top: 16px;
+  border-top: 1px solid #DCDCDC;
+  padding-top: 8px;
 }
 .updates__table p {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.5);
 }
 .updates__table img {
   width: 100%;
@@ -420,7 +424,7 @@ body {
 }
 .updates__table th,
 .updates__table td {
-  padding: 16px 0px 64px 0px;
+  padding: 16px 0px 32px 0px;
   text-align: left;
   border-top: 1px solid #dcdcdc;
   vertical-align: top;
@@ -430,11 +434,11 @@ body {
 }
 .updates__table th:nth-child(1),
 .updates__table td:nth-child(1) {
-  width: 30%;
+  width: 50%;
 }
 .updates__table th:nth-child(2),
 .updates__table td:nth-child(2) {
-  width: 70%;
+  width: 50%;
 }
 @media (max-width: 500px) {
   .updates h2 {
@@ -1036,9 +1040,11 @@ body {
   margin-top: 4px;
 }
 .notes__table p {
+  margin-bottom: 32px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.5);
 }
 .notes__table p + h5 {
   margin-top: 16px;
@@ -1051,7 +1057,7 @@ body {
 }
 .notes__table th,
 .notes__table td {
-  padding: 16px 0px 64px 0px;
+  padding: 16px 0px 32px 0px;
   text-align: left;
   border-top: 1px solid #dcdcdc;
   vertical-align: top;

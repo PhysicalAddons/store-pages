@@ -1000,44 +1000,58 @@ body {
 .notes h2 {
   padding-left: 30%;
 }
-.notes table {
+.notes__table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
 }
-.notes table h4 {
+.notes__table h4 {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   padding-right: 32px;
 }
-.notes table p {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
+.notes__table h5 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
 }
-.notes table img {
+.notes__table h5 + p {
+  margin-top: 4px;
+}
+.notes__table p {
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.5);
+}
+.notes__table p + h5 {
+  margin-top: 16px;
+}
+.notes__table img {
   width: 100%;
   margin-top: 32px;
   margin-bottom: 32px;
   border-radius: 6px;
 }
-.notes table th,
-.notes table td {
-  padding: 16px 0px 64px 0px;
+.notes__table th,
+.notes__table td {
+  padding: 16px 0px 32px 0px;
   text-align: left;
   border-top: 1px solid #dcdcdc;
   vertical-align: top;
 }
-.notes table tr {
+.notes__table tr {
   border-bottom: 1px solid #dcdcdc;
 }
-.notes table th:nth-child(1),
-.notes table td:nth-child(1) {
+.notes__table th:nth-child(1),
+.notes__table td:nth-child(1) {
   width: 30%;
 }
-.notes table th:nth-child(2),
-.notes table td:nth-child(2) {
+.notes__table th:nth-child(2),
+.notes__table td:nth-child(2) {
   width: 70%;
 }
 @media (max-width: 500px) {

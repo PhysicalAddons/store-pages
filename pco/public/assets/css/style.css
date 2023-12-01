@@ -159,21 +159,12 @@ body {
 }
 .hero .bigBlock {
   background: #000000;
+  background-image: url("https://placehold.co/728x1208/red/white");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 200px 32px 32px 32px;
   border-radius: 6px 0px 6px 6px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .hero .bigBlock {
-    background-image: url("https://placehold.co/728x1208/red/white");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .hero .bigBlock {
-    background-image: url("https://placehold.co/1456x2416/red/white");
-  }
 }
 .hero .bigBlock h1 {
   font-weight: 500;
@@ -286,15 +277,8 @@ body {
 .hero .tabs .active {
   background-color: #000000;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .hero .bigBlock {
-    background-image: url("/assets/images/hero/001-big-box.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .hero .bigBlock {
-    background-image: url("/assets/images/hero/001-big-box-2x.jpg");
-  }
+.hero .bigBlock {
+  background-image: url("/assets/images/hero/001-big-box.jpg");
 }
 
 .benefits__title {
@@ -500,30 +484,16 @@ body {
 
 .team {
   background: black;
+  background-image: url("/assets/images/team/team.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 32px;
   border-radius: 6px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .team {
-    background-image: url("/assets/images/team/team.webp");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .team {
-    background-image: url("/assets/images/team/team2x.webp");
-  }
-}
-@media only screen and (max-width: 467px) and (-webkit-min-device-pixel-ratio: 1), only screen and (max-width: 467px) and (min--moz-device-pixel-ratio: 1), only screen and (max-width: 467px) and (-o-min-device-pixel-ratio: 1/1), only screen and (max-width: 467px) and (min-resolution: 96dpi) {
+@media (max-width: 467px) {
   .team {
     background-image: url("/assets/images/team/teamMobile.webp");
-  }
-}
-@media only screen and (max-width: 467px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 467px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 467px) and (-o-min-device-pixel-ratio: 2/1), only screen and (max-width: 467px) and (min-resolution: 192dpi) {
-  .team {
-    background-image: url("/assets/images/team/teamMobile2x.webp");
   }
 }
 @media (max-width: 467px) {
@@ -631,6 +601,7 @@ body {
 
 .controls .heroBlock {
   background: black;
+  background-image: url("https://placehold.co/728x292/red/white");
   background-repeat: no-repeat;
   background-position: top 0 right 0;
   background-size: cover;
@@ -640,16 +611,6 @@ body {
   overflow: hidden;
   border-radius: 6px;
   margin-bottom: 32px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .controls .heroBlock {
-    background-image: url("https://placehold.co/728x292/red/white");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .controls .heroBlock {
-    background-image: url("https://placehold.co/1456x584/red/white");
-  }
 }
 .controls .heroBlock .h2, .controls .heroBlock .notes__title, .controls .heroBlock .pricing-mobile__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .benefits__title, .controls .heroBlock .updates__title, .controls .heroBlock .team__title, .controls .heroBlock .controls__title {
   color: white;
@@ -732,15 +693,8 @@ body {
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .controls .heroBlock {
-    background-image: url("/assets/images/controls/addon-controls.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .controls .heroBlock {
-    background-image: url("/assets/images/controls/addon-controlsx2.jpg");
-  }
+.controls .heroBlock {
+  background-image: url("/assets/images/controls/addon-controls.jpg");
 }
 
 @media (max-width: 467px) {
@@ -1415,130 +1369,44 @@ body {
 .benefit-card .videoContainerSmall video {
   min-width: 360px !important;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .benefit-card .image2 {
-    background-image: url("/assets/images/benefits/features-2.jpg");
-  }
+.benefit-card .image2 {
+  background-image: url("/assets/images/benefits/features-2.jpg");
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .benefit-card .image2 {
-    background-image: url("/assets/images/benefits/features-2x2.jpg");
-  }
+.benefit-card .image3 {
+  background-image: url("/assets/images/benefits/features-3.jpg");
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .benefit-card .image3 {
-    background-image: url("/assets/images/benefits/features-3.jpg");
-  }
+.benefit-card.image4 {
+  background-image: url("/assets/images/benefits/features-4.jpg");
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .benefit-card .image3 {
-    background-image: url("/assets/images/benefits/features-3x2.jpg");
-  }
+.benefit-card .image5 {
+  background-image: url("/assets/images/benefits/benefits-animation.webp");
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .benefit-card.image4 {
-    background-image: url("/assets/images/benefits/features-4.jpg");
-  }
+.benefit-card .image6 {
+  background-image: url("/assets/images/benefits/features-6.jpg");
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .benefit-card.image4 {
-    background-image: url("/assets/images/benefits/features-4x2.jpg");
-  }
+.benefit-card.image7 {
+  background-image: url("/assets/images/benefits/features-7.jpg");
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .benefit-card .image5 {
-    background-image: url("/assets/images/benefits/benefits-animation.webp");
-  }
+.benefit-card .image8 {
+  background-image: url("/assets/images/benefits/features-8.jpg");
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .benefit-card .image5 {
-    background-image: url("/assets/images/benefits/benefits-animation2x.webp");
-  }
+.benefit-card .image9 {
+  background-image: url("/assets/images/benefits/features-9.jpg");
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .benefit-card .image6 {
-    background-image: url("/assets/images/benefits/features-6.jpg");
-  }
+.benefit-card.image10 {
+  background-image: url("/assets/images/benefits/features-10.jpg");
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .benefit-card .image6 {
-    background-image: url("/assets/images/benefits/features-6x2.jpg");
-  }
+.benefit-card.image11 {
+  background-image: url("/assets/images/benefits/features-11.jpg");
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .benefit-card.image7 {
-    background-image: url("/assets/images/benefits/features-7.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .benefit-card.image7 {
-    background-image: url("/assets/images/benefits/features-7x2.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .benefit-card .image8 {
-    background-image: url("/assets/images/benefits/features-8.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .benefit-card .image8 {
-    background-image: url("/assets/images/benefits/features-8x2.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .benefit-card .image9 {
-    background-image: url("/assets/images/benefits/features-9.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .benefit-card .image9 {
-    background-image: url("/assets/images/benefits/features-9x2.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .benefit-card.image10 {
-    background-image: url("/assets/images/benefits/features-10.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .benefit-card.image10 {
-    background-image: url("/assets/images/benefits/features-10x2.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .benefit-card.image11 {
-    background-image: url("/assets/images/benefits/features-11.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .benefit-card.image11 {
-    background-image: url("/assets/images/benefits/features-11x2.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .benefit-card.image12 {
-    background-image: url("/assets/images/benefits/features-12.jpg");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .benefit-card.image12 {
-    background-image: url("/assets/images/benefits/features-12x2.jpg");
-  }
+.benefit-card.image12 {
+  background-image: url("/assets/images/benefits/features-12.jpg");
 }
 .benefit-card .imageDemo {
+  background-image: url("/assets/images/benefits/benefits-demo.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1/1), only screen and (min-resolution: 96dpi) {
-  .benefit-card .imageDemo {
-    background-image: url("/assets/images/benefits/benefits-demo.webp");
-  }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-resolution: 192dpi) {
-  .benefit-card .imageDemo {
-    background-image: url("/assets/images/benefits/benefits-demo2x.webp");
-  }
 }
 .benefit-card__demoBlock {
   padding: 64px 64px 64px calc(50% + 64px);

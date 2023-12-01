@@ -111,16 +111,16 @@ $breakpoints: (
 
 @mixin backgroundImage($nonRetinaImage, $retinaImage) {
   // Non-retina screen
-  @media #{$nonRetina} {
+  // @media #{$nonRetina} {
     background-image: url($nonRetinaImage);
     // background-image: -webkit-image-set(url($nonRetinaImage) 1x);
-  }
+  // }
   
   // Retina screen
-  @media #{$retina} {
-    background-image: url($retinaImage);
+  // @media #{$retina} {
+  // background-image: url($retinaImage);
     // background-image: -webkit-image-set(url($retinaImage) 1x);
-  }
+  // }
 }
 // Define media queries for non-retina and retina screens
 $nonRetina: 'only screen and (-webkit-min-device-pixel-ratio: 1),' +

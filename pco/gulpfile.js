@@ -2,6 +2,7 @@ var destroot = "public/";
 var gulp = require("gulp"),
   sass = require("gulp-sass")(require("sass")),
   twig = require("gulp-twig"),
+  responsive = require("gulp-responsive"),
   browserSync = require("browser-sync").create();
 
 gulp.task("css", function () {
@@ -15,6 +16,43 @@ gulp.task("css", function () {
     .pipe(gulp.dest(destroot + "assets/css/"))
     .pipe(browserSync.stream());
 });
+
+gulp.task("images-benefits", function () {
+  return gulp
+    .src(["assets/benefits/normal/*.jpg", "assets/benefits/wide/*.jpg"]) // Include both selectors
+    .pipe(
+      responsive(
+        {
+          "**/*.jpg": [ // Selector for normal .jpg
+            {
+              width: 356,
+            },
+            {
+              width: 712,
+              rename: { suffix: "x2" },
+            },
+          ],
+          "**/*.jpg": [ // Selector for wide .jpg
+            {
+              width: 724,
+            },
+            {
+              width: 1448,
+              rename: { suffix: "x2" },
+            },
+          ],
+        },
+        {
+          // Global configuration for all images
+          quality: 95,
+          progressive: true,
+          withMetadata: false,
+        }
+      )
+    )
+    .pipe(gulp.dest(destroot + "assets/images/benefits"));
+});
+
 
 gulp.task("compile", function (done) {
   return gulp

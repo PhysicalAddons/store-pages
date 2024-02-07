@@ -2,11 +2,7 @@ var destroot = "public/";
 var gulp = require("gulp"),
   sass = require("gulp-sass")(require("sass")),
   twig = require("gulp-twig"),
-  responsive = require("gulp-responsive"),
-  // imagemin  = require("gulp-imagemin"),
-  // shell = require('gulp-shell'),
-  // glob = require('glob'),
-  // path = require('path'),
+  // responsive = require("gulp-responsive"),
   browserSync = require("browser-sync").create();
 
 gulp.task("css", function () {
@@ -21,67 +17,26 @@ gulp.task("css", function () {
     .pipe(browserSync.stream());
 });
 
-// gulp.task('convert-to-webp', done => {
-//   const normal = glob.sync('src/assets/benefits/normal/*.jpg');
-//   const wide = glob.sync('src/assets/benefits/wide/*.jpg');
-//   const folders = [normal, wide]
-//   folders.forEach(folder => {
-//     folder.forEach(file => {
-//       const outputPath = path.join(
-//         path.dirname(file),
-//         path.basename(file, path.extname(file)) + '.webp'
-//       );
-//       shell.task([
-//         `cwebp -q 100 -losslessd ${file} -o ${outputPath}`
-//       ])();
-//     });
-//   })
-//   done();
-// });
 
-gulp.task("resize-jpg", function () {
-  return gulp
-    .src(["src/assets/benefits/normal/*.jpg", "src/assets/benefits/wide/*.jpg"]) // Include both selectors
-    .pipe(
-      responsive(
-        {
-          "**/*.jpg": [ // Selector for normal .jpg
-            { width: 356 },
-            { width: 712, rename: { suffix: "x2" } },
-          ],
-          "**/*.jpg": [ // Selector for wide .jpg
-            { width: 724 },
-            { width: 1448, rename: { suffix: "x2" } },
-          ],
-        },
-        {
-          // Global configuration for all images
-          quality: 85,
-          progressive: true,
-          withMetadata: false,
-          withoutEnlargement: false, // This will generate image also if it is smaller than needed image
-        }
-      )
-    )
-    .pipe(gulp.dest(destroot + "assets/images/benefits"))
-});
-
-// gulp.task("resize-webp", function () {
+// gulp.task("resize-jpg", function () {
 //   return gulp
-//     .src(["src/assets/benefits/normal/*.webp", "src/assets/benefits/wide/*.webp"]) // Include both selectors
+//     .src(["src/assets/benefits/normal/*.jpg", "src/assets/benefits/wide/*.jpg"]) // Include both selectors
 //     .pipe(
 //       responsive(
 //         {
-//           "**/*.webp": [ // Selector for normal .jpg
+//           "**/*.jpg": [ // Selector for normal .jpg
 //             { width: 356 },
 //             { width: 712, rename: { suffix: "x2" } },
 //           ],
-//           "**/*.webp": [ // Selector for wide .jpg
+//           "**/*.jpg": [ // Selector for wide .jpg
 //             { width: 724 },
 //             { width: 1448, rename: { suffix: "x2" } },
 //           ],
 //         },
 //         {
+//           // Global configuration for all images
+//           quality: 85,
+//           progressive: true,
 //           withMetadata: false,
 //           withoutEnlargement: false, // This will generate image also if it is smaller than needed image
 //         }
@@ -89,6 +44,7 @@ gulp.task("resize-jpg", function () {
 //     )
 //     .pipe(gulp.dest(destroot + "assets/images/benefits"))
 // });
+
 
 gulp.task('copy-videos', function() {
   return gulp.src([
@@ -126,5 +82,5 @@ gulp.task("watch", function () {
 
 gulp.task("default", gulp.parallel("browserSync", "compile", "watch", "css"));
 gulp.task("build", gulp.parallel("compile", "css"));
-gulp.task("generate-media", gulp.parallel("resize-jpg", "copy-videos"));
+// gulp.task("generate-media", gulp.parallel("resize-jpg", "copy-videos"));
 

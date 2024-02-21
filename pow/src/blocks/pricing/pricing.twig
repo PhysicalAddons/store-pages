@@ -114,7 +114,7 @@
                                 <h4>Basic</h4>
                                 <p>One time payment</p>
                                 <div class="pricing__price">
-                                    <div>${{ promo ? price_basic * ( 1 - discount) : price_basic }}</div>
+                                    <div>${{ (promo ? price_basic * ( 1 - discount) : price_basic) | number_format(2, '.', '') }}</div>
                                     <div>{{ promo ? '$' ~ price_basic : '' }}</div>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@
                                 <h4>Studio</h4>
                                 <p>One time payment</p>
                                 <div class="pricing__price">
-                                    <div>${{ promo ? price_studio * ( 1 - discount) : price_studio }}</div>
+                                    <div>${{ (promo ? price_studio * ( 1 - discount) : price_studio) | number_format(2, '.', '') }}</div>
                                     <div>{{ promo ? '$' ~ price_studio : '' }}</div>
                                 </div>
                             </div>

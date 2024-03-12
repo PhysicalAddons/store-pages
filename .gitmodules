@@ -1,3 +1,6 @@
 [submodule "pco/src/shared"]
 	path = pco/src/shared
 	url = https://github.com/PhysicalAddons/shared.git
+[submodule "pow/src/shared"]
+	path = pow/src/shared
+	url = https://github.com/PhysicalAddons/shared.git

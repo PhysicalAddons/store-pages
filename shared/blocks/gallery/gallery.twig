@@ -1,0 +1,129 @@
+{% set artworks = [
+	{
+		'size': 2,
+		'author': 'Lorem Ipsum',
+		'jobtitle': 'Lorem Gibson',
+		'url':'#',
+		'image': {
+			'thumb':'assets/images/gallery/alexander-lortkipanidze/1-thumb',
+			'alt':''
+		}
+	},
+	{
+		'size': 2,
+		'author': 'Lorem Ipsum',
+		'jobtitle': 'Lorem Gibson',
+		'url':'#',
+		'image': {
+			'thumb':'assets/images/gallery/alexander-lortkipanidze/1-thumb',
+			'alt':''
+		}
+	},
+	{
+		'size': 2,
+		'author': 'Lorem Ipsum',
+		'jobtitle': 'Lorem Gibson',
+		'url':'#',
+		'image': {
+			'thumb':'assets/images/gallery/alexander-lortkipanidze/1-thumb',
+			'alt':''
+		}
+	},
+	{
+		'size': 2,
+		'author': 'Lorem Ipsum',
+		'jobtitle': 'Lorem Gibson',
+		'url':'#',
+		'image': {
+			'thumb':'assets/images/gallery/alexander-lortkipanidze/1-thumb',
+			'alt':''
+		}
+	},
+	{
+		'size': 2,
+		'author': 'Lorem Ipsum',
+		'jobtitle': 'Lorem Gibson',
+		'url':'#',
+		'image': {
+			'thumb':'assets/images/gallery/alexander-lortkipanidze/1-thumb',
+			'alt':''
+		}
+	},
+	{
+		'size': 2,
+		'author': 'Lorem Ipsum',
+		'jobtitle': 'Lorem Gibson',
+		'url':'#',
+		'image': {
+			'thumb':'assets/images/gallery/alexander-lortkipanidze/1-thumb',
+			'alt':''
+		}
+	},
+	{
+		'size': 2,
+		'author': 'Lorem Ipsum',
+		'jobtitle': 'Lorem Gibson',
+		'url':'#',
+		'image': {
+			'thumb':'assets/images/gallery/alexander-lortkipanidze/1-thumb',
+			'alt':''
+		}
+	},
+	{
+		'size': 2,
+		'author': 'Lorem Ipsum',
+		'jobtitle': 'Lorem Gibson',
+		'url':'#',
+		'image': {
+			'thumb':'assets/images/gallery/alexander-lortkipanidze/1-thumb',
+			'alt':''
+		}
+	},
+	
+
+
+
+
+
+]%}
+<div class="gallery block" id="gallery">
+	<h2 class="gallery__title">
+		Gallery
+	</h2>
+	<div class="gallery__grid">
+		{% for artwork in artworks %}
+			<figure class="gallery__artwork {{ (artwork.size == 2) ? 'gallery__artwork--wide' : '' }}">
+					<img
+						alt="Artwork by {{artwork.author}}"
+						
+						{# {% if artwork.size == 2 %}
+						src="{{artwork.image.thumb }}-2x-342.webp"
+						srcset="
+							{{artwork.image.thumb }}-2x-684.webp 2x,
+						"
+						{% else %}
+						src="{{artwork.image.thumb }}-172.webp"
+						srcset="
+							{{artwork.image.thumb }}-344.webp 2x,
+						"
+						{% endif %} #}
+						{% if artwork.size == 2 %}
+						src="https://placehold.co/342x171/red/white"
+						srcset="
+							https://placehold.co/648x342/red/white 2x,
+						"
+						{% else %}
+						src="https://placehold.co/172x172/red/white"
+						srcset="
+							https://placehold.co/344x344/red/white 2x,
+						"
+						{% endif %}
+					>
+				<figcaption>
+					<a href="{{ artwork.url }}" class="gallery__author" target="_blank" rel="noreferrer" tabindex="-1">{{ artwork.author }}</a>
+					<div class="gallery__jobtitle">{{ artwork.jobtitle }}</div>
+				</figcaption>
+			</figure>
+		{% endfor %}
+	</div>
+</div>

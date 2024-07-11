@@ -120,6 +120,27 @@ body {
   }
 }
 
+.hero {
+  position: relative;
+}
+.hero__notice {
+  bottom: -32px;
+  left: 32px;
+  position: absolute;
+  color: #c96306;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.hero__notice:before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #c96306;
+}
 .hero .stencilDark {
   background: linear-gradient(270deg, #6C26FF, #BA26FF, #6C26FF);
   background-size: 200% 200%;

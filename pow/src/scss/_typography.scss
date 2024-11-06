@@ -1,0 +1,61 @@
+$color-text: #000000;
+$font-path: '../fonts/';
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url($font-path + "Inter-Light.woff2?v=3.18") format("woff2"),
+  url($font-path + "Inter-Light.woff?v=3.18") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url($font-path + "Inter-Regular.woff2?v=3.18") format("woff2"),
+  url($font-path + "Inter-Regular.woff?v=3.18") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url($font-path + "Inter-Medium.woff2?v=3.18") format("woff2"),
+  url($font-path + "Inter-Medium.woff?v=3.18") format("woff");
+}
+
+
+body {
+  //font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family: "Inter","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: $color-text;
+}
+
+.h2 {
+    padding: 0 0 64px 16px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: Inter;
+    color: $color-text;
+    letter-spacing: -0.03em;
+    em {
+        font-weight: 600;
+        background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    @include respond-below(sm) {
+      font-size: 32px;
+      padding-left: 16px;
+      padding-bottom: 32px;
+      br {
+        display: none;
+      }
+    }
+    
+}

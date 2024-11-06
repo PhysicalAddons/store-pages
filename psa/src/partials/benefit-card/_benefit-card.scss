@@ -1,7 +1,17 @@
 .benefit-card {
-    padding: 32px 66px 32px 32px;
+    position: relative;
+    padding: 32px 67px 32px 32px;
     background-color: #000000;
     border-radius: $default-radius;
+    overflow: hidden;
+    @include respond-below(lg) {
+        padding: 32px; 
+    }
+    @include respond-below(sm) {
+        padding: 16px;
+        padding-right: 52px;
+    }
+
     &__title {
         color: #FFFFFF;
     }
@@ -9,13 +19,312 @@
         color: rgba(#FFFFFF, .5);
     }
     &__title, &__description {
+        position: relative;
         display: inline;
         font-family: Inter;
         font-size: 16px;
         font-weight: 500;
         line-height: 1.4;
+        z-index: 1; // to be on top of the img
+        @include respond-below(sm) {
+            font-size: 12px;
+        }
     }
     &--wide {
-        grid-column: span 2;
+        grid-column: span 2; // better if this would be passed from the top
+        @include respond-below(sm) {
+			grid-column: auto;
+            .benefit-card__figure {
+                left: -200px;
+                right: 16px !important;
+            }
+		}
+        
+    }
+    &--background {
+        background-position: center;
+        background-size: cover;
+        @include respond-below(sm) {
+            background-position: 81% 50%;
+        }
+    }
+    &--onethird {
+        padding: 32px 66% 32px 32px;
+        @include respond-below(lg) {
+            padding: 32px;
+        }
+        @include respond-below(sm) {
+            padding: 16px;
+            padding-right: 52px;
+        }
+    }
+    &--twothirds {
+        padding: 32px 33% 32px 32px;
+        @include respond-below(lg) {
+            padding: 32px;
+        }
+        @include respond-below(sm) {
+            padding: 16px;
+            padding-right: 52px;
+        }
+    }
+    &__figure {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        &--bordered {
+            left: -15px;
+            bottom: -18px;
+            border: 2px solid #2F2F2F;
+            border-top-right-radius: 32px;
+            .benefit-card__image {
+                border: 13px solid #121212;
+                border-top-right-radius: 32px;
+                box-sizing: border-box;
+            }
+            @include respond-below(sm) {
+                right: 16px !important;
+            }
+        }
+    }
+    &__image {
+        max-width: 100%;
+    }
+
+
+
+
+    &__screenImage {
+        display: block;
+        height: 340px;
+        width: 92%;
+        position: absolute;
+        left: -16px;
+        bottom: -16px;
+        border: 16px solid #121212;
+        outline: 2px solid #2F2F2F;
+        border-top-right-radius: 32px;
+        box-sizing: border-box;
+        @include respond-below(sm) {
+            height: 270px;
+        }
+    }
+    &__backgroundImage {
+        display: block;
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+    }
+    .smallScreenImage {
+        height: 270px;
+    }
+    .videoContainer {
+        overflow: hidden;
+        video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            min-width: 630px;
+        }
+    }
+    .videoContainerSmall {
+        video {
+            min-width: 360px !important;
+        }
+    }
+    .image1 {
+        //@include backgroundImage('/assets/images/benefits/presetsBig.webm', '/assets/images/benefits/presetsBig.webm');
+        //background-repeat: no-repeat;
+        //background-position: right 0px top 0px;
+        //background-size: cover;
+    }
+    .image2 {
+        //@include backgroundImage('/assets/images/benefits/realtime.webm', '/assets/images/benefits/realtime.webm');
+        //background-repeat: no-repeat;
+        //background-position: right 0px top 0px;
+        //background-size: cover;
+    }
+    .image3 {
+        @include backgroundImage('/assets/images/benefits/benefits-animation.webp', '/assets/images/benefits/benefits-animation2x.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &.image4 { 
+        @include backgroundImage('/assets/images/benefits/benefits-freedom.webp', '/assets/images/benefits/benefits-freedom2x.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .image5 {
+        @include backgroundImage('/assets/images/benefits/presets.webm', '/assets/images/benefits/presets.webm');
+        background-repeat: no-repeat;
+        background-position: right 0px top 0px;
+        background-size: cover;
+    }
+    .image6 {
+        @include backgroundImage('/assets/images/benefits/benefits-eeveecycles.webp', '/assets/images/benefits/benefits-eeveecycles2x.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .image7 {
+        @include backgroundImage('/assets/images/benefits/benefits-values.webp', '/assets/images/benefits/benefits-values2x.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .image8 {
+        @include backgroundImage('/assets/images/benefits/benefits-aces.webp', '/assets/images/benefits/benefits-aces2x.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .imageDemo {
+        @include backgroundImage('/assets/images/benefits/benefits-demo.webp', '/assets/images/benefits/benefits-demo2x.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &__demoBlock {
+        padding: 64px 64px 64px calc(50% + 64px); 
+		height: 216px;
+		margin: 2px;
+    	margin-top: 12px;
+        h3 {
+            font-size: 20px; 
+            display: block;
+            span {
+                background: radial-gradient(
+                    79.17% 79.17% at 25% 12.5%,
+                    #a479ff 45.31%,
+                    #ae01ff 100%
+                ),#ffffff;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+        h4 {
+            font-size: 12px;
+            margin-top: 16px;
+            display: block;
+            margin-bottom: 32px;
+            a {
+                height: 12px;
+            }
+        }
+        .tooltip {
+			img {
+				opacity: 0.5;
+			}
+		}
+        .imageDemo {
+            width: calc(50% + 8px);
+            height: 300px;
+            @include respond-below(sm) {
+                width: 90%;
+                height: 250px;
+            }
+		}
+        .infotrgr2:hover+.infomsg2 {
+			display: block;
+		}
+		.infomsg2 {
+			position: absolute;
+			left: calc(-50% + -8px);
+			top: calc(100% + 10px);
+			box-sizing: border-box;
+			width: 280px;
+			padding: 16px;
+			display: none;
+			border-radius: $default-radius;
+			box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.3);
+			background-color: #1E1E1E;
+			color: rgba(#FFFFFF, .7);
+			z-index: 2;
+			font-size: 12px;
+			font-weight: 300;
+			line-height: 1.2;
+			&:before {
+				position: absolute;
+				content: "";
+				display: block;
+				width: 20px;
+				height: 20px;
+				background-color: #1E1E1E;
+				left: calc(50% - 16px);
+				transform: rotate(45deg);
+				top: -6px;
+				z-index: 1;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 20px;
+				background-color: transparent;
+				left: 0px;
+				top: -15px;
+				z-index: 3;
+			}
+			&:hover {
+				display: block;
+			}
+			a {
+				color: rgba(#FFFFFF, .7);
+			}
+		}
+        @media (max-width: 500px) {
+            padding: 32px 64px 60% 32px;
+            .demoImage {
+                left: -16px !important;
+                top: 225px;
+            }
+            .infotrgr2 {
+                display: none;
+            }
+        }
+    }
+
+
+
+    &__note {
+        position: absolute;
+        left: 32px;
+        bottom: 32px;
+        z-index: 1;
+    }
+    &__label, &__text {
+        font-size: 12px;
+        font-family: Inter;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+    &__label {
+        color: rgba(#FFFFFF, .5);
+    }
+    &__text {
+        color: #FFFFFF;
+    }
+
+    &__comp1, &__comp2 {
+        position: absolute;
+        bottom: 70px;
+        color : #FFFFFF;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &__comp1 {
+        left: 18%;
+    }
+    &__comp2 {
+        right: 18%;
     }
 }

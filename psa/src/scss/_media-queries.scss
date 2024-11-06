@@ -5,11 +5,16 @@
 // A map of breakpoints.
 $breakpoints: (
 
-  sm: 767px,
-  md: 990px, // 992
-  lg: 1200px
+  sm: 468px,
+  md: 569px, // 648 ir nākamais solis
+  lg: 688px
 );
 
+
+
+// sm: 767px,
+// md: 992px, // 992
+// lg: 1200px
 
 //
 //  RESPOND ABOVE
@@ -102,3 +107,29 @@ $breakpoints: (
     }
   }
 }
+
+
+@mixin backgroundImage($nonRetinaImage, $retinaImage) {
+  // Non-retina screen
+  // @media #{$nonRetina} {
+    background-image: url($nonRetinaImage);
+    // background-image: -webkit-image-set(url($nonRetinaImage) 1x);
+  // }
+  
+  // Retina screen
+  // @media #{$retina} {
+  // background-image: url($retinaImage);
+    // background-image: -webkit-image-set(url($retinaImage) 1x);
+  // }
+}
+// Define media queries for non-retina and retina screens
+$nonRetina: 'only screen and (-webkit-min-device-pixel-ratio: 1),' +
+            'only screen and (min--moz-device-pixel-ratio: 1),' +
+            'only screen and (-o-min-device-pixel-ratio: 1/1),' +
+            'only screen and (min-resolution: 96dpi)';
+
+$retina: 'only screen and (-webkit-min-device-pixel-ratio: 2),' +
+        'only screen and (min--moz-device-pixel-ratio: 2),' +
+        'only screen and (-o-min-device-pixel-ratio: 2/1),' +
+        'only screen and (min-resolution: 192dpi)';
+

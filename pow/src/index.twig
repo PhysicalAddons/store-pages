@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Physical Open Waters | Blender Addon</title>
+	<meta name="description" content="Blender addon Physical Celestial Objects lets you create physically accurate planets on a real scale with just a few clicks.">
+	<link rel="icon" type="image/svg+xml" href="assets/images/icons/pow.svg">
+	<!-- Do not transfer random numbers into phone numbers -->
+	<meta name="format-detection" content="telephone=no">
+	<!-- Fonts -->
+	{# <link rel="preload" href="assets/fonts/Inter-Light.woff2" as="font" type="font/woff2" crossorigin> #}
+	<link href="assets/fonts/Inter-Light.woff2" type="font/woff2" crossorigin>
+	<link href="assets/fonts/Inter-Regular.woff2" type="font/woff2" crossorigin>
+	<link href="assets/fonts/Inter-Medium.woff2" type="font/woff2" crossorigin>
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	{# <link rel="stylesheet" href="assets/css/vendor/jquery.fancybox.min.css"> #}
+	<script defer data-domain="pow-listing.netlify.app" src="https://plausible.io/js/script.js"></script>
+	<script defer data-domain="pow-listing.netlify.app" src="https://plausible.io/js/script.outbound-links.js"></script>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        {% include "blocks/hero/hero.twig" %}
+        {% include "blocks/benefits/benefits.twig" %}
+        {% include "blocks/updates/updates.twig" %}
+        {% include "blocks/team/team.twig" %}
+        {# {% include "blocks/gallery/gallery.twig" %} #}
+        {% include "blocks/controls/controls.twig" %}
+        {% include "blocks/pricing/pricing.twig" %}
+        {% include "blocks/notes/notes.twig" %}
+        {% include "blocks/footer/footer.twig" %}
+    </div>
+</body>
+</html>
+

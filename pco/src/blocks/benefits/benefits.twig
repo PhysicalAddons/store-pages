@@ -1,133 +1,113 @@
 {% set benefits = [
-	{
-		'size': 2,
-		'title': 'No compromise precision.',
-		'description': 'You are free to scale up your planets using real-world measurements and distances without having to worry about precision loss, z-flighting, and shadow distances.',
+    {
+        'size': 2,
+        'title': 'Scientifically Accurate Tool for Artists',
+        'description': 'Craft beautiful, scientifically accurate planetary scenes designed for artists, allowing you to prioritize creativity over complex calculations.',
         'framed': true,
         'video': {
             'webm': '/assets/images/benefits/feature-1.webm',
-            'mp4': '/assets/images/benefits/feature-1.mp4',
+            'mp4': '/assets/images/benefits/feature-1.mp4'
         }
     },
     {
-		'size': 1,
-		'title': 'Realtime speed and performance.',
-		'description': 'Experience unparalleled speed and efficiency with real-time rendering, ensuring smooth performance during both editing and playback.',
+        'size': 1,
+        'title': 'Solar System Planet Presets',
+        'description': 'Quickly set up scenes with pre-made, customizable planets modeled on the solar system, saving time and enhancing visual realism instantly.',
+        'image': {
+            'src': '/assets/images/benefits/feature-3.jpg',
+            'srcx2': '/assets/images/benefits/feature-3x2.jpg',
+            'alt': ''
+        }
+    },
+    {
+        'size': 1,
+        'title': 'Optimized Rendering for Planetary Scales',
+        'description': 'Our custom rendering system solves issues like volumetric distances and precision errors, letting you work with planetary sizes without quality loss.',
         'framed': true,
         'video': {
             'webm': '/assets/images/benefits/feature-2.webm',
-            'mp4': '/assets/images/benefits/feature-2.mp4',
+            'mp4': '/assets/images/benefits/feature-2.mp4'
+        }
+    },
+] %}
+
+{% set features = [
+    {
+        'size': 2,
+        'title': 'Scientific Shading Model for Realistic Planet Textures',
+        'description': 'Our shading model combines HAPKE BRDF and Single Scatter Albedo, providing scientifically accurate results. Texture each planet with albedo, roughness, height, and emission maps, all supported through a PBR workflow.',
+        'image': {
+            'src': '/assets/images/benefits/feature-11.jpg',
+            'srcx2': '/assets/images/benefits/feature-11x2.jpg',
+            'alt': ''
         }
     },
     {
-		'size': 1,
-		'title': 'Pre-made planets.',
-		'description': 'Save time and effort with pre-made planetary systems, that can instantly transform your scene and serve as a starting point for further customisation.',
-		'image': {
-			'src':'/assets/images/benefits/feature-3.jpg',
-            'srcx2':'/assets/images/benefits/feature-3x2.jpg',
-            'alt': '',
-		}
-    },
-    {
-		'size': 2,
-		'title': 'Planetary rings',
-		'description': 'can be customized to build eye-catching worlds. Rings interact with the atmosphere and the planet surface - cast shadows and indirect light.',
-		'image': {
-			'src':'/assets/images/benefits/feature-4.jpg',
-            'srcx2':'/assets/images/benefits/feature-4x2.jpg',
-            'alt': '',
-		}
-    },
-    {
-		'size': 1,
-		'title': 'Animate everything.',
-		'description': 'Use keyframes to effortlessly animate each feature, giving you the ability to bring your scenes to life.',
-		'image': {
-			'src':'/assets/images/benefits/feature-5.jpg',
-            'srcx2':'/assets/images/benefits/feature-5x2.jpg',
-            'alt': '',
-		}
-    },
-    {
-		'size': 1,
-		'title': 'Intuitive Planet Positioning.',
-		'description': 'When you work in celestial sizes, intuitive positioning is a must. You can position planets using orbital, global, or viewer transform.',
-        'framed': true,
-		'video': {
-            'webm': '/assets/images/benefits/feature-6.webm',
-            'mp4': '/assets/images/benefits/feature-6.mp4',
+        'size': 1,
+        'title': 'Planetary Scale, Shadows, and Lighting Made Easy',
+        'description': 'Build planets with real-world measurements and scale them down for scene flexibility. Multiple rotation and positioning options. Each sphere interacts with lighting, casting realistic shadows and indirect light effects on other planets.',
+        'image': {
+            'src': '/assets/images/benefits/feature-4.jpg',
+            'srcx2': '/assets/images/benefits/feature-4x2.jpg',
+            'alt': ''
         }
     },
     {
-		'size': 2,
-		'title': 'Cinematic Atmosphere.',
-		'description': 'Our atmosphere is built with a multi-layer system. You can assign properties to each layer to build your own unique atmospheres. Our physics based ray-marcher takes care of mixing it all together.',
-		'image': {
-			'src':'/assets/images/benefits/feature-7.jpg',
-            'srcx2':'/assets/images/benefits/feature-7x2.jpg',
-            'alt': '',
-		}
-    },
-    {
-		'size': 1,
-		'title': 'Save time.',
-		'description': 'PCO saves hours that usually are invested in solving issues that come up when you decide to create planetary-scale worlds.',
-		'framed': true,
-        'video': {
-            'webm': '/assets/images/benefits/feature-8.webm',
-            'mp4': '/assets/images/benefits/feature-8.mp4',
+        'size': 1,
+        'title': 'Realistic Color Tones with Wavelength Control',
+        'description': 'Input precise light wavelengths to achieve accurate color representation in your scenes. With 470, 650, and 700 𝑛m coefficients, you can create atmospheres that respond naturally to light.',
+        'image': {
+            'src': '/assets/images/benefits/feature-3.jpg',
+            'srcx2': '/assets/images/benefits/feature-3x2.jpg',
+            'alt': ''
         }
     },
     {
-		'size': 1,
-		'title': 'Works on Eevee & Cycles.',
-		'description': 'Our addon seamlessly integrates with both Eevee and Cycles render engines, ensuring compatibility and consistent results across your favorite rendering platforms.',
-		'image': {
-			'src':'/assets/images/benefits/feature-9.jpg',
-            'srcx2':'/assets/images/benefits/feature-9x2.jpg',
-            'alt': '',
-		},
-        'comparison': true
+        'size': 2,
+        'title': 'Create Lifelike Atmospheres with Light Scattering Layers',
+        'description': 'Each layer in your planet’s atmosphere can be fine-tuned for realistic light behavior, using advanced models to mimic natural haze and fog. This layered approach allows for lifelike depth and color transitions that respond dynamically to lighting.',
+        'image': {
+            'src': '/assets/images/benefits/feature-7.jpg',
+            'srcx2': '/assets/images/benefits/feature-7x2.jpg',
+            'alt': ''
+        }
     },
     {
-		'size': 2,
-		'title': 'Lights up your scene.',
-		'description': 'Our addon is calculated in World node shader that automatically acts as environment light and illuminates your scene without having to add fake lights manually.',
-		'image': {
-			'src':'/assets/images/benefits/feature-10.jpg',
-            'srcx2':'/assets/images/benefits/feature-10x2.jpg',
-            'alt': '',
-		}
+        'size': 1,
+        'title': 'Six-Layer Atmosphere with Realistic Light Effects',
+        'description': 'Create rich atmospheres with six interactive layers that scatter, absorb, and emit light naturally. Each layer casts shadows, with texture-driven density and height profiles for added realism, including options for stunning procedural auroras.',
+        'image': {
+            'src': '/assets/images/benefits/feature-8.jpg',
+            'srcx2': '/assets/images/benefits/feature-8x2.jpg',
+            'alt': ''
+        }
     },
     {
-		'size': 2,
-		'title': 'Physically acurrate shading.',
-		'description': 'Our planet surface lighting model is based on <a href="https://en.wikipedia.org/wiki/Hapke_parameters" target="_blank">Hapke BRDF</a> specifically designed for celestial bodies. Raytraced soft shadows are cast from planets. Indirect light bounces from lit parts of planets.',
-		'image': {
-			'src':'/assets/images/benefits/feature-11.jpg',
-            'srcx2':'/assets/images/benefits/feature-11x2.jpg',
-            'alt': '',
-		}
+        'size': 1,
+        'title': 'Realistic Planetary Rings with Shadows',
+        'description': 'Create stunning, customizable rings that cast realistic shadows onto the planet and atmosphere. This creates a rich interplay of light and shadow, perfect for cinematic planetary visuals.',
+        'image': {
+            'src': '/assets/images/benefits/feature-10.jpg',
+            'srcx2': '/assets/images/benefits/feature-10x2.jpg',
+            'alt': ''
+        }
     },
     {
-		'size': 2,
-		'title': 'All our addons work together',
-		'description': 'to make procedural worlds you won\'t be able to distinguish from reality.',
-		'image': {
-			'src':'/assets/images/benefits/feature-12.jpg',
-            'srcx2':'/assets/images/benefits/feature-12x2.jpg',
-            'alt': '',
-		},
-        'list': true
-    },
-    
-]
-%}
+        'size': 2,
+        'title': 'Procedural Stars',
+        'description': 'A procedurally generated star background offers a universe-like look, while the sun casts light that brings life and dimension to the planets within this starry cosmos.',
+        'image': {
+            'src': '/assets/images/benefits/feature-12.jpg',
+            'srcx2': '/assets/images/benefits/feature-12x2.jpg',
+            'alt': ''
+        }
+    }
+] %}
+
 
 <div class="benefits block" id="benefits">
     <h2 class="benefits__title">
-        Features
+        Benefits
     </h2>
 
     <div class="benefits__grid">
@@ -137,6 +117,21 @@
     </div>
 
 </div>
+
+<div class="benefits block" id="features">
+    <h2 class="benefits__title">
+        Features
+    </h2>
+
+    <div class="benefits__grid">
+        {% for feature in features %}
+        {% include '../../../../shared/partials/benefit-card/benefit-card.twig' with feature only %}
+        {% endfor %}
+    </div>
+
+</div>
+
+
 
 
 <script>

@@ -2,6 +2,7 @@ var destroot = "public/";
 var gulp = require("gulp"),
   sass = require("gulp-sass")(require("sass")),
   twig = require("gulp-twig"),
+  responsive = require("gulp-responsive"),
   browserSync = require("browser-sync").create();
 
 gulp.task("css", function () {
@@ -35,32 +36,32 @@ gulp.task("browserSync", function () {
 });
 
 
-// gulp.task("resize-jpg", function () {
-//   return gulp
-//     .src(["src/assets/benefits/normal/*.jpg", "src/assets/benefits/wide/*.jpg"]) // Include both selectors
-//     .pipe(
-//       responsive(
-//         {
-//           "**/*.jpg": [ // Selector for normal .jpg
-//             { width: 356 },
-//             { width: 712, rename: { suffix: "x2" } },
-//           ],
-//           "**/*.jpg": [ // Selector for wide .jpg
-//             { width: 724 },
-//             { width: 1448, rename: { suffix: "x2" } },
-//           ],
-//         },
-//         {
-//           // Global configuration for all images
-//           quality: 85,
-//           progressive: true,
-//           withMetadata: false,
-//           withoutEnlargement: false, // This will generate image also if it is smaller than needed image
-//         }
-//       )
-//     )
-//     .pipe(gulp.dest(destroot + "assets/images/benefits"))
-// });
+gulp.task("resize-jpg", function () {
+  return gulp
+    .src(["src/assets/benefits/normal/*.jpg", "src/assets/benefits/wide/*.jpg"]) // Include both selectors
+    .pipe(
+      responsive(
+        {
+          "**/*.jpg": [ // Selector for normal .jpg
+            { width: 356 },
+            { width: 712, rename: { suffix: "x2" } },
+          ],
+          "**/*.jpg": [ // Selector for wide .jpg
+            { width: 724 },
+            { width: 1448, rename: { suffix: "x2" } },
+          ],
+        },
+        {
+          // Global configuration for all images
+          quality: 85,
+          progressive: true,
+          withMetadata: false,
+          withoutEnlargement: false, // This will generate image also if it is smaller than needed image
+        }
+      )
+    )
+    .pipe(gulp.dest(destroot + "assets/images/benefits"))
+});
 
 
 gulp.task('copy-videos', function() {

@@ -1,3 +1,129 @@
+{% set benefits = [
+	{
+		'size': 2,
+		'title': 'No compromise precision.',
+		'description': 'You are free to scale up your planets using real-world measurements and distances without having to worry about precision loss, z-flighting, and shadow distances.',
+        'framed': true,
+        'video': {
+            'webm': '/assets/images/benefits/feature-1.webm',
+            'mp4': '/assets/images/benefits/feature-1.mp4',
+        }
+    },
+    {
+		'size': 1,
+		'title': 'Realtime speed and performance.',
+		'description': 'Experience unparalleled speed and efficiency with real-time rendering, ensuring smooth performance during both editing and playback.',
+        'framed': true,
+        'video': {
+            'webm': '/assets/images/benefits/feature-2.webm',
+            'mp4': '/assets/images/benefits/feature-2.mp4',
+        }
+    },
+    {
+		'size': 1,
+		'title': 'Pre-made planets.',
+		'description': 'Save time and effort with pre-made planetary systems, that can instantly transform your scene and serve as a starting point for further customisation.',
+		'image': {
+			'src':'/assets/images/benefits/feature-3.jpg',
+            'srcx2':'/assets/images/benefits/feature-3x2.jpg',
+            'alt': '',
+		}
+    },
+    {
+		'size': 2,
+		'title': 'Planetary rings',
+		'description': 'can be customized to build eye-catching worlds. Rings interact with the atmosphere and the planet surface - cast shadows and indirect light.',
+		'image': {
+			'src':'/assets/images/benefits/feature-4.jpg',
+            'srcx2':'/assets/images/benefits/feature-4x2.jpg',
+            'alt': '',
+		}
+    },
+    {
+		'size': 1,
+		'title': 'Animate everything.',
+		'description': 'Use keyframes to effortlessly animate each feature, giving you the ability to bring your scenes to life.',
+		'image': {
+			'src':'/assets/images/benefits/feature-5.jpg',
+            'srcx2':'/assets/images/benefits/feature-5x2.jpg',
+            'alt': '',
+		}
+    },
+    {
+		'size': 1,
+		'title': 'Intuitive Planet Positioning.',
+		'description': 'When you work in celestial sizes, intuitive positioning is a must. You can position planets using orbital, global, or viewer transform.',
+        'framed': true,
+		'video': {
+            'webm': '/assets/images/benefits/feature-6.webm',
+            'mp4': '/assets/images/benefits/feature-6.mp4',
+        }
+    },
+    {
+		'size': 2,
+		'title': 'Cinematic Atmosphere.',
+		'description': 'Our atmosphere is built with a multi-layer system. You can assign properties to each layer to build your own unique atmospheres. Our physics based ray-marcher takes care of mixing it all together.',
+		'image': {
+			'src':'/assets/images/benefits/feature-7.jpg',
+            'srcx2':'/assets/images/benefits/feature-7x2.jpg',
+            'alt': '',
+		}
+    },
+    {
+		'size': 1,
+		'title': 'Save time.',
+		'description': 'PCO saves hours that usually are invested in solving issues that come up when you decide to create planetary-scale worlds.',
+		'framed': true,
+        'video': {
+            'webm': '/assets/images/benefits/feature-8.webm',
+            'mp4': '/assets/images/benefits/feature-8.mp4',
+        }
+    },
+    {
+		'size': 1,
+		'title': 'Works on Eevee & Cycles.',
+		'description': 'Our addon seamlessly integrates with both Eevee and Cycles render engines, ensuring compatibility and consistent results across your favorite rendering platforms.',
+		'image': {
+			'src':'/assets/images/benefits/feature-9.jpg',
+            'srcx2':'/assets/images/benefits/feature-9x2.jpg',
+            'alt': '',
+		},
+        'comparison': true
+    },
+    {
+		'size': 2,
+		'title': 'Lights up your scene.',
+		'description': 'Our addon is calculated in World node shader that automatically acts as environment light and illuminates your scene without having to add fake lights manually.',
+		'image': {
+			'src':'/assets/images/benefits/feature-10.jpg',
+            'srcx2':'/assets/images/benefits/feature-10x2.jpg',
+            'alt': '',
+		}
+    },
+    {
+		'size': 2,
+		'title': 'Physically acurrate shading.',
+		'description': 'Our planet surface lighting model is based on <a href="https://en.wikipedia.org/wiki/Hapke_parameters" target="_blank">Hapke BRDF</a> specifically designed for celestial bodies. Raytraced soft shadows are cast from planets. Indirect light bounces from lit parts of planets.',
+		'image': {
+			'src':'/assets/images/benefits/feature-11.jpg',
+            'srcx2':'/assets/images/benefits/feature-11x2.jpg',
+            'alt': '',
+		}
+    },
+    {
+		'size': 2,
+		'title': 'All our addons work together',
+		'description': 'to make procedural worlds you won\'t be able to distinguish from reality.',
+		'image': {
+			'src':'/assets/images/benefits/feature-12.jpg',
+            'srcx2':'/assets/images/benefits/feature-12x2.jpg',
+            'alt': '',
+		},
+        'list': true
+    },
+    
+]
+%}
 
 <div class="benefits block" id="benefits">
     <h2 class="benefits__title">
@@ -5,134 +131,24 @@
     </h2>
 
     <div class="benefits__grid">
-
-
-        <div class="benefit-card benefit-card--wide benefit-card--twothirds">
-            <h3 class="benefit-card__title">No compromise precision.</h3>
-            <p class="benefit-card__description">
-                You are free to scale up your planets using real-world measurements and distances without having to worry about precision loss, z-flighting, and shadow distances.
-            </p>
-            <div class="benefit-card__screenImage videoContainer">
-                <img src="/assets/images/benefits/features-1x2.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="benefit-card">
-            <h3 class="benefit-card__title">Realtime speed and performance.</h3>
-            <p class="benefit-card__description">
-                Experience unparalleled speed and efficiency with real-time rendering, ensuring smooth performance during both editing and playback.
-            </p>
-            <div class="benefit-card__screenImage smallScreenImage image2">
-            </div>
-        </div>
-
-        <div class="benefit-card">
-            <h3 class="benefit-card__title">
-                Pre-made planets.
-            </h3>
-            <p class="benefit-card__description">
-                Save time and effort with pre-made planetary systems, that can instantly transform your scene and serve as a starting point for further customisation.
-            </p>
-            <div class="benefit-card__backgroundImage image3"></div>
-        </div>
-
-        <div class="benefit-card benefit-card--wide benefit-card--onethird image4">
-            <h3 class="benefit-card__title">
-                Planetary rings
-            </h3>
-            <p class="benefit-card__description">
-                can be customized to build eye-catching worlds. Rings interact with the atmosphere and the planet surface - cast shadows and indirect light.
-            </p>
-        </div>
-
-        <div class="benefit-card">
-            <h3 class="benefit-card__title">
-                Animate everything.
-            </h3>
-            <p class="benefit-card__description">
-                Use keyframes to effortlessly animate each feature, giving you the ability to bring your scenes to life.
-            </p>
-            <div class="benefit-card__backgroundImage image5" style="height:400px; top:auto;"></div>
-        </div>
-
-        <div class="benefit-card">
-            <h3 class="benefit-card__title">Intuitive Planet Positioning.</h3>
-            <p class="benefit-card__description">
-                When you work in celestial sizes, intuitive positioning is a must. You can position planets using orbital, global, or viewer transform.
-            </p>
-            <div class="benefit-card__screenImage smallScreenImage image6">
-            </div>
-        </div>
-
-        <div class="benefit-card benefit-card--wide benefit-card--onethird image7">
-            <h3 class="benefit-card__title">
-                Cinematic Atmosphere.
-            </h3>
-            <p class="benefit-card__description">
-                Our atmosphere is built with a multi-layer system. You can assign properties to each layer to build your own unique atmospheres. Our physics based ray-marcher takes care of mixing it all together.
-            </p>
-            <div class="benefit-card__backgroundImage"></div>
-        </div>
-
-        <div class="benefit-card">
-            <h3 class="benefit-card__title">Save time.</h3>
-            <p class="benefit-card__description">
-                PCO saves hours that usually are invested in solving issues that come up when you decide to create planetary-scale worlds.
-            </p>
-            <div class="benefit-card__screenImage smallScreenImage image8">
-            </div>
-        </div>
-
-        <div class="benefit-card">
-            <h3 class="benefit-card__title">
-                Works on Eevee & Cycles.
-            </h3>
-            <p class="benefit-card__description">
-                Our addon seamlessly integrates with both Eevee and Cycles render engines, ensuring compatibility and consistent results across your favorite rendering platforms.
-            </p>
-            <div class="benefit-card__backgroundImage image9"></div>
-        </div>
-
-        <div class="benefit-card benefit-card--wide benefit-card--onethird image10">
-            <h3 class="benefit-card__title">
-                Lights up your scene.
-            </h3>
-            <p class="benefit-card__description">
-                Our addon is calculated in World node shader that automatically acts as environment light and illuminates your scene without having to add fake lights manually.
-            </p>
-            <div class="benefit-card__backgroundImage"></div>
-        </div>
-        <div class="benefit-card benefit-card--wide benefit-card--onethird image11">
-            <h3 class="benefit-card__title">
-                Physically acurrate shading. 
-            </h3>
-            <p class="benefit-card__description">
-                Our planet surface lighting model is based on <a href="https://en.wikipedia.org/wiki/Hapke_parameters" target="_blank">Hapke BRDF</a> specifically designed for celestial bodies. Raytraced soft shadows are cast from planets. Indirect light bounces from lit parts of planets.
-            </p>
-            <div class="benefit-card__backgroundImage"></div>
-        </div>
-
-        <div class="benefit-card benefit-card--wide benefit-card--onethird image12">
-            <h3 class="benefit-card__title">All our addons work together</h3>
-            <p class="benefit-card__description">
-                to make procedural worlds you won't be able to distinguish from reality. 
-            </p>
-            <ul class="benefit-card__list">
-                <li>
-                    <img src="assets/images/icons/psa_transparent.svg">
-                    Atmosphere
-                </li>
-                <li>
-                    <img src="assets/images/icons/pco_transparent.svg">
-                    Planets
-                </li>
-                <li>
-                    <img src="assets/images/icons/pow_transparent.svg">
-                    Ocean
-                </li>
-            </ul>
-        </div>
-
+        {% for benefit in benefits %}
+        {% include '../../shared/partials/benefit-card/benefit-card.twig' with benefit only %}
+        {% endfor %}
     </div>
 
 </div>
+
+
+<script>
+// this should trigger playback of safari mobile videos
+document.addEventListener('DOMContentLoaded', (event) => {
+    const videoElements = document.querySelectorAll('.benefit-card__video');
+    if (videoElements.length > 0) {
+        document.body.addEventListener('click', function() {
+            videoElements.forEach(video => {
+                video.play();
+            });
+        });
+    }
+});
+</script>

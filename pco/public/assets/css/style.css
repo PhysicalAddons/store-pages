@@ -156,6 +156,7 @@ body {
 .hero .tabs .active {
   color: white;
   background-color: #FF0000;
+  cursor: default;
 }
 .hero .bigBlock {
   background: #000000;

@@ -2,7 +2,7 @@ var destroot = "public/";
 var gulp = require("gulp"),
   sass = require("gulp-sass")(require("sass")),
   twig = require("gulp-twig"),
-  responsive = require("gulp-responsive"),
+  // responsive = require("gulp-responsive"),
   browserSync = require("browser-sync").create();
 
 gulp.task("css", function () {

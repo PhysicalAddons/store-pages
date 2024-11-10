@@ -711,7 +711,7 @@ body {
   padding-top: 16px;
   list-style-position: inside;
   list-style-type: decimal;
-  padding-left: 1.5em;
+  padding-left: 16px;
 }
 .controls__footnotes > li {
   margin-bottom: 0.5em;

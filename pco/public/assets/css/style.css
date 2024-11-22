@@ -693,8 +693,35 @@ body {
   }
 }
 
+.controls sup {
+  margin-left: 1px;
+  position: relative;
+  top: -0.5em;
+  font-size: 80%;
+}
+.controls sup > a {
+  text-decoration: none;
+}
 .controls .heroBlock {
   background-image: url("/assets/images/controls/addon-controls.jpg");
+}
+.controls__footnotes {
+  padding-top: 16px;
+  list-style-position: inside;
+  list-style-type: decimal;
+  padding-left: 16px;
+}
+.controls__footnotes > li {
+  margin-bottom: 0.5em;
+  text-indent: -14px;
+  margin-left: 1em;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 12px;
+}
+.controls__footnotes > li > a {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media (max-width: 467px) {

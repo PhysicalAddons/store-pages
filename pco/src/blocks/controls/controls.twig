@@ -1,27 +1,114 @@
-
 {% set data = {
     controls : [
         {
+            "title": "HAPKE BRDF",
+            "description": "
+Our shading model combines HAPKE BRDF<sup id='footnote-brdf-ref'><a href='#footnote-brdf'>1</a></sup> and Single Scatter Albedo, providing scientifically accurate results. Texture each planet with albedo, roughness, height, and emission maps, all supported through a PBR workflow.<br><br>
+- Single Scatter Albedo<sup id='footnote-scatter-ref'><a href='#footnote-scatter'>2</a></sup><br>
+    - Textured Planets<br>
+    - Use PBR workflow<br>
+    <p style='padding-left: 2em;'>
+        - Albedo<br>
+        - Roughness<br>
+        - Height<br>
+        - Emission
+    </p>
+"
+        },
+        {
             "title": "Planets",
-            "description": "Enables the addition, removal, and renaming of planets in the scene. The system's flexibility allows for dynamic creation, with the maximum number of planets dictated by the user's hardware capabilities."
+            "description": "
+Planets with real-world measurements and scale them down for easier use. Multiple rotation and positioning options. Each sphere interacts with lighting, casting realistic shadows and indirect light effects on other planets.<br><br>
+- Input Real World Scale & Scale down<br>
+- Move and Rotate different methods<br>
+- Spheres, multiple planets cast shadows & indirect light
+            "
         },
         {
-            "title": "Planet Surface",
-            "description": "Albedo: Applies a color map or texture, defining the planet's surface appearance. Roughness: Adjusts the surface texture, affecting how light interacts with the terrain. Height: Implements a displacement map to create realistic topographical features. Emission: Allows specific areas to emit light, with adjustable emission strength for varying intensities."
+            "title": "Phases",
+            "description": "
+Each layer in your planet’s atmosphere can be fine-tuned for realistic light behavior, using the Draine Phase model with Cornette-Shanks, Rayleigh for molecular scattering, and Mie for aerosol scattering. <br><br>
+- For individual layers<br>
+- Draine Phase model<sup id='footnote-draine-phase-ref'><a href='#footnote-draine-phase'>3</a></sup><br>
+<p style='padding-left: 2em;'>
+- Includes Cornette-Shanks<sup id='footnote-cornette-shanks-ref'><a href='#footnote-cornette-shanks'>4</a></sup><br>
+- Molecular Phase (Rayleigh)<br>
+- Aerosol Phase (Mie)
+</p>
+
+"
         },
         {
-            "title": "Atmosphere",
-            "description": "Calculates atmospheric properties based on user-defined parameters. This includes the atmosphere's radius, density, and light scattering characteristics, offering a realistic portrayal of planetary atmospheres."
+            "title": "6 Layer atmosphere",
+            "description": "
+Rich atmospheres with six interactive layers that scatter, absorb, and emit light naturally. Each layer casts shadows, with texture-driven density and height profiles for added realism, including options for stunning procedural auroras.<br><br>
+- Layers Sum and Absorb<br>
+- Single Scattering Model<br>
+- Scatter, Absorb & Emit<br>
+- Cast shadows<br>
+- Texture-driven Density & Height Profile<br>
+- Procedural Aurora texture
+
+"
+        },
+        {
+            "title": "Spectral rendering",
+            "description": "
+Precise light wavelengths to achieve accurate color representation in your scenes.<br><br>
+- Input coefficients for 470, 650, 700 𝑛m wavelengths
+"
         },
         {
             "title": "Rings",
-            "description": "Our addon provides two ring creation methods: Procedural and Textured.  Procedural Rings: Generate rings with adjustable scale, detail, roughness, and color. Customize inner/outer radius, shadow impact, and translucency for realistic or artistic effects. Textured Rings: Create rings using textures with control over color tint, rotation, inner/outer radius, shadow factor, and translucency, offering a blend of realism and artistic flexibility."
+            "description": "
+Stunning, customizable rings that cast realistic shadows onto the planet and atmosphere. This creates a rich interplay of light and shadow, perfect for cinematic planetary visuals.<br><br>
+- Shadows<br>
+- Indirect Light
+"
         },
         {
-            "title": "Transform",
-            "description": "Allows for precise planetary positioning and orientation. Includes options for global coordinate placement, viewer-based positioning, or setting planets in elliptical orbits."
+            "title": "Background Stars",
+            "description": "
+A procedurally generated star background to offer an out of the box a universe-like look.
+            "
         },
     ]
 }
 %}
-{% include "../../../../shared/blocks/controls/controls.twig" with data only %}
+
+<div class="controls block" id="controls">
+
+    <div class="heroBlock">
+
+        <h2 class="controls__title">
+		    Technical Specification
+	    </h2>
+
+    </div>
+
+	<div class="controls__table">
+
+        <table>
+            {% for control in data.controls %}
+            <tr>
+                <td><h4>{{control.title}}</h4></td>
+                <td>
+                    <p>
+                        {{control.description}}
+                    </p>
+                </td>
+            </tr>   
+            {% endfor %}
+        </table>
+        <ol class="controls__footnotes">
+            <li id="footnote-brdf">Hapke, B. 1993. Theory of Reflectance and Emittance Spectroscopy. Cambridge University Press. <a href="#footnote-brdf-ref">↩</a></li>
+            <li id="footnote-scatter">Johannes Jendersie and Eugene d'Eon. 2023. An Approximate Mie Scattering Function for Fog and Cloud Rendering. In ACM SIGGRAPH 2023 Talks (SIGGRAPH '23). Association for Computing Machinery, New York, NY, USA, Article 47, 1–2. <a target="_blank" href="https://doi.org/10.1145/3587421.3595409">https://doi.org/10.1145/3587421.3595409</a> <a href="#footnote-scatter-ref">↩</a></li>
+            <li id="footnote-draine-phase">Draine, B. T. 2003. Scattering by interstellar dust grains. I. Optical and ultraviolet. The Astrophysical Journal, 598(2), 1017. <a target="_blank" href="https://doi.org/10.1086/379118">https://doi.org/10.1086/379118</a> <a href="#footnote-draine-phase-ref">↩</a></li>
+            <li id="footnote-cornette-shanks">Cornette, W. M., and Shanks, J. J. 1992. A Physically-Based Light Scattering Model for Realistic Rendering of Clouds and Fog. Computer Graphics, 26(2), 159-166.<a href="#footnote-cornette-shanks-ref">↩</a></li>
+        </ol>
+	</div>
+</div>
+
+
+
+{# {% include "../../../../shared/blocks/controls/controls.twig" with data only %} #}

@@ -3,7 +3,7 @@
     <div class="tabs">
         <div class="label">Our Addons</div>
         {% for tab in tabs %}
-            <a class="tab{{ tab.active ? ' active': '' }}" target="_blank" href="{{tab.link}}" >{{tab.title}}</a>
+            <a class="tab{{ tab.active ? ' active': '' }}" target="{{ tab.active ? '_self': '_blank' }}" href="{{ tab.active ? 'javascript:void(0);': tab.link }}">{{tab.title}}</a>
         {% endfor %}
     </div>
 

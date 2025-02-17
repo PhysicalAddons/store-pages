@@ -45,7 +45,138 @@
         <p class="bigBlock__notice">Our products are used by creators from:</p>
     </div>
 
-</div>        <div class="benefits block" id="benefits">
+</div>        
+
+
+<div class="benefits block" id="benefits">
+    <h2 class="benefits__title">
+        Why did <em>1500+</em> users<br> choose POW?
+    </h2>
+
+    <div class="benefits__grid">
+                <div class="benefit-card benefit-card--wide">
+        <picture class="benefit-card__figure benefit-card__figure--background">
+        <img class="benefit-card__image" src="/assets/images/benefits/feature-4.jpg" srcset="/assets/images/benefits/feature-4.jpg 1x, /assets/images/benefits/feature-4x2.jpg 2x" alt="">
+    </picture>
+            <div class="benefit-card__message">
+        <h3 class="benefit-card__title">Pre-made presets.</h3>
+        <p class="benefit-card__description">Save time and effort with pre-made presets, providing you with a list of ready-to-use settings that can instantly transform your scene and serve as a starting point for further customization.</p>
+    </div>
+    
+    
+            </div>
+                <div class="benefit-card">
+        <picture class="benefit-card__figure benefit-card__figure--background">
+        <img class="benefit-card__image" src="/assets/images/benefits/feature-3.jpg" srcset="/assets/images/benefits/feature-3.jpg 1x, /assets/images/benefits/feature-3x2.jpg 2x" alt="">
+    </picture>
+            <div class="benefit-card__message">
+        <h3 class="benefit-card__title">Realtime speed and performance.</h3>
+        <p class="benefit-card__description">Quickly set up scenes with pre-made, customizable planets modeled on the solar system, saving time and enhancing visual realism instantly.</p>
+    </div>
+    
+    
+            </div>
+                <div class="benefit-card">
+            <figure class="benefit-card__figure benefit-card__figure--background">
+        <video autoplay loop muted playsinline class="benefit-card__video">
+                        <source src="/assets/images/benefits/planetary_scale.mp4" type="video/mp4">            Your browser does not support the video tag.        </video>
+    </figure>
+        <div class="benefit-card__message">
+        <h3 class="benefit-card__title">Optimized Rendering for Planetary Scales.</h3>
+        <p class="benefit-card__description">Our custom rendering system solves issues like volumetric distances and precision errors, letting you work with planetary sizes without quality loss.</p>
+    </div>
+    
+    
+            </div>
+                <div class="benefit-card">
+            <figure class="benefit-card__figure benefit-card__figure--background">
+        <video autoplay loop muted playsinline class="benefit-card__video">
+                        <source src="/assets/images/benefits/planetary_scale.mp4" type="video/mp4">            Your browser does not support the video tag.        </video>
+    </figure>
+        <div class="benefit-card__message">
+        <h3 class="benefit-card__title">Works on Eevee & Cycles.</h3>
+        <p class="benefit-card__description">Our addon seamlessly integrates with both Eevee and Cycles render engines, ensuring compatibility and consistent results across your favorite rendering platforms.</p>
+    </div>
+    
+    
+            </div>
+                <div class="benefit-card">
+            <figure class="benefit-card__figure benefit-card__figure--bordered">
+        <video autoplay loop muted playsinline class="benefit-card__video">
+            <source src="/assets/images/benefits/feature-1.webm" type="video/webm">            <source src="/assets/images/benefits/feature-1.mp4" type="video/mp4">            Your browser does not support the video tag.        </video>
+    </figure>
+        <div class="benefit-card__message">
+        <h3 class="benefit-card__title">Intuitive Planet Positioning.</h3>
+        <p class="benefit-card__description">When you work in celestial sizes, intuitive positioning is a must. You can position planets using orbital, global, or viewer transform.</p>
+    </div>
+    
+    
+            </div>
+                <div class="benefit-card benefit-card--wide">
+        <picture class="benefit-card__figure benefit-card__figure--background">
+        <img class="benefit-card__image" src="/assets/images/benefits/feature-3.jpg" srcset="/assets/images/benefits/feature-3.jpg 1x, /assets/images/benefits/feature-3x2.jpg 2x" alt="">
+    </picture>
+            <div class="benefit-card__message">
+        <h3 class="benefit-card__title">All our addons work together</h3>
+        <p class="benefit-card__description"> to make procedural worlds you won't be able to distinguish from reality.</p>
+    </div>
+    
+    
+                <ul class="benefit-card__list">
+        <li>
+            <img src="assets/images/icons/psa_transparent.svg">
+            Atmosphere
+        </li>
+        <li>
+            <img src="assets/images/icons/pco_transparent.svg">
+            Planets
+        </li>
+        <li>
+            <img src="assets/images/icons/pow_transparent.svg">
+            Ocean
+        </li>
+    </ul>
+    </div>
+            </div>
+
+</div>
+
+<script>
+// this should trigger playback of safari mobile videos
+document.addEventListener('DOMContentLoaded', (event) => {
+    const videoElements = document.querySelectorAll('.benefit-card__video');
+    if (videoElements.length > 0) {
+        document.body.addEventListener('click', function() {
+            videoElements.forEach(video => {
+                video.play();
+            });
+        });
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="benefits block" id="benefits">
     <h2 class="benefits__title">
         Features
     </h2>

@@ -1,3 +1,113 @@
+
+{% set features = [
+    {
+        'size': 2,
+        'title': 'Pre-made presets.',
+        'description': 'Save time and effort with pre-made presets, providing you with a list of ready-to-use settings that can instantly transform your scene and serve as a starting point for further customization.',
+        'image': {
+            'src': '/assets/images/benefits/feature-4.jpg',
+            'srcx2': '/assets/images/benefits/feature-4x2.jpg',
+            'alt': ''
+        }
+    },
+    {
+        'size': 1,
+        'title': 'Realtime speed and performance.',
+        'description': 'Quickly set up scenes with pre-made, customizable planets modeled on the solar system, saving time and enhancing visual realism instantly.',
+        'image': {
+            'src': '/assets/images/benefits/feature-3.jpg',
+            'srcx2': '/assets/images/benefits/feature-3x2.jpg',
+            'alt': ''
+        }
+    },
+    {
+        'size': 1,
+        'title': 'Optimized Rendering for Planetary Scales.',
+        'description': 'Our custom rendering system solves issues like volumetric distances and precision errors, letting you work with planetary sizes without quality loss.',
+        'video': {
+            'mp4': '/assets/images/benefits/planetary_scale.mp4'
+        }
+    },
+    {
+        'size': 1,
+        'title': 'Works on Eevee & Cycles.',
+        'description': 'Our addon seamlessly integrates with both Eevee and Cycles render engines, ensuring compatibility and consistent results across your favorite rendering platforms.',
+        'video': {
+            'mp4': '/assets/images/benefits/planetary_scale.mp4'
+        }
+    },
+    {
+        'size': 1,
+        'title': 'Intuitive Planet Positioning.',
+        'description': 'When you work in celestial sizes, intuitive positioning is a must. You can position planets using orbital, global, or viewer transform.',
+        'framed': true,
+        'video': {
+            'webm': '/assets/images/benefits/feature-1.webm',
+            'mp4': '/assets/images/benefits/feature-1.mp4'
+        }
+    },
+    {
+        'size': 2,
+        'title': 'All our addons work together',
+        'description': ' to make procedural worlds you won\'t be able to distinguish from reality.',
+        'list': true,
+        'image': {
+            'src': '/assets/images/benefits/feature-3.jpg',
+            'srcx2': '/assets/images/benefits/feature-3x2.jpg',
+            'alt': ''
+        }
+    },
+] %}
+
+
+<div class="benefits block" id="benefits">
+    <h2 class="benefits__title">
+        Why did <em>1500+</em> users<br> choose POW?
+    </h2>
+
+    <div class="benefits__grid">
+        {% for feature in features %}
+        {% include '../../../../shared/partials/benefit-card/benefit-card.twig' with feature only %}
+        {% endfor %}
+    </div>
+
+</div>
+
+<script>
+// this should trigger playback of safari mobile videos
+document.addEventListener('DOMContentLoaded', (event) => {
+    const videoElements = document.querySelectorAll('.benefit-card__video');
+    if (videoElements.length > 0) {
+        document.body.addEventListener('click', function() {
+            videoElements.forEach(video => {
+                video.play();
+            });
+        });
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {% set benefits = [
 	{
 		'size': 2,

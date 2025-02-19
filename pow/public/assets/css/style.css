@@ -78,7 +78,7 @@ body {
   color: #000000;
 }
 
-.h2, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .updates__title, .benefits__title {
+.h2, .comparison__title, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .updates__title, .benefits__title {
   padding: 0 0 64px 16px;
   font-size: 40px;
   font-weight: 500;
@@ -87,7 +87,7 @@ body {
   color: #000000;
   letter-spacing: -0.03em;
 }
-.h2 em, .gallery__title em, .notes__title em, .pricing-mobile__title em, .pricing__subtitle em, .pricing__title em, .controls__title em, .updates__title em, .benefits__title em {
+.h2 em, .comparison__title em, .gallery__title em, .notes__title em, .pricing-mobile__title em, .pricing__subtitle em, .pricing__title em, .controls__title em, .updates__title em, .benefits__title em {
   font-weight: 600;
   background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
   -webkit-background-clip: text;
@@ -96,12 +96,12 @@ body {
   text-fill-color: transparent;
 }
 @media (max-width: 467px) {
-  .h2, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .updates__title, .benefits__title {
+  .h2, .comparison__title, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__subtitle, .pricing__title, .controls__title, .updates__title, .benefits__title {
     font-size: 32px;
     padding-left: 16px;
     padding-bottom: 32px;
   }
-  .h2 br, .gallery__title br, .notes__title br, .pricing-mobile__title br, .pricing__subtitle br, .pricing__title br, .controls__title br, .updates__title br, .benefits__title br {
+  .h2 br, .comparison__title br, .gallery__title br, .notes__title br, .pricing-mobile__title br, .pricing__subtitle br, .pricing__title br, .controls__title br, .updates__title br, .benefits__title br {
     display: none;
   }
 }
@@ -608,7 +608,7 @@ body {
   border-radius: 6px;
   margin-bottom: 32px;
 }
-.controls .heroBlock .h2, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing-mobile__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .benefits__title, .controls .heroBlock .updates__title, .controls .heroBlock .controls__title {
+.controls .heroBlock .h2, .controls .heroBlock .comparison__title, .controls .heroBlock .gallery__title, .controls .heroBlock .notes__title, .controls .heroBlock .pricing-mobile__title, .controls .heroBlock .pricing__subtitle, .controls .heroBlock .pricing__title, .controls .heroBlock .benefits__title, .controls .heroBlock .updates__title, .controls .heroBlock .controls__title {
   color: white;
   position: absolute;
   top: 0;
@@ -1890,6 +1890,105 @@ body {
     left: 166px;
   }
 }
+.comparison .comparison__table {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+.comparison table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.comparison table th,
+.comparison table td {
+  width: 33.3333%;
+  padding: 16px 16px 48px 0px;
+  text-align: left;
+  vertical-align: top;
+}
+.comparison table th {
+  padding-right: 4px;
+}
+.comparison table tr {
+  border-bottom: 1px solid #DCDCDC;
+}
+.comparison table tr:last-child {
+  border-bottom: none;
+}
+.comparison h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.comparison h4 {
+  font-size: 20px;
+}
+.comparison img {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 16px;
+  margin-top: -4px;
+}
+.comparison .imgException {
+  margin-top: 0px;
+}
+.comparison p {
+  display: inline-block;
+  width: calc(100% - 57px);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+}
+.comparison .lightText {
+  opacity: 0.5;
+}
+@media (max-width: 500px) {
+  .comparison .comparison__table {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .comparison table {
+    display: block;
+  }
+  .comparison thead {
+    display: none;
+  }
+  .comparison tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+    border: none !important;
+  }
+  .comparison img {
+    padding-right: 4px;
+  }
+  .comparison td,
+  .comparison th {
+    display: block;
+    padding: 0px 0px 8px 0px !important;
+  }
+  .comparison h4 {
+    font-size: 20px;
+    border-bottom: 1px solid #DCDCDC;
+    padding-bottom: 8px;
+    margin-top: 20px;
+  }
+  .comparison p {
+    width: calc(100% - 46px);
+  }
+  .comparison td:nth-child(1),
+  .comparison th:nth-child(1) {
+    width: 100%;
+  }
+  .comparison td:nth-child(2),
+  .comparison th:nth-child(2),
+  .comparison td:nth-child(3),
+  .comparison th:nth-child(3) {
+    width: 50%;
+  }
+  .comparison tr:last-child td {
+    border-bottom: none;
+  }
+}
+
 .benefit-card {
   position: relative;
   padding: 32px 20% 32px 32px;

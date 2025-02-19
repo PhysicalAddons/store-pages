@@ -1,0 +1,140 @@
+{% set comparison = {
+    "title": "Comparison",
+    "products": [{
+        "name": "POW",
+        "full_name": "Physical Open Waters"
+    },{
+        "name": "Ocean Modifier",
+        "full_name": "built-in Blender ocean"
+    }
+    ],
+    "features": [
+        {
+            "name": "Underwater",
+            "values": [
+                {
+                    "checks": true,
+                    "description": "Includes underwater particles and object fog"
+                },
+                {
+                    "checks": false,
+                }
+            ]
+        },
+        {
+            "name": "Unlimited Ocean",
+            "values": [
+                {
+                    "checks": true,
+                    "description": "Extends infinitely"
+                },
+                {
+                    "checks": false,
+                }
+            ]
+        },
+        {
+            "name": "No Tiling",
+            "values": [
+                {
+                    "checks": true,
+                    "description": "Seamless water surface without visible patterns"
+                },
+                {
+                    "checks": false,
+                }
+            ]
+        },
+        {
+            "name": "Advanced Ocean Material",
+            "values": [
+                {
+                    "checks": true,
+                    "description": "Reflection, transparency, and color customization"
+                },
+                {
+                    "checks": false,
+                }
+            ]
+        },
+        {
+            "name": "Wakes",
+            "values": [
+                {
+                    "checks": true,
+                    "description": "Trailing waves from objects"
+                },
+                {
+                    "checks": false,
+                }
+            ]
+        },
+        {
+            "name": "Ripples",
+            "values": [
+                {
+                    "checks": true,
+                    "description": "Forms natural ripples with objects"
+                },
+                {
+                    "checks": false,
+                }
+            ]
+        },
+        {
+            "name": "Meniscus",
+            "values": [
+                {
+                    "checks": true,
+                    "description": "Thin reflective edge where water meets objects"
+                },
+                {
+                    "checks": false,
+                }
+            ]
+        },
+    ]
+
+
+}%}
+
+
+<div class="comparison block" id="comparison">
+
+	<h2 class="comparison__title">
+		{{comparison.title}}
+	</h2>
+
+	<div class="comparison__table"> 
+
+	<table>
+    <thead>
+        <tr>
+            <th> </th>
+            {% for product in comparison.products %}
+            <th>
+                <h3>{{product.name}}</h3><br>
+                <p class="lightText">{{product.full_name}}</p>
+            </th>   
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for feature in comparison.features %}
+        <tr>
+            <td><h4>{{feature.name}}</h4></td>
+            {% for value in feature.values %}
+            <td>
+                {{ value.checks ? '<img src="assets/images/icons/ir.svg"></img>' : '<img src="assets/images/icons/nav.svg"></img>' }}
+                {% if value.description %}
+                <p>{{value.description}}</p>
+                {% endif %}
+            </td>
+            {% endfor %}
+        </tr>   
+        {% endfor %}
+    </tbody>
+</table>
+        
+	</div>
+</div>

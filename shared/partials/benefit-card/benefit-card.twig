@@ -1,6 +1,6 @@
 <div class="benefit-card{{ (size == 2) ? ' benefit-card--wide' : '' }}">
     {% if image %}
-    <picture class="benefit-card__figure{{ (framed) ? ' benefit-card__figure--bordered' : ' benefit-card__figure--background' }}">
+    <picture class="benefit-card__figure{{ (framed) ? ' benefit-card__figure--bordered' : ' benefit-card__figure--background' }}{{ shadow ? ' benefit-card__figure--shadow' : '' }}">
         <img class="benefit-card__image" src="{{image.src}}" srcset="{{image.src}} 1x, {{image.srcx2}} 2x" alt="{{image.alt}}">
     </picture>
     {% endif %}
@@ -21,7 +21,7 @@
     
     {# Exceptions #}
     {% if author %}
-    <div class="benefit-card__note">
+    <div class="benefit-card__note{{ list ? ' benefit-card__note--right' : '' }}">
         <div class="benefit-card__label">Artwork by</div>
         <div class="benefit-card__text">{{author}}</div>
     </div>

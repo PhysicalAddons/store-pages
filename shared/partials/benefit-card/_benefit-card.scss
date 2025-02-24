@@ -79,6 +79,17 @@
         left: 0;
         right: 0;
 
+        &--shadow::after {
+            content: "";
+            background: linear-gradient(to bottom, black 0%, transparent 50%, transparent 100%);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
         // bordered wide
         .benefit-card--wide &--bordered {
             width: 85%;
@@ -239,6 +250,10 @@
         left: 32px;
         bottom: 32px;
         z-index: 1;
+        &--right {
+            right: 32px;
+            text-align: right;
+        }
     }
     &__label, &__text {
         font-size: 12px;

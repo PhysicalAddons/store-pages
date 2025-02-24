@@ -1,4 +1,23 @@
 
+
+
+
+<div class="benefits block" id="benefits">
+    <h2 class="benefits__title">
+        Features
+    </h2>
+
+    <div class="benefits__grid">
+        {% for feature in features %}
+        {% include '../../../../shared/partials/benefit-card/benefit-card.twig' with feature only %}
+        {% endfor %}
+    </div>
+
+</div>
+
+
+
+
 <div class="benefits block" id="benefits">
     <h2 class="benefits__title">
         Features
@@ -136,3 +155,18 @@
     </div>
 
 </div>
+
+
+<script>
+// this should trigger playback of safari mobile videos
+document.addEventListener('DOMContentLoaded', (event) => {
+    const videoElements = document.querySelectorAll('.benefit-card__video');
+    if (videoElements.length > 0) {
+        document.body.addEventListener('click', function() {
+            videoElements.forEach(video => {
+                video.play();
+            });
+        });
+    }
+});
+</script>

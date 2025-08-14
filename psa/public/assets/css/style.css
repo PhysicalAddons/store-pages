@@ -120,6 +120,17 @@ body {
   }
 }
 
+.banner {
+  margin-bottom: 16px;
+  height: 43px;
+  background-color: #E52955;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 43px;
+  text-align: center;
+}
+
 .hero .stencilDark {
   background: linear-gradient(270deg, #6C26FF, #BA26FF, #6C26FF);
   background-size: 200% 200%;

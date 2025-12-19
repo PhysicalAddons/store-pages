@@ -1890,6 +1890,17 @@ body {
     left: 166px;
   }
 }
+.banner {
+  margin-bottom: 16px;
+  background-color: #E52955;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding: 10px 16px;
+}
+
 .comparison .comparison__table {
   padding-right: 16px;
   padding-left: 16px;

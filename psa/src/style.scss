@@ -3,7 +3,6 @@
 @import "scss/typography";
 @import "scss/scaffolding";
 
-@import "blocks/banner/banner";
 @import "blocks/hero/hero";
 @import "blocks/benefits/benefits";
 @import "blocks/comparison/comparison";
@@ -21,3 +20,5 @@
 @import "partials/btn/btn";
 @import "partials/pricing-pack/pricing-pack";
 @import "partials/tooltip/tooltip";
+
+@import "../../shared/blocks/banner/banner";

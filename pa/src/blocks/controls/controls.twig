@@ -1,0 +1,43 @@
+<div class="controls block" id="controls">
+
+    <div class="heroBlock">
+
+        <h2 class="controls__title">
+		    Addon controls
+	    </h2>
+
+    </div>
+
+	<div class="controls__table">
+
+        <table>
+        
+            <tr>
+                <td><h4>Sun</h4></td>
+                <td><p>We Calculate the Sun disk based on Temperature of the sun (in Kelvins), overall energy emitted (in W/m2sr) and limb darkening factor. Then the light gets scattered through the atmosphere, giving the sun a warmer tone. In order to see shadows in Eevee, we add a sun object and run the same scattering calculation we do for the atmosphere shader. </p></td>
+            </tr>
+            <tr>
+                <td><h4>Binary Sun</h4></td>
+                <td><p>Due to popular demand, we added a secondary sun disk. It uses the same properties as the primary sun, but it does only cast shadows in Cycles.</p></td>
+            </tr>
+            <tr>
+                <td><h4>Atmosphere</h4></td>
+                <td><p>In PSA, we use an analytic approach to calculate the air mass volume of the atmosphere. The transmitted light then passes through the volume and is scattered based on the user-defined scattering coefficient. Our solution is very efficient even for real-time use.</p></td>
+            </tr>
+            <tr>
+                <td><h4>Stars</h4></td>
+                <td><p>We have two-star coverage options - procedural and texture based. Procedural stars offer a pixel-perfect and fast approach to simulate a convincing star field. Stars also scatter through the atmosphere, so stars near the horizon appear warmer. </p></td>
+            </tr>
+            <tr>
+                <td><h4>Clouds</h4></td>
+                <td><p>There are two cloud coverage options - procedural and textured-based. Both are projected on a sphere at a user-defined altitude. Lighting is calculated procedurally for both options and interacts with sunlight.</p></td>
+            </tr>
+            <tr>
+                <td><h4>Ground plane</h4></td>
+                <td><p>There is an option to enable and disable a procedural ground plane. Users can define the offset of the ground which moves the viewer to a higher altitude. A large enough altitude will place you in space. Ground plane interacts with the atmosphere and sunlight.</p></td>
+            </tr>
+
+        </table>
+
+	</div>
+</div>

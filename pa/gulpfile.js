@@ -16,6 +16,13 @@ gulp.task("css", function () {
     .pipe(browserSync.stream());
 });
 
+gulp.task("js", function () {
+  return gulp
+    .src("src/javascript/**/*.js")
+    .pipe(gulp.dest(destroot + "assets/javascript/"))
+    .pipe(browserSync.stream());
+});
+
 gulp.task("compile", function (done) {
   return gulp
     .src("src/index.twig")
@@ -38,7 +45,8 @@ gulp.task("browserSync", function () {
 gulp.task("watch", function () {
   gulp.watch("./**/*.scss", gulp.series("css"));
   gulp.watch("./**/*.twig", gulp.series("compile"));
+  gulp.watch("./src/javascript/**/*.js", gulp.series("js"));
 });
 
-gulp.task("default", gulp.parallel("browserSync", "compile", "watch", "css"));
-gulp.task("build", gulp.parallel("compile", "css"));
+gulp.task("default", gulp.parallel("browserSync", "compile", "watch", "css", "js"));
+gulp.task("build", gulp.parallel("compile", "css", "js"));

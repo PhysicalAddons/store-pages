@@ -1,0 +1,68 @@
+{% set overview_points = [
+    {
+        'label': 'Realtime',
+        'width': 114,
+        'image': 'assets/images/gallery/jonas-fornerod/2.webp',
+        'description': 'Physical Starlight and Atmosphere is the most popular atmosphere addon for Blender.'
+    },
+    {
+        'label': 'Intuitive Controls',
+        'width': 209,
+        'image': 'assets/images/gallery/jonas-fornerod/1.webp',
+        'description': 'A clean control setup makes it fast to dial in mood, time of day and lighting without breaking your flow.'
+    },
+    {
+        'label': 'Physics Based',
+        'width': 180,
+        'image': 'assets/images/gallery/ilmari-kumpunen/1.webp',
+        'description': 'Lighting and atmosphere are driven by physical principles, so scenes stay believable even when pushed creatively.'
+    },
+    {
+        'label': 'Advanced Mode',
+        'width': 202,
+        'image': 'assets/images/gallery/lee-petty/1.webp',
+        'description': 'Go deeper when you need to with advanced controls that open up finer artistic and technical adjustments.'
+    },
+    {
+        'label': 'Presets',
+        'width': 102,
+        'image': 'assets/images/gallery/andrei-khrutskii/1.webp',
+        'description': 'Start from curated presets to get strong results quickly, then refine the atmosphere to fit your scene.'
+    }
+] %}
+
+<div class="overview block" id="overview">
+    <h2 class="overview__title">More than just an Atmosphere</h2>
+
+    <div class="overview__card">
+        <div class="overview__points" role="tablist" aria-label="Overview features">
+            {% for point in overview_points %}
+                <button
+                    class="overview__point {{ loop.first ? 'overview__point--active' : '' }}"
+                    type="button"
+                    role="tab"
+                    aria-selected="{{ loop.first ? 'true' : 'false' }}"
+                    style="width: {{ point.width }}px;"
+                    data-overview-tab
+                    data-image="{{ point.image }}"
+                    data-description="{{ point.description }}"
+                >
+                    {{ point.label }}
+                </button>
+            {% endfor %}
+        </div>
+
+        <div class="overview__media">
+            <img
+                class="overview__image"
+                src="assets/images/gallery/jonas-fornerod/2.webp"
+                alt="Artwork by Jonas Fornerod"
+                data-overview-image
+            >
+        </div>
+
+        <p class="overview__description" data-overview-description>
+            Physical Starlight and Atmosphere is the most popular atmosphere addon for Blender.
+        </p>
+    </div>
+</div>

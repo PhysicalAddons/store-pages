@@ -1,124 +1,150 @@
 .comparison {
-
     &__title {
         @extend .h2;
+        font-size: 50px;
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        margin: 0 0 64px;
+
+        @include respond-below(sm) {
+            font-size: 32px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
     }
 
-    .comparison__table {
-        padding-right: 16px;
-        padding-left: 16px;
+    &__table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
-    table { 
+    &__table {
         width: 100%;
+        min-width: 832px;
         border-collapse: collapse;
+        table-layout: fixed;
+    }
 
+    &__col {
+        width: 208px;
+    }
+
+    &__col--label {
+        width: 208px;
+    }
+
+    thead th {
+        padding: 0 0 8px;
+        vertical-align: top;
+    }
+
+    &__product {
+        text-align: center;
+    }
+
+    &__product-title {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #000000;
+
+        sup {
+            font-size: 0.6em;
+            line-height: 0;
+            vertical-align: super;
+        }
+    }
+
+    &__product--primary &__product-title {
+        background: linear-gradient(90deg, #5b61ff 0%, #9454ff 52%, #6a63ff 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__product-subtitle {
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 1.25;
+        font-weight: 400;
+        color: #000000;
+    }
+
+    &__group-row {
         th,
         td {
-            width: 33.3333%;
-            padding: 16px 16px 48px 0px;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        tr {
-            border-bottom: 1px solid #DCDCDC;
-            &:last-child {
-                border-bottom: none;
-            }
+            padding: 16px 0 9px;
         }
     }
 
-    h3 {
-        font-size: 30px;
-        font-weight: 500;
-    }
-
-    h4 {
+    &__group-title {
         font-size: 20px;
+        line-height: 32px;
+        font-weight: 500;
+        text-align: left;
+        color: #000000;
     }
 
-    img {
-        display: inline-block;
-        vertical-align: top;
-        padding-right: 16px;
-        margin-top: -4px;
-    }
-    .imgException {
-        margin-top: 0px;
+    &__feature-row {
+        border-bottom: 1px solid #e9e9e9;
     }
 
-    p {
-        display: inline-block;
-        width: calc(100% - 57px);
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 140%;
+    &__feature-row th,
+    &__feature-row td {
+        height: 32px;
+        padding: 0;
+        vertical-align: middle;
     }
 
-    .lightText {
-        opacity: 0.5;
-    }
-
-    @media (max-width: 500px) {
-
-        .comparison__table {
-            padding-right: 0px;
-            padding-left: 0px;
-        }
-
-        table {
-            display: block;
-        }
-        
-        thead {
-            display: none;
-        }
-        
-        tr {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 8px;
-            border: none !important;
-        }
+    &__feature-label {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-align: left;
 
         img {
-            padding-right: 4px;
-        }
-        
-        td,
-        th {
-            display: block;
-            padding: 0px 0px 8px 0px !important;
+            width: 16px;
+            height: 16px;
+            flex: 0 0 16px;
         }
 
-        h4 {
-            font-size: 20px;
-            border-bottom: 1px solid #DCDCDC;
-            padding-bottom: 8px;
-            margin-top: 20px;
+        span {
+            font-size: 12px;
+            line-height: 32px;
+            font-weight: 500;
+            color: #000000;
         }
+    }
 
-        p {
-            width: calc(100% - 46px);
-        }
-        
-        td:nth-child(1),
-        th:nth-child(1) {
-            width: 100%;
-        }
-        
-        td:nth-child(2),
-        th:nth-child(2),
-        td:nth-child(3),
-        th:nth-child(3) {
-            width: 50%;
-        }
-        
-        tr:last-child {
-            td {
-              border-bottom: none;
-            }
+    &__value-cell {
+        text-align: center;
+    }
+
+    &__value {
+        display: inline-block;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 500;
+        letter-spacing: 0;
+    }
+
+    &__value--yes {
+        background: linear-gradient(90deg, #5b61ff 0%, #9454ff 52%, #6a63ff 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__value--no {
+        color: rgba(0, 0, 0, 0.2);
+    }
+
+    @include respond-below(sm) {
+        &__table {
+            min-width: 832px;
         }
     }
 }

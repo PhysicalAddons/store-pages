@@ -1,0 +1,196 @@
+{% set pollution_types = [
+    {
+        'label': 'Continental polluted',
+        'state': 'is-faint',
+        'image': 'assets/images/gallery/roma-likholob/1.webp',
+        'alt': 'Continental polluted atmosphere preview',
+        'chips': [
+            { 'value': '50000', 'label': 'Ni' },
+            { 'value': '15700', 'label': 'WASO' },
+            { 'value': '0.6', 'label': 'INSO' },
+            { 'value': '34300', 'label': 'SOOT' }
+        ]
+    },
+    {
+        'label': 'Urban',
+        'state': 'is-mid',
+        'image': 'assets/images/gallery/vincent-mactiernan/1.webp',
+        'alt': 'Urban atmosphere preview',
+        'chips': [
+            { 'value': '158000', 'label': 'Ni' },
+            { 'value': '28000', 'label': 'WASO' },
+            { 'value': '1.5', 'label': 'INSO' },
+            { 'value': '130000', 'label': 'SOOT' }
+        ]
+    },
+    {
+        'label': 'Desert',
+        'state': 'is-active',
+        'image': 'assets/images/gallery/jukka-lehto/1.webp',
+        'alt': 'Desert atmosphere preview',
+        'chips': [
+            { 'value': '2300', 'label': 'Ni' },
+            { 'value': '2000', 'label': 'WASO' },
+            { 'value': '269.5', 'label': 'MINM' },
+            { 'value': '30.5', 'label': 'MIAM' },
+            { 'value': '0.142', 'label': 'MICM' }
+        ]
+    },
+    {
+        'label': 'Maritime clean',
+        'state': 'is-mid',
+        'image': 'assets/images/gallery/wolfgang-pereira/1.webp',
+        'alt': 'Maritime clean atmosphere preview',
+        'chips': [
+            { 'value': '1520', 'label': 'Ni' },
+            { 'value': '1500', 'label': 'WASO' },
+            { 'value': '20', 'label': 'SSAM' },
+            { 'value': '3.2e-3', 'label': 'SSCM' }
+        ]
+    },
+    {
+        'label': 'Maritime polluted',
+        'state': 'is-faint',
+        'image': 'assets/images/gallery/scott-warren/1.webp',
+        'alt': 'Maritime polluted atmosphere preview',
+        'chips': [
+            { 'value': '9000', 'label': 'Ni' },
+            { 'value': '3800', 'label': 'WASO' },
+            { 'value': '20', 'label': 'SSAM' },
+            { 'value': '3.2e-3', 'label': 'SSCM' },
+            { 'value': '5180', 'label': 'SOOT' }
+        ]
+    }
+] %}
+
+{% set pollution_active = pollution_types[2] %}
+
+{% set secondary_features = [
+    {
+        'modifier': 'stars',
+        'title': 'Stars',
+        'subtitle': 'For memorable nights',
+        'image': 'assets/images/gallery/lee-petty/2.webp',
+        'alt': 'Stars preview'
+    },
+    {
+        'modifier': 'eclipses',
+        'title': 'Eclipses',
+        'subtitle': 'Because we can',
+        'image': 'assets/images/gallery/alexander-lortkipanidze/1.webp',
+        'alt': 'Eclipses preview'
+    }
+] %}
+
+<div class="features block" id="features">
+    <h2 class="features__title">
+        Why <span class="features__stat">17'000+</span> users choose it
+    </h2>
+
+    <div class="features__stack">
+        <article class="feature-card feature-card--atmosphere">
+            <div class="feature-card__visual feature-card__visual--image">
+                <img src="assets/images/gallery/ilmari-kumpunen/1.webp" alt="Atmosphere preview">
+            </div>
+
+            <div class="feature-card__copy">
+                <h3 class="feature-card__title">Atmosphere</h3>
+                <p class="feature-card__subtitle">Verified by Physics</p>
+            </div>
+        </article>
+
+        <article class="feature-card feature-card--clouds">
+            <div class="feature-card__copy">
+                <h3 class="feature-card__title">Clouds</h3>
+                <p class="feature-card__subtitle">Real time</p>
+            </div>
+
+            <div class="feature-card__visual feature-card__visual--image">
+                <img src="assets/images/gallery/ilmari-kumpunen/1.webp" alt="Realtime clouds preview">
+            </div>
+
+            <div class="feature-card__aside">
+                <div class="feature-card__aside-label">Free Bonus</div>
+                <div class="feature-card__aside-title">VDB Clouds Pack</div>
+                <div class="feature-card__aside-text">
+                    Made in collaboration with<br>Samuel Krug
+                </div>
+            </div>
+        </article>
+
+        <article class="feature-card feature-card--refraction">
+            <div class="feature-card__copy">
+                <h3 class="feature-card__title">Atmospheric refraction</h3>
+                <p class="feature-card__subtitle">For true realism</p>
+            </div>
+
+            <div class="feature-card__visual feature-card__visual--image">
+                <img src="assets/images/gallery/lee-petty/1.webp" alt="Atmospheric refraction preview">
+            </div>
+
+            <p class="feature-card__body">
+                The secret to photorealism isn't the big things. It's the subtle physics your eye learned to trust.
+            </p>
+        </article>
+
+        <div class="feature-pair">
+            {% for feature in secondary_features %}
+                <article class="feature-card feature-card--small feature-card--{{ feature.modifier }}">
+                    <div class="feature-card__visual feature-card__visual--image">
+                        <img src="{{ feature.image }}" alt="{{ feature.alt }}">
+                    </div>
+
+                    <div class="feature-card__copy feature-card__copy--bottom">
+                        <h3 class="feature-card__title">{{ feature.title }}</h3>
+                        <p class="feature-card__subtitle">{{ feature.subtitle }}</p>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+
+        <article class="feature-card feature-card--pollution">
+            <div class="feature-card__visual feature-card__visual--image">
+                <img
+                    src="{{ pollution_active.image }}"
+                    alt="{{ pollution_active.alt }}"
+                    data-pollution-image
+                >
+            </div>
+
+            <div class="feature-card__copy">
+                <h3 class="feature-card__title">Pollution</h3>
+                <p class="feature-card__subtitle">Based on OPAC data</p>
+            </div>
+
+            <div class="feature-card__pollution-panel">
+                <div class="feature-card__overlay-list" data-pollution-list>
+                    <div class="feature-card__overlay-window" aria-hidden="true"></div>
+                    <div class="feature-card__overlay-track" data-pollution-track>
+                    {% for pollution in pollution_types %}
+                        <button
+                            class="feature-card__overlay-item {{ pollution.state }}"
+                            type="button"
+                            aria-pressed="{{ pollution.state == 'is-active' ? 'true' : 'false' }}"
+                            data-pollution-option
+                            data-pollution-image="{{ pollution.image }}"
+                            data-pollution-alt="{{ pollution.alt }}"
+                            data-pollution-chip-set="{{ pollution.chips|json_encode|e('html_attr') }}"
+                        >
+                            {{ pollution.label }}
+                        </button>
+                    {% endfor %}
+                    </div>
+                </div>
+
+                <div class="feature-card__chips" data-pollution-chip-grid>
+                    {% for chip in pollution_active.chips %}
+                        <div class="feature-card__chip">
+                            <span>{{ chip.value }}</span>
+                            <small>{{ chip.label }}</small>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </article>
+    </div>
+</div>

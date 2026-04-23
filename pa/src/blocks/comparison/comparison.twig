@@ -1,94 +1,116 @@
+{% set comparison_columns = [
+    {
+        'modifier': 'primary',
+        'title': 'Atmosphere',
+        'title_suffix': '2',
+        'subtitle': 'New and updated\nPhysical Atmosphere2'
+    },
+    {
+        'title': 'PSA',
+        'subtitle': 'Physical Starlight\nand Atmosphere'
+    },
+    {
+        'title': 'Sky Texture',
+        'subtitle': 'Blender Built-in\nSky Texture Modifier'
+    }
+] %}
+
+{% set comparison_groups = [
+    {
+        'title': 'Atmosphere',
+        'rows': [
+            { 'label': 'Round Planet', 'a2': true, 'psa': false, 'sky': false },
+            { 'label': 'Multiple Scattering', 'a2': true, 'psa': false, 'sky': true },
+            { 'label': 'Spectral atmosphere', 'a2': true, 'psa': false, 'sky': false },
+            { 'label': 'Atmospheric Refraction', 'a2': true, 'psa': false, 'sky': false },
+            { 'label': 'Air Glow', 'a2': true, 'psa': false, 'sky': false },
+            { 'label': 'Ozone Integral', 'a2': true, 'psa': true, 'sky': false },
+            { 'label': 'Pollution OPAC', 'a2': true, 'psa': false, 'sky': false },
+            { 'label': 'Earth Texture', 'a2': true, 'psa': false, 'sky': false }
+        ]
+    },
+    {
+        'title': 'Sky & Lighting',
+        'rows': [
+            { 'label': 'Sun Disc', 'a2': true, 'psa': false, 'sky': false },
+            { 'label': 'Spectral Sun', 'a2': true, 'psa': false, 'sky': false },
+            { 'label': 'Night Sky', 'a2': true, 'psa': false, 'sky': false },
+            { 'label': 'Clouds', 'a2': true, 'psa': true, 'sky': false },
+            { 'label': 'Eclipses', 'a2': true, 'psa': false, 'sky': false }
+        ]
+    },
+    {
+        'title': 'Celestial Objects',
+        'rows': [
+            { 'label': 'Moon', 'a2': true, 'psa': true, 'sky': false },
+            { 'label': 'Real Stars', 'a2': true, 'psa': true, 'sky': false },
+            { 'label': 'Constellations', 'a2': true, 'psa': false, 'sky': false }
+        ]
+    },
+    {
+        'title': 'Workflow',
+        'rows': [
+            { 'label': 'Position', 'a2': true, 'psa': false, 'sky': false },
+            { 'label': 'Artistic Controls', 'a2': true, 'psa': true, 'sky': false },
+            { 'label': 'Bake HDRI', 'a2': true, 'psa': false, 'sky': false }
+        ]
+    }
+] %}
+
 <div class="comparison block" id="comparison">
+    <h2 class="comparison__title">Comparison</h2>
 
-	<h2 class="comparison__title">
-		HDRI comparison
-	</h2>
+    <div class="comparison__table-wrap">
+        <table class="comparison__table">
+            <colgroup>
+                <col class="comparison__col comparison__col--label">
+                <col class="comparison__col">
+                <col class="comparison__col">
+                <col class="comparison__col">
+            </colgroup>
 
-	<div class="comparison__table"> 
+            <thead>
+                <tr>
+                    <th></th>
+                    {% for column in comparison_columns %}
+                        <th class="comparison__product comparison__product{{ column.modifier is defined ? ' comparison__product--' ~ column.modifier : '' }}">
+                            <div class="comparison__product-title">
+                                {{ column.title }}{% if column.title_suffix is defined %}<sup>{{ column.title_suffix }}</sup>{% endif %}
+                            </div>
+                            <div class="comparison__product-subtitle">{{ column.subtitle|nl2br }}</div>
+                        </th>
+                    {% endfor %}
+                </tr>
+            </thead>
 
-	<table>
-    <thead>
-        <tr>
-            <th class=""></th>
-            <th>
-                <h3>PSA</h3><br>
-                <p class="lightText">Physical Starlight <br>and Atmosphere</p>
-            </th>
-            <th>
-                <h3>HDRI</h3><br>
-                <p class="lightText">High dynamic <br>range image</p>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-            <tr>
-                <td class=""><h4>Filesize</h4></td>
-                <td>
-                    <img class="imgException" src="assets/images/icons/1MB.svg"></img>
-                    <p>Lightweight. Addon itself - 600kb install file. Each preset less than 1MB</p>
-                </td>
-                <td>
-                    <img class="imgException" src="assets/images/icons/1GB.svg"></img>
-                    <p>Large files for each HDRI up to 4GB</p>
-                </td>
-            </tr>
-            <tr>
-                <td class=""><h4>Animation</h4></td>
-                <td>
-                    <img src="assets/images/icons/ir.svg"></img>
-                    <p>Animate each parameter in keyframes</p>
-                </td>
-                <td>
-                    <img src="assets/images/icons/nav.svg"></img>
-                    <p>HDRIs are static</p>
-                </td>
-            </tr>
-            <tr>
-                <td class=""><h4>Artistic freedom</h4></td>
-                <td>
-                    <img src="assets/images/icons/ir.svg"></img>
-                    <p>Limitless configuration possibilities to build any world you imagine</p>
-                </td>
-                <td>
-                    <img src="assets/images/icons/nav.svg"></img>
-                    <p>Limited to the captured  HDRI file</p>
-                </td>
-            </tr>
-            <tr>
-                <td class=""><h4>Ease of use</h4></td>
-                <td>
-                    <img src="assets/images/icons/ir.svg"></img>
-                    <p>One-click presets</p>
-                </td>
-                <td>
-                    <img src="assets/images/icons/ir.svg"></img>
-                    <p>Setup with 2 nodes</p>
-                </td>
-            </tr>
-            <tr>
-                <td class=""><h4>Dynamic interaction</h4></td>
-                <td>
-                    <img src="assets/images/icons/ir.svg"></img>
-                    <p>For every parameter</p>
-                </td>
-                <td>
-                    <img src="assets/images/icons/nav.svg"></img>
-                    <p>HDRIs are static</p>
-                </td>
-            </tr>
-            <tr>
-                <td class=""><h4>Fast Workflow</h4></td>
-                <td>
-                    <img src="assets/images/icons/ir.svg"></img>
-                    <p>intuitively tunable parameters for specific lighting conditions </p>
-                </td>
-                <td>
-                    <img src="assets/images/icons/nav.svg"></img>
-                    <p>Significantly longer prototyping for specific lighting conditions</p>
-                </td>
-            </tr>
-    </tbody>
-</table>
-        
-	</div>
+            <tbody>
+                {% for group in comparison_groups %}
+                    <tr class="comparison__group-row">
+                        <th class="comparison__group-title" scope="colgroup">{{ group.title }}</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    {% for row in group.rows %}
+                        <tr class="comparison__feature-row">
+                            <th class="comparison__feature-label" scope="row">
+                                <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
+                                <span>{{ row.label }}</span>
+                            </th>
+                            <td class="comparison__value-cell">
+                                <span class="comparison__value comparison__value--yes">✓</span>
+                            </td>
+                            <td class="comparison__value-cell">
+                                <span class="comparison__value comparison__value--{{ row.psa ? 'yes' : 'no' }}">{{ row.psa ? '✓' : '‒' }}</span>
+                            </td>
+                            <td class="comparison__value-cell">
+                                <span class="comparison__value comparison__value--{{ row.sky ? 'yes' : 'no' }}">{{ row.sky ? '✓' : '‒' }}</span>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>

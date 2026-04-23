@@ -1,5 +1,6 @@
 .benefit-card {
     position: relative;
+    height: 100%;
     padding: 32px 67px 32px 32px;
     background-color: #000000;
     border-radius: $default-radius;
@@ -8,6 +9,7 @@
         padding: 32px; 
     }
     @include respond-below(sm) {
+        min-height: 411px;
         padding: 16px;
         padding-right: 52px;
     }

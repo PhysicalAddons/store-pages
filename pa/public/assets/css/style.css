@@ -1806,6 +1806,7 @@ body {
   letter-spacing: -0.02em;
 }
 .gallery__cta-link {
+  display: inline-block;
   width: fit-content;
   padding: 0;
   border: 0;
@@ -1816,7 +1817,11 @@ body {
   line-height: 1.2;
   font-weight: 400;
   letter-spacing: -0.02em;
+  text-decoration: none;
   cursor: pointer;
+}
+.gallery__cta-link:hover, .gallery__cta-link:focus-visible {
+  color: rgba(255, 255, 255, 0.75);
 }
 @media (max-width: 467px) {
   .gallery__title {

@@ -135,8 +135,9 @@
             z-index: 2;
         }
 
+        // Free VDB Clouds Pack aside — hidden until content is ready (re-enable: delete rule).
         .feature-card__aside {
-            width: 245px;
+            display: none;
         }
     }
 

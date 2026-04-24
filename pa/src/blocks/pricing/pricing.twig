@@ -1,14 +1,232 @@
 {% set data = {
-    promo: false,
-    discount: 0.25,
-    promotion_text: 'Winter is cold. Your renders don\'t have to be.',
-    price_basic: 70,
-    price_studio: 350,
-    price_bundle: 142,
-    rounded_price: false,
+    current_price_basic: 59,
+    original_price_basic: 118,
+    current_price_bundle: 59,
+    original_price_bundle: 118,
+    rounded_price: true,
     link_basic: 'https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=2891&ref=875',
-    link_studio: 'https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=2892&ref=875',
     link_bundle: 'https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=9114&ref=875',
     preset_text: '10 Presets'
 } %}
-{% include "../../../../shared/blocks/pricing/pricing.twig" with data only %}
+
+{% set pricing_features = [
+    {
+        'label': 'Users',
+        'badge': '1',
+        'badge_type': 'value'
+    },
+    {
+        'label': 'Updates',
+        'badge': 'check',
+        'tooltip': 'Free updates are included with your purchase.'
+    },
+    {
+        'label': 'Commercial use',
+        'badge': 'check',
+        'tooltip': 'All artworks made using our addon belong to you and can be used for commercial purposes. No need for attribution. <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">Read more about GPL license</a>'
+    },
+    {
+        'label': data.preset_text,
+        'badge': 'check'
+    },
+    {
+        'label': 'Support',
+        'badge': 'check'
+    },
+    {
+        'label': 'Discord community',
+        'badge': 'check',
+        'link': 'https://discord.gg/wvzPVzj9Vr'
+    },
+    {
+        'label': '30 day refund policy',
+        'badge': 'check',
+        'link': 'https://support.blendermarket.com/article/22-refund-policy'
+    }
+] %}
+
+{% set bundle_products = [
+    {
+        'code': 'PA',
+        'code_sup': '2',
+        'name': 'Atmosphere',
+        'modifier': 'atmosphere'
+    },
+    {
+        'code': 'POW',
+        'name': 'Oceans',
+        'modifier': 'oceans'
+    },
+    {
+        'code': 'PCO',
+        'name': 'Planets',
+        'modifier': 'planets'
+    }
+] %}
+
+{% macro price_block(current_price, original_price, link, rounded) %}
+    <div>
+        <p class="pricing-card__meta">One time payment</p>
+        <div class="pricing-card__price">
+            <span class="pricing-card__price-current">${{ rounded ? current_price|number_format(0, '.', '') : current_price|number_format(2, '.', '') }}</span>
+            {% if original_price is not null %}
+                <span class="pricing-card__price-original">${{ original_price }}</span>
+            {% endif %}
+        </div>
+    </div>
+    <a href="{{ link }}" class="pricing-card__select" target="_blank">Select</a>
+{% endmacro %}
+
+{% import _self as pricing_macros %}
+
+<div class="pricing block" id="pricing">
+    <div class="pricing__head">
+        <h2 class="pricing__title">Pricing</h2>
+    </div>
+
+    <div class="pricing__layout">
+        <div class="pricing__feature-rail">
+            <ul class="pricing__feature-list">
+                {% for feature in pricing_features %}
+                    <li class="pricing__feature-item">
+                        <span class="pricing__feature-badge pricing__feature-badge--{{ feature.badge_type|default('check') }}">
+                            {% if feature.badge == 'check' %}
+                                &#10003;
+                            {% else %}
+                                {{ feature.badge }}
+                            {% endif %}
+                        </span>
+                        <span class="pricing__feature-text">
+                            {% if feature.link %}
+                                <a href="{{ feature.link }}" target="_blank">{{ feature.label }}</a>
+                            {% else %}
+                                {{ feature.label }}
+                            {% endif %}
+                        </span>
+                        {% if feature.tooltip %}
+                            <span class="pricing__feature-info tooltip tooltip--left mobileTooltip2">
+                                <img src="assets/images/icons/info.svg" alt="Info icon">
+                                <span class="tooltip__content">{{ feature.tooltip }}</span>
+                            </span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <p class="pricing__contact-copy">
+                Feel free to <a href="https://www.physicaladdons.com/psa/contacts/" target="_blank">contact us</a> in case you have questions
+            </p>
+        </div>
+
+        <article class="pricing-card pricing-card--atmosphere">
+            <div class="pricing-card__header">
+                <h3 class="pricing-card__title pricing-card__title--accent">Atmosphere<sup>2</sup></h3>
+            </div>
+
+            <div class="pricing-card__body pricing-card__body--single">
+                <div class="pricing-product pricing-product--atmosphere">
+                    <span class="pricing-product__badge pricing-product__badge--atmosphere">PA<sup>2</sup></span>
+                    <span class="pricing-product__name">Atmosphere</span>
+                </div>
+            </div>
+
+            <div class="pricing-card__footer">
+                {{ pricing_macros.price_block(data.current_price_basic, data.original_price_basic, data.link_basic, data.rounded_price) }}
+            </div>
+        </article>
+
+        <article class="pricing-card pricing-card--bundle">
+            <div class="pricing-card__header">
+                <h3 class="pricing-card__title">Bundle</h3>
+                <p class="pricing-card__subtitle">Get all our addons</p>
+            </div>
+
+            <div class="pricing-card__body">
+                {% for product in bundle_products %}
+                    <div class="pricing-product pricing-product--{{ product.modifier }}">
+                        <span class="pricing-product__badge pricing-product__badge--{{ product.modifier }}">
+                            {{ product.code }}{% if product.code_sup %}<sup>{{ product.code_sup }}</sup>{% endif %}
+                        </span>
+                        <span class="pricing-product__name">{{ product.name }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="pricing-card__footer">
+                {{ pricing_macros.price_block(data.current_price_bundle, data.original_price_bundle, data.link_bundle, data.rounded_price) }}
+            </div>
+        </article>
+    </div>
+</div>
+
+<div class="pricing-mobile block">
+    <div class="pricing-mobile__head">
+        <h2 class="pricing-mobile__title">Pricing</h2>
+        <p class="pricing-mobile__contact">
+            Feel free to <a href="https://www.physicaladdons.com/psa/contacts/" target="_blank">contact us</a> in case you have questions
+        </p>
+    </div>
+
+    <div class="pricing-mobile__cards">
+        <article class="pricing-card pricing-card--mobile pricing-card--atmosphere">
+            <div class="pricing-card__header">
+                <h3 class="pricing-card__title pricing-card__title--accent">Atmosphere<sup>2</sup></h3>
+            </div>
+
+            <div class="pricing-card__footer pricing-card__footer--top">
+                {{ pricing_macros.price_block(data.current_price_basic, data.original_price_basic, data.link_basic, data.rounded_price) }}
+            </div>
+
+            <div class="pricing-card__body pricing-card__body--features">
+                <ul class="pricing__feature-list pricing__feature-list--mobile">
+                    {% for feature in pricing_features %}
+                        <li class="pricing__feature-item">
+                            <span class="pricing__feature-badge pricing__feature-badge--{{ feature.badge_type|default('check') }}">
+                                {% if feature.badge == 'check' %}
+                                    &#10003;
+                                {% else %}
+                                    {{ feature.badge }}
+                                {% endif %}
+                            </span>
+                            <span class="pricing__feature-text">
+                                {% if feature.link %}
+                                    <a href="{{ feature.link }}" target="_blank">{{ feature.label }}</a>
+                                {% else %}
+                                    {{ feature.label }}
+                                {% endif %}
+                            </span>
+                            {% if feature.tooltip %}
+                                <span class="pricing__feature-info tooltip tooltip--left mobileTooltip2">
+                                    <img src="assets/images/icons/info.svg" alt="Info icon">
+                                    <span class="tooltip__content">{{ feature.tooltip }}</span>
+                                </span>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </article>
+
+        <article class="pricing-card pricing-card--mobile pricing-card--bundle">
+            <div class="pricing-card__header">
+                <h3 class="pricing-card__title">Bundle</h3>
+                <p class="pricing-card__subtitle">Get all our addons</p>
+            </div>
+
+            <div class="pricing-card__footer pricing-card__footer--top">
+                {{ pricing_macros.price_block(data.current_price_bundle, data.original_price_bundle, data.link_bundle, data.rounded_price) }}
+            </div>
+
+            <div class="pricing-card__body">
+                {% for product in bundle_products %}
+                    <div class="pricing-product pricing-product--{{ product.modifier }}">
+                        <span class="pricing-product__badge pricing-product__badge--{{ product.modifier }}">
+                            {{ product.code }}{% if product.code_sup %}<sup>{{ product.code_sup }}</sup>{% endif %}
+                        </span>
+                        <span class="pricing-product__name">{{ product.name }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        </article>
+    </div>
+</div>

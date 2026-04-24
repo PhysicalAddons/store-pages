@@ -2,15 +2,18 @@
     {
         'modifier': 'primary',
         'title': 'Atmosphere',
+        'mobile_title': 'PA2',
         'title_suffix': '2',
         'subtitle': 'New and updated\nPhysical Atmosphere2'
     },
     {
         'title': 'PSA',
+        'mobile_title': 'PSA',
         'subtitle': 'Physical Starlight\nand Atmosphere'
     },
     {
         'title': 'Sky Texture',
+        'mobile_title': 'Sky Texture',
         'subtitle': 'Blender Built-in\nSky Texture Modifier'
     }
 ] %}
@@ -19,12 +22,12 @@
     {
         'title': 'Atmosphere',
         'rows': [
-            { 'label': 'Round Planet', 'a2': true, 'psa': false, 'sky': false },
             { 'label': 'Multiple Scattering', 'a2': true, 'psa': false, 'sky': true },
+            { 'label': 'Round Planet', 'a2': true, 'psa': false, 'sky': false },
             { 'label': 'Spectral atmosphere', 'a2': true, 'psa': false, 'sky': false },
             { 'label': 'Atmospheric Refraction', 'a2': true, 'psa': false, 'sky': false },
             { 'label': 'Air Glow', 'a2': true, 'psa': false, 'sky': false },
-            { 'label': 'Ozone Integral', 'a2': true, 'psa': true, 'sky': false },
+            { 'label': 'Ozone Integral', 'a2': true, 'psa': false, 'sky': false },
             { 'label': 'Pollution OPAC', 'a2': true, 'psa': false, 'sky': false },
             { 'label': 'Earth Texture', 'a2': true, 'psa': false, 'sky': false }
         ]
@@ -32,10 +35,10 @@
     {
         'title': 'Sky & Lighting',
         'rows': [
-            { 'label': 'Sun Disc', 'a2': true, 'psa': false, 'sky': false },
-            { 'label': 'Spectral Sun', 'a2': true, 'psa': false, 'sky': false },
-            { 'label': 'Night Sky', 'a2': true, 'psa': false, 'sky': false },
             { 'label': 'Clouds', 'a2': true, 'psa': true, 'sky': false },
+            { 'label': 'Night Sky', 'a2': true, 'psa': true, 'sky': false },
+            { 'label': 'Spherical Sun', 'a2': true, 'psa': false, 'sky': false },
+            { 'label': 'Spectral Sun', 'a2': true, 'psa': false, 'sky': false },
             { 'label': 'Eclipses', 'a2': true, 'psa': false, 'sky': false }
         ]
     },
@@ -50,9 +53,10 @@
     {
         'title': 'Workflow',
         'rows': [
-            { 'label': 'Position', 'a2': true, 'psa': false, 'sky': false },
             { 'label': 'Artistic Controls', 'a2': true, 'psa': true, 'sky': false },
-            { 'label': 'Bake HDRI', 'a2': true, 'psa': false, 'sky': false }
+            { 'label': 'Bake HDRI', 'a2': true, 'psa': true, 'sky': false },
+            { 'label': 'Position', 'a2': true, 'psa': false, 'sky': false },
+            { 'label': 'Advanced Controls', 'a2': true, 'psa': false, 'sky': false }
         ]
     }
 ] %}
@@ -64,9 +68,9 @@
         <table class="comparison__table">
             <colgroup>
                 <col class="comparison__col comparison__col--label">
-                <col class="comparison__col">
-                <col class="comparison__col">
-                <col class="comparison__col">
+                <col class="comparison__col comparison__col--a2">
+                <col class="comparison__col comparison__col--psa">
+                <col class="comparison__col comparison__col--sky">
             </colgroup>
 
             <thead>
@@ -112,5 +116,34 @@
                 {% endfor %}
             </tbody>
         </table>
+    </div>
+
+    <div class="comparison__mobile">
+        <div class="comparison__mobile-head">
+            <div class="comparison__mobile-spacer" aria-hidden="true"></div>
+            {% for column in comparison_columns %}
+                <div class="comparison__mobile-product comparison__mobile-product{{ column.modifier is defined ? ' comparison__mobile-product--' ~ column.modifier : '' }}">
+                    {{ column.mobile_title }}
+                </div>
+            {% endfor %}
+        </div>
+
+        {% for group in comparison_groups %}
+            <section class="comparison__mobile-group">
+                <h3 class="comparison__mobile-group-title">{{ group.title }}</h3>
+
+                {% for row in group.rows %}
+                    <div class="comparison__mobile-row">
+                        <div class="comparison__mobile-label">
+                            <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
+                            <span>{{ row.label }}</span>
+                        </div>
+                        <div class="comparison__mobile-value comparison__mobile-value--yes">✓</div>
+                        <div class="comparison__mobile-value comparison__mobile-value--{{ row.psa ? 'yes' : 'no' }}">{{ row.psa ? '✓' : '‒' }}</div>
+                        <div class="comparison__mobile-value comparison__mobile-value--{{ row.sky ? 'yes' : 'no' }}">{{ row.sky ? '✓' : '‒' }}</div>
+                    </div>
+                {% endfor %}
+            </section>
+        {% endfor %}
     </div>
 </div>

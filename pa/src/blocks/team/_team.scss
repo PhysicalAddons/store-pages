@@ -1,125 +1,164 @@
 .team {
-    background: black;
-    @include backgroundImage('/assets/images/team/team.webp', '/assets/images/team/team2x.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 32px;
-    border-radius: 6px;
-    
-    @include respond-below(sm) {
-        @include backgroundImage('/assets/images/team/teamMobile.webp', '/assets/images/team/teamMobile2x.webp');
+    &__card {
+        position: relative;
+        height: 468px;
+        padding: 32px;
+        box-sizing: border-box;
+        border-radius: 14px;
+        overflow: hidden;
+        color: #ffffff;
+        background: #000000;
+        background-image: url('/assets/images/team/team-figma.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 
-    // &__title {
-	// 	@extend .h2;
-    //     @include respond-below(sm) {
-    //         font-size: 28px;
-    //         display: none;
-    //     }
-	// }
+    &__title {
+        margin: 0;
+        max-width: 436px;
+        font-size: 50px;
+        line-height: 1.1;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+    }
 
-    // @media (max-width: 500px) { 
-    //     background-image: url('/assets/images/team/team2.jpg');
-    //     background-repeat: no-repeat;
-    //     background-position: top;
-    //     background-size: cover;
-    // }
+    &__details {
+        position: absolute;
+        top: 182px;
+        left: 32px;
+        width: 245px;
+    }
 
-    .topRow {
-        padding-bottom: 64px;
+    &__detail {
+        padding-top: 10px;
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
 
-        h2 {
-            color: white;
-            padding: 0px;
-            display: inline-block;
-            margin-top: -6px;
-            @include respond-below(sm) {
-                font-size: 28px;
-            }
-        }
-
-        img {
-            float: right;
-            @include respond-below(sm) {
-                display: none
-            }
+        &:not(:last-child) {
+            margin-bottom: 48px;
         }
     }
 
-    .sideBySideRows {
-        display: flex;
-        color: white;
+    &__detail-title {
+        margin: 0 0 12px;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 400;
+    }
 
-        @media (max-width: 500px) { 
-            flex-direction: column;
-        }
+    &__detail-copy {
+        width: 245px;
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.42;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.7);
+        letter-spacing: -0.03em;
 
         a {
-            color: white;
-            font-size: 14px;
-            font-weight: 500;
+            color: #ffffff;
+            text-decoration: none;
         }
+    }
 
-        .leftSide {
-            width: 60%;
-            margin-right: 1%;
+    &__speaker {
+        position: absolute;
+        top: 170px;
+        right: 29px;
+        max-width: 126px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: #000000;
+        font-size: 10px;
+        line-height: 1.4;
+        font-weight: 500;
+        color: #ffffff;
+        letter-spacing: -0.03em;
+
+        // Tail on straight left edge (below top radius) — avoids jagged join with rounded corner.
+        &::before {
+            content: "";
+            position: absolute;
+            top: 13px;
+            left: -6px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 7px 6px 0;
+            border-color: transparent #000000 transparent transparent;
+        }
+    }
+
+    &__keynote {
+        position: absolute;
+        right: 32px;
+        bottom: 30px;
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-align: right;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    @include respond-below(sm) {
+        // Mobile: flex column so details sit on the bottom; gap under title is whatever space is left (dynamic).
+        &__card {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            height: auto;
+            min-height: 454px;
+            padding: 20px;
+            border-radius: 16px;
+            background-image: url('/assets/images/team/team-figma-mobile.png');
+            background-position: center top;
+            background-size: cover;
+        }
 
-            @media (max-width: 500px) { 
-                width: 100%;
-                padding-top: 80px;
-            }
+        &__title {
+            flex-shrink: 0;
+            align-self: flex-start;
+            max-width: 340px;
+            font-size: 36px;
+            line-height: 1.1;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+        }
 
-            img {
-                display: block;
+        &__details {
+            position: relative;
+            top: auto;
+            left: auto;
+            width: 100%;
+            max-width: 296px;
+            margin-top: auto;
+            align-self: flex-start;
+            flex-shrink: 0;
+        }
 
-                @media (max-width: 500px) { 
-                    display: none;
-                }
-            }
-            a {
-                color: white;
-                margin-top: 16px;
-                display: inline-block;
-            }
-            b {
-                font-weight: 600px !important;
+        &__detail {
+            padding-top: 0;
+            border-top: none;
+
+            &:not(:last-child) {
+                margin-bottom: 32px;
             }
         }
-    
-        .rightSide {
-            width: 39%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding-bottom: 32px;
 
-            @media (max-width: 500px) { 
-                width: 100%;
-                padding-bottom: 0px;
-            }
+        &__detail-copy {
+            width: 100%;
+            max-width: 296px;
+            color: rgba(255, 255, 255, 0.5);
+        }
 
-            h3 {
-                font-size: 20px;
-                font-weight: 500;
-                margin-top: 32px;
-                margin-bottom: 8px;
-            }
-
-            img {
-                position: relative;
-                top: 2px;
-                padding-right: 4px;
-            }
-
-            p {
-                font-size: 12px;
-                opacity: 0.7;
-                line-height: 140%;
-            }
+        &__speaker,
+        &__keynote {
+            display: none;
         }
     }
 }

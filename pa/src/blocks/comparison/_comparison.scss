@@ -15,23 +15,39 @@
     }
 
     &__table-wrap {
+        width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
 
+    &__mobile {
+        display: none;
+    }
+
     &__table {
         width: 100%;
-        min-width: 832px;
         border-collapse: collapse;
         table-layout: fixed;
     }
 
     &__col {
-        width: 208px;
+        width: 25%;
     }
 
     &__col--label {
-        width: 208px;
+        width: 25%;
+    }
+
+    &__col--a2 {
+        width: 25.1202%;
+    }
+
+    &__col--psa {
+        width: 25%;
+    }
+
+    &__col--sky {
+        width: 24.8798%;
     }
 
     thead th {
@@ -143,8 +159,119 @@
     }
 
     @include respond-below(sm) {
-        &__table {
-            min-width: 832px;
+        &__title {
+            font-size: 40px;
+            line-height: 1.2;
+            margin-bottom: 44px;
+        }
+
+        &__table-wrap {
+            display: none;
+        }
+
+        &__mobile {
+            display: block;
+            width: 100%;
+            max-width: 380px;
+        }
+
+        &__mobile-head,
+        &__mobile-row {
+            display: grid;
+            grid-template-columns: 203px repeat(3, 54px);
+            align-items: center;
+        }
+
+        &__mobile-head {
+            height: 104px;
+            margin-bottom: 16px;
+        }
+
+        &__mobile-spacer {
+            width: 203px;
+        }
+
+        &__mobile-product {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            position: relative;
+            left: 18px;
+            height: 104px;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+            color: #000000;
+            text-align: left;
+            white-space: nowrap;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+
+        &__mobile-product--primary {
+            background: linear-gradient(90deg, #5b61ff 0%, #9454ff 52%, #6a63ff 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &__mobile-group {
+            margin-bottom: 31px;
+        }
+
+        &__mobile-group-title {
+            margin: 0 0 9px;
+            font-size: 20px;
+            line-height: 32px;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        &__mobile-row {
+            min-height: 32px;
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+        &__mobile-label {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            min-width: 0;
+
+            img {
+                width: 16px;
+                height: 16px;
+                flex: 0 0 16px;
+            }
+
+            span {
+                font-size: 12px;
+                line-height: 32px;
+                font-weight: 500;
+                color: #000000;
+                white-space: nowrap;
+            }
+        }
+
+        &__mobile-value {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: 0;
+
+            &--yes {
+                background: linear-gradient(90deg, #5b61ff 0%, #9454ff 52%, #6a63ff 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+            }
+
+            &--no {
+                color: rgba(0, 0, 0, 0.2);
+            }
         }
     }
 }

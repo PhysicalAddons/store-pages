@@ -23,13 +23,12 @@ gulp.task("js", function () {
     .pipe(browserSync.stream());
 });
 
-gulp.task("compile", function (done) {
+gulp.task("compile", function () {
   return gulp
     .src("src/index.twig")
     .pipe(twig({ data: {} }))
     .pipe(gulp.dest(destroot))
     .pipe(browserSync.stream());
-  done();
 });
 
 gulp.task("browserSync", function () {
@@ -40,7 +39,6 @@ gulp.task("browserSync", function () {
     },
   });
 });
-
 
 gulp.task("watch", function () {
   gulp.watch("./**/*.scss", gulp.series("css"));

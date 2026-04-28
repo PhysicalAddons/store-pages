@@ -47,8 +47,8 @@
     </div>
 
 </div>        
-<div class="overview block" id="overview">
-    <h2 class="overview__title">More than just an Atmosphere</h2>
+<div class="overview block debug debug--red" id="overview">
+    <h2 class="overview__title debug debug--red">More than just an Atmosphere</h2>
 
     <div class="overview__card">
         <div class="overview__points" role="tablist" aria-label="Overview features">
@@ -132,7 +132,7 @@
 
 
 <div class="features block" id="features">
-    <h2 class="features__title">
+    <h2 class="features__title debug debug--red">
         Why <span class="features__stat">17'000+</span> users choose it
     </h2>
 
@@ -305,11 +305,25 @@
                                     </div>
             </div>
         </article>
+
+        <article class="feature-card feature-card--advanced-mode">
+            <div class="feature-card__visual feature-card__visual--image">
+                <picture>
+                    <source media="(max-width: 467px)" srcset="assets/images/advanced-mode/advanced-mode-mobile.png">
+                    <img src="assets/images/advanced-mode/advanced-mode-desktop.png" alt="Stupidly Advanced Mode preview">
+                </picture>
+            </div>
+
+            <div class="feature-card__copy">
+                <h3 class="feature-card__title">Stupidly Advanced Mode</h3>
+                <p class="feature-card__subtitle">For full control</p>
+            </div>
+        </article>
     </div>
 </div>
         
 
-<div class="comparison block" id="comparison">
+<div class="comparison block debug debug--yellow" id="comparison">
     <h2 class="comparison__title">Comparison</h2>
 
     <div class="comparison__table-wrap">
@@ -662,7 +676,7 @@ Sky Texture Modifier</div>
                                             <tr class="comparison__feature-row">
                             <th class="comparison__feature-label" scope="row">
                                 <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
-                                <span>Advanced Controls</span>
+                                <span>Advanced Mode</span>
                             </th>
                             <td class="comparison__value-cell">
                                 <span class="comparison__value comparison__value--yes">✓</span>
@@ -881,7 +895,7 @@ Sky Texture Modifier</div>
                                     <div class="comparison__mobile-row">
                         <div class="comparison__mobile-label">
                             <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
-                            <span>Advanced Controls</span>
+                            <span>Advanced Mode</span>
                         </div>
                         <div class="comparison__mobile-value comparison__mobile-value--yes">✓</div>
                         <div class="comparison__mobile-value comparison__mobile-value--no">‒</div>
@@ -1050,7 +1064,7 @@ Sky Texture Modifier</div>
     </div>
 </div>
         
-<div class="block testimonials" id="testimonials">
+<div class="block testimonials debug debug--red" id="testimonials">
     <h2 class="testimonials__title">Used by industry leaders</h2> 
     <div class="testimonials__slider">
         
@@ -1377,37 +1391,19 @@ Sky Texture Modifier</div>
         </article>
     </div>
 </div>
-        <div class="notes block" id="notes">
+        <div class="upgrade block">
+    <div class="upgrade__card">
+        <h2 class="upgrade__title">Upgrade from PSA to PA<sup>2</sup></h2>
 
-    <h2 class="notes__title">
-	    Creator notes
-    </h2>
-
-    <table class="notes__table">
-    
-        <tr>
-            <td><h4>The complexity of the atmosphere</h4></td>
-            <td><p>We float through and breathe the atmosphere, we see it every day and we take it for granted. Most of us don't even care to understand why the sky looks like it does. We just naturally can look at the photo of the sky and tell that it feels like a cold winter morning, hot summer evening, dusk, or dawn.<br><br>So even though replicating those moments would seem like a trivial task, the more you dig into it, the more you understand the complexity of it. There are many concepts at work that make the skylight look and feel right and we always don’t have the time and patience to do our own research. This is why we made the PSA - skylight system we wish existed when we started doing CGI! </p></td>
-        </tr>
-        <tr>
-            <td><h4>How is this different from other solutions?</h4></td>
-            <td><p>As an artist you don’t want to feel limited by software, so PSA offers you unlimited customization possibilities. It is not tied only to Earth’s atmosphere like other analytical sky models (Preethan, Hosek-Wilkie, or Nishita), but lets you make even alien landscapes in a binary star system. Lighting is procedurally calculated based on real-world physics, therefore even your craziest input values will offer physically correct lighting. And the crazy thing - all of it is calculated in real-time, so it works in Eevee just as well as Cycles.<br><br>One special feature PSA has - is volumetric. Unlike HDRIs that are, basically, spheres around the scene, our sky fills your Blender scene with air (or any gas of your liking) where density at the ground level is the highest and in the space - lowest, then a Star illuminates the air using physics laws.<br><br>Sun and Skylight is the dominating light source for outdoors and most of the time - indoors too. PSA does not only make the sky and atmosphere, it simulates the Sun object scattering through the atmosphere.</p></td>
-        </tr>
-        <tr>
-            <td><h4>Why procedural skies?</h4></td>
-            <td><p>Procedural skies are more common in the games industry, and there the industry has developed way past the static HDRIs, skyboxes, or skydomes.<br><br>The industry is still using the good old HDRI light probe method to do outdoor lighting, and for a good reason - it is the simplest way to simulate realistic lighting conditions, without worrying that it will look wrong. After all, it is a 360° snapshot of a real environment.<br><br>HDRI probes unfortunately are not able to capture one crucial aspect - the fact that the sky is dynamic. The sky is not just a membrane of the imaginary rim of the sky, it has volume. The sky's the atmosphere and the atmosphere is a physical medium consisting of a blend of gases. The sky literally starts just outside of your eyeball and extends to outer space. Sunlight travels through this medium illuminating, scattering, and absorbing in it.<br>
-            
-            <img src="assets/images/notes2x.webp"></img>
-
-            <br>Physical Starlight and Atmosphere is a product 2 years in active development and a culmination of at least a decade of research and development.</p></td>
-        </tr>
-        <tr>
-            <td><h4>Awesome time (and money) saver!</h4></td>
-            <td><p>We have been using it for a few projects and this tool has already saved us many hours of work and hundreds if not thousands of euros on HDRi probes.<br><br>We did the test!<br><br>With the HDRI probe method, it usually took us at minimum 2 hours per project to find the best matching environment map (desired sun position, overcast or not, urban or greens, camera altitude, etc.). Then buying it, setting it in the scene, waiting for data to load, render, fine-tune, render... till you get the desired result.<br><br>Then we used this tool and matched the lighting in minutes. That puts things in perspective. </p></td>
-        </tr>
-
-    </table>
-</div>        <div class="footer">
+        <p class="upgrade__copy">
+            For our previous PSA (Physical Starlight and Atmosphere) users we give extra 70% discount so you can upgrade with ease.
+            Use code <strong>ATMOSPHERE</strong>. If something doesn't work
+            <a href="https://www.physicaladdons.com/psa/contacts/" target="_blank" rel="noreferrer noopener">contact us</a>
+            and we will give you discount manually.
+        </p>
+    </div>
+</div>
+        <div class="footer">
     <div class="column column1">
         <a href="https://www.physicaladdons.com/psa/" target="_blank" class="svg-logo-link">
             <style>

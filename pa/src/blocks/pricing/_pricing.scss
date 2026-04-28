@@ -1,4 +1,6 @@
 .pricing {
+    margin-bottom: 16px;
+
     @include respond-below(sm) {
         display: none;
     }
@@ -296,6 +298,7 @@
 
 .pricing-mobile {
     display: none;
+    margin-bottom: 16px;
 
     @include respond-below(sm) {
         display: block;

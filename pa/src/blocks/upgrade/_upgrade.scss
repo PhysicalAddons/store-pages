@@ -1,0 +1,63 @@
+.upgrade {
+    &__card {
+        width: 554px;
+        min-height: 155px;
+        margin-left: auto;
+        padding: 16px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        background: #f2f2f2;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: #000000;
+
+        sup {
+            font-size: 0.55em;
+            line-height: 1;
+            vertical-align: top;
+            position: relative;
+            top: -0.24em;
+        }
+    }
+
+    &__copy {
+        width: 377px;
+        margin: 37px 0 0;
+        font-size: 12px;
+        line-height: 17px;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        color: rgba(#000000, 0.5);
+
+        strong {
+            font-weight: 500;
+            color: #000000;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+        }
+    }
+
+    @include respond-below(sm) {
+        &__card {
+            width: 100%;
+            min-height: 177px;
+        }
+
+        &__copy {
+            width: 300px;
+            max-width: 100%;
+            margin-top: 43px;
+        }
+    }
+}

@@ -11,3 +11,20 @@ $default-radius: 6px;
         margin-bottom: 100px;
     }
 }
+
+.debug {
+    box-sizing: border-box;
+    padding: 16px;
+    border: 3px solid;
+    border-radius: 12px;
+}
+
+.debug--red {
+    background: #fff2f2;
+    border-color: #d71920;
+}
+
+.debug--yellow {
+    background: #fff8df;
+    border-color: #d19b00;
+}

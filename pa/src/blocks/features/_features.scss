@@ -184,6 +184,29 @@
         }
     }
 
+    &--advanced-mode {
+        .feature-card__copy {
+            max-width: none;
+            right: 32px;
+        }
+
+        .feature-card__visual--image {
+            picture {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                object-position: center;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
     &--small {
         height: 468px;
 
@@ -439,6 +462,18 @@
 
         &__visual {
             position: absolute;
+        }
+
+        &--advanced-mode {
+            height: 380px;
+            min-height: 380px;
+            padding: 20px;
+
+            .feature-card__copy {
+                position: absolute;
+                left: 20px;
+                top: 20px;
+            }
         }
 
         &__aside,

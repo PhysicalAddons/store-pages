@@ -78,7 +78,7 @@ body {
   color: #000000;
 }
 
-.h2, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__title, .testimonials__title, .comparison__title, .features__title, .overview__title {
+.h2, .gallery__title, .pricing-mobile__title, .pricing__title, .testimonials__title, .comparison__title, .features__title, .overview__title {
   padding: 0 0 48px 16px;
   font-size: 40px;
   font-weight: 500;
@@ -87,7 +87,7 @@ body {
   color: #000000;
   letter-spacing: -0.03em;
 }
-.h2 em, .gallery__title em, .notes__title em, .pricing-mobile__title em, .pricing__title em, .testimonials__title em, .comparison__title em, .features__title em, .overview__title em {
+.h2 em, .gallery__title em, .pricing-mobile__title em, .pricing__title em, .testimonials__title em, .comparison__title em, .features__title em, .overview__title em {
   font-weight: 600;
   background: radial-gradient(50% 50% at 50% 50%, #6C26FF 45.31%, #BA26FF 100%), #000000;
   -webkit-background-clip: text;
@@ -96,12 +96,12 @@ body {
   text-fill-color: transparent;
 }
 @media (max-width: 467px) {
-  .h2, .gallery__title, .notes__title, .pricing-mobile__title, .pricing__title, .testimonials__title, .comparison__title, .features__title, .overview__title {
+  .h2, .gallery__title, .pricing-mobile__title, .pricing__title, .testimonials__title, .comparison__title, .features__title, .overview__title {
     font-size: 32px;
     padding-left: 0;
     padding-bottom: 32px;
   }
-  .h2 br, .gallery__title br, .notes__title br, .pricing-mobile__title br, .pricing__title br, .testimonials__title br, .comparison__title br, .features__title br, .overview__title br {
+  .h2 br, .gallery__title br, .pricing-mobile__title br, .pricing__title br, .testimonials__title br, .comparison__title br, .features__title br, .overview__title br {
     display: none;
   }
 }
@@ -118,6 +118,23 @@ body {
   .block {
     margin-bottom: 100px;
   }
+}
+
+.debug {
+  box-sizing: border-box;
+  padding: 16px;
+  border: 3px solid;
+  border-radius: 12px;
+}
+
+.debug--red {
+  background: #fff2f2;
+  border-color: #d71920;
+}
+
+.debug--yellow {
+  background: #fff8df;
+  border-color: #d19b00;
 }
 
 .hero .stencilDark {
@@ -241,6 +258,9 @@ body {
     line-height: 32px;
   }
   .hero .tabs .tab span {
+    display: none;
+  }
+  .hero .tabs .tab .productMark {
     display: none;
   }
   .hero .bigBlock {
@@ -571,6 +591,21 @@ body {
 .feature-card--pollution .feature-card__visual--image img.is-active {
   opacity: 1;
 }
+.feature-card--advanced-mode .feature-card__copy {
+  max-width: none;
+  right: 32px;
+}
+.feature-card--advanced-mode .feature-card__visual--image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.feature-card--advanced-mode .feature-card__visual--image img {
+  object-position: center;
+}
+.feature-card--advanced-mode .feature-card__visual--image::after {
+  display: none;
+}
 .feature-card--small {
   height: 468px;
 }
@@ -784,6 +819,16 @@ body {
   }
   .feature-card__visual {
     position: absolute;
+  }
+  .feature-card--advanced-mode {
+    height: 380px;
+    min-height: 380px;
+    padding: 20px;
+  }
+  .feature-card--advanced-mode .feature-card__copy {
+    position: absolute;
+    left: 20px;
+    top: 20px;
   }
   .feature-card__aside, .feature-card__pollution-panel {
     margin-top: 24px;
@@ -1204,6 +1249,9 @@ body {
   }
 }
 
+.pricing {
+  margin-bottom: 16px;
+}
 @media (max-width: 467px) {
   .pricing {
     display: none;
@@ -1457,6 +1505,7 @@ body {
 
 .pricing-mobile {
   display: none;
+  margin-bottom: 16px;
 }
 @media (max-width: 467px) {
   .pricing-mobile {
@@ -1495,96 +1544,58 @@ body {
   margin-top: 16px;
 }
 
-.notes {
-  padding-left: 16px;
-  padding-right: 16px;
+.upgrade__card {
+  width: 554px;
+  min-height: 155px;
+  margin-left: auto;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: #f2f2f2;
 }
-.notes h2 {
-  padding-left: 30%;
-}
-.notes__table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-}
-.notes__table h4 {
+.upgrade__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 29px;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  padding-right: 32px;
+  letter-spacing: -0.02em;
+  color: #000000;
 }
-.notes__table h5 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.25;
-  letter-spacing: -0.6px;
+.upgrade__title sup {
+  font-size: 0.55em;
+  line-height: 1;
+  vertical-align: top;
+  position: relative;
+  top: -0.24em;
 }
-.notes__table h5 + p {
-  margin-top: 4px;
-}
-.notes__table p {
-  margin-bottom: 32px;
-  font-weight: 400;
+.upgrade__copy {
+  width: 377px;
+  margin: 37px 0 0;
   font-size: 12px;
-  line-height: 1.4;
+  line-height: 17px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
   color: rgba(0, 0, 0, 0.5);
 }
-.notes__table p + h5 {
-  margin-top: 16px;
+.upgrade__copy strong {
+  font-weight: 500;
+  color: #000000;
 }
-.notes__table img {
-  width: 100%;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  border-radius: 6px;
+.upgrade__copy a {
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
-.notes__table th,
-.notes__table td {
-  padding: 16px 0px 32px 0px;
-  text-align: left;
-  border-top: 1px solid #dcdcdc;
-  vertical-align: top;
-}
-.notes__table tr {
-  border-bottom: 1px solid #dcdcdc;
-}
-.notes__table th:nth-child(1),
-.notes__table td:nth-child(1) {
-  width: 30%;
-}
-.notes__table th:nth-child(2),
-.notes__table td:nth-child(2) {
-  width: 70%;
-}
-@media (max-width: 500px) {
-  .notes h2 {
-    padding-left: 0px !important;
-    padding-bottom: 16px;
+@media (max-width: 467px) {
+  .upgrade__card {
+    width: 100%;
+    min-height: 177px;
   }
-  .notes table {
-    display: block;
-  }
-  .notes table h4 {
-    padding-right: 0px;
-    margin-top: 32px;
-    font-size: 32px;
-    line-height: 120%;
-    font-weight: 400;
-  }
-  .notes tr {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 8px;
-    border: none !important;
-  }
-  .notes td,
-  .notes th {
-    display: block;
-    width: 100% !important;
-    border-top: none !important;
-    border-left: none !important;
-    margin-right: 8px !important;
-    padding: 8px 0px 16px 0px !important;
+  .upgrade__copy {
+    width: 300px;
+    max-width: 100%;
+    margin-top: 43px;
   }
 }
 

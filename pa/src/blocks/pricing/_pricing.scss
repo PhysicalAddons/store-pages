@@ -69,14 +69,19 @@
     }
 
     &__feature-info {
-        display: inline-flex;
-        align-items: center;
+        display: inline-block;
+        flex: 0 0 16px;
+        width: 16px;
+        height: 16px;
         margin-left: -2px;
         color: #0000004d;
+        cursor: pointer;
+        outline: none;
 
         img {
             width: 16px;
             height: 16px;
+            position: static;
             display: block;
             opacity: 0.3;
         }

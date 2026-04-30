@@ -1,5 +1,135 @@
 .testimonials {
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+        padding-bottom: 32px;
+
+        @include respond-below(sm) {
+            gap: 16px;
+            padding-bottom: 24px;
+        }
+    }
+
     &__title {
         @extend .h2;
+        margin: 0;
+        padding: 0;
+        font-size: 50px;
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: #000000;
+
+        @include respond-below(sm) {
+            font-size: 40px;
+            line-height: 1.2;
+        }
+    }
+
+    &__title-accent {
+        color: #1f7df1;
+    }
+
+    &__avatars {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__avatar-item {
+        & + & {
+            margin-left: -8px;
+        }
+    }
+
+    &__avatar {
+        position: relative;
+        display: block;
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        background: #f2f2f2;
+        cursor: pointer;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        outline: none;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        &:hover,
+        &:focus-visible {
+            transform: translateY(-2px);
+        }
+
+        &.is-active {
+            border-color: #1f7df1;
+            box-shadow: 0 4px 16px rgba(31, 125, 241, 0.25);
+            transform: translateY(-2px);
+        }
+    }
+
+    &__slider {
+        position: relative;
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        margin-top: 24px;
+
+        @include respond-below(sm) {
+            margin-top: 16px;
+        }
+    }
+
+    &__arrow--prev {
+        margin-right: auto;
+    }
+
+    &__arrow--next {
+        margin-left: auto;
+    }
+
+    &__arrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 44px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: #000000;
+        cursor: pointer;
+        outline: none;
+        transition: color 0.2s ease, opacity 0.2s ease;
+
+        svg {
+            display: block;
+        }
+
+        &[disabled],
+        &:disabled {
+            color: rgba(0, 0, 0, 0.2);
+            cursor: not-allowed;
+        }
+
+        &:hover:not([disabled]) {
+            color: #1f7df1;
+        }
     }
 }

@@ -4,6 +4,7 @@
 		'description': 'Physical Starlight and Atmosphere has been an invaluable tool for me in my personal/professional work and a huge missing link for lighting in Blender. It still feels like magic every time I use it, I can\'t recommend it highly enough!',
         'author': '<em>Ben Mauro</em> Senior Concept<br>Artist at <em>343 Industries</em>',
         'imageClass': 'imageBen',
+        'avatar': 'assets/images/testimonials/ben.webp'
     },
     {
         'class': 'testimonial-card--case-study',
@@ -11,6 +12,7 @@
 		'description': 'Renault built workflow to export thousands of renders for product variations in 360* view. PSA allowed to rapidly test and configure appropriate lighting conditions for this task. Result was consistent and Photorealistic renders for online product builder.',
         'logo': '/assets/images/icons/renault.svg',
         'imageClass': 'imageRenault',
+        'avatar': 'assets/images/testimonials/renault.webp'
     },
     {
         'class': 'testimonial-card--no-br',
@@ -18,35 +20,75 @@
 		'description': 'Physical Starlight and Atmosphere has been an essential add-on for all of my environmental design projects. It gives me such incredibly flexibility and control over the look and feel of my renders. Lighting is key for any project, and this add-on always gives my work that extra edge.',
         'author': '<em>James Tralie</em> Planetary Science<br> Producer and Animator at <em>NASA</em>',
         'imageClass': 'imageTralie',
+        'avatar': 'assets/images/testimonials/james.webp'
     },
     {
 		'title': 'PSA Gave me<br>more time',
 		'description': 'My work life has become super easier since I started using Physical Starlight and Atmosphere, it cut down a lot of technical headache associated with setting up a believable lighting condition and gave me more time to concentrate on the creative part of my design process.',
         'author': '<em>Subin Rajendran</em> Concept Artist',
         'imageClass': 'imageSubin',
+        'avatar': 'assets/images/testimonials/subin.webp'
     },
     {
 		'title': 'Focusing on the<br>mood is super<br>important',
 		'description': 'As a lighting artist, focusing on the overall mood of an image is super important. Physical Starlight and Atmosphere is based on reality, so I can spend all of my time iterating on the look without worrying about how to achieve it.',
         'author': '<em>Scott Warren</em> Senior Lighting<br> Artist at <em>Turtle Rock Studios</em>',
         'imageClass': 'imageScott',
+        'avatar': 'assets/images/testimonials/scott.webp'
     },
     {
 		'title': 'I love the tool',
 		'description': 'I love the tool. It has been my go-to since I picked it up a couple of months ago.',
         'author': '<em>Ryan Richmond</em> Concept Artist',
         'imageClass': 'imageRyan',
-    },
+        'avatar': 'assets/images/testimonials/ryan.webp'
+    }
 ]%}
 
 <div class="block testimonials" id="testimonials">
-    <h2 class="testimonials__title">Used by industry leaders</h2> 
-    <div class="testimonials__slider">
-        {# container that can contain arrows etc. #}
-        <div class="siema">
+    <div class="testimonials__head">
+        <h2 class="testimonials__title">Why <span class="testimonials__title-accent">17&rsquo;000+</span> users trust us</h2>
+        <ul class="testimonials__avatars" data-testimonial-avatars>
             {% for testimonial in testimonials %}
-            {% include '../../partials/testimonial-card/testimonial-card.twig' with testimonial only %}
+                <li class="testimonials__avatar-item">
+                    <button type="button"
+                            class="testimonials__avatar{{ loop.first ? ' is-active' : '' }}"
+                            data-testimonial-avatar
+                            data-index="{{ loop.index0 }}"
+                            aria-label="Show testimonial {{ loop.index }}">
+                        <img src="{{ testimonial.avatar }}" alt="" loading="lazy">
+                    </button>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="testimonials__slider">
+        <div class="siema" data-testimonial-siema>
+            {% for testimonial in testimonials %}
+                {% include '../../partials/testimonial-card/testimonial-card.twig' with testimonial only %}
             {% endfor %}
         </div>
+    </div>
+
+    <div class="testimonials__controls">
+        <button type="button"
+                class="testimonials__arrow testimonials__arrow--prev"
+                data-testimonial-prev
+                aria-label="Previous testimonial">
+            <svg width="44" height="20" viewBox="0 0 44 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M10 1L1 10L10 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 10H43" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <button type="button"
+                class="testimonials__arrow testimonials__arrow--next"
+                data-testimonial-next
+                aria-label="Next testimonial">
+            <svg width="44" height="20" viewBox="0 0 44 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M34 1L43 10L34 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M43 10H1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
     </div>
 </div>

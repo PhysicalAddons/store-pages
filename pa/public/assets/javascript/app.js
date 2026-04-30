@@ -1,13 +1,83 @@
 (function () {
   if (typeof window.Siema !== "undefined") {
-    if (window.innerWidth < 468) {
-      new window.Siema({
-        perPage: 1.1,
+    var siemaTarget = document.querySelector("[data-testimonial-siema]") || document.querySelector(".siema");
+    var avatarButtons = Array.prototype.slice.call(
+      document.querySelectorAll("[data-testimonial-avatar]")
+    );
+    var prevButton = document.querySelector("[data-testimonial-prev]");
+    var nextButton = document.querySelector("[data-testimonial-next]");
+    var totalSlides = avatarButtons.length;
+    var activeIndex = 0;
+
+    function updateAvatars(index) {
+      avatarButtons.forEach(function (btn, i) {
+        if (i === index) {
+          btn.classList.add("is-active");
+        } else {
+          btn.classList.remove("is-active");
+        }
       });
-    } else {
-      new window.Siema({
-        perPage: 1.5,
+    }
+
+    function updateArrows(index) {
+      if (prevButton) {
+        prevButton.disabled = index <= 0;
+      }
+      if (nextButton) {
+        nextButton.disabled = index >= totalSlides - 1;
+      }
+    }
+
+    function setActive(index) {
+      if (index < 0) {
+        index = 0;
+      }
+      if (index > totalSlides - 1) {
+        index = totalSlides - 1;
+      }
+      activeIndex = index;
+      updateAvatars(activeIndex);
+      updateArrows(activeIndex);
+    }
+
+    if (siemaTarget) {
+      var siemaInstance = new window.Siema({
+        selector: siemaTarget,
+        perPage: window.innerWidth < 468 ? 1.1 : 1.5,
+        loop: false,
+        onChange: function () {
+          var idx = this.currentSlide;
+          if (idx > activeIndex) {
+            setActive(idx);
+          }
+        },
       });
+
+      setActive(0);
+
+      avatarButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var idx = parseInt(btn.getAttribute("data-index"), 10);
+          if (!isNaN(idx)) {
+            setActive(idx);
+            siemaInstance.goTo(idx);
+          }
+        });
+      });
+
+      if (prevButton) {
+        prevButton.addEventListener("click", function () {
+          setActive(activeIndex - 1);
+          siemaInstance.goTo(activeIndex);
+        });
+      }
+
+      if (nextButton) {
+        nextButton.addEventListener("click", function () {
+          setActive(activeIndex + 1);
+          siemaInstance.goTo(activeIndex);
+        });
+      }
     }
   }
 

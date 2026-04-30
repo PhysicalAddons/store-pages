@@ -56,7 +56,7 @@
     {
         'title': 'Sky & Lighting',
         'rows': [
-            { 'label': 'Clouds', 'a2': true, 'psa': true, 'sky': false },
+            { 'label': 'Clouds', 'a2': true, 'a2_double': true, 'psa': true, 'sky': false },
             { 'label': 'Night Sky', 'a2': true, 'psa': true, 'sky': false },
             { 'label': 'Spherical Sun', 'a2': true, 'psa': false, 'sky': false },
             { 'label': 'Spectral Sun', 'a2': true, 'psa': false, 'sky': false },
@@ -134,7 +134,7 @@
                                 <span>{{ row.label }}</span>
                             </th>
                             <td class="comparison__value-cell">
-                                <span class="comparison__value comparison__value--yes">✓</span>
+                                <span class="comparison__value comparison__value--yes{{ row.a2_double ? ' comparison__value--double' : '' }}">✓</span>
                             </td>
                             <td class="comparison__value-cell">
                                 <span class="comparison__value comparison__value--{{ row.psa ? 'yes' : 'no' }}">{{ row.psa ? '✓' : '‒' }}</span>
@@ -179,7 +179,7 @@
                             {% endif %}
                             <span>{{ row.label }}</span>
                         </div>
-                        <div class="comparison__mobile-value comparison__mobile-value--yes">✓</div>
+                        <div class="comparison__mobile-value comparison__mobile-value--yes{{ row.a2_double ? ' comparison__mobile-value--double' : '' }}">✓</div>
                         <div class="comparison__mobile-value comparison__mobile-value--{{ row.psa ? 'yes' : 'no' }}">{{ row.psa ? '✓' : '‒' }}</div>
                         <div class="comparison__mobile-value comparison__mobile-value--{{ row.sky ? 'yes' : 'no' }}">{{ row.sky ? '✓' : '‒' }}</div>
                     </div>

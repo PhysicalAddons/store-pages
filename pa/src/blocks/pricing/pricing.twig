@@ -18,12 +18,14 @@
     {
         'label': 'Updates',
         'badge': 'check',
-        'tooltip': 'Free updates are included with your purchase.'
+        'tooltip_title': 'Updates',
+        'tooltip_text': 'Free updates are included with your purchase.'
     },
     {
         'label': 'Commercial use',
         'badge': 'check',
-        'tooltip': 'All artworks made using our addon belong to you and can be used for commercial purposes. No need for attribution. <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">Read more about GPL license</a>'
+        'tooltip_title': 'Commercial use',
+        'tooltip_text': 'All artworks made using our addon belong to you and can be used for commercial purposes. No need for attribution. <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">Read more about GPL license</a>'
     },
     {
         'label': data.preset_text,
@@ -103,10 +105,13 @@
                                 {{ feature.label }}
                             {% endif %}
                         </span>
-                        {% if feature.tooltip %}
-                            <span class="pricing__feature-info tooltip tooltip--left mobileTooltip2">
+                        {% if feature.tooltip_title is defined %}
+                            <span class="pricing__feature-info tooltip tooltip--side" tabindex="0" aria-label="{{ feature.tooltip_title }}">
                                 <img src="assets/images/icons/info.svg" alt="Info icon">
-                                <span class="tooltip__content">{{ feature.tooltip }}</span>
+                                <span class="tooltip__content">
+                                    <strong>{{ feature.tooltip_title }}</strong>
+                                    <span>{{ feature.tooltip_text|raw }}</span>
+                                </span>
                             </span>
                         {% endif %}
                     </li>
@@ -195,10 +200,13 @@
                                     {{ feature.label }}
                                 {% endif %}
                             </span>
-                            {% if feature.tooltip %}
-                                <span class="pricing__feature-info tooltip tooltip--left mobileTooltip2">
+                            {% if feature.tooltip_title is defined %}
+                                <span class="pricing__feature-info tooltip tooltip--side" tabindex="0" aria-label="{{ feature.tooltip_title }}">
                                     <img src="assets/images/icons/info.svg" alt="Info icon">
-                                    <span class="tooltip__content">{{ feature.tooltip }}</span>
+                                    <span class="tooltip__content">
+                                        <strong>{{ feature.tooltip_title }}</strong>
+                                        <span>{{ feature.tooltip_text|raw }}</span>
+                                    </span>
                                 </span>
                             {% endif %}
                         </li>

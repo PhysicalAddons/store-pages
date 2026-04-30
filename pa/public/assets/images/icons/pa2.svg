@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 40 40">
+    <rect width="40" height="40" fill="url(#pa2-bg)" rx="7"/>
+    <text x="20" y="25" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="-0.4" text-anchor="middle">PA<tspan font-size="9" dy="-5">2</tspan></text>
+    <defs>
+        <linearGradient id="pa2-bg" x1="20" y1="0" x2="20" y2="40" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#00131d"/>
+            <stop offset="0.63" stop-color="#0b78b7"/>
+            <stop offset="1" stop-color="#d0a05e"/>
+        </linearGradient>
+    </defs>
+</svg>

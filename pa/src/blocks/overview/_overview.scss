@@ -10,16 +10,13 @@
         @include respond-below(sm) {
             font-size: 32px;
             line-height: 1.1;
-            padding-bottom: 24px;
+            padding-bottom: 32px;
         }
     }
 
     &__card {
-        display: grid;
-        grid-template-columns: 277px 554px;
-        grid-template-rows: 420px auto;
-        row-gap: 32px;
-        height: 560px;
+        position: relative;
+        height: 468px;
         box-sizing: border-box;
         border-radius: 16px;
         background: #000000;
@@ -31,9 +28,10 @@
         flex-direction: column;
         justify-content: flex-start;
         gap: 4px;
+        position: absolute;
+        left: 555px;
+        top: 106px;
         min-width: 0;
-        grid-row: 1 / span 2;
-        padding: 120px 0 0 32px;
     }
 
     &__point {
@@ -86,14 +84,26 @@
     }
 
     &__media {
-        grid-column: 2;
-        align-self: start;
-        width: 554px;
-        height: 420px;
-        position: relative;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 507px;
+        height: 404px;
+        display: block;
         overflow: hidden;
-        background: #2d2d2d;
+        border-top-right-radius: 32px;
         box-sizing: border-box;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 513px;
+            height: 410px;
+            background: url("../images/overview/overview-frame-desktop.svg") 0 0 / 100% 100% no-repeat;
+            pointer-events: none;
+        }
 
         img {
             position: absolute;
@@ -107,38 +117,22 @@
         }
     }
 
-    &__description {
-        grid-column: 2;
-        padding-left: 8px;
-        max-width: 310px;
-        margin: 0;
-        font-size: 12px;
-        line-height: 1.4;
-        font-weight: 400;
-        color: rgba(255, 255, 255, 0.5);
-        letter-spacing: -0.03em;
-        opacity: 1;
-        transition: opacity 200ms ease;
-    }
-
-    &__description.is-fading {
-        opacity: 0;
-    }
-
     @include respond-below(sm) {
+        &__title {
+            font-size: 40px;
+            line-height: 1.2;
+        }
+
         &__card {
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-            row-gap: 24px;
-            padding: 24px 16px 16px;
+            min-height: 580px;
             height: auto;
-            border-radius: 12px;
+            border-radius: 16px;
         }
 
         &__points {
-            gap: 8px;
-            grid-row: auto;
-            padding: 0;
+            left: 32px;
+            top: 340px;
+            gap: 2px;
         }
 
         &__point {
@@ -146,7 +140,6 @@
             width: auto !important;
             font-size: 20px;
             padding-left: 14px;
-            white-space: normal;
 
             &::before {
                 height: 40px;
@@ -154,15 +147,20 @@
         }
 
         &__media {
-            width: auto;
-            height: 280px;
-        }
+            left: 32px;
+            top: 0;
+            bottom: auto;
+            width: calc(100% - 32px);
+            height: auto;
+            aspect-ratio: 348 / 263.8267;
 
-        &__description {
-            grid-column: 1;
-            padding-left: 0;
-            max-width: none;
-            font-size: 14px;
+            &::after {
+                left: -4px;
+                top: 0;
+                width: 352px;
+                height: 268px;
+                background-image: url("../images/overview/overview-frame-mobile.svg");
+            }
         }
     }
 }

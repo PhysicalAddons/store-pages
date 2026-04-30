@@ -22,9 +22,30 @@
     {
         'title': 'Atmosphere',
         'rows': [
-            { 'label': 'Multiple Scattering', 'a2': true, 'psa': false, 'sky': true },
-            { 'label': 'Round Planet', 'a2': true, 'psa': false, 'sky': false },
-            { 'label': 'Spectral atmosphere', 'a2': true, 'psa': false, 'sky': false },
+            {
+                'label': 'Multiple Scattering',
+                'a2': true,
+                'psa': false,
+                'sky': true,
+                'tooltip_title': 'Multiple Scattering',
+                'tooltip_text': 'Softens atmospheric light by bouncing it through the air, giving skies and horizons a richer result.'
+            },
+            {
+                'label': 'Round Planet',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Round Planet',
+                'tooltip_text': 'Keeps the horizon and atmosphere curvature believable for large scale shots and space views.'
+            },
+            {
+                'label': 'Spectral atmosphere',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Spectral Atmosphere',
+                'tooltip_text': 'Uses wavelength-aware color behavior so sunsets, skies and haze feel more physically grounded.'
+            },
             { 'label': 'Atmospheric Refraction', 'a2': true, 'psa': false, 'sky': false },
             { 'label': 'Air Glow', 'a2': true, 'psa': false, 'sky': false },
             { 'label': 'Ozone Integral', 'a2': true, 'psa': false, 'sky': false },
@@ -61,7 +82,7 @@
     }
 ] %}
 
-<div class="comparison block debug debug--yellow" id="comparison">
+<div class="comparison block" id="comparison">
     <h2 class="comparison__title">Comparison</h2>
 
     <div class="comparison__table-wrap">
@@ -99,7 +120,17 @@
                     {% for row in group.rows %}
                         <tr class="comparison__feature-row">
                             <th class="comparison__feature-label" scope="row">
-                                <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
+                                {% if row.tooltip_title is defined %}
+                                    <span class="comparison__info-tooltip tooltip tooltip--side" tabindex="0" aria-label="{{ row.tooltip_title }}">
+                                        <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
+                                        <span class="tooltip__content">
+                                            <strong>{{ row.tooltip_title }}</strong>
+                                            <span>{{ row.tooltip_text }}</span>
+                                        </span>
+                                    </span>
+                                {% else %}
+                                    <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
+                                {% endif %}
                                 <span>{{ row.label }}</span>
                             </th>
                             <td class="comparison__value-cell">
@@ -135,7 +166,17 @@
                 {% for row in group.rows %}
                     <div class="comparison__mobile-row">
                         <div class="comparison__mobile-label">
-                            <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
+                            {% if row.tooltip_title is defined %}
+                                <span class="comparison__info-tooltip tooltip tooltip--side" tabindex="0" aria-label="{{ row.tooltip_title }}">
+                                    <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
+                                    <span class="tooltip__content">
+                                        <strong>{{ row.tooltip_title }}</strong>
+                                        <span>{{ row.tooltip_text }}</span>
+                                    </span>
+                                </span>
+                            {% else %}
+                                <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
+                            {% endif %}
                             <span>{{ row.label }}</span>
                         </div>
                         <div class="comparison__mobile-value comparison__mobile-value--yes">✓</div>

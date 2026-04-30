@@ -52,6 +52,51 @@ $tooltip-padding-top: 16px;
     &--left &__content {
         right: calc(-113px + -8px);
     }
+
+    &--side &__content {
+        left: calc(100% + 22px);
+        right: auto;
+        top: -24px;
+        width: 300px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        background-color: #000000;
+        color: rgba(255, 255, 255, 0.7);
+        font-family: Inter, sans-serif;
+        font-size: 12px;
+        line-height: 1.4;
+        font-weight: 400;
+
+        &::before {
+            border: 0;
+            top: 16px;
+            left: -13px;
+            width: 14px;
+            height: 32px;
+            background: url("../images/icons/caret.svg") center / contain no-repeat;
+        }
+
+        strong {
+            display: block;
+            margin: 0 0 8px;
+            font-family: Inter, sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        p,
+        > span {
+            display: block;
+            margin: 0;
+            font-family: Inter, sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
 }
 
 @media (max-width: 500px) {

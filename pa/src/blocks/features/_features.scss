@@ -1,15 +1,16 @@
 .features {
     &__title {
         @extend .h2;
-        font-size: 60px;
-        line-height: 1;
-        font-weight: 400;
-        padding: 0 0 48px;
+        font-size: 50px;
+        line-height: 1.2;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        padding: 0 0 32px;
 
         @include respond-below(sm) {
-            font-size: 32px;
-            line-height: 1.1;
-            padding-bottom: 24px;
+            font-size: 40px;
+            line-height: 1.2;
+            padding-bottom: 32px;
         }
     }
 
@@ -96,6 +97,26 @@
         letter-spacing: -0.03em;
     }
 
+    &__body--right {
+        left: auto;
+        right: 24px;
+        max-width: 239px;
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 500;
+        color: #ffffff;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -14px;
+            top: 0;
+            width: 2px;
+            height: 156px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+    }
+
     &__visual {
         position: absolute;
         inset: 0;
@@ -125,19 +146,88 @@
 
     &--clouds {
         .feature-card__visual--image {
+            picture {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
             img {
-                object-position: center 44%;
+                object-position: center;
             }
         }
 
         .feature-card__copy,
-        .feature-card__aside {
+        .feature-card__body {
             z-index: 2;
         }
 
-        // Free VDB Clouds Pack aside — hidden until content is ready (re-enable: delete rule).
-        .feature-card__aside {
-            display: none;
+        .feature-card__body {
+            bottom: 76px;
+        }
+    }
+
+    &__title-mobile {
+        display: none;
+    }
+
+    &--position {
+        background: #000000;
+
+        .feature-card__copy {
+            max-width: none;
+        }
+    }
+
+    &__position-orbit {
+        position: absolute;
+        left: 0;
+        top: 29px;
+        width: 831px;
+        height: 439px;
+        z-index: 1;
+        background: url("../images/features/geopos.svg") 0 0 / 100% 100% no-repeat;
+        pointer-events: none;
+    }
+
+    &__position-panel {
+        position: absolute;
+        left: 32px;
+        right: 32px;
+        bottom: 0;
+        z-index: 2;
+        height: 98px;
+    }
+
+    &__position-copy {
+        width: 202px;
+        margin: 0 0 24px;
+        font-size: 12px;
+        line-height: 1.2;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &__position-meta {
+        display: flex;
+        gap: 0;
+
+        span {
+            position: relative;
+            min-width: 105px;
+            padding: 0 10px;
+            font-size: 12px;
+            line-height: 1.2;
+            color: #ffffff;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 2px;
+                height: 46px;
+                background: rgba(255, 255, 255, 0.2);
+            }
         }
     }
 
@@ -158,8 +248,14 @@
                 background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 52.773%);
             }
 
+            picture {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
             img {
-                object-position: center 56%;
+                object-position: center;
             }
         }
     }
@@ -209,6 +305,14 @@
 
     &--small {
         height: 468px;
+
+        .feature-card__visual--image {
+            picture {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
 
         .feature-card__visual--image::after {
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.42) 100%);
@@ -430,38 +534,100 @@
     }
 
     @include respond-below(sm) {
-        height: 411px;
-        min-height: 411px;
-        padding: 24px 16px;
+        height: 380px;
+        min-height: 380px;
+        padding: 20px;
         border-radius: 12px;
 
         &__title,
         &__subtitle {
             font-size: 32px;
+            line-height: 38px;
         }
 
         &__copy {
-            position: relative;
-            left: auto;
-            top: auto;
+            position: absolute;
+            left: 20px;
+            top: 20px;
             max-width: none;
         }
 
         &__copy--bottom {
-            bottom: auto;
+            top: auto;
+            bottom: 20px;
         }
 
         &__body {
-            position: relative;
-            left: auto;
-            bottom: auto;
-            margin-top: 24px;
-            max-width: none;
-            font-size: 18px;
+            position: absolute;
+            left: 20px;
+            right: auto;
+            bottom: 20px;
+            margin-top: 0;
+            max-width: 292px;
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.5);
         }
 
         &__visual {
             position: absolute;
+        }
+
+        &--clouds {
+            .feature-card__body {
+                bottom: 20px;
+                max-width: 239px;
+                color: #ffffff;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+        &--position {
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 52px;
+                background: #0f0f0f;
+                z-index: 1;
+                pointer-events: none;
+            }
+
+            .feature-card__position-orbit {
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 50px;
+                width: auto;
+                height: auto;
+                background-size: 100% auto;
+                background-position: bottom center;
+                transform: none;
+            }
+
+            .feature-card__position-panel {
+                left: 20px;
+                right: 20px;
+                bottom: 0;
+                height: 98px;
+            }
+
+            .feature-card__position-copy {
+                margin-bottom: 24px;
+            }
+
+            .feature-card__position-meta {
+                span {
+                    min-width: 105px;
+                    padding-right: 0;
+                }
+            }
         }
 
         &--advanced-mode {
@@ -473,6 +639,14 @@
                 position: absolute;
                 left: 20px;
                 top: 20px;
+            }
+
+            .feature-card__title-desktop {
+                display: none;
+            }
+
+            .feature-card__title-mobile {
+                display: inline;
             }
         }
 
@@ -504,6 +678,7 @@
             left: auto;
             right: auto;
             bottom: auto;
+            margin-top: 0;
             flex-direction: column;
             align-items: flex-start;
         }
@@ -530,6 +705,68 @@
             justify-content: flex-start;
             width: auto;
             max-width: none;
+        }
+
+        &--pollution {
+            .feature-card__copy {
+                left: 20px;
+                top: 20px;
+            }
+
+            .feature-card__pollution-panel {
+                position: absolute;
+                left: 20px;
+                right: 20px;
+                top: auto;
+                bottom: 24px;
+                z-index: 2;
+            }
+
+            .feature-card__overlay-list {
+                height: 168px;
+                width: 100%;
+                max-width: none;
+                margin-bottom: 0;
+                overflow: visible;
+                touch-action: auto;
+            }
+
+            .feature-card__overlay-track {
+                height: 100%;
+            }
+
+            .feature-card__overlay-window {
+                display: block;
+                height: 40px;
+            }
+
+            .feature-card__overlay-item {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                min-height: 40px;
+                padding-left: 18px;
+                font-size: 20px;
+                line-height: 1;
+                color: rgba(255, 255, 255, 0.32);
+                pointer-events: auto;
+            }
+
+            .feature-card__overlay-item.is-active {
+                color: #ffffff;
+            }
+
+            .feature-card__overlay-item.is-near {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            .feature-card__overlay-item.is-faint {
+                color: rgba(255, 255, 255, 0.22);
+            }
+
+            .feature-card__chips {
+                display: none;
+            }
         }
     }
 }

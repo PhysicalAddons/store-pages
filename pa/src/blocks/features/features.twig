@@ -70,24 +70,42 @@
         'modifier': 'stars',
         'title': 'Stars',
         'subtitle': 'For memorable nights',
-        'image': 'assets/images/gallery/lee-petty/2.webp',
+        'image': 'assets/images/features/stars-desktop.png',
+        'mobile_image': 'assets/images/features/stars-mobile.png',
         'alt': 'Stars preview'
     },
     {
         'modifier': 'eclipses',
         'title': 'Eclipses',
         'subtitle': 'Because we can',
-        'image': 'assets/images/gallery/alexander-lortkipanidze/1.webp',
+        'image': 'assets/images/features/eclipses-desktop.png',
+        'mobile_image': 'assets/images/features/eclipses-mobile.png',
         'alt': 'Eclipses preview'
     }
 ] %}
 
 <div class="features block" id="features">
-    <h2 class="features__title debug debug--red">
-        Why <span class="features__stat">17'000+</span> users choose it
-    </h2>
+    <h2 class="features__title">All you asked for.</h2>
 
     <div class="features__stack">
+        <article class="feature-card feature-card--clouds">
+            <div class="feature-card__copy">
+                <h3 class="feature-card__title">Clouds</h3>
+                <p class="feature-card__subtitle">Real time</p>
+            </div>
+
+            <div class="feature-card__visual feature-card__visual--image">
+                <picture>
+                    <source media="(max-width: 467px)" srcset="assets/images/features/clouds-mobile.png">
+                    <img src="assets/images/features/clouds-desktop.png" alt="Realtime clouds preview">
+                </picture>
+            </div>
+
+            <p class="feature-card__body feature-card__body--right">
+                Volumetric clouds that render in real time. Highly customisable in 3 procedural cloud layers. Move a slider, watch them shift.
+            </p>
+        </article>
+
         <article class="feature-card feature-card--atmosphere">
             <div class="feature-card__visual feature-card__visual--image">
                 <img src="assets/images/gallery/ilmari-kumpunen/1.webp" alt="Atmosphere preview">
@@ -99,21 +117,20 @@
             </div>
         </article>
 
-        <article class="feature-card feature-card--clouds">
+        <article class="feature-card feature-card--position">
             <div class="feature-card__copy">
-                <h3 class="feature-card__title">Clouds</h3>
-                <p class="feature-card__subtitle">Real time</p>
+                <h3 class="feature-card__title">Position</h3>
+                <p class="feature-card__subtitle">That matches reality</p>
             </div>
 
-            <div class="feature-card__visual feature-card__visual--image">
-                <img src="assets/images/gallery/ilmari-kumpunen/1.webp" alt="Realtime clouds preview">
-            </div>
+            <div class="feature-card__position-orbit" aria-hidden="true"></div>
 
-            <div class="feature-card__aside">
-                <div class="feature-card__aside-label">Free Bonus</div>
-                <div class="feature-card__aside-title">VDB Clouds Pack</div>
-                <div class="feature-card__aside-text">
-                    Made in collaboration with<br>Samuel Krug
+            <div class="feature-card__position-panel">
+                <p class="feature-card__position-copy">Set date, time and location for exact positions for sun and moon.</p>
+                <div class="feature-card__position-meta">
+                    <span>Rome, Italy</span>
+                    <span>25th June 2026</span>
+                    <span>03:00 PM</span>
                 </div>
             </div>
         </article>
@@ -125,7 +142,10 @@
             </div>
 
             <div class="feature-card__visual feature-card__visual--image">
-                <img src="assets/images/gallery/lee-petty/1.webp" alt="Atmospheric refraction preview">
+                <picture>
+                    <source media="(max-width: 467px)" srcset="assets/images/features/refraction-mobile.png">
+                    <img src="assets/images/features/refraction-desktop.png" alt="Atmospheric refraction preview">
+                </picture>
             </div>
 
             <p class="feature-card__body">
@@ -137,7 +157,10 @@
             {% for feature in secondary_features %}
                 <article class="feature-card feature-card--small feature-card--{{ feature.modifier }}">
                     <div class="feature-card__visual feature-card__visual--image">
-                        <img src="{{ feature.image }}" alt="{{ feature.alt }}">
+                        <picture>
+                            <source media="(max-width: 467px)" srcset="{{ feature.mobile_image }}">
+                            <img src="{{ feature.image }}" alt="{{ feature.alt }}">
+                        </picture>
                     </div>
 
                     <div class="feature-card__copy feature-card__copy--bottom">
@@ -202,7 +225,10 @@
             </div>
 
             <div class="feature-card__copy">
-                <h3 class="feature-card__title">Stupidly Advanced Mode</h3>
+                <h3 class="feature-card__title">
+                    <span class="feature-card__title-desktop">Stupidly Advanced Mode</span>
+                    <span class="feature-card__title-mobile">Advanced Mode</span>
+                </h3>
                 <p class="feature-card__subtitle">For full control</p>
             </div>
         </article>

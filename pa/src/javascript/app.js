@@ -11,10 +11,9 @@
     }
   }
 
-  var overview = document.querySelector("[data-overview-description]");
+  var overviewTabs = document.querySelectorAll("[data-overview-tab]");
 
-  if (overview) {
-    var overviewTabs = document.querySelectorAll("[data-overview-tab]");
+  if (overviewTabs.length) {
     var overviewImage = document.querySelector("[data-overview-image]");
     var overviewDescription = document.querySelector(
       "[data-overview-description]"

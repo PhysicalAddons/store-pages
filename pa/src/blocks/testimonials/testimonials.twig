@@ -4,7 +4,8 @@
 		'description': 'Physical Starlight and Atmosphere has been an invaluable tool for me in my personal/professional work and a huge missing link for lighting in Blender. It still feels like magic every time I use it, I can\'t recommend it highly enough!',
         'author': '<em>Ben Mauro</em> Senior Concept<br>Artist at <em>343 Industries</em>',
         'imageClass': 'imageBen',
-        'avatar': 'assets/images/testimonials/ben.webp'
+        'avatar': 'assets/images/testimonials/ben-mauro-200.jpg',
+        'avatarAlt': 'Ben Mauro'
     },
     {
         'class': 'testimonial-card--case-study',
@@ -12,7 +13,9 @@
 		'description': 'Renault built workflow to export thousands of renders for product variations in 360* view. PSA allowed to rapidly test and configure appropriate lighting conditions for this task. Result was consistent and Photorealistic renders for online product builder.',
         'logo': '/assets/images/icons/renault.svg',
         'imageClass': 'imageRenault',
-        'avatar': 'assets/images/testimonials/renault.webp'
+        'avatar': 'assets/images/testimonials/renault-avatar.svg',
+        'avatarAlt': 'Renault',
+        'avatarLogo': true
     },
     {
         'class': 'testimonial-card--no-br',
@@ -20,28 +23,32 @@
 		'description': 'Physical Starlight and Atmosphere has been an essential add-on for all of my environmental design projects. It gives me such incredibly flexibility and control over the look and feel of my renders. Lighting is key for any project, and this add-on always gives my work that extra edge.',
         'author': '<em>James Tralie</em> Planetary Science<br> Producer and Animator at <em>NASA</em>',
         'imageClass': 'imageTralie',
-        'avatar': 'assets/images/testimonials/james.webp'
+        'avatar': 'assets/images/testimonials/james-tralie-200.jpg',
+        'avatarAlt': 'James Tralie'
     },
     {
 		'title': 'PSA Gave me<br>more time',
 		'description': 'My work life has become super easier since I started using Physical Starlight and Atmosphere, it cut down a lot of technical headache associated with setting up a believable lighting condition and gave me more time to concentrate on the creative part of my design process.',
         'author': '<em>Subin Rajendran</em> Concept Artist',
         'imageClass': 'imageSubin',
-        'avatar': 'assets/images/testimonials/subin.webp'
+        'avatar': 'assets/images/testimonials/subin-rajendran-200.jpg',
+        'avatarAlt': 'Subin Rajendran'
     },
     {
 		'title': 'Focusing on the<br>mood is super<br>important',
 		'description': 'As a lighting artist, focusing on the overall mood of an image is super important. Physical Starlight and Atmosphere is based on reality, so I can spend all of my time iterating on the look without worrying about how to achieve it.',
         'author': '<em>Scott Warren</em> Senior Lighting<br> Artist at <em>Turtle Rock Studios</em>',
         'imageClass': 'imageScott',
-        'avatar': 'assets/images/testimonials/scott.webp'
+        'avatar': 'assets/images/testimonials/scott-warren-200.jpg',
+        'avatarAlt': 'Scott Warren'
     },
     {
 		'title': 'I love the tool',
 		'description': 'I love the tool. It has been my go-to since I picked it up a couple of months ago.',
         'author': '<em>Ryan Richmond</em> Concept Artist',
         'imageClass': 'imageRyan',
-        'avatar': 'assets/images/testimonials/ryan.webp'
+        'avatar': 'assets/images/testimonials/ryan-richmond-200.jpg',
+        'avatarAlt': 'Ryan Richmond'
     }
 ]%}
 
@@ -52,11 +59,11 @@
             {% for testimonial in testimonials %}
                 <li class="testimonials__avatar-item">
                     <button type="button"
-                            class="testimonials__avatar{{ loop.first ? ' is-active' : '' }}"
+                            class="testimonials__avatar{{ testimonial.avatarLogo ? ' testimonials__avatar--logo' : '' }}{{ loop.first ? ' is-active' : '' }}"
                             data-testimonial-avatar
                             data-index="{{ loop.index0 }}"
-                            aria-label="Show testimonial {{ loop.index }}">
-                        <img src="{{ testimonial.avatar }}" alt="" loading="lazy">
+                            aria-label="Show testimonial by {{ testimonial.avatarAlt }}">
+                        <img src="{{ testimonial.avatar }}" alt="{{ testimonial.avatarAlt }}" loading="lazy">
                     </button>
                 </li>
             {% endfor %}

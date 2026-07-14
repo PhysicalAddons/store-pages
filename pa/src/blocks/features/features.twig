@@ -1,69 +1,91 @@
+{% set pollution_pills = [
+    { 'label': 'β_e', 'unit': '(km⁻¹)', 'key': 'beta_e' },
+    { 'label': 'β_s', 'unit': '(km⁻¹)', 'key': 'beta_s' },
+    { 'label': 'β_a', 'unit': '(km⁻¹)', 'key': 'beta_a' },
+    { 'label': 'SSA',  'unit': '',        'key': 'ssa' }
+] %}
+
 {% set pollution_types = [
     {
-        'label': 'Continental polluted',
+        'label': 'Continental clean',
         'state': 'is-faint',
+        'image': 'assets/images/gallery/tomasz-sadzinica/1.webp',
+        'alt': 'Continental clean atmosphere preview',
+        'chips': { 'beta_e': '0.026', 'beta_s': '0.02527', 'beta_a': '0.00073', 'ssa': '0.972' }
+    },
+    {
+        'label': 'Continental average',
+        'state': 'is-mid',
+        'image': 'assets/images/gallery/andrei-khrutskii/1.webp',
+        'alt': 'Continental average atmosphere preview',
+        'chips': { 'beta_e': '0.075', 'beta_s': '0.06938', 'beta_a': '0.00563', 'ssa': '0.925' }
+    },
+    {
+        'label': 'Continental polluted',
+        'state': 'is-mid',
         'image': 'assets/images/gallery/roma-likholob/1.webp',
         'alt': 'Continental polluted atmosphere preview',
-        'chips': [
-            { 'value': '50000', 'label': 'Ni' },
-            { 'value': '15700', 'label': 'WASO' },
-            { 'value': '0.6', 'label': 'INSO' },
-            { 'value': '34300', 'label': 'SOOT' }
-        ]
+        'chips': { 'beta_e': '0.175', 'beta_s': '0.15610', 'beta_a': '0.01890', 'ssa': '0.892' }
     },
     {
         'label': 'Urban',
-        'state': 'is-mid',
+        'state': 'is-active',
         'image': 'assets/images/gallery/vincent-mactiernan/1.webp',
         'alt': 'Urban atmosphere preview',
-        'chips': [
-            { 'value': '158000', 'label': 'Ni' },
-            { 'value': '28000', 'label': 'WASO' },
-            { 'value': '1.5', 'label': 'INSO' },
-            { 'value': '130000', 'label': 'SOOT' }
-        ]
+        'chips': { 'beta_e': '0.353', 'beta_s': '0.28840', 'beta_a': '0.06460', 'ssa': '0.817' }
     },
     {
         'label': 'Desert',
-        'state': 'is-active',
+        'state': 'is-mid',
         'image': 'assets/images/gallery/jukka-lehto/1.webp',
         'alt': 'Desert atmosphere preview',
-        'chips': [
-            { 'value': '2300', 'label': 'Ni' },
-            { 'value': '2000', 'label': 'WASO' },
-            { 'value': '269.5', 'label': 'MINM' },
-            { 'value': '30.5', 'label': 'MIAM' },
-            { 'value': '0.142', 'label': 'MICM' }
-        ]
+        'chips': { 'beta_e': '0.145', 'beta_s': '0.12876', 'beta_a': '0.01624', 'ssa': '0.888' }
     },
     {
         'label': 'Maritime clean',
-        'state': 'is-mid',
+        'state': 'is-faint',
         'image': 'assets/images/gallery/wolfgang-pereira/1.webp',
         'alt': 'Maritime clean atmosphere preview',
-        'chips': [
-            { 'value': '1520', 'label': 'Ni' },
-            { 'value': '1500', 'label': 'WASO' },
-            { 'value': '20', 'label': 'SSAM' },
-            { 'value': '3.2e-3', 'label': 'SSCM' }
-        ]
+        'chips': { 'beta_e': '0.090', 'beta_s': '0.08973', 'beta_a': '0.00027', 'ssa': '0.997' }
     },
     {
         'label': 'Maritime polluted',
-        'state': 'is-faint',
+        'state': 'is-mid',
         'image': 'assets/images/gallery/scott-warren/1.webp',
         'alt': 'Maritime polluted atmosphere preview',
-        'chips': [
-            { 'value': '9000', 'label': 'Ni' },
-            { 'value': '3800', 'label': 'WASO' },
-            { 'value': '20', 'label': 'SSAM' },
-            { 'value': '3.2e-3', 'label': 'SSCM' },
-            { 'value': '5180', 'label': 'SOOT' }
-        ]
+        'chips': { 'beta_e': '0.115', 'beta_s': '0.11213', 'beta_a': '0.00288', 'ssa': '0.975' }
+    },
+    {
+        'label': 'Maritime tropical',
+        'state': 'is-mid',
+        'image': 'assets/images/gallery/ilmari-kumpunen/1.webp',
+        'alt': 'Maritime tropical atmosphere preview',
+        'chips': { 'beta_e': '0.043', 'beta_s': '0.04291', 'beta_a': '0.00009', 'ssa': '0.998' }
+    },
+    {
+        'label': 'Arctic',
+        'state': 'is-faint',
+        'image': 'assets/images/gallery/petra-trebjesanin/1.webp',
+        'alt': 'Arctic atmosphere preview',
+        'chips': { 'beta_e': '0.023', 'beta_s': '0.02040', 'beta_a': '0.00260', 'ssa': '0.887' }
+    },
+    {
+        'label': 'Antarctic',
+        'state': 'is-faint',
+        'image': 'assets/images/gallery/noely-ryan/1.webp',
+        'alt': 'Antarctic atmosphere preview',
+        'chips': { 'beta_e': '0.011', 'beta_s': '0.01100', 'beta_a': '0.00000', 'ssa': '1.000' }
+    },
+    {
+        'label': 'Mineral transported',
+        'state': 'is-faint',
+        'image': 'assets/images/gallery/jan-sarbort/1.webp',
+        'alt': 'Mineral transported atmosphere preview',
+        'chips': { 'beta_e': '0.064', 'beta_s': '0.05357', 'beta_a': '0.01043', 'ssa': '0.837' }
     }
 ] %}
 
-{% set pollution_active = pollution_types[2] %}
+{% set pollution_active = pollution_types[3] %}
 
 {% set secondary_features = [
     {
@@ -182,7 +204,16 @@
 
             <div class="feature-card__copy">
                 <h3 class="feature-card__title">Pollution</h3>
-                <p class="feature-card__subtitle">Based on OPAC data</p>
+                <p class="feature-card__subtitle">Based on
+                    <span class="feature-card__opac tooltip tooltip--side" tabindex="0">
+                        <span class="feature-card__opac-word">OPAC</span>
+                        <span class="tooltip__content" role="tooltip">
+                            <strong>OPAC – Optical Properties of Aerosols and Clouds</strong>
+                            <span>A scientific dataset that measures how real airborne particles (soot, dust, sea salt, water droplets) absorb and scatter sunlight. We feed those measurements into the renderer so the haze you see is physically accurate, not painted in.</span>
+                            <a href="https://opac.userweb.mwn.de/radaer/opac.html" target="_blank" rel="noopener">opac.userweb.mwn.de</a>
+                        </span>
+                    </span>
+                    data</p>
             </div>
 
             <div class="feature-card__pollution-panel">
@@ -205,11 +236,11 @@
                     </div>
                 </div>
 
-                <div class="feature-card__chips" data-pollution-chip-grid>
-                    {% for chip in pollution_active.chips %}
+                <div class="feature-card__chips" data-pollution-chip-grid data-pollution-pills="{{ pollution_pills|json_encode|e('html_attr') }}">
+                    {% for pill in pollution_pills %}
                         <div class="feature-card__chip">
-                            <span>{{ chip.value }}</span>
-                            <small>{{ chip.label }}</small>
+                            <small>{{ pill.label }}{% if pill.unit %} <em>{{ pill.unit }}</em>{% endif %}</small>
+                            <span>{{ pollution_active.chips[pill.key] }}</span>
                         </div>
                     {% endfor %}
                 </div>

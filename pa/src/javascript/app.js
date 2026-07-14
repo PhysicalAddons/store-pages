@@ -153,7 +153,21 @@
     var velocity = 0;
     var animationFrame = null;
     var pressedOption = null;
-    var visibleChipSlots = 5;
+    var pollutionPills = (function () {
+      if (!pollutionChips) {
+        return [];
+      }
+      var raw = pollutionChips.getAttribute("data-pollution-pills");
+      if (!raw) {
+        return [];
+      }
+      try {
+        return JSON.parse(raw);
+      } catch (error) {
+        console.error("Invalid pollution pill schema", error);
+        return [];
+      }
+    })();
     var pollutionImageSwapId = 0;
     var displayedIndex = activeIndex;
     var activePollutionImage = pollutionImage;
@@ -217,31 +231,38 @@
       }
     }
 
-    function renderPollutionChips(chips) {
-      var normalizedChips;
+    function escapeHtml(value) {
+      return String(value == null ? "" : value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
 
-      if (!pollutionChips || !Array.isArray(chips)) {
+    function renderPollutionChips(chips) {
+      if (!pollutionChips || !pollutionPills.length || !chips || typeof chips !== "object") {
         return;
       }
 
-      normalizedChips = chips.slice(0, visibleChipSlots);
+      pollutionChips.innerHTML = pollutionPills
+        .map(function (pill) {
+          var value = chips[pill.key];
+          var hasValue = value !== undefined && value !== null && value !== "";
+          var unitHtml = pill.unit
+            ? ' <em>' + escapeHtml(pill.unit) + "</em>"
+            : "";
 
-      while (normalizedChips.length < visibleChipSlots) {
-        normalizedChips.push({ value: "", label: "", empty: true });
-      }
-
-      pollutionChips.innerHTML = normalizedChips
-        .map(function (chip) {
           return (
             '<div class="feature-card__chip' +
-            (chip.empty ? " feature-card__chip--empty" : "") +
+            (hasValue ? "" : " feature-card__chip--empty") +
             '">' +
-            "<span>" +
-            chip.value +
-            "</span>" +
             "<small>" +
-            chip.label +
+            escapeHtml(pill.label) +
+            unitHtml +
             "</small>" +
+            "<span>" +
+            escapeHtml(hasValue ? value : "—") +
+            "</span>" +
             "</div>"
           );
         })

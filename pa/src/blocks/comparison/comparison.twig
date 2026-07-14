@@ -46,38 +46,158 @@
                 'tooltip_title': 'Spectral Atmosphere',
                 'tooltip_text': 'Uses wavelength-aware color behavior so sunsets, skies and haze feel more physically grounded.'
             },
-            { 'label': 'Atmospheric Refraction', 'a2': true, 'psa': false, 'sky': false },
-            { 'label': 'Air Glow', 'a2': true, 'psa': false, 'sky': false },
-            { 'label': 'Ozone Integral', 'a2': true, 'psa': false, 'sky': false },
-            { 'label': 'Pollution OPAC', 'a2': true, 'psa': false, 'sky': false },
-            { 'label': 'Earth Texture', 'a2': true, 'psa': false, 'sky': false }
+            {
+                'label': 'Atmospheric Refraction',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Atmospheric Refraction',
+                'tooltip_text': 'Light bends as it passes through air of varying density — keeps the horizon and sunset positions astronomically correct.'
+            },
+            {
+                'label': 'Air Glow',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Air Glow',
+                'tooltip_text': 'Faint natural glow from the upper atmosphere that gives deep night skies depth instead of pitch black.'
+            },
+            {
+                'label': 'Ozone Integral',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Ozone Integral',
+                'tooltip_text': 'Models how the ozone layer tints twilight, especially that distinctive blue-purple band low on the horizon.'
+            },
+            {
+                'label': 'Pollution OPAC',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Pollution (OPAC)',
+                'tooltip_text': 'Real-world aerosol and pollution data so haze, smog and dust look physically grounded rather than just darker air.'
+            },
+            {
+                'label': 'Earth Texture',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Earth Texture',
+                'tooltip_text': 'True-Earth surface and cloud cover for shots from above the atmosphere, so the planet looks like home.'
+            }
         ]
     },
     {
         'title': 'Sky & Lighting',
         'rows': [
-            { 'label': 'Clouds', 'a2': true, 'a2_double': true, 'psa': true, 'sky': false },
-            { 'label': 'Night Sky', 'a2': true, 'psa': true, 'sky': false },
-            { 'label': 'Spherical Sun', 'a2': true, 'psa': false, 'sky': false },
-            { 'label': 'Spectral Sun', 'a2': true, 'psa': false, 'sky': false },
-            { 'label': 'Eclipses', 'a2': true, 'psa': false, 'sky': false }
+            {
+                'label': 'Clouds',
+                'a2': true,
+                'a2_double': true,
+                'psa': true,
+                'sky': false,
+                'tooltip_title': 'Clouds',
+                'tooltip_text': 'Volumetric clouds driven by procedural noise — shape, density and lighting are all calculated, not painted on.'
+            },
+            {
+                'label': 'Night Sky',
+                'a2': true,
+                'psa': true,
+                'sky': false,
+                'tooltip_title': 'Night Sky',
+                'tooltip_text': 'Star field, milky way and planet positions that match real astronomy for a given date and location.'
+            },
+            {
+                'label': 'Spherical Sun',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Spherical Sun',
+                'tooltip_text': 'The sun rendered as a true sphere — not a billboard — so its glow, refraction and limb darkening feel right.'
+            },
+            {
+                'label': 'Spectral Sun',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Spectral Sun',
+                'tooltip_text': 'Wavelength-aware sunlight so colour and intensity shift naturally from dawn through midday to dusk.'
+            },
+            {
+                'label': 'Eclipses',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Eclipses',
+                'tooltip_text': 'Solar and lunar eclipses solved geometrically — set the date and the alignment just works.'
+            }
         ]
     },
     {
         'title': 'Celestial Objects',
         'rows': [
-            { 'label': 'Moon', 'a2': true, 'psa': true, 'sky': false },
-            { 'label': 'Real Stars', 'a2': true, 'psa': true, 'sky': false },
-            { 'label': 'Constellations', 'a2': true, 'psa': false, 'sky': false }
+            {
+                'label': 'Moon',
+                'a2': true,
+                'psa': true,
+                'sky': false,
+                'tooltip_title': 'Moon',
+                'tooltip_text': 'Real moon phase, position and surface texture driven by the scene date and observer location.'
+            },
+            {
+                'label': 'Real Stars',
+                'a2': true,
+                'psa': true,
+                'sky': false,
+                'tooltip_title': 'Real Stars',
+                'tooltip_text': 'Star catalogue with real coordinates and magnitudes so the night sky matches what you would actually see.'
+            },
+            {
+                'label': 'Constellations',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Constellations',
+                'tooltip_text': 'Optional constellation overlay for previs and orientation when composing night-sky shots.'
+            }
         ]
     },
     {
         'title': 'Workflow',
         'rows': [
-            { 'label': 'Artistic Controls', 'a2': true, 'psa': true, 'sky': false },
-            { 'label': 'Bake HDRI', 'a2': true, 'psa': true, 'sky': false },
-            { 'label': 'Position', 'a2': true, 'psa': false, 'sky': false },
-            { 'label': 'Advanced Mode', 'a2': true, 'psa': false, 'sky': false }
+            {
+                'label': 'Artistic Controls',
+                'a2': true,
+                'psa': true,
+                'sky': false,
+                'tooltip_title': 'Artistic Controls',
+                'tooltip_text': 'Nudge the physics where you need to — adjust the mood without breaking the underlying simulation.'
+            },
+            {
+                'label': 'Bake HDRI',
+                'a2': true,
+                'psa': true,
+                'sky': false,
+                'tooltip_title': 'Bake HDRI',
+                'tooltip_text': 'Capture the current sky as an HDRI in one click — use it in other tools or lock a look you like.'
+            },
+            {
+                'label': 'Position',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Position',
+                'tooltip_text': 'Set latitude, longitude, date and time — the addon places the sun, moon and stars accordingly.'
+            },
+            {
+                'label': 'Advanced Mode',
+                'a2': true,
+                'psa': false,
+                'sky': false,
+                'tooltip_title': 'Advanced Mode',
+                'tooltip_text': 'Exposes every physics knob — multiple-scattering quality, ozone density, fog falloff — for full control.'
+            }
         ]
     }
 ] %}

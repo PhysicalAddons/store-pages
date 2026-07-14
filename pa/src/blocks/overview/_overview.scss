@@ -48,7 +48,7 @@
         line-height: 1;
         font-weight: 400;
         color: rgba(255, 255, 255, 0.6);
-        letter-spacing: -0.03em;
+        letter-spacing: 0;
         white-space: nowrap;
         cursor: pointer;
         text-align: left;
@@ -61,7 +61,7 @@
             top: 0;
             width: 4px;
             height: 48px;
-            border-radius: 999px;
+            border-radius: 0;
             background: rgba(255, 255, 255, 0.2);
             transition: background-color 180ms ease;
         }

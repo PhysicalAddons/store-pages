@@ -72,7 +72,7 @@
         font-size: 32px;
         line-height: 38px;
         font-weight: 400;
-        letter-spacing: -0.03em;
+        letter-spacing: 0;
     }
 
     &__subtitle {
@@ -80,7 +80,7 @@
         font-size: 32px;
         line-height: 38px;
         font-weight: 400;
-        letter-spacing: -0.03em;
+        letter-spacing: 0;
         color: rgba(255, 255, 255, 0.5);
     }
 
@@ -94,7 +94,7 @@
         font-size: 20px;
         line-height: 20px;
         font-weight: 400;
-        letter-spacing: -0.03em;
+        letter-spacing: 0;
     }
 
     &__body--right {
@@ -367,7 +367,7 @@
     &__aside-label,
     &__aside-title,
     &__aside-text {
-        letter-spacing: -0.03em;
+        letter-spacing: 0;
     }
 
     &__aside-label {
@@ -453,7 +453,7 @@
         font-size: 24px;
         line-height: 1;
         font-weight: 400;
-        letter-spacing: -0.03em;
+        letter-spacing: 0;
         color: rgba(255, 255, 255, 0.4);
         text-align: left;
         cursor: pointer;
@@ -491,46 +491,74 @@
 
     &__chips {
         display: grid;
-        grid-template-columns: repeat(5, 80px);
+        grid-template-columns: repeat(4, 70px);
         justify-content: end;
         align-items: end;
         gap: 8px;
-        width: 432px;
-        max-width: 432px;
+        width: auto;
+        max-width: 304px;
     }
 
     &__chip {
-        width: 80px;
-        height: 28px;
-        padding: 0 8px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 6px;
-        border-radius: 40px;
-        background: rgba(255, 255, 255, 0.1);
+        width: 70px;
+        height: 40px;
+        padding: 6px 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2px;
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(8px);
         box-sizing: border-box;
         white-space: nowrap;
         overflow: hidden;
-
-        span {
-            font-size: 12px;
-            line-height: 1;
-            font-weight: 400;
-        }
+        color: #ffffff;
 
         small {
-            font-size: 6px;
+            display: block;
+            font-size: 7px;
             line-height: 1.2;
-            color: rgba(255, 255, 255, 0.6);
-            flex: 0 0 auto;
+            font-weight: 400;
+            color: #ffffff;
+
+            em {
+                font-style: normal;
+                font-size: 6px;
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+
+        span {
+            display: block;
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: #ffffff;
         }
 
         &--empty {
             opacity: 0;
             pointer-events: none;
         }
+    }
+
+    &__opac.tooltip {
+        height: auto;
+        line-height: inherit;
+        cursor: help;
+
+        .tooltip__content {
+            top: -13px;
+        }
+    }
+
+    &__opac-word {
+        text-decoration: underline dotted;
+        text-decoration-color: rgba(255, 255, 255, 0.5);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 6px;
     }
 
     @include respond-below(sm) {
@@ -701,7 +729,7 @@
         }
 
         &__chips {
-            grid-template-columns: repeat(3, 80px);
+            grid-template-columns: repeat(4, 70px);
             justify-content: flex-start;
             width: auto;
             max-width: none;

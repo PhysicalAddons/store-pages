@@ -76,6 +76,17 @@ $tooltip-padding-top: 16px;
             background: url("../images/icons/caret.svg") center / contain no-repeat;
         }
 
+        // Invisible hover bridge between the trigger and the tooltip body so the
+        // popover stays open while the cursor crosses the gap to click links inside.
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -22px;
+            width: 22px;
+            height: 100%;
+        }
+
         strong {
             display: block;
             margin: 0 0 8px;

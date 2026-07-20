@@ -1,17 +1,22 @@
+{# Discounts work like in psa/pco/pow: set base prices, then promo + discount.
+   When promo is true, cards show price * (1 - discount) with the base price crossed out. #}
 {% set data = {
-    current_price_basic: 59,
-    original_price_basic: 118,
-    current_price_bundle: 59,
-    original_price_bundle: 118,
+    promo: true,
+    discount: 0.5,
+    price_basic: 118,
+    price_bundle: 170,
     rounded_price: true,
-    link_basic: 'https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=2891&ref=875',
-    link_bundle: 'https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=9114&ref=875',
+    link_basic: 'https://superhivemarket.com/products/physical-atmosphere?variant=2891&ref=875',
+    link_bundle: 'https://superhivemarket.com/products/physical-atmosphere?variant=9114&ref=875',
     preset_text: '10 Presets'
 } %}
 
+{# Presets row hidden for now. To restore, add back after "Commercial use":
+   { 'label': data.preset_text, 'badge': 'check' }
+#}
 {% set pricing_features = [
     {
-        'label': 'Users',
+        'label': 'User',
         'badge': '1',
         'badge_type': 'value'
     },
@@ -26,10 +31,6 @@
         'badge': 'check',
         'tooltip_title': 'Commercial use',
         'tooltip_text': 'All artworks made using our addon belong to you and can be used for commercial purposes. No need for attribution. <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">Read more about GPL license</a>'
-    },
-    {
-        'label': data.preset_text,
-        'badge': 'check'
     },
     {
         'label': 'Support',
@@ -66,13 +67,14 @@
     }
 ] %}
 
-{% macro price_block(current_price, original_price, link, rounded) %}
+{% macro price_block(price, link, data) %}
+    {% set current_price = data.promo ? price * (1 - data.discount) : price %}
     <div>
         <p class="pricing-card__meta">One time payment</p>
         <div class="pricing-card__price">
-            <span class="pricing-card__price-current">${{ rounded ? current_price|number_format(0, '.', '') : current_price|number_format(2, '.', '') }}</span>
-            {% if original_price is not null %}
-                <span class="pricing-card__price-original">${{ original_price }}</span>
+            <span class="pricing-card__price-current">${{ data.rounded_price ? current_price|number_format(0, '.', '') : current_price|number_format(2, '.', '') }}</span>
+            {% if data.promo %}
+                <span class="pricing-card__price-original">${{ price }}</span>
             {% endif %}
         </div>
     </div>
@@ -136,7 +138,7 @@
             </div>
 
             <div class="pricing-card__footer">
-                {{ pricing_macros.price_block(data.current_price_basic, data.original_price_basic, data.link_basic, data.rounded_price) }}
+                {{ pricing_macros.price_block(data.price_basic, data.link_basic, data) }}
             </div>
         </article>
 
@@ -158,7 +160,7 @@
             </div>
 
             <div class="pricing-card__footer">
-                {{ pricing_macros.price_block(data.current_price_bundle, data.original_price_bundle, data.link_bundle, data.rounded_price) }}
+                {{ pricing_macros.price_block(data.price_bundle, data.link_bundle, data) }}
             </div>
         </article>
     </div>
@@ -179,7 +181,7 @@
             </div>
 
             <div class="pricing-card__footer pricing-card__footer--top">
-                {{ pricing_macros.price_block(data.current_price_basic, data.original_price_basic, data.link_basic, data.rounded_price) }}
+                {{ pricing_macros.price_block(data.price_basic, data.link_basic, data) }}
             </div>
 
             <div class="pricing-card__body pricing-card__body--features">
@@ -222,7 +224,7 @@
             </div>
 
             <div class="pricing-card__footer pricing-card__footer--top">
-                {{ pricing_macros.price_block(data.current_price_bundle, data.original_price_bundle, data.link_bundle, data.rounded_price) }}
+                {{ pricing_macros.price_block(data.price_bundle, data.link_bundle, data) }}
             </div>
 
             <div class="pricing-card__body">

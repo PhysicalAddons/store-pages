@@ -1,38 +1,64 @@
+{% set overview_default_image = 'assets/images/overview/overview-media.webp' %}
+
 {% set overview_points = [
     {
         'label': 'Realtime',
-        'width': 114
+        'width': 114,
+        'video': 'assets/videos/interaction.mp4',
+        'video_webm': 'assets/videos/interaction.webm',
+        'poster': 'assets/videos/interaction-poster.jpg'
     },
     {
         'label': 'Intuitive Controls',
-        'width': 209
+        'width': 209,
+        'video': 'assets/videos/controls.mp4',
+        'video_webm': 'assets/videos/controls.webm',
+        'poster': 'assets/videos/controls-poster.jpg'
     },
     {
         'label': 'Physics Based',
-        'width': 180
+        'width': 180,
+        'image': 'assets/images/overview/overview-physics.webp'
     },
     {
         'label': 'Advanced Mode',
-        'width': 202
+        'width': 202,
+        'image': 'assets/images/overview/overview-advanced.webp'
     },
     {
         'label': 'Artistic Tools',
-        'width': 164
+        'width': 164,
+        'image': 'assets/images/overview/overview-artistic.webp'
     }
 ] %}
+
+{% set overview_active = overview_points[0] %}
 
 <div class="overview block" id="overview">
     <h2 class="overview__title">Feels Like Magic.</h2>
 
     <div class="overview__card">
-        <picture class="overview__media">
-            <source media="(max-width: 767px)" srcset="assets/images/overview/overview-media-mobile.png">
+        <div class="overview__media">
+            <video
+                class="overview__video is-active"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="{{ overview_active.poster }}"
+                data-overview-video
+            >
+                <source src="{{ overview_active.video_webm }}" type="video/webm">
+                <source src="{{ overview_active.video }}" type="video/mp4">
+            </video>
             <img
                 class="overview__image"
-                src="assets/images/overview/overview-media.png"
+                src="{{ overview_default_image }}"
                 alt="Physical Atmosphere interface in Blender"
+                data-overview-image
             >
-        </picture>
+        </div>
 
         <div class="overview__points" role="tablist" aria-label="Overview features">
             {% for point in overview_points %}
@@ -43,6 +69,13 @@
                     aria-selected="{{ loop.first ? 'true' : 'false' }}"
                     style="width: {{ point.width }}px;"
                     data-overview-tab
+                    {% if point.video %}
+                        data-video="{{ point.video }}"
+                        data-video-webm="{{ point.video_webm }}"
+                        data-poster="{{ point.poster }}"
+                    {% else %}
+                        data-image="{{ point.image }}"
+                    {% endif %}
                 >
                     {{ point.label }}
                 </button>

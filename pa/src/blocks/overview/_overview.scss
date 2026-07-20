@@ -105,7 +105,8 @@
             pointer-events: none;
         }
 
-        img {
+        img,
+        video {
             position: absolute;
             inset: -1px;
             width: calc(100% + 2px);
@@ -114,6 +115,13 @@
             object-fit: cover;
             object-position: center center;
             display: block;
+            opacity: 0;
+            transition: opacity 200ms ease;
+        }
+
+        img.is-active,
+        video.is-active {
+            opacity: 1;
         }
     }
 

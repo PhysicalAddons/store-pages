@@ -85,6 +85,7 @@
 
   if (overviewTabs.length) {
     var overviewImage = document.querySelector("[data-overview-image]");
+    var overviewVideo = document.querySelector("[data-overview-video]");
     var overviewDescription = document.querySelector(
       "[data-overview-description]"
     );
@@ -104,8 +105,35 @@
         tab.classList.add("overview__point--active");
         tab.setAttribute("aria-selected", "true");
 
-        if (overviewImage) {
-          overviewImage.src = tab.dataset.image;
+        if (tab.dataset.video) {
+          if (overviewVideo) {
+            var webmSource = overviewVideo.querySelector('source[type="video/webm"]');
+            var mp4Source = overviewVideo.querySelector('source[type="video/mp4"]');
+            if (webmSource && tab.dataset.videoWebm) {
+              webmSource.setAttribute("src", tab.dataset.videoWebm);
+            }
+            if (mp4Source) {
+              mp4Source.setAttribute("src", tab.dataset.video);
+            }
+            if (tab.dataset.poster) {
+              overviewVideo.setAttribute("poster", tab.dataset.poster);
+            }
+            overviewVideo.load();
+            overviewVideo.classList.add("is-active");
+          }
+          if (overviewImage) {
+            overviewImage.classList.remove("is-active");
+          }
+        } else {
+          if (overviewImage) {
+            if (tab.dataset.image) {
+              overviewImage.src = tab.dataset.image;
+            }
+            overviewImage.classList.add("is-active");
+          }
+          if (overviewVideo) {
+            overviewVideo.classList.remove("is-active");
+          }
         }
 
         if (overviewDescription) {

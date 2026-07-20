@@ -123,7 +123,8 @@
     }
 
     &__visual--image {
-        img {
+        img,
+        video {
             width: 100%;
             height: 100%;
             display: block;
@@ -144,7 +145,29 @@
         }
     }
 
+    &__atmosphere-layers {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: auto;
+        z-index: 2;
+        pointer-events: none;
+
+        @include respond-below(sm) {
+            display: none;
+        }
+    }
+
     &--clouds {
+        .feature-card__copy {
+            max-width: none;
+        }
+
+        .feature-card__subtitle {
+            white-space: nowrap;
+        }
+
         .feature-card__visual--image {
             picture {
                 display: block;
@@ -227,6 +250,24 @@
                 width: 2px;
                 height: 46px;
                 background: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+
+    &--interaction {
+        .feature-card__copy {
+            max-width: none;
+        }
+
+        .feature-card__visual--image {
+            picture {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                object-position: center;
             }
         }
     }
@@ -339,7 +380,8 @@
 
     &--eclipses {
         .feature-card__visual--image {
-            img {
+            img,
+            video {
                 object-position: center 46%;
             }
         }

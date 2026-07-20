@@ -1,0 +1,103 @@
+{# Footer design prototypes for comparison — remove this block (and its include
+   in index.twig + style.scss import) once a direction is picked. #}
+
+{% set fv_products = [
+    { 'icon': 'assets/images/icons/pa2.svg', 'name': 'Atmosphere', 'code': 'PA²', 'link': 'https://superhivemarket.com/products/physical-atmosphere?ref=875' },
+    { 'icon': 'assets/images/icons/pco.svg', 'name': 'Planets', 'code': 'PCO', 'link': 'https://blendermarket.com/products/physical-celestial-objects?ref=875' },
+    { 'icon': 'assets/images/icons/pow.svg', 'name': 'Ocean', 'code': 'POW', 'link': 'https://blendermarket.com/products/physical-open-waters?ref=875' }
+] %}
+
+{% set fv_socials = [
+    { 'icon': 'assets/images/icons/discord.svg', 'label': 'Discord', 'link': 'https://discord.gg/wvzPVzj9Vr' },
+    { 'icon': 'assets/images/icons/twitter.svg', 'label': 'Twitter / X', 'link': 'https://twitter.com/PhysicalAddons' },
+    { 'icon': 'assets/images/icons/instagram.svg', 'label': 'Instagram', 'link': 'https://www.instagram.com/physicaladdons/' },
+    { 'icon': 'assets/images/icons/youtube.svg', 'label': 'YouTube', 'link': 'https://www.youtube.com/@physicaladdonscrew' }
+] %}
+
+<div class="footer-variants">
+
+    <p class="footer-variants__label">Variant A — dark, multi-column</p>
+
+    <footer class="fv fv--dark">
+        <div class="fv__top">
+            <div class="fv__brand">
+                <div class="fv__brand-name">Physical Addons</div>
+                <p class="fv__tagline">Physically based lighting, skies, oceans and planets for Blender. Built by artists, driven by real physics.</p>
+                <div class="fv__socials">
+                    {% for social in fv_socials %}
+                        <a href="{{ social.link }}" target="_blank" aria-label="{{ social.label }}"><img src="{{ social.icon }}" alt=""></a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="fv__columns">
+                <div class="fv__col">
+                    <h4>Addons</h4>
+                    {% for product in fv_products %}
+                        <a href="{{ product.link }}" target="_blank">{{ product.name }}</a>
+                    {% endfor %}
+                    <span class="fv__muted">Coming soon…</span>
+                </div>
+                <div class="fv__col">
+                    <h4>Resources</h4>
+                    <a href="https://www.physicaladdons.com/psa/release-notes/" target="_blank">Release notes</a>
+                    <a href="https://www.physicaladdons.com/psa/" target="_blank">Documentation</a>
+                    <a href="https://support.blendermarket.com/article/22-refund-policy" target="_blank">Refund policy</a>
+                </div>
+                <div class="fv__col">
+                    <h4>Company</h4>
+                    <a href="https://www.physicaladdons.com/psa/contacts/" target="_blank">Contact us</a>
+                    <a href="https://discord.gg/wvzPVzj9Vr" target="_blank">Community</a>
+                    <a href="https://www.youtube.com/watch?v=hLKSudM6BcQ&t=24s" target="_blank">BCON25 Keynote</a>
+                </div>
+            </div>
+        </div>
+        <div class="fv__bottom">
+            <span>© 2026 Physical Addons. All rights reserved.</span>
+            <span class="fv__muted">Blender is a registered trademark of the Blender Foundation.</span>
+        </div>
+    </footer>
+
+    <p class="footer-variants__label">Variant B — minimal, centered</p>
+
+    <footer class="fv fv--minimal">
+        <div class="fv__brand-name">Physical Addons</div>
+        <nav class="fv__inline-links">
+            {% for product in fv_products %}
+                <a href="{{ product.link }}" target="_blank">{{ product.name }}</a>
+            {% endfor %}
+            <a href="https://www.physicaladdons.com/psa/release-notes/" target="_blank">Release notes</a>
+            <a href="https://www.physicaladdons.com/psa/contacts/" target="_blank">Contact</a>
+        </nav>
+        <div class="fv__socials">
+            {% for social in fv_socials %}
+                <a href="{{ social.link }}" target="_blank" aria-label="{{ social.label }}"><img src="{{ social.icon }}" alt=""></a>
+            {% endfor %}
+        </div>
+        <div class="fv__copyright">© 2026 Physical Addons · 17'000+ users worldwide</div>
+    </footer>
+
+    <p class="footer-variants__label">Variant C — CTA card + slim bar</p>
+
+    <footer class="fv fv--cta">
+        <div class="fv__cta-card">
+            <h3>Ready for better skies?</h3>
+            <p>One-time payment, free updates, 30&nbsp;day refund policy.</p>
+            <a class="fv__cta-button" href="https://superhivemarket.com/products/physical-atmosphere?ref=875" target="_blank">Get Atmosphere² — $59</a>
+        </div>
+        <div class="fv__slim">
+            <div class="fv__slim-products">
+                {% for product in fv_products %}
+                    <a href="{{ product.link }}" target="_blank"><img src="{{ product.icon }}" alt="">{{ product.name }}</a>
+                {% endfor %}
+            </div>
+            <div class="fv__socials">
+                {% for social in fv_socials %}
+                    <a href="{{ social.link }}" target="_blank" aria-label="{{ social.label }}"><img src="{{ social.icon }}" alt=""></a>
+                {% endfor %}
+            </div>
+            <span class="fv__copyright">© 2026 Physical Addons</span>
+        </div>
+    </footer>
+
+</div>

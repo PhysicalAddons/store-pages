@@ -92,16 +92,19 @@
         'modifier': 'stars',
         'title': 'Stars',
         'subtitle': 'For memorable nights',
-        'image': 'assets/images/features/stars-desktop.png',
-        'mobile_image': 'assets/images/features/stars-mobile.png',
+        'image': 'assets/images/features/stars-desktop.jpg',
+        'webp': 'assets/images/features/stars-desktop.webp',
+        'mobile_image': 'assets/images/features/stars-mobile.jpg',
+        'mobile_webp': 'assets/images/features/stars-mobile.webp',
         'alt': 'Stars preview'
     },
     {
         'modifier': 'eclipses',
         'title': 'Eclipses',
         'subtitle': 'Because we can',
-        'image': 'assets/images/features/eclipses-desktop.png',
-        'mobile_image': 'assets/images/features/eclipses-mobile.png',
+        'video': 'assets/videos/eclipses.mp4',
+        'video_webm': 'assets/videos/eclipses.webm',
+        'poster': 'assets/videos/eclipses-poster.jpg',
         'alt': 'Eclipses preview'
     }
 ] %}
@@ -113,13 +116,15 @@
         <article class="feature-card feature-card--clouds">
             <div class="feature-card__copy">
                 <h3 class="feature-card__title">Clouds</h3>
-                <p class="feature-card__subtitle">Real time</p>
+                <p class="feature-card__subtitle">Volumetric. Procedural.</p>
             </div>
 
             <div class="feature-card__visual feature-card__visual--image">
                 <picture>
-                    <source media="(max-width: 467px)" srcset="assets/images/features/clouds-mobile.png">
-                    <img src="assets/images/features/clouds-desktop.png" alt="Realtime clouds preview">
+                    <source media="(max-width: 467px)" type="image/webp" srcset="assets/images/features/clouds-mobile.webp">
+                    <source media="(max-width: 467px)" srcset="assets/images/features/clouds-mobile.jpg">
+                    <source type="image/webp" srcset="assets/images/features/clouds-desktop.webp">
+                    <img src="assets/images/features/clouds-desktop.jpg" alt="Realtime clouds preview">
                 </picture>
             </div>
 
@@ -130,8 +135,20 @@
 
         <article class="feature-card feature-card--atmosphere">
             <div class="feature-card__visual feature-card__visual--image">
-                <img src="assets/images/gallery/ilmari-kumpunen/1.webp" alt="Atmosphere preview">
+                <picture>
+                    <source media="(max-width: 467px)" type="image/webp" srcset="assets/images/features/atmosphere-mobile.webp">
+                    <source media="(max-width: 467px)" srcset="assets/images/features/atmosphere-mobile.jpg">
+                    <source type="image/webp" srcset="assets/images/features/atmosphere-desktop.webp">
+                    <img src="assets/images/features/atmosphere-desktop.jpg" alt="Atmosphere preview">
+                </picture>
             </div>
+
+            <img
+                class="feature-card__atmosphere-layers"
+                src="assets/images/features/atmosphere-layers.svg"
+                alt="Atmospheric layers by altitude in kilometers"
+                aria-hidden="true"
+            >
 
             <div class="feature-card__copy">
                 <h3 class="feature-card__title">Atmosphere</h3>
@@ -157,6 +174,20 @@
             </div>
         </article>
 
+        <article class="feature-card feature-card--interaction">
+            <div class="feature-card__copy">
+                <h3 class="feature-card__title">Object interaction</h3>
+                <p class="feature-card__subtitle">Whaaaat?</p>
+            </div>
+
+            <div class="feature-card__visual feature-card__visual--image">
+                <picture>
+                    <source type="image/webp" srcset="assets/images/features/interaction-desktop.webp">
+                    <img src="assets/images/features/interaction-desktop.jpg" alt="Object interaction preview">
+                </picture>
+            </div>
+        </article>
+
         <article class="feature-card feature-card--refraction">
             <div class="feature-card__copy">
                 <h3 class="feature-card__title">Atmospheric refraction</h3>
@@ -165,8 +196,8 @@
 
             <div class="feature-card__visual feature-card__visual--image">
                 <picture>
-                    <source media="(max-width: 467px)" srcset="assets/images/features/refraction-mobile.png">
-                    <img src="assets/images/features/refraction-desktop.png" alt="Atmospheric refraction preview">
+                    <source media="(max-width: 467px)" srcset="assets/images/features/refraction-mobile.jpg">
+                    <img src="assets/images/features/refraction-desktop.jpg" alt="Atmospheric refraction preview">
                 </picture>
             </div>
 
@@ -179,10 +210,19 @@
             {% for feature in secondary_features %}
                 <article class="feature-card feature-card--small feature-card--{{ feature.modifier }}">
                     <div class="feature-card__visual feature-card__visual--image">
-                        <picture>
-                            <source media="(max-width: 467px)" srcset="{{ feature.mobile_image }}">
-                            <img src="{{ feature.image }}" alt="{{ feature.alt }}">
-                        </picture>
+                        {% if feature.video %}
+                            <video autoplay muted loop playsinline preload="metadata" poster="{{ feature.poster }}" aria-label="{{ feature.alt }}">
+                                <source src="{{ feature.video_webm }}" type="video/webm">
+                                <source src="{{ feature.video }}" type="video/mp4">
+                            </video>
+                        {% else %}
+                            <picture>
+                                <source media="(max-width: 467px)" type="image/webp" srcset="{{ feature.mobile_webp }}">
+                                <source media="(max-width: 467px)" srcset="{{ feature.mobile_image }}">
+                                <source type="image/webp" srcset="{{ feature.webp }}">
+                                <img src="{{ feature.image }}" alt="{{ feature.alt }}">
+                            </picture>
+                        {% endif %}
                     </div>
 
                     <div class="feature-card__copy feature-card__copy--bottom">
@@ -250,8 +290,10 @@
         <article class="feature-card feature-card--advanced-mode">
             <div class="feature-card__visual feature-card__visual--image">
                 <picture>
-                    <source media="(max-width: 467px)" srcset="assets/images/advanced-mode/advanced-mode-mobile.png">
-                    <img src="assets/images/advanced-mode/advanced-mode-desktop.png" alt="Stupidly Advanced Mode preview">
+                    <source media="(max-width: 467px)" type="image/webp" srcset="assets/images/advanced-mode/advanced-mode-mobile.webp">
+                    <source media="(max-width: 467px)" srcset="assets/images/advanced-mode/advanced-mode-mobile.jpg">
+                    <source type="image/webp" srcset="assets/images/advanced-mode/advanced-mode-desktop.webp">
+                    <img src="assets/images/advanced-mode/advanced-mode-desktop.jpg" alt="Stupidly Advanced Mode preview">
                 </picture>
             </div>
 

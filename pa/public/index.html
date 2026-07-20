@@ -19,8 +19,7 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/vendor/jquery.fancybox.min.css">
-	<script defer data-domain="psa-listing.netlify.app" src="https://plausible.io/js/script.js"></script>
-	<script defer data-domain="psa-listing.netlify.app" src="https://plausible.io/js/script.outbound-links.js"></script>
+	<script defer data-domain="pa-listing.netlify.app" src="https://stats.upitis.com/js/script.outbound-links.js"></script>
 </head>
 
 
@@ -47,18 +46,33 @@
     </div>
 
 </div>        
+
+
 <div class="overview block" id="overview">
     <h2 class="overview__title">Feels Like Magic.</h2>
 
     <div class="overview__card">
-        <picture class="overview__media">
-            <source media="(max-width: 767px)" srcset="assets/images/overview/overview-media-mobile.png">
+        <div class="overview__media">
+            <video
+                class="overview__video is-active"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/videos/interaction-poster.jpg"
+                data-overview-video
+            >
+                <source src="assets/videos/interaction.webm" type="video/webm">
+                <source src="assets/videos/interaction.mp4" type="video/mp4">
+            </video>
             <img
                 class="overview__image"
-                src="assets/images/overview/overview-media.png"
+                src="assets/images/overview/overview-media.webp"
                 alt="Physical Atmosphere interface in Blender"
+                data-overview-image
             >
-        </picture>
+        </div>
 
         <div class="overview__points" role="tablist" aria-label="Overview features">
                             <button
@@ -68,7 +82,10 @@
                     aria-selected="true"
                     style="width: 114px;"
                     data-overview-tab
-                >
+                                            data-video="assets/videos/interaction.mp4"
+                        data-video-webm="assets/videos/interaction.webm"
+                        data-poster="assets/videos/interaction-poster.jpg"
+                                    >
                     Realtime
                 </button>
                             <button
@@ -78,7 +95,10 @@
                     aria-selected="false"
                     style="width: 209px;"
                     data-overview-tab
-                >
+                                            data-video="assets/videos/controls.mp4"
+                        data-video-webm="assets/videos/controls.webm"
+                        data-poster="assets/videos/controls-poster.jpg"
+                                    >
                     Intuitive Controls
                 </button>
                             <button
@@ -88,7 +108,8 @@
                     aria-selected="false"
                     style="width: 180px;"
                     data-overview-tab
-                >
+                                            data-image="assets/images/overview/overview-physics.webp"
+                                    >
                     Physics Based
                 </button>
                             <button
@@ -98,7 +119,8 @@
                     aria-selected="false"
                     style="width: 202px;"
                     data-overview-tab
-                >
+                                            data-image="assets/images/overview/overview-advanced.webp"
+                                    >
                     Advanced Mode
                 </button>
                             <button
@@ -108,7 +130,8 @@
                     aria-selected="false"
                     style="width: 164px;"
                     data-overview-tab
-                >
+                                            data-image="assets/images/overview/overview-artistic.webp"
+                                    >
                     Artistic Tools
                 </button>
                     </div>
@@ -125,13 +148,15 @@
         <article class="feature-card feature-card--clouds">
             <div class="feature-card__copy">
                 <h3 class="feature-card__title">Clouds</h3>
-                <p class="feature-card__subtitle">Real time</p>
+                <p class="feature-card__subtitle">Volumetric. Procedural.</p>
             </div>
 
             <div class="feature-card__visual feature-card__visual--image">
                 <picture>
-                    <source media="(max-width: 467px)" srcset="assets/images/features/clouds-mobile.png">
-                    <img src="assets/images/features/clouds-desktop.png" alt="Realtime clouds preview">
+                    <source media="(max-width: 467px)" type="image/webp" srcset="assets/images/features/clouds-mobile.webp">
+                    <source media="(max-width: 467px)" srcset="assets/images/features/clouds-mobile.jpg">
+                    <source type="image/webp" srcset="assets/images/features/clouds-desktop.webp">
+                    <img src="assets/images/features/clouds-desktop.jpg" alt="Realtime clouds preview">
                 </picture>
             </div>
 
@@ -142,8 +167,20 @@
 
         <article class="feature-card feature-card--atmosphere">
             <div class="feature-card__visual feature-card__visual--image">
-                <img src="assets/images/gallery/ilmari-kumpunen/1.webp" alt="Atmosphere preview">
+                <picture>
+                    <source media="(max-width: 467px)" type="image/webp" srcset="assets/images/features/atmosphere-mobile.webp">
+                    <source media="(max-width: 467px)" srcset="assets/images/features/atmosphere-mobile.jpg">
+                    <source type="image/webp" srcset="assets/images/features/atmosphere-desktop.webp">
+                    <img src="assets/images/features/atmosphere-desktop.jpg" alt="Atmosphere preview">
+                </picture>
             </div>
+
+            <img
+                class="feature-card__atmosphere-layers"
+                src="assets/images/features/atmosphere-layers.svg"
+                alt="Atmospheric layers by altitude in kilometers"
+                aria-hidden="true"
+            >
 
             <div class="feature-card__copy">
                 <h3 class="feature-card__title">Atmosphere</h3>
@@ -169,6 +206,20 @@
             </div>
         </article>
 
+        <article class="feature-card feature-card--interaction">
+            <div class="feature-card__copy">
+                <h3 class="feature-card__title">Object interaction</h3>
+                <p class="feature-card__subtitle">Whaaaat?</p>
+            </div>
+
+            <div class="feature-card__visual feature-card__visual--image">
+                <picture>
+                    <source type="image/webp" srcset="assets/images/features/interaction-desktop.webp">
+                    <img src="assets/images/features/interaction-desktop.jpg" alt="Object interaction preview">
+                </picture>
+            </div>
+        </article>
+
         <article class="feature-card feature-card--refraction">
             <div class="feature-card__copy">
                 <h3 class="feature-card__title">Atmospheric refraction</h3>
@@ -177,8 +228,8 @@
 
             <div class="feature-card__visual feature-card__visual--image">
                 <picture>
-                    <source media="(max-width: 467px)" srcset="assets/images/features/refraction-mobile.png">
-                    <img src="assets/images/features/refraction-desktop.png" alt="Atmospheric refraction preview">
+                    <source media="(max-width: 467px)" srcset="assets/images/features/refraction-mobile.jpg">
+                    <img src="assets/images/features/refraction-desktop.jpg" alt="Atmospheric refraction preview">
                 </picture>
             </div>
 
@@ -190,11 +241,13 @@
         <div class="feature-pair">
                             <article class="feature-card feature-card--small feature-card--stars">
                     <div class="feature-card__visual feature-card__visual--image">
-                        <picture>
-                            <source media="(max-width: 467px)" srcset="assets/images/features/stars-mobile.png">
-                            <img src="assets/images/features/stars-desktop.png" alt="Stars preview">
-                        </picture>
-                    </div>
+                                                    <picture>
+                                <source media="(max-width: 467px)" type="image/webp" srcset="assets/images/features/stars-mobile.webp">
+                                <source media="(max-width: 467px)" srcset="assets/images/features/stars-mobile.jpg">
+                                <source type="image/webp" srcset="assets/images/features/stars-desktop.webp">
+                                <img src="assets/images/features/stars-desktop.jpg" alt="Stars preview">
+                            </picture>
+                                            </div>
 
                     <div class="feature-card__copy feature-card__copy--bottom">
                         <h3 class="feature-card__title">Stars</h3>
@@ -203,11 +256,11 @@
                 </article>
                             <article class="feature-card feature-card--small feature-card--eclipses">
                     <div class="feature-card__visual feature-card__visual--image">
-                        <picture>
-                            <source media="(max-width: 467px)" srcset="assets/images/features/eclipses-mobile.png">
-                            <img src="assets/images/features/eclipses-desktop.png" alt="Eclipses preview">
-                        </picture>
-                    </div>
+                                                    <video autoplay muted loop playsinline preload="metadata" poster="assets/videos/eclipses-poster.jpg" aria-label="Eclipses preview">
+                                <source src="assets/videos/eclipses.webm" type="video/webm">
+                                <source src="assets/videos/eclipses.mp4" type="video/mp4">
+                            </video>
+                                            </div>
 
                     <div class="feature-card__copy feature-card__copy--bottom">
                         <h3 class="feature-card__title">Eclipses</h3>
@@ -391,8 +444,10 @@
         <article class="feature-card feature-card--advanced-mode">
             <div class="feature-card__visual feature-card__visual--image">
                 <picture>
-                    <source media="(max-width: 467px)" srcset="assets/images/advanced-mode/advanced-mode-mobile.png">
-                    <img src="assets/images/advanced-mode/advanced-mode-desktop.png" alt="Stupidly Advanced Mode preview">
+                    <source media="(max-width: 467px)" type="image/webp" srcset="assets/images/advanced-mode/advanced-mode-mobile.webp">
+                    <source media="(max-width: 467px)" srcset="assets/images/advanced-mode/advanced-mode-mobile.jpg">
+                    <source type="image/webp" srcset="assets/images/advanced-mode/advanced-mode-desktop.webp">
+                    <img src="assets/images/advanced-mode/advanced-mode-desktop.jpg" alt="Stupidly Advanced Mode preview">
                 </picture>
             </div>
 
@@ -407,6 +462,7 @@
     </div>
 </div>
         
+
 
 <div class="comparison block" id="comparison">
     <h2 class="comparison__title">Comparison</h2>
@@ -654,7 +710,7 @@ Sky Texture Modifier</div>
                                         <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
                                         <span class="tooltip__content">
                                             <strong>Night Sky</strong>
-                                            <span>Star field, milky way and planet positions that match real astronomy for a given date and location.</span>
+                                            <span>Star field and planet positions that match real astronomy for a given date and location.</span>
                                         </span>
                                     </span>
                                                                 <span>Night Sky</span>
@@ -679,27 +735,6 @@ Sky Texture Modifier</div>
                                         </span>
                                     </span>
                                                                 <span>Spherical Sun</span>
-                            </th>
-                            <td class="comparison__value-cell">
-                                <span class="comparison__value comparison__value--yes">✓</span>
-                            </td>
-                            <td class="comparison__value-cell">
-                                <span class="comparison__value comparison__value--no">‒</span>
-                            </td>
-                            <td class="comparison__value-cell">
-                                <span class="comparison__value comparison__value--no">‒</span>
-                            </td>
-                        </tr>
-                                            <tr class="comparison__feature-row">
-                            <th class="comparison__feature-label" scope="row">
-                                                                    <span class="comparison__info-tooltip tooltip tooltip--side" tabindex="0" aria-label="Spectral Sun">
-                                        <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
-                                        <span class="tooltip__content">
-                                            <strong>Spectral Sun</strong>
-                                            <span>Wavelength-aware sunlight so colour and intensity shift naturally from dawn through midday to dusk.</span>
-                                        </span>
-                                    </span>
-                                                                <span>Spectral Sun</span>
                             </th>
                             <td class="comparison__value-cell">
                                 <span class="comparison__value comparison__value--yes">✓</span>
@@ -819,27 +854,6 @@ Sky Texture Modifier</div>
                                         </span>
                                     </span>
                                                                 <span>Artistic Controls</span>
-                            </th>
-                            <td class="comparison__value-cell">
-                                <span class="comparison__value comparison__value--yes">✓</span>
-                            </td>
-                            <td class="comparison__value-cell">
-                                <span class="comparison__value comparison__value--yes">✓</span>
-                            </td>
-                            <td class="comparison__value-cell">
-                                <span class="comparison__value comparison__value--no">‒</span>
-                            </td>
-                        </tr>
-                                            <tr class="comparison__feature-row">
-                            <th class="comparison__feature-label" scope="row">
-                                                                    <span class="comparison__info-tooltip tooltip tooltip--side" tabindex="0" aria-label="Bake HDRI">
-                                        <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
-                                        <span class="tooltip__content">
-                                            <strong>Bake HDRI</strong>
-                                            <span>Capture the current sky as an HDRI in one click — use it in other tools or lock a look you like.</span>
-                                        </span>
-                                    </span>
-                                                                <span>Bake HDRI</span>
                             </th>
                             <td class="comparison__value-cell">
                                 <span class="comparison__value comparison__value--yes">✓</span>
@@ -1059,7 +1073,7 @@ Sky Texture Modifier</div>
                                     <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
                                     <span class="tooltip__content">
                                         <strong>Night Sky</strong>
-                                        <span>Star field, milky way and planet positions that match real astronomy for a given date and location.</span>
+                                        <span>Star field and planet positions that match real astronomy for a given date and location.</span>
                                     </span>
                                 </span>
                                                         <span>Night Sky</span>
@@ -1078,21 +1092,6 @@ Sky Texture Modifier</div>
                                     </span>
                                 </span>
                                                         <span>Spherical Sun</span>
-                        </div>
-                        <div class="comparison__mobile-value comparison__mobile-value--yes">✓</div>
-                        <div class="comparison__mobile-value comparison__mobile-value--no">‒</div>
-                        <div class="comparison__mobile-value comparison__mobile-value--no">‒</div>
-                    </div>
-                                    <div class="comparison__mobile-row">
-                        <div class="comparison__mobile-label">
-                                                            <span class="comparison__info-tooltip tooltip tooltip--side" tabindex="0" aria-label="Spectral Sun">
-                                    <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
-                                    <span class="tooltip__content">
-                                        <strong>Spectral Sun</strong>
-                                        <span>Wavelength-aware sunlight so colour and intensity shift naturally from dawn through midday to dusk.</span>
-                                    </span>
-                                </span>
-                                                        <span>Spectral Sun</span>
                         </div>
                         <div class="comparison__mobile-value comparison__mobile-value--yes">✓</div>
                         <div class="comparison__mobile-value comparison__mobile-value--no">‒</div>
@@ -1176,21 +1175,6 @@ Sky Texture Modifier</div>
                                     </span>
                                 </span>
                                                         <span>Artistic Controls</span>
-                        </div>
-                        <div class="comparison__mobile-value comparison__mobile-value--yes">✓</div>
-                        <div class="comparison__mobile-value comparison__mobile-value--yes">✓</div>
-                        <div class="comparison__mobile-value comparison__mobile-value--no">‒</div>
-                    </div>
-                                    <div class="comparison__mobile-row">
-                        <div class="comparison__mobile-label">
-                                                            <span class="comparison__info-tooltip tooltip tooltip--side" tabindex="0" aria-label="Bake HDRI">
-                                    <img src="assets/images/icons/info.svg" alt="" aria-hidden="true">
-                                    <span class="tooltip__content">
-                                        <strong>Bake HDRI</strong>
-                                        <span>Capture the current sky as an HDRI in one click — use it in other tools or lock a look you like.</span>
-                                    </span>
-                                </span>
-                                                        <span>Bake HDRI</span>
                         </div>
                         <div class="comparison__mobile-value comparison__mobile-value--yes">✓</div>
                         <div class="comparison__mobile-value comparison__mobile-value--yes">✓</div>
@@ -1498,23 +1482,25 @@ Sky Texture Modifier</div>
                 class="testimonials__arrow testimonials__arrow--prev"
                 data-testimonial-prev
                 aria-label="Previous testimonial">
-            <svg width="44" height="20" viewBox="0 0 44 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M10 1L1 10L10 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M1 10H43" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <svg width="44" height="27" viewBox="0 0 56 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M56 17H4" stroke="currentColor" stroke-width="4.5"/>
+                <path d="M19 2L4 17L19 32" stroke="currentColor" stroke-width="4.5"/>
             </svg>
         </button>
         <button type="button"
                 class="testimonials__arrow testimonials__arrow--next"
                 data-testimonial-next
                 aria-label="Next testimonial">
-            <svg width="44" height="20" viewBox="0 0 44 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M34 1L43 10L34 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M43 10H1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <svg width="44" height="27" viewBox="0 0 56 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M0 17H52" stroke="currentColor" stroke-width="4.5"/>
+                <path d="M37 2L52 17L37 32" stroke="currentColor" stroke-width="4.5"/>
             </svg>
         </button>
     </div>
 </div>
         
+
+
 
 
 
@@ -1532,7 +1518,7 @@ Sky Texture Modifier</div>
                                                             1
                                                     </span>
                         <span class="pricing__feature-text">
-                                                            Users
+                                                            User
                                                     </span>
                                             </li>
                                     <li class="pricing__feature-item">
@@ -1564,14 +1550,6 @@ Sky Texture Modifier</div>
                                     <span>All artworks made using our addon belong to you and can be used for commercial purposes. No need for attribution. <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">Read more about GPL license</a></span>
                                 </span>
                             </span>
-                                            </li>
-                                    <li class="pricing__feature-item">
-                        <span class="pricing__feature-badge pricing__feature-badge--check">
-                                                            &#10003;
-                                                    </span>
-                        <span class="pricing__feature-text">
-                                                            10 Presets
-                                                    </span>
                                             </li>
                                     <li class="pricing__feature-item">
                         <span class="pricing__feature-badge pricing__feature-badge--check">
@@ -1617,14 +1595,14 @@ Sky Texture Modifier</div>
             </div>
 
             <div class="pricing-card__footer">
-                    <div>
+                        <div>
         <p class="pricing-card__meta">One time payment</p>
         <div class="pricing-card__price">
             <span class="pricing-card__price-current">$59</span>
                             <span class="pricing-card__price-original">$118</span>
                     </div>
     </div>
-    <a href="https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=2891&ref=875" class="pricing-card__select" target="_blank">Select</a>
+    <a href="https://superhivemarket.com/products/physical-atmosphere?variant=2891&ref=875" class="pricing-card__select" target="_blank">Select</a>
 
             </div>
         </article>
@@ -1654,14 +1632,14 @@ Sky Texture Modifier</div>
                             </div>
 
             <div class="pricing-card__footer">
-                    <div>
+                        <div>
         <p class="pricing-card__meta">One time payment</p>
         <div class="pricing-card__price">
-            <span class="pricing-card__price-current">$59</span>
-                            <span class="pricing-card__price-original">$118</span>
+            <span class="pricing-card__price-current">$85</span>
+                            <span class="pricing-card__price-original">$170</span>
                     </div>
     </div>
-    <a href="https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=9114&ref=875" class="pricing-card__select" target="_blank">Select</a>
+    <a href="https://superhivemarket.com/products/physical-atmosphere?variant=9114&ref=875" class="pricing-card__select" target="_blank">Select</a>
 
             </div>
         </article>
@@ -1683,14 +1661,14 @@ Sky Texture Modifier</div>
             </div>
 
             <div class="pricing-card__footer pricing-card__footer--top">
-                    <div>
+                        <div>
         <p class="pricing-card__meta">One time payment</p>
         <div class="pricing-card__price">
             <span class="pricing-card__price-current">$59</span>
                             <span class="pricing-card__price-original">$118</span>
                     </div>
     </div>
-    <a href="https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=2891&ref=875" class="pricing-card__select" target="_blank">Select</a>
+    <a href="https://superhivemarket.com/products/physical-atmosphere?variant=2891&ref=875" class="pricing-card__select" target="_blank">Select</a>
 
             </div>
 
@@ -1701,7 +1679,7 @@ Sky Texture Modifier</div>
                                                                     1
                                                             </span>
                             <span class="pricing__feature-text">
-                                                                    Users
+                                                                    User
                                                             </span>
                                                     </li>
                                             <li class="pricing__feature-item">
@@ -1739,14 +1717,6 @@ Sky Texture Modifier</div>
                                                                     &#10003;
                                                             </span>
                             <span class="pricing__feature-text">
-                                                                    10 Presets
-                                                            </span>
-                                                    </li>
-                                            <li class="pricing__feature-item">
-                            <span class="pricing__feature-badge pricing__feature-badge--check">
-                                                                    &#10003;
-                                                            </span>
-                            <span class="pricing__feature-text">
                                                                     Support
                                                             </span>
                                                     </li>
@@ -1777,14 +1747,14 @@ Sky Texture Modifier</div>
             </div>
 
             <div class="pricing-card__footer pricing-card__footer--top">
-                    <div>
+                        <div>
         <p class="pricing-card__meta">One time payment</p>
         <div class="pricing-card__price">
-            <span class="pricing-card__price-current">$59</span>
-                            <span class="pricing-card__price-original">$118</span>
+            <span class="pricing-card__price-current">$85</span>
+                            <span class="pricing-card__price-original">$170</span>
                     </div>
     </div>
-    <a href="https://blendermarket.com/products/physical-starlight-and-atmosphere?variant=9114&ref=875" class="pricing-card__select" target="_blank">Select</a>
+    <a href="https://superhivemarket.com/products/physical-atmosphere?variant=9114&ref=875" class="pricing-card__select" target="_blank">Select</a>
 
             </div>
 
@@ -1813,10 +1783,11 @@ Sky Texture Modifier</div>
         <h2 class="upgrade__title">Upgrade from PSA to PA<sup>2</sup></h2>
 
         <p class="upgrade__copy">
-            For our previous PSA (Physical Starlight and Atmosphere) users we give extra 70% discount so you can upgrade with ease.
+            For our previous PSA (Physical Starlight and Atmosphere) users we give extra 50% discount so you can upgrade with ease.
             Use code <strong>ATMOSPHERE</strong>. If something doesn't work
             <a href="https://www.physicaladdons.com/psa/contacts/" target="_blank" rel="noreferrer noopener">contact us</a>
             and we will give you discount manually.
+            <i>Note: coupon codes don't work during sales.</i>
         </p>
     </div>
 </div>
@@ -1984,6 +1955,100 @@ Sky Texture Modifier</div>
             /></a>
         </div>
     </div>
+</div>
+        
+
+
+
+<div class="footer-variants">
+
+    <p class="footer-variants__label">Variant A — dark, multi-column</p>
+
+    <footer class="fv fv--dark">
+        <div class="fv__top">
+            <div class="fv__brand">
+                <div class="fv__brand-name">Physical Addons</div>
+                <p class="fv__tagline">Physically based lighting, skies, oceans and planets for Blender. Built by artists, driven by real physics.</p>
+                <div class="fv__socials">
+                                            <a href="https://discord.gg/wvzPVzj9Vr" target="_blank" aria-label="Discord"><img src="assets/images/icons/discord.svg" alt=""></a>
+                                            <a href="https://twitter.com/PhysicalAddons" target="_blank" aria-label="Twitter / X"><img src="assets/images/icons/twitter.svg" alt=""></a>
+                                            <a href="https://www.instagram.com/physicaladdons/" target="_blank" aria-label="Instagram"><img src="assets/images/icons/instagram.svg" alt=""></a>
+                                            <a href="https://www.youtube.com/@physicaladdonscrew" target="_blank" aria-label="YouTube"><img src="assets/images/icons/youtube.svg" alt=""></a>
+                                    </div>
+            </div>
+
+            <div class="fv__columns">
+                <div class="fv__col">
+                    <h4>Addons</h4>
+                                            <a href="https://superhivemarket.com/products/physical-atmosphere?ref=875" target="_blank">Atmosphere</a>
+                                            <a href="https://blendermarket.com/products/physical-celestial-objects?ref=875" target="_blank">Planets</a>
+                                            <a href="https://blendermarket.com/products/physical-open-waters?ref=875" target="_blank">Ocean</a>
+                                        <span class="fv__muted">Coming soon…</span>
+                </div>
+                <div class="fv__col">
+                    <h4>Resources</h4>
+                    <a href="https://www.physicaladdons.com/psa/release-notes/" target="_blank">Release notes</a>
+                    <a href="https://www.physicaladdons.com/psa/" target="_blank">Documentation</a>
+                    <a href="https://support.blendermarket.com/article/22-refund-policy" target="_blank">Refund policy</a>
+                </div>
+                <div class="fv__col">
+                    <h4>Company</h4>
+                    <a href="https://www.physicaladdons.com/psa/contacts/" target="_blank">Contact us</a>
+                    <a href="https://discord.gg/wvzPVzj9Vr" target="_blank">Community</a>
+                    <a href="https://www.youtube.com/watch?v=hLKSudM6BcQ&t=24s" target="_blank">BCON25 Keynote</a>
+                </div>
+            </div>
+        </div>
+        <div class="fv__bottom">
+            <span>© 2026 Physical Addons. All rights reserved.</span>
+            <span class="fv__muted">Blender is a registered trademark of the Blender Foundation.</span>
+        </div>
+    </footer>
+
+    <p class="footer-variants__label">Variant B — minimal, centered</p>
+
+    <footer class="fv fv--minimal">
+        <div class="fv__brand-name">Physical Addons</div>
+        <nav class="fv__inline-links">
+                            <a href="https://superhivemarket.com/products/physical-atmosphere?ref=875" target="_blank">Atmosphere</a>
+                            <a href="https://blendermarket.com/products/physical-celestial-objects?ref=875" target="_blank">Planets</a>
+                            <a href="https://blendermarket.com/products/physical-open-waters?ref=875" target="_blank">Ocean</a>
+                        <a href="https://www.physicaladdons.com/psa/release-notes/" target="_blank">Release notes</a>
+            <a href="https://www.physicaladdons.com/psa/contacts/" target="_blank">Contact</a>
+        </nav>
+        <div class="fv__socials">
+                            <a href="https://discord.gg/wvzPVzj9Vr" target="_blank" aria-label="Discord"><img src="assets/images/icons/discord.svg" alt=""></a>
+                            <a href="https://twitter.com/PhysicalAddons" target="_blank" aria-label="Twitter / X"><img src="assets/images/icons/twitter.svg" alt=""></a>
+                            <a href="https://www.instagram.com/physicaladdons/" target="_blank" aria-label="Instagram"><img src="assets/images/icons/instagram.svg" alt=""></a>
+                            <a href="https://www.youtube.com/@physicaladdonscrew" target="_blank" aria-label="YouTube"><img src="assets/images/icons/youtube.svg" alt=""></a>
+                    </div>
+        <div class="fv__copyright">© 2026 Physical Addons · 17'000+ users worldwide</div>
+    </footer>
+
+    <p class="footer-variants__label">Variant C — CTA card + slim bar</p>
+
+    <footer class="fv fv--cta">
+        <div class="fv__cta-card">
+            <h3>Ready for better skies?</h3>
+            <p>One-time payment, free updates, 30&nbsp;day refund policy.</p>
+            <a class="fv__cta-button" href="https://superhivemarket.com/products/physical-atmosphere?ref=875" target="_blank">Get Atmosphere² — $59</a>
+        </div>
+        <div class="fv__slim">
+            <div class="fv__slim-products">
+                                    <a href="https://superhivemarket.com/products/physical-atmosphere?ref=875" target="_blank"><img src="assets/images/icons/pa2.svg" alt="">Atmosphere</a>
+                                    <a href="https://blendermarket.com/products/physical-celestial-objects?ref=875" target="_blank"><img src="assets/images/icons/pco.svg" alt="">Planets</a>
+                                    <a href="https://blendermarket.com/products/physical-open-waters?ref=875" target="_blank"><img src="assets/images/icons/pow.svg" alt="">Ocean</a>
+                            </div>
+            <div class="fv__socials">
+                                    <a href="https://discord.gg/wvzPVzj9Vr" target="_blank" aria-label="Discord"><img src="assets/images/icons/discord.svg" alt=""></a>
+                                    <a href="https://twitter.com/PhysicalAddons" target="_blank" aria-label="Twitter / X"><img src="assets/images/icons/twitter.svg" alt=""></a>
+                                    <a href="https://www.instagram.com/physicaladdons/" target="_blank" aria-label="Instagram"><img src="assets/images/icons/instagram.svg" alt=""></a>
+                                    <a href="https://www.youtube.com/@physicaladdonscrew" target="_blank" aria-label="YouTube"><img src="assets/images/icons/youtube.svg" alt=""></a>
+                            </div>
+            <span class="fv__copyright">© 2026 Physical Addons</span>
+        </div>
+    </footer>
+
 </div>
     </div>
 

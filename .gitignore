@@ -3,3 +3,5 @@ node_modules
 
 # Local scratch (exports, Figma screenshots)
 pa/tmp/
+pa/figma-exports/
+pa/originals/

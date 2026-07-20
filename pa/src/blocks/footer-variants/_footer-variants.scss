@@ -1,0 +1,249 @@
+// Footer design prototypes — delete together with footer-variants.twig once done.
+
+.footer-variants {
+    margin-bottom: 128px;
+
+    &__label {
+        margin: 0 0 12px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(#000000, 0.35);
+    }
+
+    .fv {
+        margin-bottom: 64px;
+        border-radius: 12px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    // Shared pieces -----------------------------------------------------------
+
+    .fv__brand-name {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+    }
+
+    .fv__socials {
+        display: flex;
+        gap: 16px;
+
+        a {
+            display: inline-flex;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .fv__muted {
+        opacity: 0.35;
+    }
+
+    .fv__copyright {
+        font-size: 12px;
+        color: rgba(#000000, 0.4);
+    }
+
+    // Variant A: dark, multi-column -------------------------------------------
+
+    .fv--dark {
+        background: #0d0d0d;
+        color: rgba(#ffffff, 0.7);
+        padding: 48px 40px 24px;
+
+        .fv__brand-name {
+            color: #ffffff;
+        }
+
+        .fv__top {
+            display: flex;
+            justify-content: space-between;
+            gap: 48px;
+            flex-wrap: wrap;
+            padding-bottom: 40px;
+        }
+
+        .fv__brand {
+            max-width: 280px;
+
+            .fv__tagline {
+                margin: 12px 0 24px;
+                font-size: 13px;
+                color: rgba(#ffffff, 0.5);
+            }
+        }
+
+        // Icons are black; invert for the dark surface.
+        .fv__socials img {
+            filter: invert(1);
+        }
+
+        .fv__columns {
+            display: flex;
+            gap: 64px;
+            flex-wrap: wrap;
+        }
+
+        .fv__col {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-width: 120px;
+
+            h4 {
+                margin: 0 0 6px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                color: rgba(#ffffff, 0.4);
+            }
+
+            a {
+                color: rgba(#ffffff, 0.75);
+                text-decoration: none;
+
+                &:hover {
+                    color: #ffffff;
+                }
+            }
+        }
+
+        .fv__bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding-top: 24px;
+            border-top: 1px solid rgba(#ffffff, 0.1);
+            font-size: 12px;
+            color: rgba(#ffffff, 0.4);
+        }
+    }
+
+    // Variant B: minimal, centered ---------------------------------------------
+
+    .fv--minimal {
+        background: #f7f7f7;
+        padding: 48px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+
+        .fv__inline-links {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            a {
+                color: rgba(#000000, 0.6);
+                text-decoration: none;
+
+                &:hover {
+                    color: #000000;
+                }
+            }
+        }
+    }
+
+    // Variant C: CTA card + slim bar -------------------------------------------
+
+    .fv--cta {
+        .fv__cta-card {
+            background: linear-gradient(135deg, #0b1f3f 0%, #1457bc 55%, #36a1ff 100%);
+            border-radius: 12px 12px 0 0;
+            padding: 56px 32px;
+            text-align: center;
+            color: #ffffff;
+
+            h3 {
+                margin: 0 0 8px;
+                font-size: 32px;
+                font-weight: 500;
+                letter-spacing: -0.02em;
+            }
+
+            p {
+                margin: 0 0 24px;
+                color: rgba(#ffffff, 0.75);
+            }
+        }
+
+        .fv__cta-button {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 10px;
+            background: #ffffff;
+            color: #0d0d0d;
+            font-weight: 600;
+            text-decoration: none;
+
+            &:hover {
+                background: rgba(#ffffff, 0.9);
+            }
+        }
+
+        .fv__slim {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+            background: #f2f2f2;
+            border-radius: 0 0 12px 12px;
+            padding: 20px 32px;
+        }
+
+        .fv__slim-products {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: #000000;
+                text-decoration: none;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+
+    @include respond-below(sm) {
+        .fv--dark {
+            padding: 32px 20px 20px;
+
+            .fv__columns {
+                gap: 32px;
+            }
+        }
+
+        .fv--cta .fv__slim {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}

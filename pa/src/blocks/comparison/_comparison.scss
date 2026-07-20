@@ -19,6 +19,10 @@
         width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        // overflow-x:auto also clips vertical overflow at the padding edge, so give
+        // bottom-row tooltips room to render; negative margin cancels the layout shift.
+        padding-bottom: 56px;
+        margin-bottom: -56px;
     }
 
     &__mobile {
@@ -148,6 +152,19 @@
             position: static;
             display: block;
             opacity: 0.2;
+        }
+    }
+
+    // The table wrapper's overflow-x:auto also clips vertical overflow, cutting off
+    // downward-opening tooltips on the bottom rows. Flip the last two rows' tooltips
+    // to open upward so they stay inside the clip area. Caret mirrors to the bottom.
+    &__feature-row:nth-last-child(-n + 2) .tooltip__content {
+        top: auto;
+        bottom: -24px;
+
+        &::before {
+            top: auto;
+            bottom: 16px;
         }
     }
 

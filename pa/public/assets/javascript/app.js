@@ -216,6 +216,27 @@
       pollutionImageContainer.appendChild(inactivePollutionImage);
     }
 
+    // Preload and decode every profile render up front so switching
+    // profiles swaps images instantly instead of waiting on the network.
+    var preloadedPollutionImages = pollutionOptions.map(function (option) {
+      var src = option.dataset.pollutionImage;
+
+      if (!src) {
+        return null;
+      }
+
+      var img = new window.Image();
+      img.decoding = "async";
+      img.src = src;
+
+      if (img.decode) {
+        img.decode().catch(function () {});
+      }
+
+      return img;
+    });
+    void preloadedPollutionImages;
+
     function clampIndexPosition(value) {
       return Math.min(pollutionOptions.length - 1, Math.max(0, value));
     }
@@ -248,15 +269,13 @@
       displayedIndex = nextIndex;
       option = pollutionOptions[displayedIndex];
 
-      if (!option || !option.dataset.pollutionChipSet) {
+      if (!option) {
         return;
       }
 
-      try {
-        renderPollutionChips(JSON.parse(option.dataset.pollutionChipSet));
-      } catch (error) {
-        console.error("Invalid pollution chip data", error);
-      }
+      // Swap image and chips live while the wheel is scrolling, so the
+      // change is visible immediately rather than after the wheel settles.
+      updatePollutionContent(option);
     }
 
     function escapeHtml(value) {
@@ -330,6 +349,14 @@
             activePollutionImage.alt = "";
             activePollutionImage.setAttribute("aria-hidden", "true");
 
+            // Paint the incoming image above the current one, then fade it in
+            // while the old image stays fully opaque underneath. Hiding the
+            // old image only afterwards prevents the background flashing
+            // through mid-fade.
+            if (pollutionImageContainer) {
+              pollutionImageContainer.appendChild(inactivePollutionImage);
+            }
+
             window.requestAnimationFrame(function () {
               var outgoingImage;
 
@@ -338,10 +365,17 @@
               }
 
               inactivePollutionImage.classList.add("is-active");
-              activePollutionImage.classList.remove("is-active");
               outgoingImage = activePollutionImage;
               activePollutionImage = inactivePollutionImage;
               inactivePollutionImage = outgoingImage;
+
+              window.setTimeout(function () {
+                if (swapId !== pollutionImageSwapId) {
+                  return;
+                }
+
+                outgoingImage.classList.remove("is-active");
+              }, 150);
             });
           };
 

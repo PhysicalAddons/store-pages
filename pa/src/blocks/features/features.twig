@@ -5,87 +5,83 @@
     { 'label': 'SSA',  'unit': '',        'key': 'ssa' }
 ] %}
 
+{# Ordered clean -> polluted, matching the 10 OPAC profile renders.
+   "Mineral transported" removed (no render); its data was:
+   { 'beta_e': '0.064', 'beta_s': '0.05357', 'beta_a': '0.01043', 'ssa': '0.837' } #}
 {% set pollution_types = [
     {
-        'label': 'Continental clean',
+        'label': 'Antarctic',
         'state': 'is-faint',
-        'image': 'assets/images/gallery/tomasz-sadzinica/1.webp',
-        'alt': 'Continental clean atmosphere preview',
-        'chips': { 'beta_e': '0.026', 'beta_s': '0.02527', 'beta_a': '0.00073', 'ssa': '0.972' }
-    },
-    {
-        'label': 'Continental average',
-        'state': 'is-mid',
-        'image': 'assets/images/gallery/andrei-khrutskii/1.webp',
-        'alt': 'Continental average atmosphere preview',
-        'chips': { 'beta_e': '0.075', 'beta_s': '0.06938', 'beta_a': '0.00563', 'ssa': '0.925' }
-    },
-    {
-        'label': 'Continental polluted',
-        'state': 'is-mid',
-        'image': 'assets/images/gallery/roma-likholob/1.webp',
-        'alt': 'Continental polluted atmosphere preview',
-        'chips': { 'beta_e': '0.175', 'beta_s': '0.15610', 'beta_a': '0.01890', 'ssa': '0.892' }
-    },
-    {
-        'label': 'Urban',
-        'state': 'is-active',
-        'image': 'assets/images/gallery/vincent-mactiernan/1.webp',
-        'alt': 'Urban atmosphere preview',
-        'chips': { 'beta_e': '0.353', 'beta_s': '0.28840', 'beta_a': '0.06460', 'ssa': '0.817' }
-    },
-    {
-        'label': 'Desert',
-        'state': 'is-mid',
-        'image': 'assets/images/gallery/jukka-lehto/1.webp',
-        'alt': 'Desert atmosphere preview',
-        'chips': { 'beta_e': '0.145', 'beta_s': '0.12876', 'beta_a': '0.01624', 'ssa': '0.888' }
-    },
-    {
-        'label': 'Maritime clean',
-        'state': 'is-faint',
-        'image': 'assets/images/gallery/wolfgang-pereira/1.webp',
-        'alt': 'Maritime clean atmosphere preview',
-        'chips': { 'beta_e': '0.090', 'beta_s': '0.08973', 'beta_a': '0.00027', 'ssa': '0.997' }
-    },
-    {
-        'label': 'Maritime polluted',
-        'state': 'is-mid',
-        'image': 'assets/images/gallery/scott-warren/1.webp',
-        'alt': 'Maritime polluted atmosphere preview',
-        'chips': { 'beta_e': '0.115', 'beta_s': '0.11213', 'beta_a': '0.00288', 'ssa': '0.975' }
-    },
-    {
-        'label': 'Maritime tropical',
-        'state': 'is-mid',
-        'image': 'assets/images/gallery/ilmari-kumpunen/1.webp',
-        'alt': 'Maritime tropical atmosphere preview',
-        'chips': { 'beta_e': '0.043', 'beta_s': '0.04291', 'beta_a': '0.00009', 'ssa': '0.998' }
+        'image': 'assets/images/features/opac/antarctic.webp',
+        'alt': 'Antarctic OPAC atmosphere preview',
+        'chips': { 'beta_e': '0.011', 'beta_s': '0.01100', 'beta_a': '0.00000', 'ssa': '1.000' }
     },
     {
         'label': 'Arctic',
         'state': 'is-faint',
-        'image': 'assets/images/gallery/petra-trebjesanin/1.webp',
-        'alt': 'Arctic atmosphere preview',
+        'image': 'assets/images/features/opac/arctic.webp',
+        'alt': 'Arctic OPAC atmosphere preview',
         'chips': { 'beta_e': '0.023', 'beta_s': '0.02040', 'beta_a': '0.00260', 'ssa': '0.887' }
     },
     {
-        'label': 'Antarctic',
+        'label': 'Maritime clean',
         'state': 'is-faint',
-        'image': 'assets/images/gallery/noely-ryan/1.webp',
-        'alt': 'Antarctic atmosphere preview',
-        'chips': { 'beta_e': '0.011', 'beta_s': '0.01100', 'beta_a': '0.00000', 'ssa': '1.000' }
+        'image': 'assets/images/features/opac/maritime-clean.webp',
+        'alt': 'Maritime clean OPAC atmosphere preview',
+        'chips': { 'beta_e': '0.090', 'beta_s': '0.08973', 'beta_a': '0.00027', 'ssa': '0.997' }
     },
     {
-        'label': 'Mineral transported',
+        'label': 'Continental clean',
+        'state': 'is-mid',
+        'image': 'assets/images/features/opac/continental-clean.webp',
+        'alt': 'Continental clean OPAC atmosphere preview',
+        'chips': { 'beta_e': '0.026', 'beta_s': '0.02527', 'beta_a': '0.00073', 'ssa': '0.972' }
+    },
+    {
+        'label': 'Maritime tropical',
+        'state': 'is-mid',
+        'image': 'assets/images/features/opac/maritime-tropical.webp',
+        'alt': 'Maritime tropical OPAC atmosphere preview',
+        'chips': { 'beta_e': '0.043', 'beta_s': '0.04291', 'beta_a': '0.00009', 'ssa': '0.998' }
+    },
+    {
+        'label': 'Continental average',
+        'state': 'is-active',
+        'image': 'assets/images/features/opac/continental-average.webp',
+        'alt': 'Continental average OPAC atmosphere preview',
+        'chips': { 'beta_e': '0.075', 'beta_s': '0.06938', 'beta_a': '0.00563', 'ssa': '0.925' }
+    },
+    {
+        'label': 'Maritime polluted',
+        'state': 'is-mid',
+        'image': 'assets/images/features/opac/maritime-polluted.webp',
+        'alt': 'Maritime polluted OPAC atmosphere preview',
+        'chips': { 'beta_e': '0.115', 'beta_s': '0.11213', 'beta_a': '0.00288', 'ssa': '0.975' }
+    },
+    {
+        'label': 'Desert',
+        'state': 'is-mid',
+        'image': 'assets/images/features/opac/desert.webp',
+        'alt': 'Desert OPAC atmosphere preview',
+        'chips': { 'beta_e': '0.145', 'beta_s': '0.12876', 'beta_a': '0.01624', 'ssa': '0.888' }
+    },
+    {
+        'label': 'Continental polluted',
         'state': 'is-faint',
-        'image': 'assets/images/gallery/jan-sarbort/1.webp',
-        'alt': 'Mineral transported atmosphere preview',
-        'chips': { 'beta_e': '0.064', 'beta_s': '0.05357', 'beta_a': '0.01043', 'ssa': '0.837' }
+        'image': 'assets/images/features/opac/continental-polluted.webp',
+        'alt': 'Continental polluted OPAC atmosphere preview',
+        'chips': { 'beta_e': '0.175', 'beta_s': '0.15610', 'beta_a': '0.01890', 'ssa': '0.892' }
+    },
+    {
+        'label': 'Urban',
+        'state': 'is-faint',
+        'image': 'assets/images/features/opac/urban.webp',
+        'alt': 'Urban OPAC atmosphere preview',
+        'chips': { 'beta_e': '0.353', 'beta_s': '0.28840', 'beta_a': '0.06460', 'ssa': '0.817' }
     }
 ] %}
 
-{% set pollution_active = pollution_types[3] %}
+{% set pollution_active = pollution_types[5] %}
 
 {% set secondary_features = [
     {

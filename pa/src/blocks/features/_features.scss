@@ -3,8 +3,7 @@
         @extend .h2;
         font-size: 50px;
         line-height: 1.2;
-        font-weight: 500;
-        letter-spacing: -0.02em;
+        letter-spacing: 0;
         padding: 0 0 32px;
 
         @include respond-below(sm) {
@@ -15,7 +14,7 @@
     }
 
     &__stat {
-        font-weight: 500;
+        font-weight: 400;
         display: inline-block;
         margin-right: 12px;
         background: linear-gradient(90deg, #5b61ff 0%, #9454ff 52%, #6a63ff 100%);
@@ -103,8 +102,9 @@
         max-width: 239px;
         font-size: 14px;
         line-height: 1.4;
-        font-weight: 500;
+        font-weight: 400;
         color: #ffffff;
+        opacity: 0.7;
 
         &::before {
             content: "";
@@ -129,13 +129,6 @@
             height: 100%;
             display: block;
             object-fit: cover;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.32) 100%);
         }
     }
 
@@ -209,7 +202,7 @@
         width: 831px;
         height: 439px;
         z-index: 1;
-        background: url("../images/features/geopos.svg") 0 0 / 100% 100% no-repeat;
+        background: url("../images/features/position-desktop.webp") 0 0 / 100% 100% no-repeat;
         pointer-events: none;
     }
 
@@ -260,13 +253,8 @@
         }
 
         .feature-card__visual--image {
-            picture {
-                display: block;
-                width: 100%;
-                height: 100%;
-            }
-
-            img {
+            img,
+            video {
                 object-position: center;
             }
         }
@@ -280,7 +268,7 @@
         .feature-card__body {
             font-size: 14px;
             line-height: 1.4;
-            font-weight: 500;
+            font-weight: 400;
             color: rgba(255, 255, 255, 0.5);
         }
 
@@ -358,7 +346,7 @@
         }
 
         .feature-card__visual--image::after {
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.42) 100%);
+            //background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.42) 100%);
         }
 
         .feature-card__title,
@@ -418,14 +406,12 @@
         margin-bottom: 0;
         font-size: 24px;
         line-height: 1.2;
-        font-weight: 500;
     }
 
     &__aside-title {
         margin-bottom: 38px;
         font-size: 24px;
         line-height: 1.2;
-        font-weight: 500;
         color: rgba(255, 255, 255, 0.5);
     }
 
@@ -433,7 +419,6 @@
         max-width: 155px;
         font-size: 12px;
         line-height: 1.2;
-        font-weight: 500;
     }
 
     &__pollution-panel {
@@ -638,7 +623,7 @@
             max-width: 292px;
             font-size: 14px;
             line-height: 1.4;
-            font-weight: 500;
+            font-weight: 400;
             color: rgba(255, 255, 255, 0.5);
         }
 

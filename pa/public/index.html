@@ -52,6 +52,73 @@
     <h2 class="overview__title">Feels Like Magic.</h2>
 
     <div class="overview__card">
+        <div class="overview__points" role="tablist" aria-label="Overview features">
+                            <button
+                    class="overview__point overview__point--active"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                    style="width: 114px;"
+                    data-overview-tab
+                    data-description="Watch atmosphere and lighting update instantly as you work in the viewport."
+                                            data-video="assets/videos/interaction.mp4"
+                        data-video-webm="assets/videos/interaction.webm"
+                        data-poster="assets/videos/interaction-poster.jpg"
+                                    >
+                    Realtime
+                </button>
+                            <button
+                    class="overview__point "
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    style="width: 209px;"
+                    data-overview-tab
+                    data-description="Familiar, approachable controls that make complex skies feel effortless to shape."
+                                            data-video="assets/videos/controls.mp4"
+                        data-video-webm="assets/videos/controls.webm"
+                        data-poster="assets/videos/controls-poster.jpg"
+                                    >
+                    Intuitive Controls
+                </button>
+                            <button
+                    class="overview__point "
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    style="width: 180px;"
+                    data-overview-tab
+                    data-description="Built on real atmospheric science so light, haze, and color behave naturally."
+                                            data-image="assets/images/overview/overview-physics.webp"
+                                    >
+                    Physics Based
+                </button>
+                            <button
+                    class="overview__point "
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    style="width: 202px;"
+                    data-overview-tab
+                    data-description="Dig into deeper parameters whenever you need precise, technical control."
+                                            data-image="assets/images/overview/overview-advanced.webp"
+                                    >
+                    Advanced Mode
+                </button>
+                            <button
+                    class="overview__point "
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    style="width: 164px;"
+                    data-overview-tab
+                    data-description="Creative overrides that let you bend reality for the look you have in mind."
+                                            data-image="assets/images/overview/overview-artistic.webp"
+                                    >
+                    Artistic Tools
+                </button>
+                    </div>
+
         <div class="overview__media">
             <video
                 class="overview__video is-active"
@@ -74,67 +141,9 @@
             >
         </div>
 
-        <div class="overview__points" role="tablist" aria-label="Overview features">
-                            <button
-                    class="overview__point overview__point--active"
-                    type="button"
-                    role="tab"
-                    aria-selected="true"
-                    style="width: 114px;"
-                    data-overview-tab
-                                            data-video="assets/videos/interaction.mp4"
-                        data-video-webm="assets/videos/interaction.webm"
-                        data-poster="assets/videos/interaction-poster.jpg"
-                                    >
-                    Realtime
-                </button>
-                            <button
-                    class="overview__point "
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    style="width: 209px;"
-                    data-overview-tab
-                                            data-video="assets/videos/controls.mp4"
-                        data-video-webm="assets/videos/controls.webm"
-                        data-poster="assets/videos/controls-poster.jpg"
-                                    >
-                    Intuitive Controls
-                </button>
-                            <button
-                    class="overview__point "
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    style="width: 180px;"
-                    data-overview-tab
-                                            data-image="assets/images/overview/overview-physics.webp"
-                                    >
-                    Physics Based
-                </button>
-                            <button
-                    class="overview__point "
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    style="width: 202px;"
-                    data-overview-tab
-                                            data-image="assets/images/overview/overview-advanced.webp"
-                                    >
-                    Advanced Mode
-                </button>
-                            <button
-                    class="overview__point "
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    style="width: 164px;"
-                    data-overview-tab
-                                            data-image="assets/images/overview/overview-artistic.webp"
-                                    >
-                    Artistic Tools
-                </button>
-                    </div>
+        <p class="overview__description" data-overview-description>
+            Watch atmosphere and lighting update instantly as you work in the viewport.
+        </p>
     </div>
 </div>
         
@@ -214,39 +223,20 @@
             </div>
 
             <div class="feature-card__visual feature-card__visual--image">
-                <picture>
-                    <source type="image/webp" srcset="assets/images/features/interaction-desktop.webp">
-                    <img src="assets/images/features/interaction-desktop.jpg" alt="Object interaction preview">
-                </picture>
+                <video autoplay muted loop playsinline preload="metadata" poster="assets/videos/interaction-poster.jpg" aria-label="Object interaction preview">
+                    <source src="assets/videos/object_interaction.webm" type="video/webm">
+                </video>
             </div>
-        </article>
-
-        <article class="feature-card feature-card--refraction">
-            <div class="feature-card__copy">
-                <h3 class="feature-card__title">Atmospheric refraction</h3>
-                <p class="feature-card__subtitle">For true realism</p>
-            </div>
-
-            <div class="feature-card__visual feature-card__visual--image">
-                <picture>
-                    <source media="(max-width: 467px)" srcset="assets/images/features/refraction-mobile.jpg">
-                    <img src="assets/images/features/refraction-desktop.jpg" alt="Atmospheric refraction preview">
-                </picture>
-            </div>
-
-            <p class="feature-card__body">
-                The secret to photorealism isn't the big things. It's the subtle physics your eye learned to trust.
-            </p>
         </article>
 
         <div class="feature-pair">
                             <article class="feature-card feature-card--small feature-card--stars">
                     <div class="feature-card__visual feature-card__visual--image">
                                                     <picture>
-                                <source media="(max-width: 467px)" type="image/webp" srcset="assets/images/features/stars-mobile.webp">
-                                <source media="(max-width: 467px)" srcset="assets/images/features/stars-mobile.jpg">
-                                <source type="image/webp" srcset="assets/images/features/stars-desktop.webp">
-                                <img src="assets/images/features/stars-desktop.jpg" alt="Stars preview">
+                                <source media="(max-width: 467px)" type="image/webp" srcset="assets/images/features/stars.webp">
+                                <source media="(max-width: 467px)" srcset="assets/images/features/stars.jpg">
+                                <source type="image/webp" srcset="assets/images/features/stars.webp">
+                                <img src="assets/images/features/stars.jpg" alt="Stars preview">
                             </picture>
                                             </div>
 

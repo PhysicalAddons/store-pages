@@ -4,6 +4,7 @@
     {
         'label': 'Realtime',
         'width': 114,
+        'description': 'Watch atmosphere and lighting update instantly as you work in the viewport.',
         'video': 'assets/videos/interaction.mp4',
         'video_webm': 'assets/videos/interaction.webm',
         'poster': 'assets/videos/interaction-poster.jpg'
@@ -11,6 +12,7 @@
     {
         'label': 'Intuitive Controls',
         'width': 209,
+        'description': 'Familiar, approachable controls that make complex skies feel effortless to shape.',
         'video': 'assets/videos/controls.mp4',
         'video_webm': 'assets/videos/controls.webm',
         'poster': 'assets/videos/controls-poster.jpg'
@@ -18,16 +20,19 @@
     {
         'label': 'Physics Based',
         'width': 180,
+        'description': 'Built on real atmospheric science so light, haze, and color behave naturally.',
         'image': 'assets/images/overview/overview-physics.webp'
     },
     {
         'label': 'Advanced Mode',
         'width': 202,
+        'description': 'Dig into deeper parameters whenever you need precise, technical control.',
         'image': 'assets/images/overview/overview-advanced.webp'
     },
     {
         'label': 'Artistic Tools',
         'width': 164,
+        'description': 'Creative overrides that let you bend reality for the look you have in mind.',
         'image': 'assets/images/overview/overview-artistic.webp'
     }
 ] %}
@@ -38,6 +43,29 @@
     <h2 class="overview__title">Feels Like Magic.</h2>
 
     <div class="overview__card">
+        <div class="overview__points" role="tablist" aria-label="Overview features">
+            {% for point in overview_points %}
+                <button
+                    class="overview__point {{ loop.first ? 'overview__point--active' : '' }}"
+                    type="button"
+                    role="tab"
+                    aria-selected="{{ loop.first ? 'true' : 'false' }}"
+                    style="width: {{ point.width }}px;"
+                    data-overview-tab
+                    data-description="{{ point.description }}"
+                    {% if point.video %}
+                        data-video="{{ point.video }}"
+                        data-video-webm="{{ point.video_webm }}"
+                        data-poster="{{ point.poster }}"
+                    {% else %}
+                        data-image="{{ point.image }}"
+                    {% endif %}
+                >
+                    {{ point.label }}
+                </button>
+            {% endfor %}
+        </div>
+
         <div class="overview__media">
             <video
                 class="overview__video is-active"
@@ -60,26 +88,8 @@
             >
         </div>
 
-        <div class="overview__points" role="tablist" aria-label="Overview features">
-            {% for point in overview_points %}
-                <button
-                    class="overview__point {{ loop.first ? 'overview__point--active' : '' }}"
-                    type="button"
-                    role="tab"
-                    aria-selected="{{ loop.first ? 'true' : 'false' }}"
-                    style="width: {{ point.width }}px;"
-                    data-overview-tab
-                    {% if point.video %}
-                        data-video="{{ point.video }}"
-                        data-video-webm="{{ point.video_webm }}"
-                        data-poster="{{ point.poster }}"
-                    {% else %}
-                        data-image="{{ point.image }}"
-                    {% endif %}
-                >
-                    {{ point.label }}
-                </button>
-            {% endfor %}
-        </div>
+        <p class="overview__description" data-overview-description>
+            {{ overview_active.description }}
+        </p>
     </div>
 </div>

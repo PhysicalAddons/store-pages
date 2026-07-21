@@ -192,7 +192,9 @@ body {
 }
 .hero .bigBlock {
   background: #000000;
-  background-image: url("/assets/images/heroBackground.webp");
+  background-image: url("/assets/images/hero.webp");
+  background-image: -webkit-image-set(url("/assets/images/hero.webp") 1x, url("/assets/images/hero.webp") 2x);
+  background-image: image-set(url("/assets/images/hero.webp") 1x, url("/assets/images/hero.webp") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -204,7 +206,6 @@ body {
   font-size: 40px;
   line-height: 120%;
   text-align: center;
-  letter-spacing: -0.03em;
   margin-bottom: 8px;
   color: white;
 }
@@ -218,7 +219,6 @@ body {
   font-size: 60px;
   line-height: 120%;
   text-align: center;
-  letter-spacing: -0.03em;
   margin-bottom: 198px;
   color: white;
 }
@@ -241,7 +241,7 @@ body {
 }
 .hero .bigBlock .logoWall, .hero .bigBlock .logoWall2 {
   display: block;
-  width: 100%;
+  width: 92%;
   margin: 0 auto;
 }
 .hero .bigBlock .logoWall2 {
@@ -272,8 +272,8 @@ body {
     border-radius: 12px;
   }
   .hero .bigBlock .heroTitle {
-    font-size: 28px;
-    margin-bottom: 6px;
+    font-size: 20px;
+    margin-bottom: 8px;
   }
   .hero .bigBlock .heroTitle sup {
     font-size: 17px;
@@ -288,22 +288,13 @@ body {
   .hero .bigBlock .video {
     margin-bottom: 40px;
   }
-  .hero .bigBlock .logoWall {
-    display: none;
-  }
-  .hero .bigBlock .logoWall2 {
-    display: block;
-    padding-right: 5%;
-    padding-left: 5%;
-    box-sizing: border-box;
-  }
 }
 
 .overview__title {
   font-size: 50px;
   line-height: 1.2;
   font-weight: 500;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   padding: 0 0 32px;
 }
 @media (max-width: 467px) {
@@ -327,9 +318,10 @@ body {
   justify-content: flex-start;
   gap: 4px;
   position: absolute;
-  left: 555px;
-  top: 106px;
+  left: 32px;
+  top: 82px;
   min-width: 0;
+  z-index: 1;
 }
 .overview__point {
   position: relative;
@@ -376,31 +368,24 @@ body {
 }
 .overview__media {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  right: 0;
+  top: 0;
   width: 507px;
-  height: 404px;
+  height: 370px;
   display: block;
   overflow: hidden;
-  border-top-right-radius: 32px;
+  border: 0;
+  border-left: 16px solid #181818;
+  border-bottom: 16px solid #181818;
+  border-bottom-left-radius: 24px;
   box-sizing: border-box;
-}
-.overview__media::after {
-  content: "";
-  position: absolute;
-  left: -6px;
-  top: 0;
-  width: 513px;
-  height: 410px;
-  background: url("../images/overview/overview-frame-desktop.svg") 0 0/100% 100% no-repeat;
-  pointer-events: none;
 }
 .overview__media img,
 .overview__media video {
   position: absolute;
-  inset: -1px;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
+  inset: 0;
+  width: 100%;
+  height: 100%;
   max-width: none;
   object-fit: cover;
   object-position: center center;
@@ -412,19 +397,65 @@ body {
 .overview__media video.is-active {
   opacity: 1;
 }
-@media (max-width: 467px) {
+.overview__description {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 507px;
+  margin: 0;
+  padding: 32px 24px 32px 16px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  transition: opacity 180ms ease;
+  text-wrap: pretty;
+}
+.overview__description.is-fading {
+  opacity: 0;
+}
+@media (max-width: 799px) {
   .overview__title {
     font-size: 40px;
     line-height: 1.2;
   }
   .overview__card {
-    min-height: 580px;
+    display: flex;
+    flex-direction: column;
     height: auto;
+    min-height: 0;
+    padding: 0 0 32px;
     border-radius: 16px;
   }
+  .overview__media {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    order: 1;
+    width: calc(100% - 32px);
+    margin-left: 32px;
+    height: auto;
+    aspect-ratio: 348/264;
+  }
+  .overview__description {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    order: 2;
+    width: auto;
+    margin: 0;
+    padding: 16px 32px 8px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
   .overview__points {
-    left: 32px;
-    top: 340px;
+    position: relative;
+    left: auto;
+    top: auto;
+    order: 3;
+    padding: 32px 32px 0;
     gap: 2px;
   }
   .overview__point {
@@ -436,28 +467,12 @@ body {
   .overview__point::before {
     height: 40px;
   }
-  .overview__media {
-    left: 32px;
-    top: 0;
-    bottom: auto;
-    width: calc(100% - 32px);
-    height: auto;
-    aspect-ratio: 348/263.8267;
-  }
-  .overview__media::after {
-    left: -4px;
-    top: 0;
-    width: 352px;
-    height: 268px;
-    background-image: url("../images/overview/overview-frame-mobile.svg");
-  }
 }
 
 .features__title {
   font-size: 50px;
   line-height: 1.2;
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   padding: 0 0 32px;
 }
 @media (max-width: 467px) {
@@ -468,7 +483,7 @@ body {
   }
 }
 .features__stat {
-  font-weight: 500;
+  font-weight: 400;
   display: inline-block;
   margin-right: 12px;
   background: linear-gradient(90deg, #5b61ff 0%, #9454ff 52%, #6a63ff 100%);
@@ -550,8 +565,9 @@ body {
   max-width: 239px;
   font-size: 14px;
   line-height: 1.4;
-  font-weight: 500;
+  font-weight: 400;
   color: #ffffff;
+  opacity: 0.7;
 }
 .feature-card__body--right::before {
   content: "";
@@ -572,12 +588,6 @@ body {
   height: 100%;
   display: block;
   object-fit: cover;
-}
-.feature-card__visual--image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.32) 100%);
 }
 .feature-card--atmosphere .feature-card__visual--image img {
   object-position: center 58%;
@@ -633,7 +643,7 @@ body {
   width: 831px;
   height: 439px;
   z-index: 1;
-  background: url("../images/features/geopos.svg") 0 0/100% 100% no-repeat;
+  background: url("../images/features/position-desktop.webp") 0 0/100% 100% no-repeat;
   pointer-events: none;
 }
 .feature-card__position-panel {
@@ -675,12 +685,8 @@ body {
 .feature-card--interaction .feature-card__copy {
   max-width: none;
 }
-.feature-card--interaction .feature-card__visual--image picture {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.feature-card--interaction .feature-card__visual--image img {
+.feature-card--interaction .feature-card__visual--image img,
+.feature-card--interaction .feature-card__visual--image video {
   object-position: center;
 }
 .feature-card--refraction .feature-card__copy {
@@ -689,7 +695,7 @@ body {
 .feature-card--refraction .feature-card__body {
   font-size: 14px;
   line-height: 1.4;
-  font-weight: 500;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
 }
 .feature-card--refraction .feature-card__visual--image::after {
@@ -739,9 +745,6 @@ body {
   width: 100%;
   height: 100%;
 }
-.feature-card--small .feature-card__visual--image::after {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.42) 100%);
-}
 .feature-card--small .feature-card__title,
 .feature-card--small .feature-card__subtitle {
   font-size: 32px;
@@ -781,20 +784,17 @@ body {
   margin-bottom: 0;
   font-size: 24px;
   line-height: 1.2;
-  font-weight: 500;
 }
 .feature-card__aside-title {
   margin-bottom: 38px;
   font-size: 24px;
   line-height: 1.2;
-  font-weight: 500;
   color: rgba(255, 255, 255, 0.5);
 }
 .feature-card__aside-text {
   max-width: 155px;
   font-size: 12px;
   line-height: 1.2;
-  font-weight: 500;
 }
 .feature-card__pollution-panel {
   position: absolute;
@@ -975,7 +975,7 @@ body {
     max-width: 292px;
     font-size: 14px;
     line-height: 1.4;
-    font-weight: 500;
+    font-weight: 400;
     color: rgba(255, 255, 255, 0.5);
   }
   .feature-card__visual {
@@ -2518,42 +2518,56 @@ body {
 }
 .benefit-card .image3 {
   background-image: url("/assets/images/benefits/benefits-animation.webp");
+  background-image: -webkit-image-set(url("/assets/images/benefits/benefits-animation.webp") 1x, url("/assets/images/benefits/benefits-animation2x.webp") 2x);
+  background-image: image-set(url("/assets/images/benefits/benefits-animation.webp") 1x, url("/assets/images/benefits/benefits-animation2x.webp") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .benefit-card.image4 {
   background-image: url("/assets/images/benefits/benefits-freedom.webp");
+  background-image: -webkit-image-set(url("/assets/images/benefits/benefits-freedom.webp") 1x, url("/assets/images/benefits/benefits-freedom2x.webp") 2x);
+  background-image: image-set(url("/assets/images/benefits/benefits-freedom.webp") 1x, url("/assets/images/benefits/benefits-freedom2x.webp") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .benefit-card .image5 {
   background-image: url("/assets/images/benefits/presets.webm");
+  background-image: -webkit-image-set(url("/assets/images/benefits/presets.webm") 1x, url("/assets/images/benefits/presets.webm") 2x);
+  background-image: image-set(url("/assets/images/benefits/presets.webm") 1x, url("/assets/images/benefits/presets.webm") 2x);
   background-repeat: no-repeat;
   background-position: right 0px top 0px;
   background-size: cover;
 }
 .benefit-card .image6 {
   background-image: url("/assets/images/benefits/benefits-eeveecycles.webp");
+  background-image: -webkit-image-set(url("/assets/images/benefits/benefits-eeveecycles.webp") 1x, url("/assets/images/benefits/benefits-eeveecycles2x.webp") 2x);
+  background-image: image-set(url("/assets/images/benefits/benefits-eeveecycles.webp") 1x, url("/assets/images/benefits/benefits-eeveecycles2x.webp") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .benefit-card .image7 {
   background-image: url("/assets/images/benefits/benefits-values.webp");
+  background-image: -webkit-image-set(url("/assets/images/benefits/benefits-values.webp") 1x, url("/assets/images/benefits/benefits-values2x.webp") 2x);
+  background-image: image-set(url("/assets/images/benefits/benefits-values.webp") 1x, url("/assets/images/benefits/benefits-values2x.webp") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .benefit-card .image8 {
   background-image: url("/assets/images/benefits/benefits-aces.webp");
+  background-image: -webkit-image-set(url("/assets/images/benefits/benefits-aces.webp") 1x, url("/assets/images/benefits/benefits-aces2x.webp") 2x);
+  background-image: image-set(url("/assets/images/benefits/benefits-aces.webp") 1x, url("/assets/images/benefits/benefits-aces2x.webp") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .benefit-card .imageDemo {
   background-image: url("/assets/images/benefits/benefits-demo.webp");
+  background-image: -webkit-image-set(url("/assets/images/benefits/benefits-demo.webp") 1x, url("/assets/images/benefits/benefits-demo2x.webp") 2x);
+  background-image: image-set(url("/assets/images/benefits/benefits-demo.webp") 1x, url("/assets/images/benefits/benefits-demo2x.webp") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2772,21 +2786,33 @@ body {
 }
 .testimonial-card.imageBen {
   background-image: url("/assets/images/testimonials/ben.webp");
+  background-image: -webkit-image-set(url("/assets/images/testimonials/ben.webp") 1x, url("/assets/images/testimonials/ben2x.webp") 2x);
+  background-image: image-set(url("/assets/images/testimonials/ben.webp") 1x, url("/assets/images/testimonials/ben2x.webp") 2x);
 }
 .testimonial-card.imageRenault {
   background-image: url("/assets/images/testimonials/renault.webp");
+  background-image: -webkit-image-set(url("/assets/images/testimonials/renault.webp") 1x, url("/assets/images/testimonials/renault2x.webp") 2x);
+  background-image: image-set(url("/assets/images/testimonials/renault.webp") 1x, url("/assets/images/testimonials/renault2x.webp") 2x);
 }
 .testimonial-card.imageTralie {
   background-image: url("/assets/images/testimonials/james.webp");
+  background-image: -webkit-image-set(url("/assets/images/testimonials/james.webp") 1x, url("/assets/images/testimonials/james2x.webp") 2x);
+  background-image: image-set(url("/assets/images/testimonials/james.webp") 1x, url("/assets/images/testimonials/james2x.webp") 2x);
 }
 .testimonial-card.imageSubin {
   background-image: url("/assets/images/testimonials/subin.webp");
+  background-image: -webkit-image-set(url("/assets/images/testimonials/subin.webp") 1x, url("/assets/images/testimonials/subin2x.webp") 2x);
+  background-image: image-set(url("/assets/images/testimonials/subin.webp") 1x, url("/assets/images/testimonials/subin2x.webp") 2x);
 }
 .testimonial-card.imageScott {
   background-image: url("/assets/images/testimonials/scott.webp");
+  background-image: -webkit-image-set(url("/assets/images/testimonials/scott.webp") 1x, url("/assets/images/testimonials/scott2x.webp") 2x);
+  background-image: image-set(url("/assets/images/testimonials/scott.webp") 1x, url("/assets/images/testimonials/scott2x.webp") 2x);
 }
 .testimonial-card.imageRyan {
   background-image: url("/assets/images/testimonials/ryan.webp");
+  background-image: -webkit-image-set(url("/assets/images/testimonials/ryan.webp") 1x, url("/assets/images/testimonials/ryan2x.webp") 2x);
+  background-image: image-set(url("/assets/images/testimonials/ryan.webp") 1x, url("/assets/images/testimonials/ryan2x.webp") 2x);
 }
 
 .bundle {

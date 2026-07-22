@@ -234,6 +234,11 @@
 			left: 12px;
 		}
 
+		&__tile-link,
+		&__tile-author {
+			pointer-events: none;
+		}
+
 		&__cta {
 			grid-row: auto;
 			min-height: 188px;

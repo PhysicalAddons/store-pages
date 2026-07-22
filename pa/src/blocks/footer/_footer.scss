@@ -1,18 +1,19 @@
 .footer {
     margin-bottom: 128px;
-    padding: 48px 40px 24px;
+    padding: 32px;
     border-radius: 12px;
-    background: #0d0d0d;
-    color: rgba(#ffffff, 0.7);
-    font-size: 14px;
+    background: #f2f2f2;
+    color: rgba(#000000, 0.7);
+    font-size: 12px;
+    letter-spacing: 0;
     line-height: 1.5;
 
     &__top {
         display: flex;
         justify-content: space-between;
-        gap: 48px;
+        gap: 64px;
         flex-wrap: wrap;
-        padding-bottom: 40px;
+        padding-bottom: 32px;
     }
 
     &__brand {
@@ -20,21 +21,23 @@
     }
 
     &__brand-name {
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: -0.01em;
-        color: #ffffff;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 0;
+        color: #000000;
     }
 
     &__tagline {
         margin: 12px 0 24px;
-        font-size: 13px;
-        color: rgba(#ffffff, 0.5);
+        font-size: 12px;
+        letter-spacing: 0;
+        color: rgba(#000000, 0.5);
     }
 
     &__socials {
         display: flex;
         gap: 16px;
+        margin-bottom: 8px;
 
         a {
             display: inline-flex;
@@ -47,8 +50,6 @@
         img {
             width: 24px;
             height: 24px;
-            // Icons are black; invert for the dark surface.
-            filter: invert(1);
         }
     }
 
@@ -67,24 +68,26 @@
         h4 {
             margin: 0 0 6px;
             font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: rgba(#ffffff, 0.4);
+            font-weight: 400;
+            letter-spacing: 0;
+            color: rgba(#000000, 0.4);
         }
 
         a {
-            color: rgba(#ffffff, 0.75);
+            font-size: 12px;
+            letter-spacing: 0;
+            color: rgba(#000000, 0.75);
             text-decoration: none;
 
             &:hover {
-                color: #ffffff;
+                color: #000000;
             }
         }
     }
 
     &__muted {
         opacity: 0.35;
+        display: none;
     }
 
     &__bottom {
@@ -93,14 +96,13 @@
         gap: 16px;
         flex-wrap: wrap;
         padding-top: 24px;
-        border-top: 1px solid rgba(#ffffff, 0.1);
+        border-top: 1px solid rgba(#000000, 0.1);
         font-size: 12px;
-        color: rgba(#ffffff, 0.4);
+        letter-spacing: 0;
+        color: rgba(#000000, 0.4);
     }
 
     @include respond-below(sm) {
-        padding: 32px 20px 20px;
-
         &__columns {
             gap: 32px;
         }

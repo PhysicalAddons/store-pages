@@ -1,0 +1,73 @@
+{% set requirements = {
+    title: 'Requirements',
+    doc_link: 'https://www.physicaladdons.com/psa/',
+    columns: [
+        { title: 'Atmosphere only' },
+        { title: 'Clouds' }
+    ],
+    rows: [
+        {
+            label: 'Specs',
+            cells: [
+                { text: 'Any GPU (even integrated) that runs Blender 5.2 comfortably, laptops included.' },
+                { text: 'Desktop-class GPU. <br>RTX 3060 / RX 6600 or better.' }
+            ]
+        },
+        {
+            label: 'What to expect',
+            cells: [
+                { text: 'Smooth. Drag the sun, scrub time, it keeps up. Runs almost anywhere. Sky, sun, moon, planets and stars update in real time even on modest laptops.' },
+                {
+                    text: 'Bring a real GPU. Volumetric clouds are the heaviest part of the add-on.<br><br>Interactive, not always smooth — clouds are heavy even for high-end GPUs at higher quality settings. Navigate on Low quality with Temporal Accumulation on: the image refines to full quality the moment the camera rests. Higher presets are for final frames, not for flying around.',
+                    note: 'We are currently working on performance optimisation to allow smooth workflow for clouds also on slower GPU models.'
+                }
+            ]
+        }
+    ]
+} %}
+
+{% macro req_cell(cell) %}
+    <p class="requirements__text">{{ cell.text|raw }}</p>
+    {% if cell.note is defined %}
+        <p class="requirements__note">
+            <span class="requirements__note-arrow">↳</span>
+            <span class="requirements__note-text">{{ cell.note|raw }}</span>
+        </p>
+    {% endif %}
+{% endmacro %}
+
+{% import _self as req_macros %}
+
+<div class="requirements block" id="requirements">
+    <h2 class="requirements__title">{{ requirements.title }}</h2>
+
+    <div class="requirements__table">
+        <div class="requirements__cell requirements__cell--corner" aria-hidden="true"></div>
+        {% for col in requirements.columns %}
+            <div class="requirements__cell requirements__head">{{ col.title }}</div>
+        {% endfor %}
+
+        {% for row in requirements.rows %}
+            <div class="requirements__cell requirements__label">{{ row.label }}</div>
+            {% for cell in row.cells %}
+                <div class="requirements__cell requirements__body">{{ req_macros.req_cell(cell) }}</div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+    <div class="requirements__mobile">
+        {% for i, col in requirements.columns %}
+            <section class="requirements__mcard">
+                <h3 class="requirements__mtitle">{{ col.title }}</h3>
+                <div class="requirements__mgrid">
+                    {% for row in requirements.rows %}
+                        <div class="requirements__mcell requirements__mlabel">{{ row.label }}</div>
+                        <div class="requirements__mcell requirements__mbody">{{ req_macros.req_cell(row.cells[i]) }}</div>
+                    {% endfor %}
+                </div>
+            </section>
+        {% endfor %}
+    </div>
+
+    <a class="requirements__doc" href="{{ requirements.doc_link }}" target="_blank">Documentation →</a>
+</div>

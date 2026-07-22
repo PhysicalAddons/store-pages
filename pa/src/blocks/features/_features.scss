@@ -147,8 +147,10 @@
         z-index: 2;
         pointer-events: none;
 
-        @include respond-below(sm) {
-            display: none;
+        @include respond-below(md) {
+            height: 70%;
+            bottom: 0;
+            top: auto;
         }
     }
 
@@ -158,7 +160,7 @@
         }
 
         .feature-card__subtitle {
-            white-space: nowrap;
+            //white-space: nowrap;
         }
 
         .feature-card__visual--image {
@@ -197,13 +199,14 @@
 
     &__position-orbit {
         position: absolute;
-        left: 0;
-        top: 29px;
-        width: 831px;
-        height: 439px;
+        inset: 0;
         z-index: 1;
-        background: url("../images/features/position-desktop.webp") 0 0 / 100% 100% no-repeat;
+        background: url("../images/features/position-desktop.webp") center / cover no-repeat;
         pointer-events: none;
+
+        @include respond-below(sm) {
+            background-image: url("../images/features/position-mobile.webp");
+        }
     }
 
     &__position-panel {
@@ -252,10 +255,58 @@
             max-width: none;
         }
 
+        .feature-card__body {
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
         .feature-card__visual--image {
             img,
             video {
                 object-position: center;
+                scale: 1.2;
+            }
+        }
+    }
+
+    &--seamless {
+        .feature-card__copy {
+            max-width: none;
+        }
+
+        .feature-card__body {
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .feature-card__visual--image {
+            video {
+                object-position: center;
+                scale: 1.1;
+            }
+        }
+    }
+
+    &--photorealistic {
+        .feature-card__copy {
+            max-width: none;
+        }
+
+        .feature-card__body {
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .feature-card__visual--image {
+            video {
+                object-position: center;
+                scale: 1.1;
             }
         }
     }
@@ -317,6 +368,13 @@
             right: 32px;
         }
 
+        .feature-card__body {
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
         .feature-card__visual--image {
             picture {
                 display: block;
@@ -325,7 +383,7 @@
             }
 
             img {
-                object-position: center;
+                object-position: right center;
             }
 
             &::after {
@@ -598,8 +656,8 @@
 
         &__title,
         &__subtitle {
-            font-size: 32px;
-            line-height: 38px;
+            font-size: 28px;
+            line-height: 32px;
         }
 
         &__copy {
@@ -654,18 +712,6 @@
                 background: #0f0f0f;
                 z-index: 1;
                 pointer-events: none;
-            }
-
-            .feature-card__position-orbit {
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 50px;
-                width: auto;
-                height: auto;
-                background-size: 100% auto;
-                background-position: bottom center;
-                transform: none;
             }
 
             .feature-card__position-panel {

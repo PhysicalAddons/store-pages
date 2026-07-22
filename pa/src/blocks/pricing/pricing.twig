@@ -2,18 +2,15 @@
    When promo is true, cards show price * (1 - discount) with the base price crossed out. #}
 {% set data = {
     promo: true,
-    discount: 0.25,
+    discount: 0.5,
     price_basic: 118,
     price_bundle: 170,
     rounded_price: true,
     link_basic: 'https://superhivemarket.com/products/physical-atmosphere?variant=2891&ref=875',
     link_bundle: 'https://superhivemarket.com/products/physical-atmosphere?variant=9114&ref=875',
-    preset_text: '10 Presets'
+    preset_text: '4 example files'
 } %}
 
-{# Presets row hidden for now. To restore, add back after "Commercial use":
-   { 'label': data.preset_text, 'badge': 'check' }
-#}
 {% set pricing_features = [
     {
         'label': 'User',
@@ -31,6 +28,10 @@
         'badge': 'check',
         'tooltip_title': 'Commercial use',
         'tooltip_text': 'All artworks made using our addon belong to you and can be used for commercial purposes. No need for attribution. <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">Read more about GPL license</a>'
+    },
+    {
+        'label': data.preset_text,
+        'badge': 'check'
     },
     {
         'label': 'Support',

@@ -1,7 +1,6 @@
 .upgrade {
     &__card {
         width: 554px;
-        min-height: 155px;
         margin-left: auto;
         padding: 16px;
         box-sizing: border-box;
@@ -14,7 +13,7 @@
         font-size: 24px;
         line-height: 29px;
         font-weight: 500;
-        letter-spacing: -0.02em;
+        letter-spacing: 0;
         color: #000000;
 
         sup {
@@ -22,16 +21,24 @@
             line-height: 1;
             vertical-align: top;
             position: relative;
-            top: -0.24em;
+            top: 0;
         }
     }
 
+    &__title-accent {
+        background: linear-gradient(90deg, #1457bc 0%, #36a1ff 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+
     &__copy {
-        width: 377px;
-        margin: 37px 0 0;
+        width: 480px;
+        margin: 32px 0 0;
         font-size: 12px;
-        line-height: 17px;
-        font-weight: 500;
+        line-height: 140%;
+        font-weight: 400;
         letter-spacing: 0;
         color: rgba(#000000, 0.5);
 
@@ -57,7 +64,7 @@
         &__copy {
             width: 300px;
             max-width: 100%;
-            margin-top: 43px;
+            margin-top: 24px;
         }
     }
 }

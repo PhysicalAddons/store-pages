@@ -12,10 +12,8 @@
 	<!-- Do not transfer random numbers into phone numbers -->
 	<meta name="format-detection" content="telephone=no">
 	<!-- Fonts -->
-	
-	<link href="assets/fonts/Inter-Light.woff2" type="font/woff2" crossorigin>
-	<link href="assets/fonts/Inter-Regular.woff2" type="font/woff2" crossorigin>
-	<link href="assets/fonts/Inter-Medium.woff2" type="font/woff2" crossorigin>
+	<link rel="preconnect" href="https://rsms.me/">
+	<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/vendor/jquery.fancybox.min.css">
@@ -219,7 +217,7 @@
         <article class="feature-card feature-card--interaction">
             <div class="feature-card__copy">
                 <h3 class="feature-card__title">Object interaction</h3>
-                <p class="feature-card__subtitle">Whaaaat?</p>
+                <p class="feature-card__subtitle">With your scene</p>
             </div>
 
             <div class="feature-card__visual feature-card__visual--image">
@@ -227,6 +225,10 @@
                     <source src="assets/videos/object_interaction.webm" type="video/webm">
                 </video>
             </div>
+
+            <p class="feature-card__body">
+                Clouds and atmosphere respond to objects in your scene. Real occlusion and shadows, not a flat backdrop.
+            </p>
         </article>
 
         <div class="feature-pair">
@@ -424,10 +426,10 @@
         <article class="feature-card feature-card--advanced-mode">
             <div class="feature-card__visual feature-card__visual--image">
                 <picture>
-                    <source media="(max-width: 467px)" type="image/webp" srcset="assets/images/advanced-mode/advanced-mode-mobile.webp">
-                    <source media="(max-width: 467px)" srcset="assets/images/advanced-mode/advanced-mode-mobile.jpg">
-                    <source type="image/webp" srcset="assets/images/advanced-mode/advanced-mode-desktop.webp">
-                    <img src="assets/images/advanced-mode/advanced-mode-desktop.jpg" alt="Stupidly Advanced Mode preview">
+                    <source media="(max-width: 467px)" type="image/webp" srcset="assets/images/features/advanced-mobile.webp">
+                    <source media="(max-width: 467px)" srcset="assets/images/features/advanced-mobile.jpg">
+                    <source type="image/webp" srcset="assets/images/features/advanced-desktop.webp">
+                    <img src="assets/images/features/advanced-desktop.jpg" alt="Stupidly Advanced Mode preview">
                 </picture>
             </div>
 
@@ -438,6 +440,46 @@
                 </h3>
                 <p class="feature-card__subtitle">For full control</p>
             </div>
+
+            <p class="feature-card__body">
+                Every physics parameter unlocked. Dial in scattering, ozone, fog, and more when you need absolute control.
+            </p>
+        </article>
+
+        <article class="feature-card feature-card--seamless">
+            <div class="feature-card__copy">
+                <h3 class="feature-card__title">Seamless Transition</h3>
+                <p class="feature-card__subtitle">At any scale</p>
+            </div>
+
+            <div class="feature-card__visual feature-card__visual--image">
+                <video autoplay muted loop playsinline preload="metadata" aria-label="Seamless transition across scales">
+                    <source src="assets/videos/zoom_out.webm" type="video/webm">
+                    <source src="assets/videos/zoom_out.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <p class="feature-card__body">
+                Atmosphere that works up close with small objects and for scenes outside the planet — one continuous sky at every scale.
+            </p>
+        </article>
+
+        <article class="feature-card feature-card--photorealistic">
+            <div class="feature-card__copy">
+                <h3 class="feature-card__title">Photorealistic</h3>
+                <p class="feature-card__subtitle">Trusted by your eye</p>
+            </div>
+
+            <div class="feature-card__visual feature-card__visual--image">
+                <video autoplay muted loop playsinline preload="metadata" aria-label="Photorealistic preview">
+                    <source src="assets/videos/amazing.webm" type="video/webm">
+                    <source src="assets/videos/amazing.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <p class="feature-card__body">
+                The secret to photorealism isn't the big things. It's the subtle physics your eye learned to trust.
+            </p>
         </article>
     </div>
 </div>
@@ -1214,7 +1256,13 @@ Sky Texture Modifier</div>
             </section>
         </div>
 
-        <div class="team__speaker">Martins Upitis co-founder of Physical Addons</div>
+        <img
+            class="team__speaker"
+            src="/assets/images/team/martinsTag.png"
+            alt="Martins Upitis, co-founder of Physical Addons"
+            width="154"
+            height="44"
+        >
 
         <a class="team__keynote" href="https://www.youtube.com/watch?v=hLKSudM6BcQ&t=24s" target="_blank">
             Watch <strong>BCON25</strong> Keynote
@@ -1348,7 +1396,7 @@ Sky Texture Modifier</div>
         
         <div class="gallery__cta">
             <div class="gallery__cta-title">Lets showcase your work</div>
-            <a class="gallery__cta-link" href="https://physicaladdons.com/submit-your-artwork/" target="_blank" rel="noreferrer noopener">Submit artwork &#8594;</a>
+            <a class="gallery__cta-link" href="https://physicaladdons.com/submit-your-artwork/" target="_blank" rel="noreferrer noopener">Submit artwork --&gt;</a>
         </div>
     </div>
 </div>
@@ -1484,7 +1532,6 @@ Sky Texture Modifier</div>
 
 
 
-
 <div class="pricing block" id="pricing">
     <div class="pricing__head">
         <h2 class="pricing__title">Pricing</h2>
@@ -1536,6 +1583,14 @@ Sky Texture Modifier</div>
                                                             &#10003;
                                                     </span>
                         <span class="pricing__feature-text">
+                                                            4 example files
+                                                    </span>
+                                            </li>
+                                    <li class="pricing__feature-item">
+                        <span class="pricing__feature-badge pricing__feature-badge--check">
+                                                            &#10003;
+                                                    </span>
+                        <span class="pricing__feature-text">
                                                             Support
                                                     </span>
                                             </li>
@@ -1578,7 +1633,7 @@ Sky Texture Modifier</div>
                         <div>
         <p class="pricing-card__meta">One time payment</p>
         <div class="pricing-card__price">
-            <span class="pricing-card__price-current">$89</span>
+            <span class="pricing-card__price-current">$59</span>
                             <span class="pricing-card__price-original">$118</span>
                     </div>
     </div>
@@ -1615,7 +1670,7 @@ Sky Texture Modifier</div>
                         <div>
         <p class="pricing-card__meta">One time payment</p>
         <div class="pricing-card__price">
-            <span class="pricing-card__price-current">$128</span>
+            <span class="pricing-card__price-current">$85</span>
                             <span class="pricing-card__price-original">$170</span>
                     </div>
     </div>
@@ -1644,7 +1699,7 @@ Sky Texture Modifier</div>
                         <div>
         <p class="pricing-card__meta">One time payment</p>
         <div class="pricing-card__price">
-            <span class="pricing-card__price-current">$89</span>
+            <span class="pricing-card__price-current">$59</span>
                             <span class="pricing-card__price-original">$118</span>
                     </div>
     </div>
@@ -1697,6 +1752,14 @@ Sky Texture Modifier</div>
                                                                     &#10003;
                                                             </span>
                             <span class="pricing__feature-text">
+                                                                    4 example files
+                                                            </span>
+                                                    </li>
+                                            <li class="pricing__feature-item">
+                            <span class="pricing__feature-badge pricing__feature-badge--check">
+                                                                    &#10003;
+                                                            </span>
+                            <span class="pricing__feature-text">
                                                                     Support
                                                             </span>
                                                     </li>
@@ -1730,7 +1793,7 @@ Sky Texture Modifier</div>
                         <div>
         <p class="pricing-card__meta">One time payment</p>
         <div class="pricing-card__price">
-            <span class="pricing-card__price-current">$128</span>
+            <span class="pricing-card__price-current">$85</span>
                             <span class="pricing-card__price-original">$170</span>
                     </div>
     </div>
@@ -1760,14 +1823,14 @@ Sky Texture Modifier</div>
 </div>
         <div class="upgrade block">
     <div class="upgrade__card">
-        <h2 class="upgrade__title">Upgrade from PSA or PCO to PA<sup>2</sup></h2>
+        <h2 class="upgrade__title">Upgrade from PSA to <span class="upgrade__title-accent">PA<sup>2</sup></span></h2>
 
         <p class="upgrade__copy">
-            For our previous PSA (Physical Starlight and Atmosphere) and PCO (Physical Celestial Objects) users we give extra 70% discount so you can upgrade with ease.
-            Use code <strong>ATMOSPHERE</strong>. If something doesn't work
+            For our previous PSA, you'll always have a 50% discount to upgrade, even after the launch sale.
+            Use code <strong>ATMOSPHERE</strong> at checkout. If something doesn't work
             <a href="https://www.physicaladdons.com/psa/contacts/" target="_blank" rel="noreferrer noopener">contact us</a>
-            and we will give you discount manually.
-            <i>Note: coupon codes don't work during sales.</i>
+            and we will give you the discount manually.
+            <i>Note: during sales, discount codes don't work on Superhive Market.</i>
         </p>
     </div>
 </div>

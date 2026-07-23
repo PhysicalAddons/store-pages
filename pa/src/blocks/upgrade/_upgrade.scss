@@ -55,10 +55,11 @@
         }
     }
 
-    @include respond-below(sm) {
+    @include respond-below(lg) {
         &__card {
             width: 100%;
             min-height: 177px;
+            margin-left: 0;
         }
 
         &__copy {

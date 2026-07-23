@@ -1999,8 +1999,9 @@ body {
 }
 
 .pricing__promo {
-  width: 100%;
-  margin: 0 0 16px;
+  width: 554px;
+  max-width: 100%;
+  margin: 0 0 16px auto;
   padding: 6px 16px;
   border-radius: 6px;
   box-sizing: border-box;
@@ -2023,6 +2024,12 @@ body {
   position: relative;
   top: -0.8em;
   margin-left: 1px;
+}
+@media (max-width: 687px) {
+  .pricing__promo {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .pricing-mobile {
@@ -2262,10 +2269,11 @@ body {
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
-@media (max-width: 467px) {
+@media (max-width: 687px) {
   .upgrade__card {
     width: 100%;
     min-height: 177px;
+    margin-left: 0;
   }
   .upgrade__copy {
     width: 300px;

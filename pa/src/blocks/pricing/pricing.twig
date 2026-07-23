@@ -3,7 +3,7 @@
 {% set data = {
     promo: true,
     discount: 0.25,
-    promotion_text: 'Welcome to new Atmosphere<span class="pricing__promo-sup">2</span> | 25% OFF using code <em>WELCOME</em>',
+    promotion_text: '25% OFF using code <em>WELCOME</em>',
     price_basic: 118,
     price_bundle: 170,
     rounded_price: true,
@@ -28,7 +28,7 @@
         'label': 'Commercial use',
         'badge': 'check',
         'tooltip_title': 'Commercial use',
-        'tooltip_text': 'All artworks made using our addon belong to you and can be used for commercial purposes. No need for attribution. <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">Read more about GPL license</a>'
+        'tooltip_text': 'Everything you render is 100% yours, commercial use included, no attribution. Full license included with the addon.'
     },
     {
         'label': data.preset_text,
@@ -89,10 +89,6 @@
     <div class="pricing__head">
         <h2 class="pricing__title">Pricing</h2>
     </div>
-
-    {% if data.promo %}
-        <div class="pricing__promo">{{ data.promotion_text|raw }}</div>
-    {% endif %}
 
     <div class="pricing__layout">
         <div class="pricing__feature-rail">
@@ -180,10 +176,6 @@
         </p>
     </div>
 
-    {% if data.promo %}
-        <div class="pricing__promo">{{ data.promotion_text|raw }}</div>
-    {% endif %}
-
     <div class="pricing-mobile__cards">
         <article class="pricing-card pricing-card--mobile pricing-card--atmosphere">
             <div class="pricing-card__header">
@@ -250,3 +242,7 @@
         </article>
     </div>
 </div>
+
+{% if data.promo %}
+    <div class="pricing__promo">{{ data.promotion_text|raw }}</div>
+{% endif %}

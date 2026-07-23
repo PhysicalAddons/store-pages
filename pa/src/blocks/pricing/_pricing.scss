@@ -307,10 +307,12 @@
     }
 }
 
-// Full-width sale strip (17'000+ blue gradient).
+// Sale strip between pricing and upgrade — same blue as 17'000+,
+// same width/alignment as the upgrade card.
 .pricing__promo {
-    width: 100%;
-    margin: 0 0 16px;
+    width: 554px;
+    max-width: 100%;
+    margin: 0 0 16px auto;
     padding: 6px 16px;
     border-radius: 6px;
     box-sizing: border-box;
@@ -335,6 +337,13 @@
         position: relative;
         top: -0.8em;
         margin-left: 1px;
+    }
+
+    // Match Atmosphere + Bundle column on desktop (269 + 16 + 269).
+    // Full width once pricing switches to the mobile layout (`lg`).
+    @include respond-below(lg) {
+        width: 100%;
+        margin-left: 0;
     }
 }
 

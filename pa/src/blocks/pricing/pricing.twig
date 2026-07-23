@@ -2,7 +2,8 @@
    When promo is true, cards show price * (1 - discount) with the base price crossed out. #}
 {% set data = {
     promo: true,
-    discount: 0.5,
+    discount: 0.25,
+    promotion_text: 'Welcome to new Atmosphere<span class="pricing__promo-sup">2</span> | 25% OFF using code <em>WELCOME</em>',
     price_basic: 118,
     price_bundle: 170,
     rounded_price: true,
@@ -84,10 +85,14 @@
 
 {% import _self as pricing_macros %}
 
-<div class="pricing block" id="pricing">
+<div class="pricing block{{ data.promo ? ' pricing--discount' : '' }}" id="pricing">
     <div class="pricing__head">
         <h2 class="pricing__title">Pricing</h2>
     </div>
+
+    {% if data.promo %}
+        <div class="pricing__promo">{{ data.promotion_text|raw }}</div>
+    {% endif %}
 
     <div class="pricing__layout">
         <div class="pricing__feature-rail">
@@ -167,13 +172,17 @@
     </div>
 </div>
 
-<div class="pricing-mobile block">
+<div class="pricing-mobile block{{ data.promo ? ' pricing-mobile--discount' : '' }}">
     <div class="pricing-mobile__head">
         <h2 class="pricing-mobile__title">Pricing</h2>
         <p class="pricing-mobile__contact">
             Feel free to <a href="https://www.physicaladdons.com/psa/contacts/" target="_blank">contact us</a> in case you have questions
         </p>
     </div>
+
+    {% if data.promo %}
+        <div class="pricing__promo">{{ data.promotion_text|raw }}</div>
+    {% endif %}
 
     <div class="pricing-mobile__cards">
         <article class="pricing-card pricing-card--mobile pricing-card--atmosphere">

@@ -1998,6 +1998,33 @@ body {
   color: #000000;
 }
 
+.pricing__promo {
+  width: 100%;
+  margin: 0 0 16px;
+  padding: 6px 16px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #1457bc 0%, #36a1ff 100%);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+}
+.pricing__promo em {
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+}
+.pricing__promo-sup {
+  display: inline-block;
+  font-size: 0.55em;
+  line-height: 1;
+  position: relative;
+  top: -0.8em;
+  margin-left: 1px;
+}
+
 .pricing-mobile {
   display: none;
   margin-bottom: 16px;
@@ -3067,12 +3094,10 @@ body {
 
 .pricing-pack {
   position: relative;
+  padding: 16px 16px 32px;
 }
 .pricing-pack + .pricing-pack {
   border-top: 1px solid #DCDCDC;
-}
-.pricing-pack {
-  padding: 16px 16px 32px;
 }
 .pricing-pack__title {
   font-family: Inter;

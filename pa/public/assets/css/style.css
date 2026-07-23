@@ -280,12 +280,13 @@ body {
   font-weight: 500;
   letter-spacing: 0;
   padding: 0 0 32px;
+  text-wrap: pretty;
 }
 @media (max-width: 467px) {
   .overview__title {
-    font-size: 32px;
+    font-size: 32px !important;
     line-height: 1.1;
-    padding-bottom: 32px;
+    padding-bottom: 20px;
   }
 }
 .overview__card {
@@ -458,12 +459,13 @@ body {
   line-height: 1.2;
   letter-spacing: 0;
   padding: 0 0 32px;
+  text-wrap: pretty;
 }
 @media (max-width: 467px) {
   .features__title {
-    font-size: 40px;
+    font-size: 32px;
     line-height: 1.2;
-    padding-bottom: 32px;
+    padding-bottom: 20px;
   }
 }
 .features__stat {
@@ -769,11 +771,6 @@ body {
   width: 100%;
   height: 100%;
 }
-.feature-card--small .feature-card__title,
-.feature-card--small .feature-card__subtitle {
-  font-size: 32px;
-  line-height: 38px;
-}
 .feature-card--small .feature-card__copy {
   max-width: 352px;
 }
@@ -881,6 +878,9 @@ body {
   text-align: left;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  outline: none;
   display: flex;
   align-items: center;
   transform-origin: center center;
@@ -1099,9 +1099,26 @@ body {
     width: auto;
     max-width: none;
   }
+  .feature-card__opac.tooltip {
+    position: static;
+  }
+  .feature-card__opac.tooltip .tooltip__content {
+    left: 20px;
+    right: 20px;
+    top: 84px;
+    width: auto;
+    z-index: 10;
+  }
+  .feature-card__opac.tooltip .tooltip__content::before {
+    display: none;
+  }
+  .feature-card__opac.tooltip .tooltip__content::after {
+    display: none;
+  }
   .feature-card--pollution .feature-card__copy {
     left: 20px;
     top: 20px;
+    z-index: 5;
   }
   .feature-card--pollution .feature-card__pollution-panel {
     position: absolute;
@@ -3175,6 +3192,7 @@ body {
   position: relative;
   height: 13px;
   display: inline-block;
+  -webkit-tap-highlight-color: transparent;
 }
 .tooltip img {
   position: absolute;
@@ -3212,7 +3230,7 @@ body {
   top: -19px;
   left: calc(50% - 10px);
 }
-.tooltip:hover .tooltip__content {
+.tooltip:hover .tooltip__content, .tooltip:focus .tooltip__content, .tooltip:focus-within .tooltip__content {
   display: block;
 }
 .tooltip--right .tooltip__content {

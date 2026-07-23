@@ -4,6 +4,7 @@ $tooltip-padding-top: 16px;
     position: relative;
     height: 13px;
     display: inline-block;
+    -webkit-tap-highlight-color: transparent;
     img {
         position: absolute;
     }
@@ -42,7 +43,9 @@ $tooltip-padding-top: 16px;
             left: calc(50% - 10px);
           }
     }
-    &:hover .tooltip__content {
+    &:hover .tooltip__content,
+    &:focus .tooltip__content,
+    &:focus-within .tooltip__content {
         display: block;
     }
 

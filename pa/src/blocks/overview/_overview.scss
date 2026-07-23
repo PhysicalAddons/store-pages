@@ -6,11 +6,12 @@
         font-weight: 500;
         letter-spacing: 0;
         padding: 0 0 32px;
+        text-wrap: pretty;
 
         @include respond-below(sm) {
-            font-size: 32px;
+            font-size: 32px !important;
             line-height: 1.1;
-            padding-bottom: 32px;
+            padding-bottom: 20px;
         }
     }
 

@@ -1,0 +1,29 @@
+{# Shared "Atmosphere² just launched" banner for legacy product pages.
+   Background image lives per-project in assets/images/launch-banner/.
+
+   Set launch_banner_compact: true for PCO/POW (shorter, no "old version" note).
+   PSA keeps the default (with note). #}
+{% set launch_banner_compact = launch_banner_compact|default(false) %}
+
+<div class="launch-banner block{{ launch_banner_compact ? ' launch-banner--compact' : '' }}">
+    <picture class="launch-banner__bg">
+        <source type="image/webp" srcset="assets/images/launch-banner/launch-banner-bg.webp 1x, assets/images/launch-banner/launch-banner-bg-2x.webp 2x">
+        <img src="assets/images/launch-banner/launch-banner-bg.jpg" srcset="assets/images/launch-banner/launch-banner-bg-2x.jpg 2x" alt="" aria-hidden="true">
+    </picture>
+
+    <div class="launch-banner__content">
+        <p class="launch-banner__product">Atmosphere<span class="launch-banner__sup">2</span></p>
+        <p class="launch-banner__headline">Just Launched</p>
+
+        <a class="launch-banner__cta" href="https://superhivemarket.com/products/physical-atmosphere?ref=875" target="_blank" rel="noopener">
+            Open new Atmosphere
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M11 1L15 5L11 9M15 5H1" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+        </a>
+
+        {% if not launch_banner_compact %}
+            <p class="launch-banner__note">You are currently viewing old Atmosphere version.</p>
+        {% endif %}
+    </div>
+</div>

@@ -148,44 +148,61 @@ body {
 }
 .hero .tabs {
   height: 40px;
+  margin-bottom: 8px;
 }
 .hero .tabs .label {
   font-weight: 500;
   font-size: 14px;
   line-height: 40px;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   display: inline-block;
   padding-left: 8px;
 }
 .hero .tabs .tab {
   display: inline-block;
-  padding: 0px 20px;
-  border-radius: 6px 6px 0px 0px;
+  padding: 0 16px;
+  border-radius: 8px;
   float: right;
   background: #F2F2F2;
   color: black;
   text-decoration: none;
-  margin-left: 4px;
-  font-weight: 500;
+  margin-left: 8px;
+  font-weight: 400;
   font-size: 14px;
   line-height: 40px;
+  letter-spacing: 0;
 }
 .hero .tabs .tab span {
-  font-weight: 600;
-  padding-right: 10px;
+  font-weight: 700;
+  padding-right: 12px;
+}
+.hero .tabs .tab .productMark {
+  display: inline-block;
+  line-height: 1;
+}
+.hero .tabs .tab .productMark__sup {
+  display: inline-block;
+  font-size: 9px;
+  line-height: 1;
+  position: relative;
+  top: -0.55em;
+  margin-left: 1px;
+  padding-right: 0;
 }
 .hero .tabs .active {
   color: white;
-  background-color: #7D9BA9;
+  background: #000000;
 }
 .hero .bigBlock {
   background: #000000;
   background-image: url("/assets/images/hero/hero.jpg");
+  background-image: -webkit-image-set(url("/assets/images/hero/hero.jpg") 1x, url("/assets/images/hero/herox2.jpg") 2x);
+  background-image: image-set(url("/assets/images/hero/hero.jpg") 1x, url("/assets/images/hero/herox2.jpg") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 200px 32px 32px 32px;
-  border-radius: 6px 0px 6px 6px;
+  border-radius: 12px;
 }
 .hero .bigBlock h1 {
   font-weight: 500;
@@ -250,15 +267,19 @@ body {
     padding-left: 0;
   }
   .hero .tabs .tab {
-    padding: 0px 12px;
+    padding: 0 12px;
     font-size: 12px;
     line-height: 32px;
   }
   .hero .tabs .tab span {
     display: none;
   }
+  .hero .tabs .tab .productMark {
+    display: none;
+  }
   .hero .bigBlock {
     padding: 30% 16px 50px 16px;
+    border-radius: 12px;
   }
   .hero .bigBlock h1 {
     font-size: 32px;
@@ -487,6 +508,8 @@ body {
 .team {
   background: black;
   background-image: url("/assets/images/team/team.webp");
+  background-image: -webkit-image-set(url("/assets/images/team/team.webp") 1x, url("/assets/images/team/team2x.webp") 2x);
+  background-image: image-set(url("/assets/images/team/team.webp") 1x, url("/assets/images/team/team2x.webp") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -496,6 +519,8 @@ body {
 @media (max-width: 467px) {
   .team {
     background-image: url("/assets/images/team/teamMobile.webp");
+    background-image: -webkit-image-set(url("/assets/images/team/teamMobile.webp") 1x, url("/assets/images/team/teamMobile2x.webp") 2x);
+    background-image: image-set(url("/assets/images/team/teamMobile.webp") 1x, url("/assets/images/team/teamMobile2x.webp") 2x);
   }
 }
 .team .topRow {
@@ -598,6 +623,8 @@ body {
 .controls .heroBlock {
   background: black;
   background-image: url("/assets/images/controls/controls.jpg");
+  background-image: -webkit-image-set(url("/assets/images/controls/controls.jpg") 1x, url("/assets/images/controls/controlsx2.jpg") 2x);
+  background-image: image-set(url("/assets/images/controls/controls.jpg") 1x, url("/assets/images/controls/controlsx2.jpg") 2x);
   background-repeat: no-repeat;
   background-position: top 0 right 0;
   background-size: cover;
@@ -1454,42 +1481,56 @@ body {
 }
 .benefit-card .image3 {
   background-image: url("/assets/images/benefits/benefits-animation.webp");
+  background-image: -webkit-image-set(url("/assets/images/benefits/benefits-animation.webp") 1x, url("/assets/images/benefits/benefits-animation2x.webp") 2x);
+  background-image: image-set(url("/assets/images/benefits/benefits-animation.webp") 1x, url("/assets/images/benefits/benefits-animation2x.webp") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .benefit-card.image4 {
   background-image: url("/assets/images/benefits/feature-4.jpg");
+  background-image: -webkit-image-set(url("/assets/images/benefits/feature-4.jpg") 1x, url("/assets/images/benefits/feature-4x2.jpg") 2x);
+  background-image: image-set(url("/assets/images/benefits/feature-4.jpg") 1x, url("/assets/images/benefits/feature-4x2.jpg") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .benefit-card .image5 {
   background-image: url("/assets/images/benefits/presets.webm");
+  background-image: -webkit-image-set(url("/assets/images/benefits/presets.webm") 1x, url("/assets/images/benefits/presets.webm") 2x);
+  background-image: image-set(url("/assets/images/benefits/presets.webm") 1x, url("/assets/images/benefits/presets.webm") 2x);
   background-repeat: no-repeat;
   background-position: right 0px top 0px;
   background-size: cover;
 }
 .benefit-card .image6 {
   background-image: url("/assets/images/benefits/feature-6.jpg");
+  background-image: -webkit-image-set(url("/assets/images/benefits/feature-6.jpg") 1x, url("/assets/images/benefits/feature-6x2.jpg") 2x);
+  background-image: image-set(url("/assets/images/benefits/feature-6.jpg") 1x, url("/assets/images/benefits/feature-6x2.jpg") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .benefit-card.image7 {
   background-image: url("/assets/images/benefits/feature-7.jpg");
+  background-image: -webkit-image-set(url("/assets/images/benefits/feature-7.jpg") 1x, url("/assets/images/benefits/feature-7x2.jpg") 2x);
+  background-image: image-set(url("/assets/images/benefits/feature-7.jpg") 1x, url("/assets/images/benefits/feature-7x2.jpg") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .benefit-card.image8 {
   background-image: url("/assets/images/benefits/feature-8.jpg");
+  background-image: -webkit-image-set(url("/assets/images/benefits/feature-8.jpg") 1x, url("/assets/images/benefits/feature-8x2.jpg") 2x);
+  background-image: image-set(url("/assets/images/benefits/feature-8.jpg") 1x, url("/assets/images/benefits/feature-8x2.jpg") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .benefit-card .imageDemo {
   background-image: url("/assets/images/benefits/benefits-demo.webp");
+  background-image: -webkit-image-set(url("/assets/images/benefits/benefits-demo.webp") 1x, url("/assets/images/benefits/benefits-demo2x.webp") 2x);
+  background-image: image-set(url("/assets/images/benefits/benefits-demo.webp") 1x, url("/assets/images/benefits/benefits-demo2x.webp") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1899,6 +1940,90 @@ body {
   line-height: 24px;
   text-align: center;
   padding: 10px 16px;
+}
+
+.launch-banner {
+  position: relative;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #ffffff;
+}
+.launch-banner__bg {
+  position: absolute;
+  inset: 0;
+}
+.launch-banner__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.launch-banner__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(40px, 9.6vw, 80px) 24px clamp(20px, 3.8vw, 32px);
+}
+.launch-banner__product {
+  margin: 0 0 8px;
+  font-size: clamp(20px, 3.8vw, 32px);
+  line-height: 1.22;
+  font-weight: 400;
+}
+.launch-banner__sup {
+  display: inline-block;
+  font-size: 0.55em;
+  line-height: 1;
+  position: relative;
+  top: -0.8em;
+  margin-left: 1px;
+}
+.launch-banner__headline {
+  margin: 0;
+  font-size: clamp(34px, 7.2vw, 60px);
+  line-height: 1.22;
+  font-weight: 400;
+}
+.launch-banner__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: clamp(48px, 14.8vw, 123px);
+  padding: 0 24px;
+  height: 40px;
+  border-radius: 100px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 40px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.launch-banner__cta svg {
+  display: block;
+}
+.launch-banner__cta:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.launch-banner__note {
+  margin: clamp(24px, 5.8vw, 48px) 0 0;
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0.9;
+}
+@media (max-width: 467px) {
+  .launch-banner__note {
+    line-height: 1.2;
+  }
+}
+.launch-banner--compact .launch-banner__content {
+  padding: clamp(36px, 7.7vw, 64px) 24px clamp(28px, 7.7vw, 64px);
+}
+.launch-banner--compact .launch-banner__cta {
+  margin-top: clamp(32px, 5.8vw, 48px);
 }
 
 .comparison .comparison__table {

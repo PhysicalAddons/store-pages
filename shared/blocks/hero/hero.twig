@@ -3,7 +3,11 @@
     <div class="tabs">
         <div class="label">Our Addons</div>
         {% for tab in tabs %}
-            <a class="tab{{ tab.active ? ' active': '' }}" target="_blank" href="{{tab.link}}" >{{tab.title}}</a>
+            <a
+                class="tab{{ tab.active ? ' active' : '' }}"
+                href="{{ tab.link }}"
+                {% if tab.link != '#' %}target="_blank" rel="noopener"{% endif %}
+            >{{ tab.title|raw }}</a>
         {% endfor %}
     </div>
 

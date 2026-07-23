@@ -355,7 +355,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 507px;
+  width: clamp(300px, 58%, 507px);
   height: 370px;
   display: block;
   overflow: hidden;
@@ -386,7 +386,7 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 507px;
+  width: clamp(300px, 58%, 507px);
   margin: 0;
   padding: 32px 24px 32px 16px;
   box-sizing: border-box;
@@ -400,11 +400,7 @@ body {
 .overview__description.is-fading {
   opacity: 0;
 }
-@media (max-width: 799px) {
-  .overview__title {
-    font-size: 40px;
-    line-height: 1.2;
-  }
+@media (max-width: 599px) {
   .overview__card {
     display: flex;
     flex-direction: column;

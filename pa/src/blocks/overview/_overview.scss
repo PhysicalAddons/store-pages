@@ -89,7 +89,9 @@
         position: absolute;
         right: 0;
         top: 0;
-        width: 507px;
+        // Flexes down on mid widths so the side-by-side layout can survive
+        // longer before stacking (was a hard 507px → early mobile switch).
+        width: clamp(300px, 58%, 507px);
         height: 370px;
         display: block;
         overflow: hidden;
@@ -123,7 +125,7 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 507px;
+        width: clamp(300px, 58%, 507px);
         margin: 0;
         padding: 32px 24px 32px 16px;
         box-sizing: border-box;
@@ -139,13 +141,9 @@
         }
     }
 
-    // Side-by-side needs ~507px media + points; stack earlier than global `sm`.
-    @media (max-width: 799px) {
-        &__title {
-            font-size: 40px;
-            line-height: 1.2;
-        }
-
+    // Stack the card only when side-by-side truly can't fit.
+    // Title sizing stays on the global `sm` rule above — not here.
+    @media (max-width: 599px) {
         &__card {
             display: flex;
             flex-direction: column;

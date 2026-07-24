@@ -1,0 +1,103 @@
+.launch-banner {
+    position: relative;
+    margin-bottom: 16px;
+    // Image is exported square; rounding happens here.
+    border-radius: 12px;
+    overflow: hidden;
+    color: #ffffff;
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    // No fixed height: the banner grows with its content, and all vertical
+    // distances scale fluidly so nothing overflows on narrow screens.
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: clamp(40px, 9.6vw, 80px) 24px clamp(20px, 3.8vw, 32px);
+    }
+
+    &__product {
+        margin: 0 0 8px;
+        font-size: clamp(20px, 3.8vw, 32px);
+        line-height: 1.22;
+        font-weight: 400;
+    }
+
+    // Reset flattens <sup>, so raise a span. top uses the *child* em, so
+    // -0.8em of a 0.55-size glyph ≈ 0.44 of Atmosphere — sits at cap height.
+    &__sup {
+        display: inline-block;
+        font-size: 0.55em;
+        line-height: 1;
+        position: relative;
+        top: -0.8em;
+        margin-left: 1px;
+    }
+
+    &__headline {
+        margin: 0;
+        font-size: clamp(34px, 7.2vw, 60px);
+        line-height: 1.22;
+        font-weight: 400;
+    }
+
+    &__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: clamp(48px, 14.8vw, 123px);
+        padding: 0 24px;
+        height: 40px;
+        border-radius: 100px;
+        background: #000000;
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 40px;
+        text-decoration: none;
+        white-space: nowrap;
+
+        svg {
+            display: block;
+        }
+
+        &:hover {
+            background: rgba(#000000, 0.8);
+        }
+    }
+
+    &__note {
+        margin: clamp(24px, 5.8vw, 48px) 0 0;
+        font-size: 14px;
+        line-height: 1;
+        opacity: 0.9;
+
+        @include respond-below(sm) {
+            line-height: 1.2;
+        }
+    }
+
+    // Compact variant (PCO / POW): shorter Figma frame, announcement only —
+    // no "old version" note, tighter CTA spacing (~336px at desktop width).
+    &--compact {
+        .launch-banner__content {
+            padding: clamp(36px, 7.7vw, 64px) 24px clamp(28px, 7.7vw, 64px);
+        }
+
+        .launch-banner__cta {
+            margin-top: clamp(32px, 5.8vw, 48px);
+        }
+    }
+}

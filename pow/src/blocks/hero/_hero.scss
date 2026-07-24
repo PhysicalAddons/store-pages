@@ -27,38 +27,54 @@
     }
 
     .tabs {
-
         height: 40px;
+        margin-bottom: 8px;
 
         .label {
             font-weight: 500;
             font-size: 14px;
             line-height: 40px;
-            letter-spacing: -0.03em;
+            letter-spacing: 0;
             display: inline-block;
             padding-left: 8px;
         }
         .tab {
             display: inline-block;
-            padding: 0px 20px;
-            border-radius: 6px 6px 0px 0px;
+            padding: 0 16px;
+            border-radius: 8px;
             float: right;
             background: #F2F2F2;
             color: black;
             text-decoration: none;
-            margin-left: 4px;
-            font-weight: 500;
+            margin-left: 8px;
+            font-weight: 400;
             font-size: 14px;
             line-height: 40px;
+            letter-spacing: 0;
+
             span {
-                font-weight: 600;
-                padding-right: 10px;
+                font-weight: 700;
+                padding-right: 12px;
+            }
+
+            .productMark {
+                display: inline-block;
+                line-height: 1;
+            }
+
+            .productMark__sup {
+                display: inline-block;
+                font-size: 9px;
+                line-height: 1;
+                position: relative;
+                top: -0.55em;
+                margin-left: 1px;
+                padding-right: 0;
             }
         }
         .active {
             color: white;
-            // background: #77789d; 
-            background-color: #7D9BA9;
+            background: #000000;
         }
     }
 
@@ -69,7 +85,7 @@
         background-position: center;
         background-size: cover;
         padding: 200px 32px 32px 32px;
-        border-radius: 6px 0px 6px 6px;
+        border-radius: 12px;
 
         h1 {
             font-weight: 500;
@@ -138,12 +154,15 @@
                 padding-left: 0;
             }
             .tab {
-                padding: 0px 12px;
+                padding: 0 12px;
                 font-size: 12px;
-                line-height: 32px;;
+                line-height: 32px;
 
                 span {
+                    display: none;
+                }
 
+                .productMark {
                     display: none;
                 }
             }
@@ -152,6 +171,7 @@
         .bigBlock {
 
             padding: 30% 16px 50px 16px;
+            border-radius: 12px;
 
             h1 {
                 font-size: 32px;

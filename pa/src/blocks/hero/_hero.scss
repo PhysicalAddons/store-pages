@@ -67,18 +67,37 @@
         padding: 192px 32px 64px 32px;
         border-radius: 12px;
 
+        // fit-content + auto margins center Atmosphere²; ::after is absolute so
+        // the Beta badge does not shift that centering.
         .heroTitle {
+            position: relative;
+            width: fit-content;
+            margin: 0 auto 8px;
             font-weight: 400;
             font-size: 40px;
-            line-height: 120%;
+            line-height: 1.2;
             text-align: center;
-            margin-bottom: 8px;
             color: white;
 
-            sup {
-                font-size: 25px;
-                vertical-align: top;
+            &::after {
+                content: '';
+                position: absolute;
+                left: calc(100% + 10px);
+                top: 10%;
+                transform: translateY(-50%);
+                width: 63px;
+                height: 28px;
+                background: url('/assets/images/beta.svg') no-repeat center / contain;
+                pointer-events: none;
+            }
+
+            &__sup {
+                display: inline-block;
+                font-size: 0.55em;
                 line-height: 1;
+                position: relative;
+                top: -0.8em;
+                margin-left: 1px;
             }
         }
 
@@ -153,8 +172,15 @@
                 font-size: 20px;
                 margin-bottom: 8px;
 
-                sup {
-                    font-size: 17px;
+                &::after {
+                    left: calc(100% + 8px);
+                    width: 45px;
+                    height: 20px;
+                }
+
+                &__sup {
+                    font-size: 0.55em;
+                    top: -0.8em;
                 }
             }
 

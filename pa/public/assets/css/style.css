@@ -186,17 +186,33 @@ body {
   border-radius: 12px;
 }
 .hero .bigBlock .heroTitle {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 8px;
   font-weight: 400;
   font-size: 40px;
-  line-height: 120%;
+  line-height: 1.2;
   text-align: center;
-  margin-bottom: 8px;
   color: white;
 }
-.hero .bigBlock .heroTitle sup {
-  font-size: 25px;
-  vertical-align: top;
+.hero .bigBlock .heroTitle::after {
+  content: "";
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 10%;
+  transform: translateY(-50%);
+  width: 63px;
+  height: 28px;
+  background: url("/assets/images/beta.svg") no-repeat center/contain;
+  pointer-events: none;
+}
+.hero .bigBlock .heroTitle__sup {
+  display: inline-block;
+  font-size: 0.55em;
   line-height: 1;
+  position: relative;
+  top: -0.8em;
+  margin-left: 1px;
 }
 .hero .bigBlock h1 {
   font-weight: 400;
@@ -259,8 +275,14 @@ body {
     font-size: 20px;
     margin-bottom: 8px;
   }
-  .hero .bigBlock .heroTitle sup {
-    font-size: 17px;
+  .hero .bigBlock .heroTitle::after {
+    left: calc(100% + 8px);
+    width: 45px;
+    height: 20px;
+  }
+  .hero .bigBlock .heroTitle__sup {
+    font-size: 0.55em;
+    top: -0.8em;
   }
   .hero .bigBlock h1 {
     font-size: 32px;

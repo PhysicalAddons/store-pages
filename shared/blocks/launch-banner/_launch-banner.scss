@@ -90,26 +90,20 @@
     }
 }
 
-// One-line link used on PCO / POW instead of the image banner.
-// Same shape as the sale banner, light so it does not compete with it.
+// Plain text link used on PCO / POW instead of the image banner.
+// No background, so the sale banner stays the only loud element.
 .launch-link {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 4px 12px;
+    gap: 0 8px;
     margin-bottom: 16px;
-    padding: 10px 16px;
-    border-radius: 6px;
-    background: #f2f2f2;
+    padding: 0 16px;
     color: #000000;
     font-size: 16px;
     line-height: 24px;
     text-decoration: none;
-
-    &:hover {
-        background: #e8e8e8;
-    }
 
     &__label {
         color: rgba(#000000, 0.6);
@@ -119,20 +113,22 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        padding-left: 12px;
-        border-left: 1px solid rgba(#000000, 0.2);
         font-weight: 500;
         white-space: nowrap;
 
         svg {
             display: block;
         }
+    }
 
-        // The link wraps to two lines on phones; a divider would dangle.
-        @include respond-below(sm) {
-            padding-left: 0;
-            border-left: 0;
-        }
+    &__name {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+    }
+
+    &:hover &__name {
+        text-decoration-color: rgba(#000000, 0.3);
     }
 
     &__sup {

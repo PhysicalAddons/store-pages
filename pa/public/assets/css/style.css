@@ -144,7 +144,7 @@ body {
   padding: 0px 16px;
   border-radius: 8px;
   float: right;
-  background: #F2F2F2;
+  background: #e8e8e8;
   color: black;
   text-decoration: none;
   margin-left: 8px;
@@ -1275,7 +1275,7 @@ body {
   color: #000000;
 }
 .comparison__feature-row {
-  border-bottom: 1px solid #e9e9e9;
+  border-bottom: 1px solid #dfdfdf;
 }
 .comparison__feature-row th, .comparison__feature-row td {
   height: 32px;
@@ -1430,7 +1430,7 @@ body {
   }
   .comparison__mobile-row {
     min-height: 32px;
-    border-bottom: 1px solid #e9e9e9;
+    border-bottom: 1px solid #dfdfdf;
   }
   .comparison__mobile-label {
     display: flex;
@@ -1677,7 +1677,7 @@ body {
   padding: 0;
   border: 2px solid #ffffff;
   border-radius: 50%;
-  background: #f2f2f2;
+  background: #e8e8e8;
   cursor: pointer;
   overflow: hidden;
   transition: transform 0.2s ease, border-color 0.2s ease;
@@ -1699,7 +1699,7 @@ body {
 }
 .testimonials__avatar--logo {
   padding: 8px;
-  background: #e9e9e9;
+  background: #dfdfdf;
   box-sizing: border-box;
 }
 .testimonials__avatar--logo img {
@@ -1849,7 +1849,7 @@ body {
   min-width: 0;
   min-height: 401px;
   padding: 16px;
-  background: #f2f2f2;
+  background: #e8e8e8;
   border-radius: 8px;
 }
 .pricing-card--mobile {
@@ -1894,7 +1894,7 @@ body {
 .pricing-card__body {
   flex: 1 1 auto;
   padding-top: 17px;
-  border-top: 1px solid #e4e4e4;
+  border-top: 1px solid #dadada;
 }
 .pricing-card__body--single {
   padding-top: 17px;
@@ -1910,7 +1910,7 @@ body {
   justify-content: space-between;
   gap: 16px;
   padding-top: 9px;
-  border-top: 1px solid #e4e4e4;
+  border-top: 1px solid #dadada;
 }
 .pricing-card__footer--top {
   padding-top: 32px;
@@ -1918,7 +1918,7 @@ body {
   margin-top: 0;
   margin-bottom: 32px;
   border-top: 0;
-  border-bottom: 1px solid #e4e4e4;
+  border-bottom: 1px solid #dadada;
   align-items: end;
 }
 .pricing-card__meta {
@@ -2105,15 +2105,15 @@ body {
 .requirements__table {
   display: grid;
   grid-template-columns: 148px 1fr 1fr;
-  border-top: 1px solid #e4e4e4;
-  border-bottom: 1px solid #e4e4e4;
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
 }
 .requirements__cell {
   padding: 8px 16px 40px 8px;
-  border-top: 1px solid #e4e4e4;
+  border-top: 1px solid #dadada;
 }
 .requirements__cell:not(:nth-child(3n+1)) {
-  border-left: 1px solid #e4e4e4;
+  border-left: 1px solid #dadada;
 }
 .requirements__cell:nth-child(3n+1) {
   padding-left: 0;
@@ -2215,15 +2215,15 @@ body {
   .requirements__mgrid {
     display: grid;
     grid-template-columns: 120px 1fr;
-    border-top: 1px solid #e4e4e4;
-    border-bottom: 1px solid #e4e4e4;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
   }
   .requirements__mcell {
     padding: 8px 8px 32px 8px;
-    border-top: 1px solid #e4e4e4;
+    border-top: 1px solid #dadada;
   }
   .requirements__mcell:nth-child(2n) {
-    border-left: 1px solid #e4e4e4;
+    border-left: 1px solid #dadada;
     padding-right: 0;
   }
   .requirements__mcell:nth-child(2n+1) {
@@ -2246,7 +2246,7 @@ body {
   padding: 16px;
   box-sizing: border-box;
   border-radius: 8px;
-  background: #f2f2f2;
+  background: #e8e8e8;
 }
 .upgrade__title {
   margin: 0;
@@ -2306,7 +2306,7 @@ body {
   margin-bottom: 128px;
   padding: 32px;
   border-radius: 12px;
-  background: #f2f2f2;
+  background: #e8e8e8;
   color: rgba(0, 0, 0, 0.7);
   font-size: 12px;
   letter-spacing: 0;
@@ -3050,7 +3050,7 @@ body {
 
 .bundle {
   padding: 16px;
-  background-color: #F2F2F2;
+  background-color: #e8e8e8;
   border-radius: 6px;
 }
 .bundle__products img {
@@ -3106,11 +3106,11 @@ body {
   font-size: 12px;
   text-align: center;
   border-radius: 100px;
-  background-color: #E3E3E3;
+  background-color: #d9d9d9;
   color: #000000;
 }
 .btn:hover {
-  background-color: #d1d1d1;
+  background-color: #c8c8c8;
 }
 .btn--primary {
   background-color: #6B26FF;
@@ -3125,7 +3125,7 @@ body {
   padding: 16px 16px 32px;
 }
 .pricing-pack + .pricing-pack {
-  border-top: 1px solid #DCDCDC;
+  border-top: 1px solid #d2d2d2;
 }
 .pricing-pack__title {
   font-family: Inter;

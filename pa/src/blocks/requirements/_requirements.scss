@@ -13,17 +13,17 @@
         display: grid;
         grid-template-columns: 148px 1fr 1fr;
         // Full-width separator lines at the very top and bottom of the table.
-        border-top: 1px solid #e4e4e4;
-        border-bottom: 1px solid #e4e4e4;
+        border-top: 1px solid #dadada;
+        border-bottom: 1px solid #dadada;
     }
 
     &__cell {
         padding: 8px 16px 40px 8px;
-        border-top: 1px solid #e4e4e4;
+        border-top: 1px solid #dadada;
 
         // Column separators between columns only — no lines on the outer edges.
         &:not(:nth-child(3n + 1)) {
-            border-left: 1px solid #e4e4e4;
+            border-left: 1px solid #dadada;
         }
 
         // First column sits flush left: no separator, no left padding.
@@ -150,17 +150,17 @@
             display: grid;
             grid-template-columns: 120px 1fr;
             // Full-width separator lines at the top and bottom, like desktop.
-            border-top: 1px solid #e4e4e4;
-            border-bottom: 1px solid #e4e4e4;
+            border-top: 1px solid #dadada;
+            border-bottom: 1px solid #dadada;
         }
 
         &__mcell {
             padding: 8px 8px 32px 8px;
-            border-top: 1px solid #e4e4e4;
+            border-top: 1px solid #dadada;
 
             // Right column: separator line on its left, flush to the far-right edge.
             &:nth-child(2n) {
-                border-left: 1px solid #e4e4e4;
+                border-left: 1px solid #dadada;
                 padding-right: 0;
             }
 

@@ -207,6 +207,42 @@ body {
   width: 100%;
   height: 100%;
 }
+.hero .bigBlock .video__poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: #000000;
+  cursor: pointer;
+}
+.hero .bigBlock .video__poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero .bigBlock .video__poster:hover .video__play {
+  background: #000000;
+  transform: translate(-50%, -50%) scale(1.06);
+}
+.hero .bigBlock .video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.75);
+  color: #FFFFFF;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
 .hero .bigBlock .logoWall, .hero .bigBlock .logoWall2 {
   width: 100%;
 }

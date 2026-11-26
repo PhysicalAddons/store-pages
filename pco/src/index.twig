@@ -25,8 +25,8 @@
 </head>
 <body>
 	<div class="wrapper">
+		{% include "../../shared/blocks/banner/banner.twig" %}
 		{% include "../../shared/blocks/launch-banner/launch-banner.twig" with { launch_banner_compact: true } %}
-		{# {% include "../../shared/blocks/banner/banner.twig" %} #}
 		{% include "blocks/hero/hero.twig" %}
 		{% include "blocks/benefits/benefits.twig" %}
 		{# {% include "blocks/updates/updates.twig" %} #}

@@ -1,29 +1,40 @@
-{# Shared "Atmosphere² just launched" banner for legacy product pages.
+{# Shared "The new Atmosphere²" banner for legacy product pages.
    Background image lives per-project in assets/images/launch-banner/.
 
-   Set launch_banner_compact: true for PCO/POW (shorter, no "old version" note).
-   PSA keeps the default (with note). #}
+   Set launch_banner_compact: true for PCO/POW: they get a one-line link
+   instead of the image banner. PSA keeps the full banner (the default). #}
 {% set launch_banner_compact = launch_banner_compact|default(false) %}
+{% set launch_banner_link = 'https://superhivemarket.com/products/physical-atmosphere?ref=875' %}
 
-<div class="launch-banner block{{ launch_banner_compact ? ' launch-banner--compact' : '' }}">
-    <picture class="launch-banner__bg">
-        <source type="image/webp" srcset="assets/images/launch-banner/launch-banner-bg.webp 1x, assets/images/launch-banner/launch-banner-bg-2x.webp 2x">
-        <img src="assets/images/launch-banner/launch-banner-bg.jpg" srcset="assets/images/launch-banner/launch-banner-bg-2x.jpg 2x" alt="" aria-hidden="true">
-    </picture>
-
-    <div class="launch-banner__content">
-        <p class="launch-banner__product">Atmosphere<span class="launch-banner__sup">2</span></p>
-        <p class="launch-banner__headline">Just Launched</p>
-
-        <a class="launch-banner__cta" href="https://superhivemarket.com/products/physical-atmosphere?ref=875" target="_blank" rel="noopener">
-            Open new Atmosphere
+{% if launch_banner_compact %}
+    <a class="launch-link block" href="{{ launch_banner_link }}" target="_blank" rel="noopener">
+        <span class="launch-link__label">Check out our new product:</span>
+        <span class="launch-link__product">
+            <span class="launch-link__name">Atmosphere<span class="launch-link__sup">2</span></span>
             <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M11 1L15 5L11 9M15 5H1" stroke="currentColor" stroke-width="1.5"/>
             </svg>
-        </a>
+        </span>
+    </a>
+{% else %}
+    <div class="launch-banner block">
+        <picture class="launch-banner__bg">
+            <source type="image/webp" srcset="assets/images/launch-banner/launch-banner-bg.webp 1x, assets/images/launch-banner/launch-banner-bg-2x.webp 2x">
+            <img src="assets/images/launch-banner/launch-banner-bg.jpg" srcset="assets/images/launch-banner/launch-banner-bg-2x.jpg 2x" alt="" aria-hidden="true">
+        </picture>
 
-        {% if not launch_banner_compact %}
-            <p class="launch-banner__note">You are currently viewing old Atmosphere version.</p>
-        {% endif %}
+        <div class="launch-banner__content">
+            <p class="launch-banner__product">The new</p>
+            <p class="launch-banner__headline">Atmosphere<span class="launch-banner__sup">2</span></p>
+
+            <a class="launch-banner__cta" href="{{ launch_banner_link }}" target="_blank" rel="noopener">
+                See the new Atmosphere
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M11 1L15 5L11 9M15 5H1" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+            </a>
+
+            <p class="launch-banner__note">You're viewing Physical Starlight and Atmosphere, the original addon.</p>
+        </div>
     </div>
-</div>
+{% endif %}

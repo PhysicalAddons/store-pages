@@ -88,16 +88,55 @@
             line-height: 1.2;
         }
     }
+}
 
-    // Compact variant (PCO / POW): shorter Figma frame, announcement only —
-    // no "old version" note, tighter CTA spacing (~336px at desktop width).
-    &--compact {
-        .launch-banner__content {
-            padding: clamp(36px, 7.7vw, 64px) 24px clamp(28px, 7.7vw, 64px);
-        }
+// Plain text link used on PCO / POW instead of the image banner.
+// No background, so the sale banner stays the only loud element.
+.launch-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 8px;
+    margin-bottom: 16px;
+    padding: 0 16px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
 
-        .launch-banner__cta {
-            margin-top: clamp(32px, 5.8vw, 48px);
+    &__label {
+        color: rgba(#000000, 0.6);
+    }
+
+    &__product {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 500;
+        white-space: nowrap;
+
+        svg {
+            display: block;
         }
+    }
+
+    &__name {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+    }
+
+    &:hover &__name {
+        text-decoration-color: rgba(#000000, 0.3);
+    }
+
+    &__sup {
+        display: inline-block;
+        font-size: 0.55em;
+        line-height: 1;
+        position: relative;
+        top: -0.5em;
+        margin-left: 1px;
     }
 }

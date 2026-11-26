@@ -2023,7 +2023,7 @@ body {
   padding: 6px 16px;
   border-radius: 6px;
   box-sizing: border-box;
-  background: linear-gradient(180deg, #1457bc 0%, #36a1ff 100%);
+  background: #000000;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
@@ -2031,9 +2031,11 @@ body {
   text-align: center;
 }
 .pricing__promo em {
+  background: unset;
   font-style: normal;
-  font-weight: 400;
-  color: #ffffff;
+  font-weight: 500;
+  color: #FF3D68;
+  -webkit-text-fill-color: currentColor;
 }
 .pricing__promo-sup {
   display: inline-block;
@@ -3362,11 +3364,18 @@ body {
 }
 .banner {
   margin-bottom: 16px;
-  background-color: #6800f0;
+  background-color: #000000;
   border-radius: 6px;
   color: #FFFFFF;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
   padding: 10px 16px;
+}
+.banner em {
+  background: unset;
+  font-style: normal;
+  font-weight: 500;
+  color: #FF3D68;
+  -webkit-text-fill-color: currentColor;
 }

@@ -211,10 +211,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
   width: 100%;
   height: 100%;
-  padding: 0;
-  border: 0;
   background: #000000;
   cursor: pointer;
 }
@@ -224,24 +223,46 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.hero .bigBlock .video__poster:hover .video__play {
-  background: #000000;
-  transform: translate(-50%, -50%) scale(1.06);
+.hero .bigBlock .video__poster::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+}
+.hero .bigBlock .video__poster:hover .video__play-bg {
+  fill: #FF0033;
+  fill-opacity: 1;
+}
+.hero .bigBlock .video__title {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  right: 20px;
+  overflow: hidden;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .hero .bigBlock .video__play {
   position: absolute;
   top: 50%;
   left: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.75);
-  color: #FFFFFF;
+  width: 68px;
+  height: 48px;
   transform: translate(-50%, -50%);
-  transition: transform 0.15s ease, background 0.15s ease;
+}
+.hero .bigBlock .video__play-bg {
+  fill: #212121;
+  fill-opacity: 0.8;
+  transition: fill 0.1s ease, fill-opacity 0.1s ease;
 }
 .hero .bigBlock .logoWall, .hero .bigBlock .logoWall2 {
   width: 100%;

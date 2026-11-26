@@ -24,3 +24,9 @@
 @import "../../shared/blocks/launch-banner/launch-banner";
 @import "../../shared/blocks/comparison/comparison";
 @import "../../shared/partials/benefit-card/benefit-card";
+
+// Superhive Market shows this page in a frame on its own grey page.
+// Use the same grey here so the page looks the same outside the frame.
+body {
+    background: #f4f4f4;
+}

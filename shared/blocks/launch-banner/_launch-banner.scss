@@ -127,6 +127,12 @@
         svg {
             display: block;
         }
+
+        // The link wraps to two lines on phones; a divider would dangle.
+        @include respond-below(sm) {
+            padding-left: 0;
+            border-left: 0;
+        }
     }
 
     &__sup {

@@ -2111,6 +2111,12 @@ body {
 .launch-link__product svg {
   display: block;
 }
+@media (max-width: 467px) {
+  .launch-link__product {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
 .launch-link__sup {
   display: inline-block;
   font-size: 0.55em;

@@ -1,1 +1,6 @@
-{% include "../../../../shared/blocks/footer/footer.twig"  %}
+{% include "../../../../shared/blocks/footer/footer.twig" with {
+    footer_resources: [
+        { 'name': 'Website', 'link': 'https://www.physicaladdons.com/psa/' },
+        { 'name': 'Refund policy', 'link': 'https://support.blendermarket.com/article/22-refund-policy' }
+    ]
+} %}

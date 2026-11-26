@@ -161,15 +161,17 @@
             td {
                 height: 100%;
                 background-color: #000000;
-                color: rgba(#FFFFFF, .6);
+                color: #FFFFFF;
                 text-align: center;
                 line-height: 36px;
-                font-weight: 300;
+                font-weight: 500;
                 padding: 6px;
                 em {
                     background: unset;
-                    font-weight: 400;
-                    color: white;
+                    font-style: normal;
+                    font-weight: 500;
+                    color: #FF3D68;
+                    -webkit-text-fill-color: currentColor;
                     
                 }
             }

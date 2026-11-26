@@ -797,12 +797,19 @@ body {
 }
 .pricing .discountRow td {
   height: 100%;
-  background: radial-gradient(59.42% 59.42% at 56.82% 56.82%, #6C26FF 45.31%, #BA26FF 100%), #D9D9D9;
+  background: #000000;
   color: white;
   text-align: center;
   line-height: 32px;
   font-weight: 500;
   padding: 6px;
+}
+.pricing .discountRow td em {
+  background: unset;
+  font-style: normal;
+  font-weight: 500;
+  color: #FF3D68;
+  -webkit-text-fill-color: currentColor;
 }
 .pricing--discount .discountRow {
   display: table-row;
@@ -1967,13 +1974,20 @@ body {
 }
 .banner {
   margin-bottom: 16px;
-  background-color: #6800f0;
+  background-color: #000000;
   border-radius: 6px;
   color: #FFFFFF;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
   padding: 10px 16px;
+}
+.banner em {
+  background: unset;
+  font-style: normal;
+  font-weight: 500;
+  color: #FF3D68;
+  -webkit-text-fill-color: currentColor;
 }
 
 .launch-banner {

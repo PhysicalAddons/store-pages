@@ -307,7 +307,7 @@
     }
 }
 
-// Sale strip between pricing and upgrade — same blue as 17'000+,
+// Sale strip between pricing and upgrade — black with a cherry red accent,
 // same width/alignment as the upgrade card.
 .pricing__promo {
     width: 554px;
@@ -316,7 +316,7 @@
     padding: 6px 16px;
     border-radius: 6px;
     box-sizing: border-box;
-    background: linear-gradient(180deg, #1457bc 0%, #36a1ff 100%);
+    background: #000000;
     color: #ffffff;
     font-size: 16px;
     font-weight: 500;
@@ -324,9 +324,11 @@
     text-align: center;
 
     em {
+        background: unset;
         font-style: normal;
-        font-weight: 400;
-        color: #ffffff;
+        font-weight: 500;
+        color: #FF3D68;
+        -webkit-text-fill-color: currentColor;
     }
 
     // Same raise as launch-banner / PA Atmosphere² (reset flattens <sup>).

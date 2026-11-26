@@ -852,16 +852,18 @@ body {
 .pricing table .discountRow td {
   height: 100%;
   background-color: #000000;
-  color: rgba(255, 255, 255, 0.6);
+  color: #FFFFFF;
   text-align: center;
   line-height: 36px;
-  font-weight: 300;
+  font-weight: 500;
   padding: 6px;
 }
 .pricing table .discountRow td em {
   background: unset;
-  font-weight: 400;
-  color: white;
+  font-style: normal;
+  font-weight: 500;
+  color: #FF3D68;
+  -webkit-text-fill-color: currentColor;
 }
 .pricing--discount table .discountRow {
   display: table-row;
@@ -1933,13 +1935,20 @@ body {
 }
 .banner {
   margin-bottom: 16px;
-  background-color: #6800f0;
+  background-color: #000000;
   border-radius: 6px;
   color: #FFFFFF;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
   padding: 10px 16px;
+}
+.banner em {
+  background: unset;
+  font-style: normal;
+  font-weight: 500;
+  color: #FF3D68;
+  -webkit-text-fill-color: currentColor;
 }
 
 .launch-banner {

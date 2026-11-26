@@ -23,7 +23,7 @@
                 padding: 3px 8px;
                 font-size: 20px;
                 line-height: 1.25;
-                background-color: #F2F2F2;
+                background-color: #e8e8e8;
                 border-radius: 50px;
             }
         }
@@ -37,7 +37,7 @@
                 padding-top: 4px;
                 // padding-bottom: 32px;
                 & + h5 {
-                    border-top: 1px solid #DCDCDC;
+                    border-top: 1px solid #d2d2d2;
                     padding-top: 8px;
                 }
             }
@@ -69,12 +69,12 @@
         td {
             padding: 16px 0px 32px 0px;
             text-align: left;
-            border-top: 1px solid #dcdcdc;
+            border-top: 1px solid #d2d2d2;
             vertical-align: top;
         }
 
         tr {
-            border-bottom: 1px solid #dcdcdc;
+            border-bottom: 1px solid #d2d2d2;
         }
 
         th:nth-child(1),

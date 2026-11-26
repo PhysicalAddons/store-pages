@@ -23,3 +23,12 @@
 @import "partials/tooltip/tooltip";
 
 @import "../../shared/blocks/banner/banner";
+
+// Superhive Market shows this page in a frame on its own grey page (#f4f4f4).
+// Use the same grey here so the page looks the same outside the frame.
+// The greys of this page were designed for a white page, so they are all
+// darkened by the same ratio (244 / 255) to keep the designed contrast,
+// for example #f2f2f2 -> #e8e8e8 and #dcdcdc -> #d2d2d2.
+body {
+    background: #f4f4f4;
+}

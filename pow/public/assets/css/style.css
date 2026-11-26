@@ -1127,7 +1127,7 @@ body {
   margin-bottom: 128px;
   padding: 32px;
   border-radius: 12px;
-  background: #f2f2f2;
+  background: #e8e8e8;
   color: rgba(0, 0, 0, 0.7);
   font-size: 12px;
   letter-spacing: 0;
@@ -2099,7 +2099,7 @@ body {
   padding-right: 2px;
 }
 .comparison table tr {
-  border-bottom: 1px solid #DCDCDC;
+  border-bottom: 1px solid #d2d2d2;
 }
 .comparison table tr:last-child {
   border-bottom: none;
@@ -2157,7 +2157,7 @@ body {
   }
   .comparison h4 {
     font-size: 20px;
-    border-bottom: 1px solid #DCDCDC;
+    border-bottom: 1px solid #d2d2d2;
     padding-bottom: 8px;
     margin-top: 20px;
   }
@@ -2349,8 +2349,4 @@ body {
 
 body {
   background: #f4f4f4;
-}
-
-.footer {
-  background: #e8e8e8;
 }

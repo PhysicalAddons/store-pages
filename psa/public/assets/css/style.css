@@ -141,7 +141,7 @@ body {
   padding: 0px 20px;
   border-radius: 6px 6px 0px 0px;
   float: right;
-  background: #F2F2F2;
+  background: #e8e8e8;
   color: black;
   text-decoration: none;
   margin-left: 4px;
@@ -374,7 +374,7 @@ body {
   vertical-align: top;
 }
 .comparison table tr {
-  border-bottom: 1px solid #DCDCDC;
+  border-bottom: 1px solid #d2d2d2;
 }
 .comparison table tr:last-child {
   border-bottom: none;
@@ -432,7 +432,7 @@ body {
   }
   .comparison h4 {
     font-size: 20px;
-    border-bottom: 1px solid #DCDCDC;
+    border-bottom: 1px solid #d2d2d2;
     padding-bottom: 8px;
     margin-top: 20px;
   }
@@ -612,15 +612,15 @@ body {
 .controls table th, .controls table td {
   padding: 8px 0px 32px 0px;
   text-align: left;
-  border-top: 1px solid #DCDCDC;
+  border-top: 1px solid #d2d2d2;
   vertical-align: top;
 }
 .controls table tr:last-child td {
-  border-bottom: 1px solid #DCDCDC;
+  border-bottom: 1px solid #d2d2d2;
 }
 .controls table th + th,
 .controls table td + td {
-  border-left: 1px solid #DCDCDC;
+  border-left: 1px solid #d2d2d2;
 }
 .controls table th:nth-child(1), .controls table td:nth-child(1) {
   width: 30%;
@@ -708,22 +708,22 @@ body {
   line-height: 19px;
 }
 .pricing table thead tr {
-  border-bottom: 1px solid #DCDCDC;
+  border-bottom: 1px solid #d2d2d2;
 }
 .pricing table tbody tr {
-  border-bottom: 1px solid #DCDCDC;
+  border-bottom: 1px solid #d2d2d2;
 }
 .pricing table tbody tr:last-child {
   border-bottom: none;
 }
 .pricing table tbody tr td {
-  border-right: 1px solid #DCDCDC;
+  border-right: 1px solid #d2d2d2;
 }
 .pricing table tbody tr td:last-child {
   border-right: none;
 }
 .pricing table tfoot {
-  background-color: #F2F2F2;
+  background-color: #e8e8e8;
 }
 .pricing table tfoot tr:first-child td:first-child {
   border-top-left-radius: 6px;
@@ -742,7 +742,7 @@ body {
 .pricing table tfoot td {
   height: 174px;
   padding: 12px 16px 16px 16px;
-  border-right: 1px solid #DCDCDC;
+  border-right: 1px solid #d2d2d2;
 }
 .pricing table tfoot td:last-child {
   border-right: none;
@@ -894,7 +894,7 @@ body {
   }
   .pricing h4 {
     font-size: 20px;
-    border-bottom: 1px solid #DCDCDC;
+    border-bottom: 1px solid #d2d2d2;
     padding-bottom: 8px;
     margin-top: 20px;
   }
@@ -954,7 +954,7 @@ body {
   color: inherit;
 }
 .pricing-mobile__packs {
-  background: #F2F2F2;
+  background: #e8e8e8;
   border-radius: 6px;
 }
 .pricing-mobile__psapco {
@@ -1025,11 +1025,11 @@ body {
 .notes__table td {
   padding: 16px 0px 32px 0px;
   text-align: left;
-  border-top: 1px solid #dcdcdc;
+  border-top: 1px solid #d2d2d2;
   vertical-align: top;
 }
 .notes__table tr {
-  border-bottom: 1px solid #dcdcdc;
+  border-bottom: 1px solid #d2d2d2;
 }
 .notes__table th:nth-child(1),
 .notes__table td:nth-child(1) {
@@ -1075,7 +1075,7 @@ body {
   margin-bottom: 128px;
   padding: 32px;
   border-radius: 12px;
-  background: #f2f2f2;
+  background: #e8e8e8;
   color: rgba(0, 0, 0, 0.7);
   font-size: 12px;
   letter-spacing: 0;
@@ -1720,7 +1720,7 @@ body {
 
 .bundle {
   padding: 16px;
-  background-color: #F2F2F2;
+  background-color: #e8e8e8;
   border-radius: 6px;
 }
 .bundle__products img {
@@ -1776,11 +1776,11 @@ body {
   font-size: 12px;
   text-align: center;
   border-radius: 100px;
-  background-color: #E3E3E3;
+  background-color: #d9d9d9;
   color: #000000;
 }
 .btn:hover {
-  background-color: #d1d1d1;
+  background-color: #c8c8c8;
 }
 .btn--primary {
   background-color: #6B26FF;
@@ -1795,7 +1795,7 @@ body {
   padding: 16px 16px 32px;
 }
 .pricing-pack + .pricing-pack {
-  border-top: 1px solid #DCDCDC;
+  border-top: 1px solid #d2d2d2;
 }
 .pricing-pack__title {
   font-family: Inter;
@@ -2119,4 +2119,8 @@ body {
   position: relative;
   top: -0.5em;
   margin-left: 1px;
+}
+
+body {
+  background: #f4f4f4;
 }

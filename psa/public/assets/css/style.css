@@ -806,6 +806,8 @@ body {
 }
 .pricing .discountRow td em {
   background: unset;
+  font-size: inherit;
+  line-height: inherit;
   font-style: normal;
   font-weight: 500;
   color: #FF3D68;

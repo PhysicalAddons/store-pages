@@ -22,9 +22,3 @@
 @import "../../shared/partials/btn/btn";
 @import "../../shared/partials/pricing-pack/pricing-pack";
 @import "../../shared/partials/tooltip/tooltip";
-
-// Superhive Market shows this page in a frame on its own grey page (#f4f4f4).
-// The page sets no background of its own, so that grey shows through.
-// The greys of this page were designed for a white page, so they are all
-// darkened by the same ratio (244 / 255) to keep the designed contrast,
-// for example #f2f2f2 -> #e8e8e8 and #dcdcdc -> #d2d2d2.

@@ -48,6 +48,39 @@
 	<script src="{{ 'assets/javascript/vendor/jquery.fancybox.min.js' }}"></script>-->
     <script src="{{ 'assets/javascript/vendor/siema.min.js' }}"></script>
 	<script>
+	document.querySelectorAll('.video__poster').forEach(function (poster) {
+		var id = poster.dataset.video;
+		var image = poster.querySelector('img');
+
+		function loadPlayer(autoplay) {
+			var player = document.createElement('iframe');
+			player.src = 'https://www.youtube.com/embed/' + id + (autoplay ? '?autoplay=1' : '');
+			player.title = 'YouTube video player';
+			player.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+			player.allowFullscreen = true;
+			player.setAttribute('frameborder', '0');
+			poster.replaceWith(player);
+		}
+
+		function checkImage() {
+			if (image.naturalWidth > 120) return;
+			if (image.src.indexOf('maxresdefault') !== -1) {
+				image.src = 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg';
+			} else {
+				loadPlayer(false);
+			}
+		}
+		image.addEventListener('load', checkImage);
+		image.addEventListener('error', checkImage);
+		if (image.complete) checkImage();
+
+		poster.addEventListener('click', function (event) {
+			loadPlayer(true);
+			event.preventDefault();
+		});
+	});
+	</script>
+	<script>
     // FANCYBOX
 	/*$.fancybox.defaults.buttons = [
       //"zoom",

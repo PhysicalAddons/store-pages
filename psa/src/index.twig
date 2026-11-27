@@ -48,8 +48,6 @@
 	<script src="{{ 'assets/javascript/vendor/jquery.fancybox.min.js' }}"></script>-->
     <script src="{{ 'assets/javascript/vendor/siema.min.js' }}"></script>
 	<script>
-	// Load the YouTube player only when the preview image is clicked.
-	// If anything here fails, the preview stays a normal link to the video on YouTube.
 	document.querySelectorAll('.video__poster').forEach(function (poster) {
 		var id = poster.dataset.video;
 		var image = poster.querySelector('img');
@@ -64,8 +62,6 @@
 			poster.replaceWith(player);
 		}
 
-		// YouTube answers with a tiny grey placeholder when it has no full-size
-		// preview. Try the smaller preview, then fall back to the normal player.
 		function checkImage() {
 			if (image.naturalWidth > 120) return;
 			if (image.src.indexOf('maxresdefault') !== -1) {

@@ -103,7 +103,6 @@
                     height: 100%;
                     object-fit: cover;
                 }
-                // Dark fade behind the title, like the YouTube player.
                 &::before {
                     content: "";
                     position: absolute;

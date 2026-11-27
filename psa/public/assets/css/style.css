@@ -234,8 +234,7 @@ body {
   pointer-events: none;
 }
 .hero .bigBlock .video__poster:hover .video__play-bg {
-  fill: #FF0033;
-  fill-opacity: 1;
+  fill: #E0002D;
 }
 .hero .bigBlock .video__title {
   position: absolute;
@@ -260,9 +259,8 @@ body {
   transform: translate(-50%, -50%);
 }
 .hero .bigBlock .video__play-bg {
-  fill: #212121;
-  fill-opacity: 0.8;
-  transition: fill 0.1s ease, fill-opacity 0.1s ease;
+  fill: #FF0033;
+  transition: fill 0.1s ease;
 }
 .hero .bigBlock .logoWall, .hero .bigBlock .logoWall2 {
   width: 100%;

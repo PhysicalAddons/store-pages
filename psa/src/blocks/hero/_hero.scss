@@ -115,8 +115,7 @@
                     pointer-events: none;
                 }
                 &:hover .video__play-bg {
-                    fill: #FF0033;
-                    fill-opacity: 1;
+                    fill: #E0002D;
                 }
             }
             &__title {
@@ -142,9 +141,8 @@
                 transform: translate(-50%, -50%);
             }
             &__play-bg {
-                fill: #212121;
-                fill-opacity: 0.8;
-                transition: fill 0.1s ease, fill-opacity 0.1s ease;
+                fill: #FF0033;
+                transition: fill 0.1s ease;
             }
         }
         .logoWall, .logoWall2 {
